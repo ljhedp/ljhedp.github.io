@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    
+
+    
+
+    
+
+
+
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    
+    
+    
+    
+    <title>图论常见模板 | 书海扬帆 | 主攻IT，兼修数理，酷爱文史，沉迷学习。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="图论,模板">
+    <meta name="description" content="Dijkstra12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061#include &amp;lt;iostream&amp;gt;#include &amp;lt;cstdio&amp;gt;#include &amp;lt;cstdlib&amp;gt;#includ">
+<meta name="keywords" content="图论,模板">
+<meta property="og:type" content="article">
+<meta property="og:title" content="图论常见模板">
+<meta property="og:url" content="https://ljhedp.github.io/2018/11/02/图论常见模板/index.html">
+<meta property="og:site_name" content="书海扬帆">
+<meta property="og:description" content="Dijkstra12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061#include &amp;lt;iostream&amp;gt;#include &amp;lt;cstdio&amp;gt;#include &amp;lt;cstdlib&amp;gt;#includ">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-11-02T10:41:08.023Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="图论常见模板">
+<meta name="twitter:description" content="Dijkstra12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061#include &amp;lt;iostream&amp;gt;#include &amp;lt;cstdio&amp;gt;#include &amp;lt;cstdlib&amp;gt;#includ">
+    
+        <link rel="alternate" type="application/atom+xml" title="书海扬帆" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+
+</head>
+
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">书海扬帆</h5>
+          <a href="mailto:me@ljhedp.cn" title="me@ljhedp.cn" class="mail">me@ljhedp.cn</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives">
+                <i class="icon icon-lg icon-archives"></i>
+                文章列表
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                标签聚合
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories">
+                <i class="icon icon-lg icon-th-list"></i>
+                分类查找
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about" target="_blank">
+                <i class="icon icon-lg icon-id-card"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://dalao.online">
+                <i class="icon icon-lg icon-link"></i>
+                RDFZOJ
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">图论常见模板</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">图论常见模板</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-11-02T10:40:33.000Z" itemprop="datePublished" class="page-time">
+  2018-11-02
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/信息学竞赛-OI/">信息学竞赛(OI)</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Dijkstra"><span class="post-toc-number">1.</span> <span class="post-toc-text">Dijkstra</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#SPFA"><span class="post-toc-number">2.</span> <span class="post-toc-text">SPFA</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Floyd"><span class="post-toc-number">3.</span> <span class="post-toc-text">Floyd</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Kruscal"><span class="post-toc-number">4.</span> <span class="post-toc-text">Kruscal</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Prim"><span class="post-toc-number">5.</span> <span class="post-toc-text">Prim</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Boruvka"><span class="post-toc-number">6.</span> <span class="post-toc-text">Boruvka</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Tarjan-SCC"><span class="post-toc-number">7.</span> <span class="post-toc-text">Tarjan-SCC</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Tarjan-BCC"><span class="post-toc-number">8.</span> <span class="post-toc-text">Tarjan-BCC</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-图论常见模板" class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">图论常见模板</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-11-02 18:40:33" datetime="2018-11-02T10:40:33.000Z" itemprop="datePublished">2018-11-02</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/信息学竞赛-OI/">信息学竞赛(OI)</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="Dijkstra"><a href="#Dijkstra" class="headerlink" title="Dijkstra"></a>Dijkstra</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100010</span>,maxm=<span class="number">500050</span>,inf=<span class="number">2147483647</span>;</span><br><span class="line"><span class="keyword">int</span> n,m,s,edgecnt;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> v,c;</span><br><span class="line">	node *next;</span><br><span class="line">&#125;*h[maxn],pool[maxm];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">addEdge</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v,<span class="keyword">int</span> c)</span> </span>&#123;</span><br><span class="line">	node *p=&amp;pool[++edgecnt];</span><br><span class="line">	p-&gt;v=v;p-&gt;c=c;p-&gt;next=h[u];h[u]=p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">dij</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> id,dis;</span><br><span class="line">	<span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> dij t) <span class="keyword">const</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> dis&gt;t.dis;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line">priority_queue&lt;dij&gt; q;</span><br><span class="line"><span class="keyword">int</span> dis[maxn];</span><br><span class="line"><span class="keyword">bool</span> vis[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dijkstra</span><span class="params">(<span class="keyword">int</span> s)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) dis[i]=inf;</span><br><span class="line">	<span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span>(vis));</span><br><span class="line">	dij t;</span><br><span class="line">	t.id=s;t.dis=<span class="number">0</span>;dis[s]=<span class="number">0</span>;</span><br><span class="line">	q.push(t);</span><br><span class="line">	<span class="keyword">while</span>(!q.empty()) &#123;</span><br><span class="line">		t=q.top();q.pop();</span><br><span class="line">		<span class="keyword">if</span>(vis[t.id]) <span class="keyword">continue</span>;</span><br><span class="line">		vis[t.id]=<span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">int</span> u=t.id;</span><br><span class="line">		<span class="keyword">for</span>(node *p=h[u];p;p=p-&gt;next) &#123;</span><br><span class="line">			<span class="keyword">int</span> v=p-&gt;v;</span><br><span class="line">			<span class="keyword">if</span>(!vis[v] &amp;&amp; dis[v]&gt;dis[u]+p-&gt;c) &#123;</span><br><span class="line">				dis[v]=dis[u]+p-&gt;c;</span><br><span class="line">				t.id=v;t.dis=dis[v];</span><br><span class="line">				q.push(t);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> u,v,c;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; s;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i&lt;=m; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; u &gt;&gt; v &gt;&gt; c;</span><br><span class="line">        addEdge(u,v,c);</span><br><span class="line">    &#125;</span><br><span class="line">    dijkstra(s);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i&lt;=n; i++)</span><br><span class="line">       <span class="built_in">cout</span> &lt;&lt; dis[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="SPFA"><a href="#SPFA" class="headerlink" title="SPFA"></a>SPFA</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100010</span>,maxm=<span class="number">5000050</span>,inf=<span class="number">2147483647</span>;</span><br><span class="line"><span class="keyword">int</span> edgecnt;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> v,c;</span><br><span class="line">	node *next;</span><br><span class="line">&#125;*h[maxn],pool[maxm];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">addEdge</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v,<span class="keyword">int</span> c)</span> </span>&#123;</span><br><span class="line">	node *p=&amp;pool[++edgecnt];</span><br><span class="line">	p-&gt;v=v;p-&gt;c=c;p-&gt;next=h[u];h[u]=p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> n,m,s,tim[maxn],dis[maxn];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">queue</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> q[maxn],head,tail;</span><br><span class="line">	<span class="built_in">queue</span>() &#123;</span><br><span class="line">		head=<span class="number">1</span>;tail=<span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">		q[++tail]=x;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		head++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">front</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> q[head];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">empty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> head&gt;tail;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> tail-head+<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;Q;</span><br><span class="line"><span class="keyword">bool</span> vis[maxn];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">spfa</span><span class="params">(<span class="keyword">int</span> s)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span>(vis));</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) dis[i]=inf;</span><br><span class="line">	Q.push(s);vis[s]=<span class="number">1</span>;dis[s]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> u,v;</span><br><span class="line">	<span class="keyword">while</span>(!Q.empty()) &#123;</span><br><span class="line">		u=Q.front();Q.pop();vis[u]=<span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">for</span>(node *p=h[u];p;p=p-&gt;next) &#123;</span><br><span class="line">			v=p-&gt;v;</span><br><span class="line">			<span class="keyword">if</span>(dis[v]&gt;dis[u]+p-&gt;c) &#123;</span><br><span class="line">				dis[v]=dis[u]+p-&gt;c;</span><br><span class="line">				<span class="keyword">if</span>(!vis[v]) &#123;</span><br><span class="line">					vis[v]=<span class="literal">true</span>;</span><br><span class="line">					tim[v]++;</span><br><span class="line">					Q.push(v);</span><br><span class="line">					<span class="keyword">if</span>(tim[v]&gt;n) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> u,v,c;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; s;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i&lt;=m; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; u &gt;&gt; v &gt;&gt; c;</span><br><span class="line">        addEdge(u,v,c);</span><br><span class="line">    &#125;</span><br><span class="line">    spfa(s);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i&lt;=n; i++)</span><br><span class="line">       <span class="built_in">cout</span> &lt;&lt; dis[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Floyd"><a href="#Floyd" class="headerlink" title="Floyd"></a>Floyd</h2><h2 id="Kruscal"><a href="#Kruscal" class="headerlink" title="Kruscal"></a>Kruscal</h2><h2 id="Prim"><a href="#Prim" class="headerlink" title="Prim"></a>Prim</h2><h2 id="Boruvka"><a href="#Boruvka" class="headerlink" title="Boruvka"></a>Boruvka</h2><h2 id="Tarjan-SCC"><a href="#Tarjan-SCC" class="headerlink" title="Tarjan-SCC"></a>Tarjan-SCC</h2><h2 id="Tarjan-BCC"><a href="#Tarjan-BCC" class="headerlink" title="Tarjan-BCC"></a>Tarjan-BCC</h2>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-11-02T10:41:08.023Z" itemprop="dateUpdated">2018-11-02 18:41:08</time>
+</span><br>
+
+
+        
+        埋头苦干是第一，熟练生出百巧来。勤能补拙是良训，一分辛苦一分才。
+        
+    </div>
+    
+    <footer>
+        <a href="https://ljhedp.github.io">
+            <img src="/img/avatar.jpg" alt="书海扬帆">
+            书海扬帆
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/图论/">图论</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模板/">模板</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ljhedp.github.io/2018/11/02/图论常见模板/&title=《图论常见模板》 — 书海扬帆&pic=https://ljhedp.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ljhedp.github.io/2018/11/02/图论常见模板/&title=《图论常见模板》 — 书海扬帆&source=分享学习经验、学习方法和学习历程" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ljhedp.github.io/2018/11/02/图论常见模板/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《图论常见模板》 — 书海扬帆&url=https://ljhedp.github.io/2018/11/02/图论常见模板/&via=https://ljhedp.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ljhedp.github.io/2018/11/02/图论常见模板/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/10/30/OI竞赛中常见的模板/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">OI竞赛常见模板</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'true' == 'true',
+            appId: "DBTfs1tn9q8DYFqS2ISkW1bk-gzGzoHsz",
+            appKey: "YwAGtYX1drDSOA0IDc1pQ2BB",
+            avatar: "identicon",
+            placeholder: "说些什么吧~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        感谢您的支持~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>书海扬帆 &copy; 2017 - 2018</span>
+            <span>
+                
+                <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备17041994号-1</a><br>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ljhedp.github.io/2018/11/02/图论常见模板/&title=《图论常见模板》 — 书海扬帆&pic=https://ljhedp.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ljhedp.github.io/2018/11/02/图论常见模板/&title=《图论常见模板》 — 书海扬帆&source=分享学习经验、学习方法和学习历程" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ljhedp.github.io/2018/11/02/图论常见模板/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《图论常见模板》 — 书海扬帆&url=https://ljhedp.github.io/2018/11/02/图论常见模板/&via=https://ljhedp.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ljhedp.github.io/2018/11/02/图论常见模板/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACNklEQVR42u3aS27DMAwFwNz/0inQVYA2znuUUzTyaGXkY2m0IEhRt1s87t/j8flxPPv88dufb/v57fG/ThgYGBgfy7gfjmNG/sn6e15sEAYGxgUYeZA9/lfyzoSXrw0DAwMjec7DYv4eDAwMjLMCbp7etVuAgYGBMStijydIjsmScPz2WhwDA+MDGbPGwN88v72/gYGB8e8Z93Ich9ekbTlrgr5YFQYGxtaMNsnLp69L0LKpGfUiMDAwtmCsTzkLvitXNG7tUjAwMLZgrGDaaxn5wVlxXQMDA+MyjDZdW78wcdY2YWBgXI2RtzDbRLCdsSiwMTAwtmbMDtfyA7skBK/AXjQGMDAwtmAkiV27rGRxbUiNOrEYGBibMtoELv99Pv0srGNgYFyNMVtoewyXF8NJPouBgXFNRht211uPs4bBCcdtGBgYH8VIXrRyJJdfs2g36GktjoGBsTUjLy/bVLK9VFGnlRgYGBdg5GE3mXJ26NbmeL+0MDEwMDZltNcdVorY4SFaclsEAwNja8b65YkT+qVxUlh0XDEwMLZjtGXtesNyFtCfbiIGBsbWjJXFJaVsexi3EpQxMDB2ZdzL0S59dmm1bYtiYGDszZgdwechdRZw2+COgYFxBUbbElhJEPPWQr1ZGBgYF2C0QTZZxKzB2TY+MTAwMM46bmtL0zzcY2BgYBQvWtiUGXKYGmJgYHwsY9YMKKbJe6px2fyi9sXAwNiI0RaQedA8t+htmxMYGBhbML4A76qyUA17ycAAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '( • ̀ω•́ )✧Where are you now~';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'ヾ(ﾟ∀ﾟゞ)欢迎回来！';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>--><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
