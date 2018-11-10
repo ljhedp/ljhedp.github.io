@@ -29,7 +29,7 @@
 <meta property="og:site_name" content="书海扬帆">
 <meta property="og:description" content="MO/OI双国家集训队大佬dmy出的模拟赛，文字中透露出神犇的霸气。%%%  K大和(kth.*)题目描述给出两个长为n的数组A,B请你求出所有Ai+Bj (1&amp;lt;=i,j&amp;lt;=n)中第k大的值注意：同一和出现多次时，算作多个。 格式第一行两个正整数n,k第二行n个数,表示 a1~an第三行n个数,表示 b1~bn输出一行整数，表示答案 范围与约定对于百分之40的数据，n&amp;lt;=300">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-22T11:03:50.238Z">
+<meta property="og:updated_time" content="2018-11-10T08:20:45.474Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[20180908]邓神模拟赛题解">
 <meta name="twitter:description" content="MO/OI双国家集训队大佬dmy出的模拟赛，文字中透露出神犇的霸气。%%%  K大和(kth.*)题目描述给出两个长为n的数组A,B请你求出所有Ai+Bj (1&amp;lt;=i,j&amp;lt;=n)中第k大的值注意：同一和出现多次时，算作多个。 格式第一行两个正整数n,k第二行n个数,表示 a1~an第三行n个数,表示 b1~bn输出一行整数，表示答案 范围与约定对于百分之40的数据，n&amp;lt;=300">
@@ -209,8 +209,7 @@
 <p>对于所有的波动，你要求出它们的长度之和。<br>答案对998244353取模。</p>
 <h3 id="格式-1"><a href="#格式-1" class="headerlink" title="格式"></a>格式</h3><p>第一行一个正整数n<br>第二行n个整数，表示f(1)~f(n)<br>输出一行一个整数，表示答案。</p>
 <h3 id="范围与约定-1"><a href="#范围与约定-1" class="headerlink" title="范围与约定"></a>范围与约定</h3><p>对于百分之40的数据，n&lt;=15<br>对于百分之70的数据，n&lt;=5000<br>对于百分之100的数据，n&lt;=300000<br><strong>数据保证f(1)到f(n)是1~n的排列。</strong></p>
-<h3 id="解题思路-1"><a href="#解题思路-1" class="headerlink" title="解题思路"></a>解题思路</h3><p>dp。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\color&#123;black&#125;dp[i][j] = \sum\limits_&#123;k &lt; i,f\left( &#123;&#123;a_k&#125;&#125; \right) &lt; f\left( &#123;&#123;a_i&#125;&#125; \right)&#125; &#123;dp[k][j - 1].&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="棋盘染色-color"><a href="#棋盘染色-color" class="headerlink" title="棋盘染色(color.*)"></a>棋盘染色(color.*)</h2><h3 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h3><p>给定n行m列的白色棋盘。<br>对于任意两行两列交出的四个方格，如果有三个是黑格，则可以将第四个格子免费染黑。<br>同时，每个格子有一个权值c。任意时刻，可以花费c的代价将这一格子染黑。<br>求染黑棋盘的最小代价。<br>由于格子数很多，我们采取这样一种方法生成权值：<br>$A0 = a,$<br>$A(i+1) = (Ai <em> Ai </em> b + Ai <em> c + d) \mod p. $<br>其中$A(m</em>(i-1)+j)$为第i行j列格子的权值。</p>
+<h3 id="解题思路-1"><a href="#解题思路-1" class="headerlink" title="解题思路"></a>解题思路</h3><script type="math/tex; mode=display">dp[i][j] = \sum\limits_{k < i,f\left(  \right) < f\left(  \right)} {dp[k][j - 1].}</script><h2 id="棋盘染色-color"><a href="#棋盘染色-color" class="headerlink" title="棋盘染色(color.*)"></a>棋盘染色(color.*)</h2><h3 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h3><p>给定n行m列的白色棋盘。<br>对于任意两行两列交出的四个方格，如果有三个是黑格，则可以将第四个格子免费染黑。<br>同时，每个格子有一个权值c。任意时刻，可以花费c的代价将这一格子染黑。<br>求染黑棋盘的最小代价。<br>由于格子数很多，我们采取这样一种方法生成权值：<br>$A0 = a,$<br>$A(i+1) = (Ai <em> Ai </em> b + Ai <em> c + d) \mod p. $<br>其中$A(m</em>(i-1)+j)$为第i行j列格子的权值。</p>
 <h3 id="格式-2"><a href="#格式-2" class="headerlink" title="格式"></a>格式</h3><p>输入7个正整数n,m,a,b,c,d,p<br>输出一行表示答案。</p>
 <h3 id="范围与约定-2"><a href="#范围与约定-2" class="headerlink" title="范围与约定"></a>范围与约定</h3><p>对于百分之30的数据，n,m&lt;=5<br>对于百分之50的数据，n,m&lt;=50<br>对于百分之80的数据，n,m&lt;=1000<br>对于百分之百的数据，a,b,c,d&lt;p&lt;=100000 n,m&lt;=5000</p>
 <h3 id="解题思路-2"><a href="#解题思路-2" class="headerlink" title="解题思路"></a>解题思路</h3><p>最小生成树。</p>
@@ -222,7 +221,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-10-22T11:03:50.238Z" itemprop="dateUpdated">2018-10-22 19:03:50</time>
+    最后更新时间：<time datetime="2018-11-10T08:20:45.474Z" itemprop="dateUpdated">2018-11-10 16:20:45</time>
 </span><br>
 
 
