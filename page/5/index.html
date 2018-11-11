@@ -17,8 +17,6 @@
     <title>书海扬帆 | 主攻IT，兼修数理，酷爱文史，沉迷学习。</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="theme-color" content="#3F51B5">
-    
     
     <meta name="keywords" content="博客,代码,分享,日志,生活,信息学竞赛,NOIP,C++,前端开发,学生">
     <meta name="description" content="分享学习经验、学习方法和学习历程">
@@ -35,8 +33,8 @@
     
         <link rel="alternate" type="application/atom+xml" title="书海扬帆" href="/atom.xml">
     
-    <link rel="shortcut icon" href="/img/favicon.ico">
-    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <link rel="shortcut icon" href="/">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
     <script>window.lazyScripts=[]</script>
 
     <!-- custom head --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
@@ -52,61 +50,19 @@
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
     </a>
-    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+    <div class="brand-wrap" style="background-image:url(/)">
       <div class="brand">
         <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/avatar.jpg">
+          <img src="/">
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">书海扬帆</h5>
-          <a href="mailto:me@ljhedp.cn" title="me@ljhedp.cn" class="mail">me@ljhedp.cn</a>
-        </hgroup>
+          <a href="mailto:undefined" class="mail">
+        </a></hgroup>
       </div>
     </div>
     <div class="scroll-wrap flex-col">
       <ul class="nav">
-        
-            <li class="waves-block waves-effect">
-              <a href="/">
-                <i class="icon icon-lg icon-home"></i>
-                主页
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/archives">
-                <i class="icon icon-lg icon-archives"></i>
-                文章列表
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/tags">
-                <i class="icon icon-lg icon-tags"></i>
-                标签聚合
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/categories">
-                <i class="icon icon-lg icon-th-list"></i>
-                分类查找
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/about" target="_blank">
-                <i class="icon icon-lg icon-id-card"></i>
-                关于
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://dalao.online">
-                <i class="icon icon-lg icon-link"></i>
-                RDFZOJ
-              </a>
-            </li>
         
       </ul>
     </div>
@@ -121,20 +77,6 @@
         </a>
         <div class="flex-col header-title ellipsis">书海扬帆</div>
         
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
-        
-        
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
-            <i class="icon icon-lg icon-share-alt"></i>
-        </a>
         
     </div>
 </header>
@@ -186,7 +128,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        123456789101112131415161718192021#include &lt;iostream&gt;#include &lt;queue&gt;using namespace std;int n,m,cnt;int main()&#123;    cin&gt;&gt;n&gt;&gt;m;    queue&lt;int&gt; a;    for(int i=1;i&lt...
+        123456789101112131415161718...
     
 
         <a href="/2018/11/11/约瑟夫问题/" class="post-more waves-effect waves-button">
@@ -232,7 +174,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        1234567891011121314151617181920212223242526272829#include &lt;iostream&gt;#include &lt;string.h&gt;#include &lt;string&gt;using namespace std;int dp[110][110];int main() &#123;	string a,b;    memse...
+        123456789101112131415161718...
     
 
         <a href="/2018/11/11/模板-最长公共子序列LCS/" class="post-more waves-effect waves-button">
@@ -278,7 +220,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        123456789101112131415161718192021222324252627282930313233// n^2 和 nlgn 的最长上升子序列#include &lt;iostream&gt;#include &lt;string.h&gt;#include &lt;algorithm&gt; using namespace std;int dp[101000],a[1010...
+        123456789101112131415161718...
     
 
         <a href="/2018/11/11/模板-最长不上升子序列/" class="post-more waves-effect waves-button">
@@ -324,10 +266,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        题目描述让我们来考虑$1$到$N$的正整数集合。让我们把集合中的元素按照字典序排列，例如当$N=11$时，其顺序应该为：$1,10,11,2,3,4,5,6,7,8,9$。
-定义$K$在$N$个数中的位置为$Q(N,K)$，例如$Q(11,2)=4$。现在给出整数$K$和$M$，要求找到最小的$N$，使得$Q(N,K)=M$。
-输入输出格式输入格式：输入文件只有一行，是两个整数K和M。
-输出...
+        题目描述让我们来考虑$1$到$N$的正整数集合。让我们...
     
 
         <a href="/2018/11/11/洛谷P2022-有趣的数/" class="post-more waves-effect waves-button">
@@ -374,10 +313,7 @@
 
     
         题目传送门
-解题思路这道题操作简单，没多想就打了个暴力上去，结果11个点AC了10个，90分。
-无奈之下，翻了翻题解，看到一个巧妙的离线并查集解决方法，于是就看明白之后学来了。
-首先读入每一个操作，cnt数组记录每个点被标记的次数。如果一个点被标记了，cnt[i]++；
-对于询问节点x最近的被打了标记的祖先，只需考察cnt数组即可。如果cnt[x]!=0，那么答案就是x自己，否则进行并查集的...
+解题思路这道题操作简单，没多想就打了个暴力...
     
 
         <a href="/2018/11/11/离线并查集-洛谷P4092-HEOI2016-TJOI2016-树/" class="post-more waves-effect waves-button">
@@ -423,7 +359,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        权值树状数组维护每一位信息，统计得到最终答案。123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919...
+        权值树状数组维护每一位信息，统计得到最终答案。1234...
     
 
         <a href="/2018/11/11/权值树状数组-洛谷P3760-TJOI2017-异或和/" class="post-more waves-effect waves-button">
@@ -469,7 +405,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        12345678910111213141516171819202122232425262728293031323334353637#include &lt;iostream&gt;#include &lt;cstdio&gt;#include &lt;algorithm&gt;#include &lt;cstring&gt;using namespace std;int n,ans;stru...
+        123456789101112131415161718...
     
 
         <a href="/2018/11/11/洛谷P2577-ZJOI2005-午餐/" class="post-more waves-effect waves-button">
@@ -516,8 +452,7 @@
 
     
         题目传送门
-解题思路建图，然后记忆化搜索。对于某个点记录入度和出度，注意单独的一种生物不算做一条食物链。
-代码：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657#include &lt;iostream&gt;#include &l...
+解题思路建图，然后记忆化搜索。对于某个点记...
     
 
         <a href="/2018/11/11/记忆化搜索-洛谷P3183-HAOI2016-食物链/" class="post-more waves-effect waves-button">
@@ -565,8 +500,7 @@
     
         题面传送门
 解题思路
-组合数与杨辉三角有着千丝万缕的联系，不得不说小学奥数的知识在OI中用处还是蛮大的。（不知道杨辉三角是啥？）杨辉三角与组合数最重要的一个联系在于，第n行的m个数可表示为$ \left( {\begin{array}{*{20}{c}} {m - 1}\\ {n - 1} \end{array}} \right) $，即为从n-1个不同元素中取m-1个元素的组合数。
-这就意...
+组合数与杨辉三角有着千丝万缕的联...
     
 
         <a href="/2018/11/11/「杨辉三角-打表-二维前缀和」NOIP2016-组合数问题/" class="post-more waves-effect waves-button">
@@ -613,14 +547,7 @@
 
     
         一个小笑话Q: 如果人生只有八年该怎么过？
-A: 五年高考三年模拟！
-……
-可以说，五三系列的作者文笔是所有教辅作者中最好的。
-这篇《轻轻地告诉你》已经随着各个版本的练习册不知走过了多少个春秋，每年都有新变化。这里经过仔细的整理和筛选，整理出一篇我认为最完美的一个版本。
-
-全文朋友，我正看着你呢，你也正看着我。
-我不是一幅色彩缤纷、线条优美的画卷，也许不能让你感受生活的美妙、世界的神奇；
-我...
+A: 五年...
     
 
         <a href="/2018/11/11/轻轻地告诉你——《五三》系列图书序言/" class="post-more waves-effect waves-button">
@@ -653,15 +580,6 @@ A: 五年高考三年模拟！
         <footer class="footer">
     <div class="top">
         
-<p>
-    <span id="busuanzi_container_site_uv" style="display:none">
-        站点总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style="display:none">
-        站点总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
-
 
         <p>
             
@@ -671,10 +589,8 @@ A: 五年高考三年模拟！
         </p>
     </div>
     <div class="bottom">
-        <p><span>书海扬帆 &copy; 2017 - 2018</span>
+        <p><span>书海扬帆 &copy; 2018</span>
             <span>
-                
-                <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备17041994号-1</a><br>
                 
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
             </span>
@@ -687,106 +603,21 @@ A: 五年高考三年模拟！
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 
-
-<div class="global-share" id="globalShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ljhedp.github.io/page/5/&title=书海扬帆&pic=https://ljhedp.github.io/img/avatar.jpg" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ljhedp.github.io/page/5/&title=书海扬帆&source=分享学习经验、学习方法和学习历程" data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ljhedp.github.io/page/5/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=书海扬帆&url=https://ljhedp.github.io/page/5/&via=https://ljhedp.github.io" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ljhedp.github.io/page/5/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-<div class="page-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABv0lEQVR42u3aS27DMAwFwNz/0i7QbWGZj/rEBUYrw0mc8YaQHvn5lNf1u8Z3Kr9Kn9BcuLi409xruMbcmft/r8cGXFzc89xxoRkj7v7y7jvj6wcbLi7uy7hp0ak8ARcX979z57cvlZfBxcV9D7dy+Lk9kLTiku1nNVxc3AluGpjuuN6Y7+Li4obcK1yV+KOOiP8dFxf3CDdtoK4tYb2gBBcX9yQ3DTV6Qxu9AoeLi3ue2yttvTZJPRAJXhsXF3cptz6AlVJ6bZLSsQcXF3czd9Xj0rGttIQ9xCK4uLhLufWmaW/jkm6hHjy4uLhHuCkoPQil8SguLu4buJWNRdpknWmiPDwZFxf3CDdtewQnqsIWqvIpLi7ueW5vJGtmIqJ3ZMLFxT3JTYct4sGIFv3Bg4uLu5mb4pq5S/jCuLi4b+D22ir1X80sXFzcb3HTI9BM9Dm1YcLFxT3CTQtKJR4tpbPTjVtcXNzd3JmodH6kI27D4OLiHuSmxWttS3Xsuc13cXFxX8CtH3t6G53FhQwXF/cgN92gpEMbzQkyXFzcDdx6S7UetvZGLpbFIri4uBPcNDCt3E+bJXE5w8XF3cX9ATUKdp3mAz4OAAAAAElFTkSuQmCC" alt="微信分享二维码">
-</div>
-
-
-
-
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+var BLOG = { ROOT: '/', SHARE: , REWARD: false };
 
 
 </script>
 
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
-
-
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
-</div>
-<template id="search-tpl">
-<li class="item">
-    <a href="{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
-            </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
-</template>
-
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+<script src="/js/main.min.js?v=1.7.2"></script>
 
 
 
 
 
 
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-
-
-<script>
-(function() {
-    var OriginTitile = document.title, titleTime;
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            document.title = '( • ̀ω•́ )✧Where are you now~';
-            clearTimeout(titleTime);
-        } else {
-            document.title = 'ヾ(ﾟ∀ﾟゞ)欢迎回来！';
-            titleTime = setTimeout(function() {
-                document.title = OriginTitile;
-            },2000);
-        }
-    });
-})();
-</script>
 
 
 
