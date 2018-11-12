@@ -37,9 +37,9 @@
       <category term="信息学竞赛(OI)" scheme="https://ljhedp.github.io/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B-OI/"/>
     
     
-      <category term="组合数学" scheme="https://ljhedp.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
-    
       <category term="数论" scheme="https://ljhedp.github.io/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+      <category term="组合数学" scheme="https://ljhedp.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
@@ -391,11 +391,11 @@
     
       <category term="学习笔记" scheme="https://ljhedp.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
+      <category term="字符串" scheme="https://ljhedp.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
       <category term="KMP" scheme="https://ljhedp.github.io/tags/KMP/"/>
     
       <category term="后缀数组" scheme="https://ljhedp.github.io/tags/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/"/>
-    
-      <category term="字符串" scheme="https://ljhedp.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
@@ -589,11 +589,11 @@
       <category term="信息学竞赛(OI)" scheme="https://ljhedp.github.io/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B-OI/"/>
     
     
-      <category term="杨辉三角" scheme="https://ljhedp.github.io/tags/%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/"/>
+      <category term="数论" scheme="https://ljhedp.github.io/tags/%E6%95%B0%E8%AE%BA/"/>
     
       <category term="组合数学" scheme="https://ljhedp.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="数论" scheme="https://ljhedp.github.io/tags/%E6%95%B0%E8%AE%BA/"/>
+      <category term="杨辉三角" scheme="https://ljhedp.github.io/tags/%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/"/>
     
       <category term="卡特兰数" scheme="https://ljhedp.github.io/tags/%E5%8D%A1%E7%89%B9%E5%85%B0%E6%95%B0/"/>
     

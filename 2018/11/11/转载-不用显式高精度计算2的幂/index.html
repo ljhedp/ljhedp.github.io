@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    
+
+    
+
+    
+
+
+
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    
+    
+    
+    
+    <title>转载-不用显式高精度计算2的幂 | 书海扬帆 | 主攻IT，兼修数理，酷爱文史，沉迷学习。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="学习笔记,模板,数论">
+    <meta name="description" content="来自某位巨佬在WC上学的技巧。 题目给定正整数$n(n&amp;lt;=15000)$，计算$2^n-1$的值。 解题思路这道题目是非常典型的高精度，但是数据范围乍一看有些吓人。普通的高精如果不慎，甚至会超时。 适用范围仅适用于计算$2^n$的精确值，且 $|n|&amp;lt;=2^{14}$ 浮点数能精确表示$2^n$，因为大部分浮点数内部都以2为底数，n的范围与浮点数类型有关。常用浮点数最高精度的long">
+<meta name="keywords" content="学习笔记,模板,数论">
+<meta property="og:type" content="article">
+<meta property="og:title" content="转载-不用显式高精度计算2的幂">
+<meta property="og:url" content="https://ljhedp.github.io/2018/11/11/转载-不用显式高精度计算2的幂/index.html">
+<meta property="og:site_name" content="书海扬帆">
+<meta property="og:description" content="来自某位巨佬在WC上学的技巧。 题目给定正整数$n(n&amp;lt;=15000)$，计算$2^n-1$的值。 解题思路这道题目是非常典型的高精度，但是数据范围乍一看有些吓人。普通的高精如果不慎，甚至会超时。 适用范围仅适用于计算$2^n$的精确值，且 $|n|&amp;lt;=2^{14}$ 浮点数能精确表示$2^n$，因为大部分浮点数内部都以2为底数，n的范围与浮点数类型有关。常用浮点数最高精度的long">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-11-11T13:47:53.591Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="转载-不用显式高精度计算2的幂">
+<meta name="twitter:description" content="来自某位巨佬在WC上学的技巧。 题目给定正整数$n(n&amp;lt;=15000)$，计算$2^n-1$的值。 解题思路这道题目是非常典型的高精度，但是数据范围乍一看有些吓人。普通的高精如果不慎，甚至会超时。 适用范围仅适用于计算$2^n$的精确值，且 $|n|&amp;lt;=2^{14}$ 浮点数能精确表示$2^n$，因为大部分浮点数内部都以2为底数，n的范围与浮点数类型有关。常用浮点数最高精度的long">
+    
+        <link rel="alternate" type="application/atom+xml" title="书海扬帆" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+
+</head>
+
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">书海扬帆</h5>
+          <a href="mailto:me@ljhedp.cn" title="me@ljhedp.cn" class="mail">me@ljhedp.cn</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives">
+                <i class="icon icon-lg icon-archives"></i>
+                文章列表
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                标签列表
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories">
+                <i class="icon icon-lg icon-th-list"></i>
+                分类查找
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about" target="_blank">
+                <i class="icon icon-lg icon-id-card"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://dalao.online">
+                <i class="icon icon-lg icon-link"></i>
+                RDFZOJ
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://upyun.com">
+                <i class="icon icon-lg icon-cloud"></i>
+                又拍云提供支持
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">转载-不用显式高精度计算2的幂</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">转载-不用显式高精度计算2的幂</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-11-11T13:44:53.000Z" itemprop="datePublished" class="page-time">
+  2018-11-11
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/信息学竞赛-OI/">信息学竞赛(OI)</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">1.</span> <span class="post-toc-text">题目</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">2.</span> <span class="post-toc-text">解题思路</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">3.</span> <span class="post-toc-text">适用范围</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">4.</span> <span class="post-toc-text">使用方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">C++</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">Windows下scanf/printf</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">5.</span> <span class="post-toc-text">题解</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">程序清单</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-转载-不用显式高精度计算2的幂" class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">转载-不用显式高精度计算2的幂</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-11-11 21:44:53" datetime="2018-11-11T13:44:53.000Z" itemprop="datePublished">2018-11-11</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/信息学竞赛-OI/">信息学竞赛(OI)</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p><blockquote>来自某位巨佬在WC上学的技巧。</blockquote></p>
+<p></p><h2>题目</h2><br>给定正整数$n(n&lt;=15000)$，计算$2^n-1$的值。<p></p>
+<p></p><h2>解题思路</h2><br>这道题目是非常典型的高精度，但是数据范围乍一看有些吓人。普通的高精如果不慎，甚至会超时。<p></p>
+<p></p><h2>适用范围</h2><br>仅适用于计算$2^n$的精确值，且 $|n|&lt;=2^{14}$<p></p>
+<p>浮点数能精确表示$2^n$，因为大部分浮点数内部都以2为底数，n的范围与浮点数类型有关。常用浮点数最高精度的long double也只有15位阶码。</p>
+<p></p><h2>使用方法</h2><br>直接使用pow函数即可计算。<p></p>
+<p></p><h3>C++</h3><br>字符串流输出<p></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    <span class="built_in">cout</span>.precision(n&gt;<span class="number">0</span>?<span class="number">0</span>:-n);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;fixed&lt;&lt;<span class="built_in">pow</span>(<span class="number">2.0L</span>,n)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>printf输出</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%.*Lf\n"</span>,n&gt;<span class="number">0</span>?<span class="number">0</span>:-n,powl(<span class="number">2.0L</span>,n));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><em>浮点数常量的L后缀表示long double</em></p>
+<p></p><h3>Windows下scanf/printf</h3><br>Windows下通常使用MinGW，部分版本可能无法正常使用<code>%lld</code>或<code>%Lf</code>。<p></p>
+<p>解决方法非常简单，在程序首部加入：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> __USE_MINGW_ANSI_STDIO 1</span></span><br></pre></td></tr></table></figure></p>
+<p></p><h2>题解</h2><br>由于n的范围刚好可以使用上述技巧，而且-1也很方便，直接在最低位-1即可，显然不会退位。<p></p>
+<p></p><h3>程序清单</h3><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    <span class="built_in">stringstream</span> ss;</span><br><span class="line">    ss.precision(<span class="number">0</span>);</span><br><span class="line">    ss&lt;&lt;fixed&lt;&lt;<span class="built_in">pow</span>(<span class="number">2.0L</span>,n);</span><br><span class="line">    <span class="built_in">string</span> s=ss.str();</span><br><span class="line">    s[s.length()<span class="number">-1</span>]--;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;s&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p></p>
+<p>这里利用了字符串流，当然用<code>sprintf</code>也完全没有问题。实测比手写高精度快很多，代码也很简单。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-11-11T13:47:53.591Z" itemprop="dateUpdated">2018-11-11 21:47:53</time>
+</span><br>
+
+
+        
+        埋头苦干是第一，熟练生出百巧来。勤能补拙是良训，一分辛苦一分才。
+        
+    </div>
+    
+    <footer>
+        <a href="https://ljhedp.github.io">
+            <img src="/img/avatar.jpg" alt="书海扬帆">
+            书海扬帆
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习笔记/">学习笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数论/">数论</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模板/">模板</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ljhedp.github.io/2018/11/11/转载-不用显式高精度计算2的幂/&title=《转载-不用显式高精度计算2的幂》 — 书海扬帆&pic=https://ljhedp.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ljhedp.github.io/2018/11/11/转载-不用显式高精度计算2的幂/&title=《转载-不用显式高精度计算2的幂》 — 书海扬帆&source=分享学习经验、学习方法和学习历程" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ljhedp.github.io/2018/11/11/转载-不用显式高精度计算2的幂/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《转载-不用显式高精度计算2的幂》 — 书海扬帆&url=https://ljhedp.github.io/2018/11/11/转载-不用显式高精度计算2的幂/&via=https://ljhedp.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ljhedp.github.io/2018/11/11/转载-不用显式高精度计算2的幂/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/11/11/NOIP2005-采药/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">NOIP2005-采药</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/11/11/蔡勒公式算日期/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">蔡勒公式算日期</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'true' == 'true',
+            appId: "DBTfs1tn9q8DYFqS2ISkW1bk-gzGzoHsz",
+            appKey: "YwAGtYX1drDSOA0IDc1pQ2BB",
+            avatar: "identicon",
+            placeholder: "说些什么吧~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        感谢您的支持~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>书海扬帆 &copy; 2017 - 2018</span>
+            <span>
+                
+                <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备17041994号-1</a><br>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ljhedp.github.io/2018/11/11/转载-不用显式高精度计算2的幂/&title=《转载-不用显式高精度计算2的幂》 — 书海扬帆&pic=https://ljhedp.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ljhedp.github.io/2018/11/11/转载-不用显式高精度计算2的幂/&title=《转载-不用显式高精度计算2的幂》 — 书海扬帆&source=分享学习经验、学习方法和学习历程" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ljhedp.github.io/2018/11/11/转载-不用显式高精度计算2的幂/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《转载-不用显式高精度计算2的幂》 — 书海扬帆&url=https://ljhedp.github.io/2018/11/11/转载-不用显式高精度计算2的幂/&via=https://ljhedp.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ljhedp.github.io/2018/11/11/转载-不用显式高精度计算2的幂/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuklEQVR42u3abY7rIAwF0O5/0/M2MA33GhjlSSe/qn5ADpXAsf35xNfPlyv/fjJO8unnxoWHh4d36Na/TZyM9vxO/s12IX6ZCw8PD+8a73n656HzxXr+VYJslwwPDw/vDbx8i5+F3fnBgIeHh/e/8NoQuU0rJL/Cw8PDewNvlkJtExZJmP4MvphrwcPDw4t5eRXpPa+v1Pfw8PDwtqvqp5IF+wWw4d3i4eHhXeDlG27bTDAbc1b0WoyJh4eH9ye8Z0bbgNU2CpxNeeDh4eGd5c1C4TaRmm/9SUtBkWjGw8PDu8BrGXmjwPMSzA6hw50ReHh4eCNeMnSefp21qJ5d3E+7cnh4eHgjXt4IlW/6bYp2drQsjg08PDy8C7woyxtv8bOAu02LtE0MeHh4eGd5bcvUbFOeNXUlcy0+xcPDw7vAa7+UBLttqJ3PNWsjwMPDwzvLa0PhvC1g58oXcaHAw8PDu8zLS/izQDlPLsyC+Ki+h4eHh3eIlz/qt1v5ftGrhS1yLXh4eHjbvFOh7WyZ2oXL3y+yL3h4eHglb/+xv41g29RtcoeL1gE8PDy8C7wW0B4ebVvVThPYL2lcPDw8vKO8WTJ31mqQhNGztELRQICHh4d3lHe2WapNZLQNYXkJDQ8PD+8eb6ck1rYFzJIReVsYHh4e3t/z2gTBfgrj+XbzA6x+YsDDw8Pb5iXT5ImJncL/LO27OBjw8PDwjvJmQ7ebfr58belrUQDDw8PDO8T7Ka828G1TwPsH1demKzw8PLxDvPxqlyA/YGaH0CyBgoeHh3eK14bUp4peySaeLMfif8PDw8O7xtspjM0C3HbMWYENDw8P7z289obaNEc+12Ip8fDw8F7A28HMWrJmQT8eHh7ebV6els0TDe0ituDor8LDw8O7wGsf+JNyV17gnyUdhgw8PDy8Xd4/59wr8PAcxDsAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '( • ̀ω•́ )✧Where are you now~';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'ヾ(ﾟ∀ﾟゞ)欢迎回来！';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>--><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

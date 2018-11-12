@@ -17,6 +17,8 @@
     <title>书海扬帆 | 主攻IT，兼修数理，酷爱文史，沉迷学习。</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
+    <meta name="theme-color" content="#3F51B5">
+    
     
     <meta name="keywords" content="博客,代码,分享,日志,生活,信息学竞赛,NOIP,C++,前端开发,学生">
     <meta name="description" content="分享学习经验、学习方法和学习历程">
@@ -33,8 +35,8 @@
     
         <link rel="alternate" type="application/atom+xml" title="书海扬帆" href="/atom.xml">
     
-    <link rel="shortcut icon" href="/">
-    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
     <script>window.lazyScripts=[]</script>
 
     <!-- custom head --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
@@ -50,19 +52,68 @@
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
     </a>
-    <div class="brand-wrap" style="background-image:url(/)">
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
       <div class="brand">
         <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/">
+          <img src="/img/avatar.jpg">
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">书海扬帆</h5>
-          <a href="mailto:undefined" class="mail">
-        </a></hgroup>
+          <a href="mailto:me@ljhedp.cn" title="me@ljhedp.cn" class="mail">me@ljhedp.cn</a>
+        </hgroup>
       </div>
     </div>
     <div class="scroll-wrap flex-col">
       <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives">
+                <i class="icon icon-lg icon-archives"></i>
+                文章列表
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                标签列表
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories">
+                <i class="icon icon-lg icon-th-list"></i>
+                分类查找
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about" target="_blank">
+                <i class="icon icon-lg icon-id-card"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://dalao.online">
+                <i class="icon icon-lg icon-link"></i>
+                RDFZOJ
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://upyun.com">
+                <i class="icon icon-lg icon-cloud"></i>
+                又拍云提供支持
+              </a>
+            </li>
         
       </ul>
     </div>
@@ -77,6 +128,20 @@
         </a>
         <div class="flex-col header-title ellipsis">书海扬帆</div>
         
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
         
     </div>
 </header>
@@ -128,7 +193,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        123456789101112131415161718...
+        123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include &lt;cstdio&gt;#include &lt;cmath&gt;#include &lt;cstring&gt;#include &lt;cstdlib&gt;#include &l...
     
 
         <a href="/2018/11/11/数论-「NOI2012」随机数生成器/" class="post-more waves-effect waves-button">
@@ -174,7 +239,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        123456789101112131415161718...
+        1234567891011121314151617181920212223242526#include &lt;bits/stdc++.h&gt;using namespace std;int n;const int maxn=10010000;int mu[maxn],prime[maxn],cnt;bool not_prime[maxn];inline void Get_Mu(int n...
     
 
         <a href="/2018/11/11/模板-线性筛莫比乌斯函数/" class="post-more waves-effect waves-button">
@@ -221,7 +286,10 @@
 
     
         题意给出n个数，找其中的众数，内存限制1M。
-解题思路...
+解题思路“摩尔投票法”。
+(此处内容待填坑…)
+代码照着hzw学长的标程写的，学习学习。
+12345678910111213141516#include&lt;cstdio&gt;int n,t,x,tot;int main()&#123;	scanf("%d",&amp;n);	for(int i=1;i&lt;=n;i++)	&#123;		...
     
 
         <a href="/2018/11/11/洛谷P2397-BZOJ2456-找众数-摩尔投票法/" class="post-more waves-effect waves-button">
@@ -268,7 +336,10 @@
 
     
         
-没学过分块的蒟蒻感觉直接写[Violet]蒲公英那一...
+没学过分块的蒟蒻感觉直接写[Violet]蒲公英那一道duliu题有些太难了，所以先来做个铺垫。
+分块入门1给定数列，要求支持区间修改，单点查值。
+
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758#include &lt;i...
     
 
         <a href="/2018/11/11/「模板」数列分块入门-学习笔记/" class="post-more waves-effect waves-button">
@@ -315,7 +386,7 @@
 
     
         题目传送门
-解题思路最开始看题目想到暴力dfs，但是拿...
+解题思路最开始看题目想到暴力dfs，但是拿不到全分。本题其实在考察组合数学中的全错位排列问题，即：重新排列棋子，每一个棋子都不在原来的位置（也就是本本题所说的障碍），有多少种放置方法。设n个棋子有D_n种放置方法。显然D_1=0,D_2=1.我们还能推得D_n=(n-1)\times(D_{n-1}+D_{n-2}).这样一来，输入数据中的棋盘便没有任何意义了，因为对于任何满足要...
     
 
         <a href="/2018/11/11/「组合数学-错位排列」洛谷P3182-HAOI2016-放棋子/" class="post-more waves-effect waves-button">
@@ -361,7 +432,13 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        摘要图论的题目真是有趣QwQ本篇文章将介绍欧拉路径、欧...
+        摘要图论的题目真是有趣QwQ本篇文章将介绍欧拉路径、欧拉回路、哈密顿路径和哈密顿圈等知识的定义、性质、判定及简单应用。
+欧拉路径在生活中，一些图形是可以一笔画出的。同样地，在图G中，若一条路径恰好经过每条边一次，则称这条路径为图G的一条欧拉路径.
+图G存在欧拉路径的充要条件
+图G是连通图
+若图G是无向图，则G中不存在度数为奇数的顶点
+若图G是有向图，则每个顶点的入度与出度相等欧拉回路
+   ...
     
 
         <a href="/2018/11/11/图论-欧拉与哈密顿的那些事儿/" class="post-more waves-effect waves-button">
@@ -408,7 +485,9 @@
 
     
         题目传送门
-实现伪代码：1234for 所有的组k  ...
+实现伪代码：1234for 所有的组k    for v=V..0        for 所有的i属于组k　　　　　　f[v]=max&#123;f[v],f[v-w[i]]+c[i]&#125;
+第一次写分组背包，继续加油吧~
+代码实现：1234567891011121314151617181920212223242526#include &lt;iostream&gt;#in...
     
 
         <a href="/2018/11/11/洛谷P1757-通天之分组背包/" class="post-more waves-effect waves-button">
@@ -454,7 +533,7 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        123456789101112131415161718...
+        12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110...
     
 
         <a href="/2018/11/11/Cpp版旅行青蛙-转自洛谷/" class="post-more waves-effect waves-button">
@@ -567,6 +646,15 @@
         <footer class="footer">
     <div class="top">
         
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
 
         <p>
             
@@ -576,8 +664,10 @@
         </p>
     </div>
     <div class="bottom">
-        <p><span>书海扬帆 &copy; 2018</span>
+        <p><span>书海扬帆 &copy; 2017 - 2018</span>
             <span>
+                
+                <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备17041994号-1</a><br>
                 
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
             </span>
@@ -590,21 +680,106 @@
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ljhedp.github.io/page/6/&title=书海扬帆&pic=https://ljhedp.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ljhedp.github.io/page/6/&title=书海扬帆&source=分享学习经验、学习方法和学习历程" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ljhedp.github.io/page/6/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=书海扬帆&url=https://ljhedp.github.io/page/6/&via=https://ljhedp.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ljhedp.github.io/page/6/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAB1UlEQVR42u3aQW7DMAwEwPz/0+m1QGt7V4SEIBidCleVxz0QFMnXK17vX+vqt8nOfM9o4eLijrnv23W15y80/4zk/MtPwsXFPchtw9PVcffP78+/N+Di4n4yN6EkH4mLi/ut3OI1t8ELFxf3M7nJ5eT+r9rCx/a7Gi4u7oCbVyn3/bylvouLi7vEfQ/WpKGy+EZcXNwj3PviRXKZSa5GyZMi0cHFxd3MbYck8sJo0ljNS6v1/wwXF3czdy2Q5S3V5ApUBDJcXNwxd23kIk+D1uhFgoWLi7uBmw9YrLVDJq2Xh24wLi7ucW7ypC15zMumuLi4Z7h5arJWMJ3sLG5CuLi4B7lt86M9MynC/rMHFxf3IDcvXLYBrk2YHt6Ci4u7mVsHkfjqUkx/xJ+Hi4t7hpuHp7VBisnJD90eXFzcbdw6G1oaxsovRUUIw8XF3cYtEotyqGJSJC3yMlxc3A3ctTZnXmBtyyLR1BguLu5mbtvZzENeO5wxGePAxcXdwW2D1xo0D3kPExe4uLgHuWv1hzYYta3cy1oOLi7ux3DnLZOWPgpkuLi4R7htaWOtLPIQtXBxcQ9y8xGrpLLSpjJFCRUXF/cIt04y4sQlb8QmVylcXNwj3B+6aU3Un2k/SAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: , REWARD: false };
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
 
 </script>
 
-<script src="/js/main.min.js?v=1.7.2"></script>
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
 
 
 
 
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '( • ̀ω•́ )✧Where are you now~';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'ヾ(ﾟ∀ﾟゞ)欢迎回来！';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
 
 
 
