@@ -13,28 +13,28 @@
     
     
     
-    <link rel="canonical" href="https://www.ljhedp.cn/2018/11/17/三角函数公式整理/">
+    <link rel="canonical" href="https://www.ljhedp.cn/2018/11/22/网络流入门——基本概念及定理，最大流，最小费用最大流/">
     
     
-    <title>三角函数公式整理 | 书海扬帆 | 主攻IT，兼修数理，酷爱文史，沉迷学习。</title>
+    <title>网络流入门——基本概念及定理，最大流，最小费用最大流 | 书海扬帆 | 主攻IT，兼修数理，酷爱文史，沉迷学习。</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="数学竞赛,学习笔记,三角函数">
-    <meta name="description" content="“代数繁，几何难，三角公式记不完……”  之前学三角函数的时候一直没好好背公式，导致题目做得乱七八糟。尽管公式比较多，但细细数来也就那么六七十个，还是可以记住的。这里就做一个整理，边用电脑录入边背。 我是这样理解背三角函数的公式的：虽然可以全部不背，要用的时候自己动手推出来，但是速度显然慢了。就像浏览器的缓存一样，提前加载好网页上的图片、css等文件，访问速度一下子就快了很多。 三角函数的意义\">
-<meta name="keywords" content="数学竞赛,学习笔记,三角函数">
+    <meta name="keywords" content="学习笔记,模板,网络流">
+    <meta name="description" content="Intro.本文着重介绍网络流的一些基本概念和定理，以及最大流、费用流的基本模型。详细的例题解析以及更加深入的探究会在后文提及。本文适合网络流初学者。  要学会网络流，你需要掌握：  图论基本知识 图的存储、遍历">
+<meta name="keywords" content="学习笔记,模板,网络流">
 <meta property="og:type" content="article">
-<meta property="og:title" content="三角函数公式整理">
-<meta property="og:url" content="https://ljhedp.github.io/2018/11/17/三角函数公式整理/index.html">
+<meta property="og:title" content="网络流入门——基本概念及定理，最大流，最小费用最大流">
+<meta property="og:url" content="https://ljhedp.github.io/2018/11/22/网络流入门——基本概念及定理，最大流，最小费用最大流/index.html">
 <meta property="og:site_name" content="书海扬帆">
-<meta property="og:description" content="“代数繁，几何难，三角公式记不完……”  之前学三角函数的时候一直没好好背公式，导致题目做得乱七八糟。尽管公式比较多，但细细数来也就那么六七十个，还是可以记住的。这里就做一个整理，边用电脑录入边背。 我是这样理解背三角函数的公式的：虽然可以全部不背，要用的时候自己动手推出来，但是速度显然慢了。就像浏览器的缓存一样，提前加载好网页上的图片、css等文件，访问速度一下子就快了很多。 三角函数的意义\">
+<meta property="og:description" content="Intro.本文着重介绍网络流的一些基本概念和定理，以及最大流、费用流的基本模型。详细的例题解析以及更加深入的探究会在后文提及。本文适合网络流初学者。  要学会网络流，你需要掌握：  图论基本知识 图的存储、遍历">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-18T10:15:06.000Z">
+<meta property="og:updated_time" content="2018-11-22T11:47:18.434Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="三角函数公式整理">
-<meta name="twitter:description" content="“代数繁，几何难，三角公式记不完……”  之前学三角函数的时候一直没好好背公式，导致题目做得乱七八糟。尽管公式比较多，但细细数来也就那么六七十个，还是可以记住的。这里就做一个整理，边用电脑录入边背。 我是这样理解背三角函数的公式的：虽然可以全部不背，要用的时候自己动手推出来，但是速度显然慢了。就像浏览器的缓存一样，提前加载好网页上的图片、css等文件，访问速度一下子就快了很多。 三角函数的意义\">
+<meta name="twitter:title" content="网络流入门——基本概念及定理，最大流，最小费用最大流">
+<meta name="twitter:description" content="Intro.本文着重介绍网络流的一些基本概念和定理，以及最大流、费用流的基本模型。详细的例题解析以及更加深入的探究会在后文提及。本文适合网络流初学者。  要学会网络流，你需要掌握：  图论基本知识 图的存储、遍历">
     
         <link rel="alternate" type="application/atom+xml" title="书海扬帆" href="/atom.xml">
     
@@ -129,7 +129,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">三角函数公式整理</div>
+        <div class="flex-col header-title ellipsis">网络流入门——基本概念及定理，最大流，最小费用最大流</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -151,15 +151,15 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">三角函数公式整理</h1>
+        <h1 class="title">网络流入门——基本概念及定理，最大流，最小费用最大流</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-11-17T08:03:02.000Z" itemprop="datePublished" class="page-time">
-  2018-11-17
+                <time datetime="2018-11-22T10:10:36.000Z" itemprop="datePublished" class="page-time">
+  2018-11-22
 </time>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/数学竞赛/">数学竞赛</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/信息学竞赛-OI/">信息学竞赛(OI)</a></li></ul>
 
             
         </h5>
@@ -176,20 +176,20 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三角函数的意义"><span class="post-toc-number">1.</span> <span class="post-toc-text">三角函数的意义</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三角函数与π"><span class="post-toc-number">2.</span> <span class="post-toc-text">三角函数与π</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Intro"><span class="post-toc-number">1.</span> <span class="post-toc-text">Intro.</span></a></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-三角函数公式整理" class="post-article article-type-post fade" itemprop="blogPost">
+<article id="post-网络流入门——基本概念及定理，最大流，最小费用最大流" class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">三角函数公式整理</h1>
+        <h1 class="post-card-title">网络流入门——基本概念及定理，最大流，最小费用最大流</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-11-17 16:03:02" datetime="2018-11-17T08:03:02.000Z" itemprop="datePublished">2018-11-17</time>
+            <time class="post-time" title="2018-11-22 18:10:36" datetime="2018-11-22T10:10:36.000Z" itemprop="datePublished">2018-11-22</time>
 
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/数学竞赛/">数学竞赛</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/信息学竞赛-OI/">信息学竞赛(OI)</a></li></ul>
 
 
 
@@ -201,43 +201,14 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <blockquote>
-<p>“代数繁，几何难，三角公式记不完……”</p>
+            <h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro."></a>Intro.</h2><p>本文着重介绍网络流的一些基本概念和定理，以及最大流、费用流的基本模型。详细的例题解析以及更加深入的探究会在后文提及。本文适合网络流初学者。</p>
+<blockquote>
+<p>要学会网络流，你需要掌握：</p>
+<ul>
+<li>图论基本知识</li>
+<li>图的存储、遍历</li>
+</ul>
 </blockquote>
-<p>之前学三角函数的时候一直没好好背公式，导致题目做得乱七八糟。尽管公式比较多，但细细数来也就那么六七十个，还是可以记住的。这里就做一个整理，边用电脑录入边背。</p>
-<p>我是这样理解背三角函数的公式的：虽然可以全部不背，要用的时候自己动手推出来，但是速度显然慢了。就像浏览器的缓存一样，提前加载好网页上的图片、css等文件，访问速度一下子就快了很多。</p>
-<h2 id="三角函数的意义"><a href="#三角函数的意义" class="headerlink" title="三角函数的意义"></a>三角函数的意义</h2><script type="math/tex; mode=display">\sin A=\frac{y}{r}</script><script type="math/tex; mode=display">\cos A=\frac{x}{r}</script><script type="math/tex; mode=display">\tan A=\frac{y}{x}</script><script type="math/tex; mode=display">\cot A=\frac{x}{y}</script><script type="math/tex; mode=display">\sin^2 \alpha + \cos ^2 \alpha=1</script><script type="math/tex; mode=display">\tan \alpha=\frac{\sin \alpha}{\cos \alpha}</script><script type="math/tex; mode=display">\cot \alpha= \frac{1}{\tan \alpha}</script><h2 id="三角函数与π"><a href="#三角函数与π" class="headerlink" title="三角函数与π"></a>三角函数与π</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">$\sin(\alpha+2k\pi)=sin \alpha$</th>
-<th style="text-align:center">$\cos(\alpha+2k\pi)=\cos \alpha$</th>
-<th style="text-align:center">$\tan(\alpha+2k\pi)=\tan \alpha$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">$\sin(-\alpha)=-\sin \alpha$</td>
-<td style="text-align:center">$\cos(-\alpha)=-\cos \alpha$</td>
-<td style="text-align:center">$\tan(-\alpha)=-\tan \alpha$</td>
-</tr>
-<tr>
-<td style="text-align:center">$\sin(\pi-\alpha)=-\sin \alpha$</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
-</table>
-</div>
 
         </div>
 
@@ -246,7 +217,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-11-18T10:15:06.000Z" itemprop="dateUpdated">2018-11-18 18:15:06</time>
+    最后更新时间：<time datetime="2018-11-22T11:47:18.434Z" itemprop="dateUpdated">2018-11-22 19:47:18</time>
 </span><br>
 
 
@@ -272,7 +243,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/三角函数/">三角函数</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习笔记/">学习笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数学竞赛/">数学竞赛</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习笔记/">学习笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模板/">模板</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络流/">网络流</a></li></ul>
 
 
             
@@ -282,7 +253,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ljhedp.github.io/2018/11/17/三角函数公式整理/&title=《三角函数公式整理》 — 书海扬帆&pic=https://ljhedp.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ljhedp.github.io/2018/11/22/网络流入门——基本概念及定理，最大流，最小费用最大流/&title=《网络流入门——基本概念及定理，最大流，最小费用最大流》 — 书海扬帆&pic=https://ljhedp.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -292,22 +263,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ljhedp.github.io/2018/11/17/三角函数公式整理/&title=《三角函数公式整理》 — 书海扬帆&source=分享学习经验、学习方法和学习历程" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ljhedp.github.io/2018/11/22/网络流入门——基本概念及定理，最大流，最小费用最大流/&title=《网络流入门——基本概念及定理，最大流，最小费用最大流》 — 书海扬帆&source=分享学习经验、学习方法和学习历程" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ljhedp.github.io/2018/11/17/三角函数公式整理/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ljhedp.github.io/2018/11/22/网络流入门——基本概念及定理，最大流，最小费用最大流/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《三角函数公式整理》 — 书海扬帆&url=https://ljhedp.github.io/2018/11/17/三角函数公式整理/&via=https://ljhedp.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《网络流入门——基本概念及定理，最大流，最小费用最大流》 — 书海扬帆&url=https://ljhedp.github.io/2018/11/22/网络流入门——基本概念及定理，最大流，最小费用最大流/&via=https://ljhedp.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ljhedp.github.io/2018/11/17/三角函数公式整理/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ljhedp.github.io/2018/11/22/网络流入门——基本概念及定理，最大流，最小费用最大流/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -327,21 +298,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2018/11/22/网络流入门——基本概念及定理，最大流，最小费用最大流/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">网络流入门——基本概念及定理，最大流，最小费用最大流</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/11/17/快速傅里叶变换（FFT）学习笔记/" id="post-next" class="post-nav-link">
+      <a href="/2018/11/17/三角函数公式整理/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">快速傅里叶变换（FFT）学习笔记</h4>
+        <h4 class="title">三角函数公式整理</h4>
       </a>
     </div>
   
@@ -463,7 +427,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ljhedp.github.io/2018/11/17/三角函数公式整理/&title=《三角函数公式整理》 — 书海扬帆&pic=https://ljhedp.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ljhedp.github.io/2018/11/22/网络流入门——基本概念及定理，最大流，最小费用最大流/&title=《网络流入门——基本概念及定理，最大流，最小费用最大流》 — 书海扬帆&pic=https://ljhedp.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -473,22 +437,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ljhedp.github.io/2018/11/17/三角函数公式整理/&title=《三角函数公式整理》 — 书海扬帆&source=分享学习经验、学习方法和学习历程" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ljhedp.github.io/2018/11/22/网络流入门——基本概念及定理，最大流，最小费用最大流/&title=《网络流入门——基本概念及定理，最大流，最小费用最大流》 — 书海扬帆&source=分享学习经验、学习方法和学习历程" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ljhedp.github.io/2018/11/17/三角函数公式整理/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ljhedp.github.io/2018/11/22/网络流入门——基本概念及定理，最大流，最小费用最大流/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《三角函数公式整理》 — 书海扬帆&url=https://ljhedp.github.io/2018/11/17/三角函数公式整理/&via=https://ljhedp.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《网络流入门——基本概念及定理，最大流，最小费用最大流》 — 书海扬帆&url=https://ljhedp.github.io/2018/11/22/网络流入门——基本概念及定理，最大流，最小费用最大流/&via=https://ljhedp.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ljhedp.github.io/2018/11/17/三角函数公式整理/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ljhedp.github.io/2018/11/22/网络流入门——基本概念及定理，最大流，最小费用最大流/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -499,7 +463,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACM0lEQVR42u3aS27DMAxFUe9/0+40QGv5PkopIPFqFCS27NMBK36uC6/7Y31+8/T59/Xj3cbfL1syZMjYlnEPF3k58rp8h/FzH6kyZMhowHh6ifE1JIDy8D0O6y87y5AhQwa+hgRufqCUIUOGjLWMNIkd7yBDhgwZtSQWbbcoZH8xF5chQ8aGDF51///PX+lvyJAhYyvGHa7aUTI9CMZvJUOGjKMZPMDxY1mtnZkGXBkyZPRhkGJZOtpFfuVJLILJkCHjaEZ6vJt5DGln1lqeMmTI6MCoHfVmYh0J7nEDQIYMGc0YZFOSfPKQOt8KlSFDxtkMXhpbNaJRa2Eua23KkCFjQ8ZMEORtAHJvCvgjiZUhQ8bRjPRIVyuikcBdbCHIkCHjUAYpgaVBNq2GkV9f3kGGDBnNGDyVTQdP1w5byJAhow8jPeRd4aqNa5CA/vgHkiFDxnGMtHmZjqvylLU2ZiFDhowOjHQkIn1MiuHJ7UvVUIYMGYcyeCPz2+MUcaiVIUNGG0baGFh1TKwlw8WjoQwZMg5i8PbA/LgGb0igLocMGTIaMHj440fJtNxG7mWnRRkyZJzAuMNF8LVhi7TkJ0OGjD6MWpBNi3F8vIynrGlzQoYMGbsz0ofxFx0/eKao95jEypAh42hGWo5P71p17EMzIzJkyGjP4GG3ljCnrVAZMmTIqAVfHlLT0t7i/xsyZMjYisHDH2HXklLSsJQhQ0ZPBt80LZytTYwXNDVlyJCxH+MHQUgsuoHs2z8AAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAAD50lEQVR42u3aSXLbQBAEQP7/0/TVERbAqu6BzEPixICwzCQOrV5er/h4/3X8e/7q+vwJV3+9ujc/83riwIEDBw4c8VavFne/3Jbm/pr73/crTLA+fAAcOHDgwHGIo13ijGaGkgTvWdDFgQMHDhzfwJGHxtlb2sDcrhAHDhw4cHwbRxvekvJf+xnareLAgQMHjt/nyEtvsxQrZ03Wlqz88VopDhw4cOBII92qLfSdvx+Z78CBAwcOHHEY26Re+V33VyYBOEnPit3hwIEDB45DgaLdanJXngqeesLsXThw4MCB4yzHvnhXqJdFurx91YbSy73gwIEDB44HOJLzyVhAu5kkbUtWMrvrMtDiwIEDB46SY1aGy5O3WSrVJof5XdGOcODAgQPHgmNTwpsFztlW2yGGYbsLBw4cOHA8xpEnY7O0rR1raHGTpBQHDhw4cDzBkd88K8+9F0eOtf+QOHDgwIHjFMcmICXDCm0ozct5yZXJ838oDuLAgQMHjgXHJnDutzR7WpLUtWcO/B+BAwcOHDji7e2bPe0S26C+/8A4cODAgeMsR7uBtlGU881CZpLIRc0wHDhw4MDxAEe7iDy8ta2jWZrXNqsO1Epx4MCBA0dZGcv7/nVrp3xLW7JcHThw4MCB4wGCfDOzct79AESSOp5aPw4cOHDgeI6jHVDbpHb70mE7QvHhXThw4MCB4xDHfshgVoZLzs9Sx+E/Cjhw4MCB4xBHm+q0TZ1ZsW/2tFlJEQcOHDhwnOV4osnUFgrbMuIsYH8I5zhw4MCB4xBHi1IX3eJFt2nkZiTih5XjwIEDB441x2bzbaDNk7E8YLdJ5nCoDgcOHDhwlBz5cEA7sjYrEW6GFfL3Xq4cBw4cOHCsOfJkLCnq5a9vWdvCYjtygQMHDhw4znLMcr52JGJTLpxdOfu0OHDgwIFjz9E2kFqUtkS4P98Gexw4cODAsefYFPuSJGpT1JtteFY6fLURHgcOHDhwjCpgs9QoL+G1lPn1yTDE5Vtw4MCBA8eCI0+rZgTtoMMMPR+M+PAEHDhw4MBxiGPWgsojed7K2revVk0yHDhw4MCx5sjTnhwuKS+2oxLtvEHy5MszOHDgwIFjwfEuj8K4TAJnA3DtR3rN4jAOHDhw4Ig58qNNk9riXZL+5aCz5+PAgQMHjlMcecsnT8ZOBcL2/IFAiwMHDhw4DnG0ITMfg5iVBZ8rO364HgcOHDhw/FeOTTPpFHdeNIyCLg4cOHDg+HWO2Qhd/rR8M7MEbziKjQMHDhw4So68wZOErjb4zQqLsyccazvhwIEDB444i9k8Ik+3ZnyngGYpKA4cOHDguF3bH4uorpH2wlWhAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
