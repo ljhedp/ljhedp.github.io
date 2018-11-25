@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ljhedp.github.io/"/>
-  <updated>2018-11-22T11:47:18.434Z</updated>
+  <updated>2018-11-25T15:03:24.769Z</updated>
   <id>https://ljhedp.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>线段树-洛谷P1204-挤牛奶</title>
+    <link href="https://ljhedp.github.io/2018/11/25/%E7%BA%BF%E6%AE%B5%E6%A0%91-%E6%B4%9B%E8%B0%B7P1204-%E6%8C%A4%E7%89%9B%E5%A5%B6/"/>
+    <id>https://ljhedp.github.io/2018/11/25/线段树-洛谷P1204-挤牛奶/</id>
+    <published>2018-11-25T14:56:41.000Z</published>
+    <updated>2018-11-25T15:03:24.769Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>三个农民每天清晨5点起床，然后去牛棚给3头牛挤奶。第一个农民在300秒(从5点开始计时)给他的牛挤奶，一直到1000秒。第二个农民在700秒开始，在 1200秒结束。第三个农民在1500秒开始2100秒结束。期间最长的至少有一个农民在挤奶的连续时间为900秒(从300秒到1200秒)，而最长的无人挤奶的连续时间(从挤奶开始一直到挤奶结束)为300秒(从1200秒到1500秒)。</p><p>你的任务是编一个程序，读入一个有N个农民(1 &lt;= N &lt;= 5000)挤N头牛的工作时间列表，计算以下两点(均以秒为单位):</p><p>最长至少有一人在挤奶的时间段。</p><p>最长的无人挤奶的时间段。（从有人挤奶开始算起）</p><h2 id="输入输出格式"><a href="#输入输出格式" class="headerlink" title="输入输出格式"></a>输入输出格式</h2><p>输入格式：</p><p>Line 1:</p><p>一个整数N。</p><p>Lines 2..N+1:</p><p>每行两个小于1000000的非负整数，表示一个农民的开始时刻与结束时刻。</p><p>输出格式：</p><p>一行，两个整数，即题目所要求的两个答案。</p><h2 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h2><p>输入样例#1：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">300 1000</span><br><span class="line">700 1200</span><br><span class="line">1500 2100</span><br></pre></td></tr></table></figure><p>输出样例#1：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">900 300</span><br></pre></td></tr></table></figure><h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><p>USA Cow Olympiad的题目真是优质…</p><p>开始想到拿一个桶模拟，但是数据范围太大，于是拿线段树来做。</p><p>我们把每个时间段转化成一个点，每个点的值即为长度。我们把有人挤奶的时间段记为正数，无人挤奶的时间段记为负数，问题就转化为了求解区间最大值与区间最小值。</p><p>将每个时间段按照左端点排序存储到线段树中，只需要建树即可，最后的答案为所有点的最大值与所有点的最小值。</p><p>注意给最小值赋初值的时候要与0取一遍最小值，否则只有1个时间段的时候最小值就会变为正数，影响到解法的正确性。</p><p>细节不少，详情请见代码。</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">5050</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mid ((l+r)&gt;&gt;1)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lson rt&lt;&lt;1,l,mid</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rson rt&lt;&lt;1|1,mid+1,r</span></span><br><span class="line"><span class="keyword">int</span> minn[maxn&lt;&lt;<span class="number">2</span>],maxx[maxn&lt;&lt;<span class="number">2</span>],z[maxn&lt;&lt;<span class="number">2</span>];</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">tim</span> &#123;</span></span><br><span class="line"><span class="keyword">int</span> l,r;</span><br><span class="line">&#125;t[maxn];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(tim p,tim q)</span> </span>&#123;</span><br><span class="line"><span class="keyword">return</span> p.l&lt;q.l;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">pushup</span><span class="params">(<span class="keyword">int</span> rt)</span> </span>&#123;</span><br><span class="line">minn[rt]=min(minn[rt&lt;&lt;<span class="number">1</span>],minn[rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>]);</span><br><span class="line">maxx[rt]=max(maxx[rt&lt;&lt;<span class="number">1</span>],maxx[rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> rt,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line"><span class="keyword">if</span>(l==r) &#123;</span><br><span class="line">minn[rt]=min(<span class="number">0</span>,z[l]);</span><br><span class="line">maxx[rt]=z[l];</span><br><span class="line"><span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br><span class="line">build(lson);build(rson);pushup(rt);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> cnt;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">cin</span>&gt;&gt;t[i].l&gt;&gt;t[i].r;</span><br><span class="line">sort(t+<span class="number">1</span>,t+n+<span class="number">1</span>,cmp);</span><br><span class="line"><span class="keyword">int</span> L=t[<span class="number">1</span>].l;</span><br><span class="line"><span class="keyword">int</span> R=t[<span class="number">1</span>].r;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) &#123;</span><br><span class="line"><span class="keyword">if</span>(t[i].l&lt;=R &amp;&amp; t[i].r&gt;R) R=t[i].r;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(t[i].r&lt;=R &amp;&amp; t[i].l&gt;L) <span class="keyword">continue</span>;</span><br><span class="line"><span class="keyword">else</span> &#123;</span><br><span class="line">z[++cnt]=R-L;</span><br><span class="line">z[++cnt]=-(t[i].l-R);</span><br><span class="line">L=t[i].l;R=t[i].r;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">z[++cnt]=R-L;</span><br><span class="line">build(<span class="number">1</span>,<span class="number">1</span>,cnt);</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;maxx[<span class="number">1</span>]&lt;&lt;<span class="string">' '</span>&lt;&lt;-minn[<span class="number">1</span>]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;p&gt;三个农民每天清晨5点起床，然后去牛棚给3头牛挤奶。第一个农民在300秒(从5点开始计时)给他的牛挤奶，一直到1000秒。第二
+      
+    
+    </summary>
+    
+      <category term="信息学竞赛(OI)" scheme="https://ljhedp.github.io/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B-OI/"/>
+    
+    
+      <category term="模拟" scheme="https://ljhedp.github.io/tags/%E6%A8%A1%E6%8B%9F/"/>
+    
+      <category term="线段树" scheme="https://ljhedp.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
+    
+  </entry>
   
   <entry>
     <title>网络流入门——基本概念及定理，最大流，最小费用最大流</title>
@@ -537,41 +564,6 @@
       <category term="Prim" scheme="https://ljhedp.github.io/tags/Prim/"/>
     
       <category term="Kruscal" scheme="https://ljhedp.github.io/tags/Kruscal/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>KMP算法与后缀数组的基本知识</title>
-    <link href="https://ljhedp.github.io/2018/11/11/KMP%E7%AE%97%E6%B3%95%E4%B8%8E%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/"/>
-    <id>https://ljhedp.github.io/2018/11/11/KMP算法与后缀数组的基本知识/</id>
-    <published>2018-11-11T13:30:16.000Z</published>
-    <updated>2018-11-11T13:30:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>整理一下新学期的笔记。</p><p>KMP算法和后缀数组算法都是用于字符串匹配。即：给定两个字符串，寻找其中一个字符串是否包含另一个字符串，如果包含，返回包含的起始位置。</p><p>我们可以利用KMP/后缀数组构建一个简单的搜索引擎。</p><ul>     <li><a href="http://blog.csdn.net/starstar1992/article/details/54913261" target="_blank" rel="noopener">KMP算法讲解</a></li>     <li><a href="https://cdn.ljhedp.cn/site-file/2018/03/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84%E2%80%94%E2%80%94%E5%A4%84%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9C%89%E5%8A%9B%E5%B7%A5%E5%85%B7.pdf" target="_blank" rel="noopener">后缀数组的基本概念及应用（国家集训队论文）</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;整理一下新学期的笔记。&lt;/p&gt;
-&lt;p&gt;KMP算法和后缀数组算法都是用于字符串匹配。即：给定两个字符串，寻找其中一个字符串是否包含另一个字符串，如果包含，返回包含的起始位置。&lt;/p&gt;
-&lt;p&gt;我们可以利用KMP/后缀数组构建一个简单的搜索引擎。&lt;/p&gt;
-&lt;ul&gt;
-     &lt;l
-      
-    
-    </summary>
-    
-      <category term="信息学竞赛(OI)" scheme="https://ljhedp.github.io/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B-OI/"/>
-    
-    
-      <category term="学习笔记" scheme="https://ljhedp.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="KMP" scheme="https://ljhedp.github.io/tags/KMP/"/>
-    
-      <category term="后缀数组" scheme="https://ljhedp.github.io/tags/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/"/>
-    
-      <category term="字符串" scheme="https://ljhedp.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
