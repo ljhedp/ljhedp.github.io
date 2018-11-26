@@ -22,19 +22,19 @@
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="">
-    <meta name="description" content="分享学习经验、学习方法和学习历程">
-<meta name="keywords" content="博客,代码,分享,日志,生活,信息学竞赛,NOIP,C++,前端开发,学生">
+    <meta name="keywords" content="学习笔记,模板,线性基">
+    <meta name="description" content="题目描述给定n个整数（数字可能重复），求在这些数中选取任意个，使得他们的异或和最大。 异或的一些性质$xor$函数的运算规则可以用一句话简要概括——相同为1，不同为0.     $xor$ 1 0     1 1 0   0 0 1     因为相同的数异或等于0，因此我们来思考这样一个有趣的问题： 给你一串数字，有些数出现了2次，其中只有一个数只出现了1次。求只出现1次的数是多少。 我们根据相同">
+<meta name="keywords" content="学习笔记,模板,线性基">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性基学习笔记">
 <meta property="og:url" content="https://ljhedp.github.io/2018/11/16/线性基学习笔记/index.html">
 <meta property="og:site_name" content="书海扬帆">
-<meta property="og:description" content="分享学习经验、学习方法和学习历程">
+<meta property="og:description" content="题目描述给定n个整数（数字可能重复），求在这些数中选取任意个，使得他们的异或和最大。 异或的一些性质$xor$函数的运算规则可以用一句话简要概括——相同为1，不同为0.     $xor$ 1 0     1 1 0   0 0 1     因为相同的数异或等于0，因此我们来思考这样一个有趣的问题： 给你一串数字，有些数出现了2次，其中只有一个数只出现了1次。求只出现1次的数是多少。 我们根据相同">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-18T10:15:02.000Z">
+<meta property="og:updated_time" content="2018-11-26T15:02:51.372Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性基学习笔记">
-<meta name="twitter:description" content="分享学习经验、学习方法和学习历程">
+<meta name="twitter:description" content="题目描述给定n个整数（数字可能重复），求在这些数中选取任意个，使得他们的异或和最大。 异或的一些性质$xor$函数的运算规则可以用一句话简要概括——相同为1，不同为0.     $xor$ 1 0     1 1 0   0 0 1     因为相同的数异或等于0，因此我们来思考这样一个有趣的问题： 给你一串数字，有些数出现了2次，其中只有一个数只出现了1次。求只出现1次的数是多少。 我们根据相同">
     
         <link rel="alternate" type="application/atom+xml" title="书海扬帆" href="/atom.xml">
     
@@ -173,6 +173,13 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#题目描述"><span class="post-toc-number">1.</span> <span class="post-toc-text">题目描述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#异或的一些性质"><span class="post-toc-number">2.</span> <span class="post-toc-text">异或的一些性质</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#线性基问题的解法"><span class="post-toc-number">3.</span> <span class="post-toc-text">线性基问题的解法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#定义"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">定义</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
 
 <article id="post-线性基学习笔记" class="post-article article-type-post fade" itemprop="blogPost">
 
@@ -194,7 +201,37 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>给定n个整数（数字可能重复），求在这些数中选取任意个，使得他们的异或和最大。</p>
+<h2 id="异或的一些性质"><a href="#异或的一些性质" class="headerlink" title="异或的一些性质"></a>异或的一些性质</h2><p>$xor$函数的运算规则可以用一句话简要概括——相同为1，不同为0.</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$xor$</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>1</strong></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>0</strong></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>因为相同的数异或等于0，因此我们来思考这样一个有趣的问题：</p>
+<p>给你一串数字，有些数出现了2次，其中只有一个数只出现了1次。求只出现1次的数是多少。</p>
+<p>我们根据相同的数异或等于0这个性质，只需<strong>从头到尾异或一遍</strong>，即可找出那个数。</p>
+<p>（这个性质好像在洛谷上有一道题，但是题号忘记了）</p>
+<h2 id="线性基问题的解法"><a href="#线性基问题的解法" class="headerlink" title="线性基问题的解法"></a>线性基问题的解法</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>对于一组数$a_1,a_2,…,a_n$，它们的线性基为</p>
+
         </div>
 
         <blockquote class="post-copyright">
@@ -202,7 +239,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-11-18T10:15:02.000Z" itemprop="dateUpdated">2018-11-18 18:15:02</time>
+    最后更新时间：<time datetime="2018-11-26T15:02:51.372Z" itemprop="dateUpdated">2018-11-26 23:02:51</time>
 </span><br>
 
 
@@ -228,6 +265,8 @@
 
         <div class="post-footer">
             
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习笔记/">学习笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模板/">模板</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/线性基/">线性基</a></li></ul>
+
 
             
 <div class="page-share-wrap">
