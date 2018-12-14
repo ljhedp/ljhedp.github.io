@@ -13,28 +13,28 @@
     
     
     
-    <link rel="canonical" href="https://www.ljhedp.cn/2018/07/08/2018暑期训练题及其详解（持续更新中）/">
+    <link rel="canonical" href="https://www.ljhedp.cn/2018/11/11/快速乘（龟速乘）学习笔记/">
     
     
-    <title>2018暑期训练题及其详解（持续更新中） | 书海扬帆 | 主攻IT，兼修数理，酷爱文史，沉迷学习。</title>
+    <title>快速乘（龟速乘）学习笔记 | 书海扬帆 | 主攻IT，兼修数理，酷爱文史，沉迷学习。</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="校内训练,学习笔记">
-    <meta name="description" content="NOIP普及组第四题[PJ2016]洛谷P2119 魔法阵[PJ2015]洛谷P2672 推销员[PJ2014]洛谷P2258 子矩阵[PJ2013]洛谷P1983 车站分级[PJ2012]洛谷P1078 文化之旅[PJ2011]洛谷P1310 表达式的值[PJ2010]洛谷P1199 三国游戏[PJ2009]洛谷P1070 道路游戏 省选/USACO/部分模板洛谷P2168 [NOI2015]荷">
-<meta name="keywords" content="校内训练,学习笔记">
+    <meta name="keywords" content="学习笔记,数论">
+    <meta name="description" content="要解决的问题给定a,b,求a*b\mod c.如果用常规的乘法运算和取余运算，可能会爆$int$或者爆$long \ long$.所以有什么好的方法呢？ 模型构建和快速幂一样的思路，用分治。 模板代码（快速乘+快速乘实现的快速幂）12345678910111213141516171819202122232425typedef long long ll;ll qmul(ll a,ll b,ll mo">
+<meta name="keywords" content="学习笔记,数论">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2018暑期训练题及其详解（持续更新中）">
-<meta property="og:url" content="https://ljhedp.github.io/2018/07/08/2018暑期训练题及其详解（持续更新中）/index.html">
+<meta property="og:title" content="快速乘（龟速乘）学习笔记">
+<meta property="og:url" content="https://ljhedp.github.io/2018/11/11/快速乘（龟速乘）学习笔记/index.html">
 <meta property="og:site_name" content="书海扬帆">
-<meta property="og:description" content="NOIP普及组第四题[PJ2016]洛谷P2119 魔法阵[PJ2015]洛谷P2672 推销员[PJ2014]洛谷P2258 子矩阵[PJ2013]洛谷P1983 车站分级[PJ2012]洛谷P1078 文化之旅[PJ2011]洛谷P1310 表达式的值[PJ2010]洛谷P1199 三国游戏[PJ2009]洛谷P1070 道路游戏 省选/USACO/部分模板洛谷P2168 [NOI2015]荷">
+<meta property="og:description" content="要解决的问题给定a,b,求a*b\mod c.如果用常规的乘法运算和取余运算，可能会爆$int$或者爆$long \ long$.所以有什么好的方法呢？ 模型构建和快速幂一样的思路，用分治。 模板代码（快速乘+快速乘实现的快速幂）12345678910111213141516171819202122232425typedef long long ll;ll qmul(ll a,ll b,ll mo">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-11T12:44:14.000Z">
+<meta property="og:updated_time" content="2018-12-09T13:33:23.092Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2018暑期训练题及其详解（持续更新中）">
-<meta name="twitter:description" content="NOIP普及组第四题[PJ2016]洛谷P2119 魔法阵[PJ2015]洛谷P2672 推销员[PJ2014]洛谷P2258 子矩阵[PJ2013]洛谷P1983 车站分级[PJ2012]洛谷P1078 文化之旅[PJ2011]洛谷P1310 表达式的值[PJ2010]洛谷P1199 三国游戏[PJ2009]洛谷P1070 道路游戏 省选/USACO/部分模板洛谷P2168 [NOI2015]荷">
+<meta name="twitter:title" content="快速乘（龟速乘）学习笔记">
+<meta name="twitter:description" content="要解决的问题给定a,b,求a*b\mod c.如果用常规的乘法运算和取余运算，可能会爆$int$或者爆$long \ long$.所以有什么好的方法呢？ 模型构建和快速幂一样的思路，用分治。 模板代码（快速乘+快速乘实现的快速幂）12345678910111213141516171819202122232425typedef long long ll;ll qmul(ll a,ll b,ll mo">
     
         <link rel="alternate" type="application/atom+xml" title="书海扬帆" href="/atom.xml">
     
@@ -129,7 +129,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">2018暑期训练题及其详解（持续更新中）</div>
+        <div class="flex-col header-title ellipsis">快速乘（龟速乘）学习笔记</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -151,11 +151,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">2018暑期训练题及其详解（持续更新中）</h1>
+        <h1 class="title">快速乘（龟速乘）学习笔记</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-07-08T12:43:18.000Z" itemprop="datePublished" class="page-time">
-  2018-07-08
+                <time datetime="2018-11-11T08:35:27.000Z" itemprop="datePublished" class="page-time">
+  2018-11-11
 </time>
 
 
@@ -176,17 +176,17 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#NOIP普及组第四题"><span class="post-toc-number">1.</span> <span class="post-toc-text">NOIP普及组第四题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#省选-USACO-部分模板"><span class="post-toc-number">2.</span> <span class="post-toc-text">省选/USACO/部分模板</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#APIO"><span class="post-toc-number">3.</span> <span class="post-toc-text">APIO</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#要解决的问题"><span class="post-toc-number">1.</span> <span class="post-toc-text">要解决的问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#模型构建"><span class="post-toc-number">2.</span> <span class="post-toc-text">模型构建</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#模板代码（快速乘-快速乘实现的快速幂）"><span class="post-toc-number">3.</span> <span class="post-toc-text">模板代码（快速乘+快速乘实现的快速幂）</span></a></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-2018暑期训练题及其详解（持续更新中）" class="post-article article-type-post fade" itemprop="blogPost">
+<article id="post-快速乘（龟速乘）学习笔记" class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">2018暑期训练题及其详解（持续更新中）</h1>
+        <h1 class="post-card-title">快速乘（龟速乘）学习笔记</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-07-08 20:43:18" datetime="2018-07-08T12:43:18.000Z" itemprop="datePublished">2018-07-08</time>
+            <time class="post-time" title="2018-11-11 16:35:27" datetime="2018-11-11T08:35:27.000Z" itemprop="datePublished">2018-11-11</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/信息学竞赛-OI/">信息学竞赛(OI)</a></li></ul>
@@ -201,9 +201,9 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="NOIP普及组第四题"><a href="#NOIP普及组第四题" class="headerlink" title="NOIP普及组第四题"></a>NOIP普及组第四题</h2><p>[PJ2016]洛谷P2119 魔法阵<br>[PJ2015]洛谷P2672 推销员<br>[PJ2014]洛谷P2258 子矩阵<br>[PJ2013]洛谷P1983 车站分级<br>[PJ2012]洛谷P1078 文化之旅<br>[PJ2011]洛谷P1310 表达式的值<br>[PJ2010]洛谷P1199 三国游戏<br>[PJ2009]洛谷P1070 道路游戏</p>
-<h2 id="省选-USACO-部分模板"><a href="#省选-USACO-部分模板" class="headerlink" title="省选/USACO/部分模板"></a>省选/USACO/部分模板</h2><p>洛谷P2168 [NOI2015]荷马史诗<br>洛谷P4092 [HEOI2016/TJOI2016]树<br>洛谷P4206 [NOI2005]聪聪与可可<br>洛谷P3623 [APIO2008]免费道路<br>洛谷P3628 [APIO2010]特别行动队<br>洛谷P2587 [ZJOI2008]泡泡堂<br>洛谷P2585 [ZJOI2006]三色二叉树<br>洛谷P2601 [ZJOI2009]对称的正方形<br>洛谷P1879 [USACO06NOV]玉米田Corn Fields<br>洛谷P1119 灾后重建<br>洛谷P3645 [APIO2015]雅加达的摩天楼<br>洛谷P2261 [CQOI2007]余数求和<br>洛谷P2341 [HAOI2006]受欢迎的牛<br>洛谷P2491 [SDOI2011]消防<br>洛谷P3271 [JLOI2016]方<br>洛谷P2215 [HAOI2007]上升序列<br>洛谷P3258 [JLOI2014]松鼠的新家<br>洛谷P3243 [HNOI2015]菜肴制作<br>洛谷P1306 斐波那契公约数<br>洛谷P2577 [ZJOI2005]午餐<br>洛谷P3279 [SCOI2013]密码<br>洛谷P3335 [ZJOI2013]蚂蚁寻路<br>洛谷P3320 [SDOI2015]寻宝游戏<br>洛谷P2218 [HAOI2007]覆盖问题<br>洛谷P2486 [SDOI2011]染色<br>洛谷P1772 [ZJOI2006]物流运输<br>洛谷P4571 [JSOI2009]瓶子和燃料<br>洛谷P3758 [TJOI2017]可乐<br>洛谷P3760 [TJOI2017]异或和<br>洛谷P3761 [TJOI2017]城市<br>洛谷P1110 [ZJOI2007]报表统计<br>洛谷P1972 [SDOI2009]HH的项链<br>洛谷P3225 [HNOI2012]矿场搭建<br>洛谷P3183 [HAOI2016]食物链<br>洛谷P3182 [HAOI2016]放棋子<br>洛谷P3736 [HAOI2016]字符合并<br>洛谷P3197 [HNOI2008]越狱</p>
-<h2 id="APIO"><a href="#APIO" class="headerlink" title="APIO"></a>APIO</h2><p>洛谷P3643 [APIO2016]划艇<br>洛谷P3644 [APIO2015]八邻旁之桥<br>洛谷P3645 [APIO2015]雅加达的摩天楼<br>洛谷P3646 [APIO2015]巴厘岛的雕塑<br>洛谷P3647 [APIO2014]连珠线<br>洛谷P3648 [APIO2014]序列分割<br>洛谷P3649 [APIO2014]回文串<br>洛谷P3638 [APIO2013]机器人<br>洛谷P3639 [APIO2013]道路费用<br>洛谷P3634 [APIO2012]守卫<br>洛谷P3631 [APIO2011]方格染色<br>洛谷P3632 [APIO2011]寻路<br>洛谷P3628 [APIO2010]特别行动队<br>洛谷P3629 [APIO2010]巡逻<br>洛谷P3625 [APIO2009]采油区域<br>洛谷P3627 [APIO2009]抢掠计划</p>
+            <h2 id="要解决的问题"><a href="#要解决的问题" class="headerlink" title="要解决的问题"></a>要解决的问题</h2><p>给定<script type="math/tex">a,b,</script>求<script type="math/tex">a*b\mod c.</script><br>如果用常规的乘法运算和取余运算，可能会爆$int$或者爆$long \ long$.<br>所以有什么好的方法呢？</p>
+<h2 id="模型构建"><a href="#模型构建" class="headerlink" title="模型构建"></a>模型构建</h2><p>和快速幂一样的思路，用分治。</p>
+<h2 id="模板代码（快速乘-快速乘实现的快速幂）"><a href="#模板代码（快速乘-快速乘实现的快速幂）" class="headerlink" title="模板代码（快速乘+快速乘实现的快速幂）"></a>模板代码（快速乘+快速乘实现的快速幂）</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="function">ll <span class="title">qmul</span><span class="params">(ll a,ll b,ll mod)</span> </span>&#123;</span><br><span class="line">	<span class="comment">//a*b%mod</span></span><br><span class="line">	ll ans=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(b) &#123;</span><br><span class="line">		<span class="keyword">if</span>(b&amp;<span class="number">1</span>) ans+=a;</span><br><span class="line">		a=(a+a)%mod;</span><br><span class="line">		a%=mod;</span><br><span class="line">		ans%=mod;</span><br><span class="line">		b&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125; </span><br><span class="line"><span class="function">ll <span class="title">qpow</span><span class="params">(ll a,ll b,ll mod)</span> </span>&#123;</span><br><span class="line">	<span class="comment">//a^b%mod</span></span><br><span class="line">	ll ans=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(b) &#123;</span><br><span class="line">		<span class="keyword">if</span>(b&amp;<span class="number">1</span>) ans=qmul(ans,a,mod);</span><br><span class="line">		a=qmul(a,a,mod);</span><br><span class="line">		ans%=mod;</span><br><span class="line">		a%=mod;</span><br><span class="line">		b&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         </div>
 
@@ -212,7 +212,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-11-11T12:44:14.000Z" itemprop="dateUpdated">2018-11-11 20:44:14</time>
+    最后更新时间：<time datetime="2018-12-09T13:33:23.092Z" itemprop="dateUpdated">2018-12-09 21:33:23</time>
 </span><br>
 
 
@@ -238,7 +238,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习笔记/">学习笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/校内训练/">校内训练</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习笔记/">学习笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数论/">数论</a></li></ul>
 
 
             
@@ -248,7 +248,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ljhedp.github.io/2018/07/08/2018暑期训练题及其详解（持续更新中）/&title=《2018暑期训练题及其详解（持续更新中）》 — 书海扬帆&pic=https://ljhedp.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ljhedp.github.io/2018/11/11/快速乘（龟速乘）学习笔记/&title=《快速乘（龟速乘）学习笔记》 — 书海扬帆&pic=https://ljhedp.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -258,22 +258,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ljhedp.github.io/2018/07/08/2018暑期训练题及其详解（持续更新中）/&title=《2018暑期训练题及其详解（持续更新中）》 — 书海扬帆&source=分享学习经验、学习方法和学习历程" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ljhedp.github.io/2018/11/11/快速乘（龟速乘）学习笔记/&title=《快速乘（龟速乘）学习笔记》 — 书海扬帆&source=分享学习经验、学习方法和学习历程" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ljhedp.github.io/2018/07/08/2018暑期训练题及其详解（持续更新中）/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ljhedp.github.io/2018/11/11/快速乘（龟速乘）学习笔记/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《2018暑期训练题及其详解（持续更新中）》 — 书海扬帆&url=https://ljhedp.github.io/2018/07/08/2018暑期训练题及其详解（持续更新中）/&via=https://ljhedp.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《快速乘（龟速乘）学习笔记》 — 书海扬帆&url=https://ljhedp.github.io/2018/11/11/快速乘（龟速乘）学习笔记/&via=https://ljhedp.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ljhedp.github.io/2018/07/08/2018暑期训练题及其详解（持续更新中）/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ljhedp.github.io/2018/11/11/快速乘（龟速乘）学习笔记/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -296,18 +296,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2018/08/23/诫OIer书-反思-总结-目标-寄语/" id="post-prev" class="post-nav-link">
+      <a href="/2018/11/11/「杨辉三角-打表-二维前缀和」NOIP2016-组合数问题/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">出师表OI版-反思/总结/目标/寄语</h4>
+        <h4 class="title">「杨辉三角+打表+二维前缀和」NOIP2016-组合数问题</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/06/11/《疯狂动物城》主题曲及中文翻译/" id="post-next" class="post-nav-link">
+      <a href="/2018/11/11/轻轻地告诉你——《五三》系列图书序言/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">《疯狂动物城》主题曲及中文翻译</h4>
+        <h4 class="title">轻轻地告诉你——《五三》系列图书序言</h4>
       </a>
     </div>
   
@@ -429,7 +429,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ljhedp.github.io/2018/07/08/2018暑期训练题及其详解（持续更新中）/&title=《2018暑期训练题及其详解（持续更新中）》 — 书海扬帆&pic=https://ljhedp.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ljhedp.github.io/2018/11/11/快速乘（龟速乘）学习笔记/&title=《快速乘（龟速乘）学习笔记》 — 书海扬帆&pic=https://ljhedp.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -439,22 +439,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ljhedp.github.io/2018/07/08/2018暑期训练题及其详解（持续更新中）/&title=《2018暑期训练题及其详解（持续更新中）》 — 书海扬帆&source=分享学习经验、学习方法和学习历程" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ljhedp.github.io/2018/11/11/快速乘（龟速乘）学习笔记/&title=《快速乘（龟速乘）学习笔记》 — 书海扬帆&source=分享学习经验、学习方法和学习历程" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ljhedp.github.io/2018/07/08/2018暑期训练题及其详解（持续更新中）/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ljhedp.github.io/2018/11/11/快速乘（龟速乘）学习笔记/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《2018暑期训练题及其详解（持续更新中）》 — 书海扬帆&url=https://ljhedp.github.io/2018/07/08/2018暑期训练题及其详解（持续更新中）/&via=https://ljhedp.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《快速乘（龟速乘）学习笔记》 — 书海扬帆&url=https://ljhedp.github.io/2018/11/11/快速乘（龟速乘）学习笔记/&via=https://ljhedp.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ljhedp.github.io/2018/07/08/2018暑期训练题及其详解（持续更新中）/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ljhedp.github.io/2018/11/11/快速乘（龟速乘）学习笔记/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -465,7 +465,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADL0lEQVR42u3aS3LiQBAFQN//0szawQDvVYsIKKdWhBGtztaiXJ+fn/i63V2P/n5/T77Co/uTXf2848LGxsb+Enay9fwB97/KPz9f7dFvZ68BGxsbex87B8zYeTRJAM9fT3J82NjY2NgvwkN850lago2NjY39jgCWr/w8OZkVlbCxsbH/Mrv9Fz8PPO2GbqPrjbU0bGxs7I9nn5SKPu3zW/rb2NjY2B/MPg8S7crtHq5qHvxaARsbG3sROw8AbYE+R86eOBskwsbGxt7HTkpIbRHnpHlwVTHoRVEMGxsbexE7DxVtO7ZtHifBbNYkfrgyNjY29lL2rKDTJi35U65aGRsbG3srO1kiCTz5OnkwOy91vSgqYWNjY69gz7YetVHjx58fUJ4sYWNjY+9jt8u1QaUtVM1K/20ww8bGxt7NLmpRZWN1FvBmjecXrwobGxt7KbsNHrPglI/jJEffto0f1tKwsbGxv5adfNFufdYSPmkVtIeCjY2NvYk9G5qZNVnb7c6ONRJhY2Njr2NfUHAPGsDtWGdb0krux8bGxt7HblOCvPWbB8K2eZB/++K52NjY2KvZ7dhlEn6SsDf7tsVjY2Njb2Xn/+7nhfuTOZm25dy+JGxsbOwd7Lzcn5d7kse3I0E5KSqQYWNjYy9i1xM9I3B7NEmJKm8DX9BVwMbGxv5a9qxxmxeGkiLUbIQoOiZsbGzsFey8mJ6D23J/e4htE/o/62BjY2MvYrc/i0ZhLtrc7ClFQoKNjY29gn1S9JmlCrNsKQdHbWlsbGzsRex2FCZvBueAfPSnXb8YEsLGxsb+cvas0H8yRtOGrhZWFJWwsbGxF7FP2gB5EJqVnPIkJA912NjY2PvYs0Zvzm4Pd9YAzo8GGxsbewf7Vl55sJmFn1mAzAte2NjY2PvYbdqQpCXtxFCbVMxSmrpPgo2Njf1V7FkDNW/35iM1V6UuwwwMGxsb+8vZeWA4afeehJxZ++FFAMPGxsb+k+w8CiQpynkobV8SNjY2NnbSErg2eWiPL0qNsLGxsdex841em0LMGsmz52JjY2NvZecFmll74KSRcDLKc8HgDjY2Nvans/8Bi2FKFcM9qgMAAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACr0lEQVR42u3a0Y7bMAwEwPv/n26BPhVIk9slpeQKjJ+MOLE0CmDSpL6+4uPXn+Pv88dPHs+TTx6vJiMePvDw8PBGU392vB7g9TdfL0QykwT8+ld4eHh493ibR3PCTkgJI58zHh4e3k/gbc7bVDu/Px4eHt7/wsuT2m9S3mSKeHh4eD+SlxcRct6shJEXNQ7XWvDw8PBi3qwB9tnz6/09PDw8vFFXPX/cz9Y12XCwOfDw8PBu8DZNprYMkSTKbXkiarnh4eHhHeXlpYdZkXfWADu1rHh4eHi3ee0wycCbzVWzxP3pGwMeHh7eW3izRlTb+sqv5uEEDw8P7x5v88LfTj0vIszKIkXNGA8PD+8Qr02O8zbVpuk1mxUeHh7ePV7eiMoLvm1R+FSAqeMYHh4e3oKXN7TaiQ4bV+Xeh6fpOB4eHt6HeBvA7EHfloy/aYDh4eHhXea1KW979VQqH/0NeHh4eG/ktc37TRKcJ/T15gY8PDy8a7z2IZ4k3/vlmG1B+EdgwMPDwzvK2zzK88f0rBw8W7hvfouHh4d3iJcXYWchJA8kmwbY01Hw8PDwjvJOFSDawNACZgk6Hh4e3g3epnkfxZzyzrNCQ/sCgIeHh7fnzbZetVtd26BSNLpm9V08PDy8Na+9aV50yIsIbRyry7h4eHh4a96m3bXZqDorAePh4eH9ZN6+2X9siqMwg4eHh3ePlzefZlfbhWiXpihS4OHh4R3izQoNsyR4M932czw8PLx7vHafUtu8b5PjtrU2CyR4eHh4e17e0NpM5fWitN8pysR4eHh413ingkGeIrfLNAtjeHh4eJ/l5eDNpoTZhoMDgQEPDw/vjbx2+FnxIm+5HQ4MeHh4eE94bTGi3VjQFh3atPvpHfDw8PAu8DYNsLZ0uwkem1Hw8PDwDvF+A9dbxTpslXj3AAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
