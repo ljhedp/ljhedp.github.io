@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    
+
+    
+
+    
+
+
+
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    
+    
+    
+    <link rel="canonical" href="https://www.ljhedp.cn/post/193a2392.html">
+    
+    
+    <title>「数论+矩阵加速」洛谷P1306-斐波那契公约数 | 书海扬帆 | 主攻IT，兼修数理，酷爱文史，沉迷学习。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="数论,矩阵加速">
+    <meta name="description" content="题目描述对于$Fibonacci$数列：$1,1,2,3,5,8,13……$大家应该很熟悉吧~~~但是现在有一个很“简单”问题：第$n$项和第$m$项的最大公约数是多少？ 输入输出格式输入格式：两个正整数$n$和$m$。$(n,m&amp;lt;=10^9)$注意：数据很大 输出格式：${F_n}$和${F_m}$的最大公约数。由于看了大数字就头晕，所以只要输出最后的8位数字就可以了。 输入输出样例输入样">
+<meta name="keywords" content="数论,矩阵加速">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「数论+矩阵加速」洛谷P1306-斐波那契公约数">
+<meta property="og:url" content="https://www.ljhedp.cn/post/193a2392.html">
+<meta property="og:site_name" content="书海扬帆">
+<meta property="og:description" content="题目描述对于$Fibonacci$数列：$1,1,2,3,5,8,13……$大家应该很熟悉吧~~~但是现在有一个很“简单”问题：第$n$项和第$m$项的最大公约数是多少？ 输入输出格式输入格式：两个正整数$n$和$m$。$(n,m&amp;lt;=10^9)$注意：数据很大 输出格式：${F_n}$和${F_m}$的最大公约数。由于看了大数字就头晕，所以只要输出最后的8位数字就可以了。 输入输出样例输入样">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-22T23:53:18.638Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="「数论+矩阵加速」洛谷P1306-斐波那契公约数">
+<meta name="twitter:description" content="题目描述对于$Fibonacci$数列：$1,1,2,3,5,8,13……$大家应该很熟悉吧~~~但是现在有一个很“简单”问题：第$n$项和第$m$项的最大公约数是多少？ 输入输出格式输入格式：两个正整数$n$和$m$。$(n,m&amp;lt;=10^9)$注意：数据很大 输出格式：${F_n}$和${F_m}$的最大公约数。由于看了大数字就头晕，所以只要输出最后的8位数字就可以了。 输入输出样例输入样">
+    
+        <link rel="alternate" type="application/atom+xml" title="书海扬帆" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+
+</head>
+
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">书海扬帆</h5>
+          <a href="mailto:me@ljhedp.cn" title="me@ljhedp.cn" class="mail">me@ljhedp.cn</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives">
+                <i class="icon icon-lg icon-archives"></i>
+                文章列表
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                标签列表
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories">
+                <i class="icon icon-lg icon-th-list"></i>
+                分类查找
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about">
+                <i class="icon icon-lg icon-id-card"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://dalao.online">
+                <i class="icon icon-lg icon-link"></i>
+                RDFZOJ
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://upyun.com">
+                <i class="icon icon-lg icon-cloud"></i>
+                又拍云提供支持
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">「数论+矩阵加速」洛谷P1306-斐波那契公约数</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">「数论+矩阵加速」洛谷P1306-斐波那契公约数</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-10-21T08:00:36.000Z" itemprop="datePublished" class="page-time">
+  2018-10-21
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/信息学竞赛-OI/">信息学竞赛(OI)</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#题目描述"><span class="post-toc-number">1.</span> <span class="post-toc-text">题目描述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#输入输出格式"><span class="post-toc-number">2.</span> <span class="post-toc-text">输入输出格式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#输入格式："><span class="post-toc-number">2.1.</span> <span class="post-toc-text">输入格式：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#输出格式："><span class="post-toc-number">2.2.</span> <span class="post-toc-text">输出格式：</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#输入输出样例"><span class="post-toc-number">3.</span> <span class="post-toc-text">输入输出样例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#说明"><span class="post-toc-number">4.</span> <span class="post-toc-text">说明</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解题思路"><span class="post-toc-number">5.</span> <span class="post-toc-text">解题思路</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#证明"><span class="post-toc-number">6.</span> <span class="post-toc-text">证明</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#引理1"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">引理1</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#引理2"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">引理2</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#引理3"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">引理3</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#由引理3证明结论"><span class="post-toc-number">6.4.</span> <span class="post-toc-text">由引理3证明结论</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#运用结论结合矩阵加速求解"><span class="post-toc-number">6.5.</span> <span class="post-toc-text">运用结论结合矩阵加速求解</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代码"><span class="post-toc-number">7.</span> <span class="post-toc-text">代码</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-「数论-矩阵加速」洛谷P1306-斐波那契公约数" class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">「数论+矩阵加速」洛谷P1306-斐波那契公约数</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-10-21 16:00:36" datetime="2018-10-21T08:00:36.000Z" itemprop="datePublished">2018-10-21</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/信息学竞赛-OI/">信息学竞赛(OI)</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>对于$Fibonacci$数列：$1,1,2,3,5,8,13……$大家应该很熟悉吧~~~<br>但是现在有一个很“简单”问题：第$n$项和第$m$项的最大公约数是多少？</p>
+<h2 id="输入输出格式"><a href="#输入输出格式" class="headerlink" title="输入输出格式"></a>输入输出格式</h2><h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>两个正整数$n$和$m$。$(n,m&lt;=10^9)$<br>注意：数据很大</p>
+<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>${F_n}$和${F_m}$的最大公约数。<br>由于看了大数字就头晕，所以只要输出最后的8位数字就可以了。</p>
+<h2 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h2><p>输入样例#1：<br>4 7<br>输出样例#1：<br>1</p>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>用递归&amp;递推会超时<br>用通项公式也会超时</p>
+<hr>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>起先看到这个题，递推不行，通项也不行，那只能使用矩阵加速来解决了。（矩阵加速是啥？）<br>那么怎样运用矩阵加速求解呢？显然，一个比较朴素的方法就是直接算出${F_n}$和${F_m}$。但是考虑到数据范围是$(n,m&lt;=10^9)$，因此该算法会超时！<br>正在冥思苦想之时，看到一个有趣的结论：</p>
+<blockquote>
+<p>在$Fibonacci$数列中，对于任意两项${F_n}$和${F_m}$，均有$gcd(F_n,F_m)={F_{gcd(n,m)}}$成立</p>
+</blockquote>
+<p>接下来，我们只需证明该结论的正确性。</p>
+<h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2><p>若$n=m$，显然成立，下证$n≠m$时的情况.<br>不失一般性，<br>不妨设n&gt;m.</p>
+<h3 id="引理1"><a href="#引理1" class="headerlink" title="引理1"></a>引理1</h3><script type="math/tex; mode=display">gcd(f[n+1],f[n])=1</script><p>【证明】<br>由辗转相除法可得，</p>
+<p>$gcd(f[n+1],f[n])=gcd(f[n+1]−f[n],f[n])$</p>
+<p>$=gcd(f[n−1],f[n])$</p>
+<p>$=gcd(f[n−1],f[n]−f[n−1])$</p>
+<p>$=gcd(f[n−1],f[n−2])$</p>
+<p>$=……$</p>
+<p>$=gcd(f[1],f[2])=gcd(1,1)=1.$</p>
+<h3 id="引理2"><a href="#引理2" class="headerlink" title="引理2"></a>引理2</h3><script type="math/tex; mode=display">f[m+n]=f[m−1]f[n]+f[m]f[n+1]</script><p>【证明】</p>
+<p>$f[m+n]=f[m+n−1]+f[m+n−2]$</p>
+<p>$=2∗f[m+n−2]+f[m+n−3]$</p>
+<p>$=……$</p>
+<p>设$f[m+n]=a[x]∗f[m+n−x]+b[x]∗f[m+n−x−1]$</p>
+<p>$=a[x]∗(f[m+n−x−1]+f[m+n−x−2])+b[x]∗f[m+n−x−1]$</p>
+<p>$=(a[x]+b[x])∗f[m+n−x−1]+a[x]∗f[m+n−x−2]$</p>
+<p>当$x=1$时，$f[m+n]=a[1]∗f[m+n−1]+b[1]∗f[m+n−1−1]$，</p>
+<p>有$a[1]=f[1]=f[2]=1,b[1]=f[1]=1$;</p>
+<p>当$x=2$时，$f[m+n]=a[2]∗f[m+n−2]+b[2]∗f[m+n−2−1]$，</p>
+<p>有$a[2]=f[1]+f[2]=f[3]=2,b[2]=a[1]=f[2]=1$;</p>
+<p>假设当$x=k$时，$a[k]=f[k+1],b[k]=a[k−1]=f[k]$,</p>
+<p>那么当$x=k+1$时，$a[k+1]=a[k]+b[k]=f[k+1]+f[k]=f[k+2]b[k+1]=a[k]=f[k+1]$;</p>
+<p>所以当$x=n$时有</p>
+<p>$f[m+n]=a[n]f[m]+b[n]f[n−1]$</p>
+<p>$=f[m−1]f[n]+f[m]f[n+1]$.</p>
+<p>证毕。</p>
+<h3 id="引理3"><a href="#引理3" class="headerlink" title="引理3"></a>引理3</h3><script type="math/tex; mode=display">gcd(f[m+n],f[n])=gcd(f[m],f[n])</script><p>【证明】</p>
+<p>由引理2得</p>
+<p>$gcd(f[m+n],f[n])=gcd(f[m−1]f[n]+f[m]f[n+1],f[n])$</p>
+<p>$=gcd(f[m]f[n+1],f[n])$</p>
+<p>$=gcd(f[m],f[n])∗gcd(f[n+1,f[n])$</p>
+<p>由引理1，</p>
+<p>gcd(f[n+1],f[n])=1,</p>
+<p>因此原式</p>
+<p>$=gcd(f[m],f[n]).$</p>
+<p>证毕。</p>
+<h3 id="由引理3证明结论"><a href="#由引理3证明结论" class="headerlink" title="由引理3证明结论"></a>由引理3证明结论</h3><p>由引理3可得，</p>
+<p>$gcd(f[m],f[n])=gcd(f[m%n],f[n]),$</p>
+<p>记$m1=m%n$，则</p>
+<p>$gcd(f[m],f[n])=gcd(f[m1],f[n%m1])$</p>
+<p>……</p>
+<p>$=gcd(0,f[gcd(m,n)])$</p>
+<p>我们已知用计算机求解最大公约数的算法如下：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> b==<span class="number">0</span>?a:gcd(b,a%b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>不难看出，在递归过程中，</p>
+<script type="math/tex; mode=display">gcd(0,f[gcd(m,n)])=f[gcd(m,n)].</script><p>证毕。</p>
+<h3 id="运用结论结合矩阵加速求解"><a href="#运用结论结合矩阵加速求解" class="headerlink" title="运用结论结合矩阵加速求解"></a>运用结论结合矩阵加速求解</h3><blockquote>
+<p>斐波那契数列的初始矩阵为<script type="math/tex">\begin{bmatrix}
+1 & 1 \\
+\end{bmatrix}</script><br>单位矩阵为<script type="math/tex">\begin{bmatrix}
+1 & 1 \\
+1 & 0 \\
+\end{bmatrix}</script></p>
+</blockquote>
+<p>对于第$gcd(n,m)$项，只需快速幂$gcd(n,m)−2$次即可，结果$\mod 1e8$.</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll n,m;</span><br><span class="line"><span class="function">ll <span class="title">gcd</span><span class="params">(ll a,ll b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(b==<span class="number">0</span>) <span class="keyword">return</span> a;</span><br><span class="line">    <span class="keyword">return</span> gcd(b,a%b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> ll mod=<span class="number">1e8</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">matrix</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ll n,m;</span><br><span class="line">    ll z[<span class="number">105</span>][<span class="number">105</span>];</span><br><span class="line">    matrix()</span><br><span class="line">    &#123;</span><br><span class="line">        n=m=<span class="number">0</span>;</span><br><span class="line">        <span class="built_in">memset</span>(z,<span class="number">0</span>,<span class="keyword">sizeof</span>(z));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;m1,e;</span><br><span class="line">matrix <span class="keyword">operator</span>*(<span class="keyword">const</span> matrix &amp;m1,<span class="keyword">const</span> matrix &amp;m2) &#123;</span><br><span class="line">    matrix m3;</span><br><span class="line">    <span class="keyword">int</span> n=m1.n,m=m1.m,k=m2.m;</span><br><span class="line">    m3.n=n;m3.m=k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> a=<span class="number">1</span>;a&lt;=n;a++)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> b=<span class="number">1</span>;b&lt;=m;b++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> c=<span class="number">1</span>;c&lt;=k;c++)</span><br><span class="line">                m3.z[a][c] = m3.z[a][c]%mod+m1.z[a][b]*m2.z[b][c]%mod;</span><br><span class="line">    <span class="keyword">return</span> m3;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> matrix <span class="title">Pow</span><span class="params">(matrix &amp;m1, ll k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    matrix ans=e;</span><br><span class="line">    <span class="keyword">while</span>(k)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(k&amp;<span class="number">1</span>) ans=ans*m1;</span><br><span class="line">        m1=m1*m1;</span><br><span class="line">        k&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>,&amp;n,&amp;m);</span><br><span class="line">    ll cur=gcd(n,m);</span><br><span class="line">    <span class="keyword">if</span>(cur==<span class="number">1</span> || cur==<span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"1"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125; </span><br><span class="line">    e.n=e.m=<span class="number">2</span>;</span><br><span class="line">    e.z[<span class="number">1</span>][<span class="number">1</span>]=e.z[<span class="number">1</span>][<span class="number">2</span>]=e.z[<span class="number">2</span>][<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    m1.n=<span class="number">1</span>,m1.m=<span class="number">2</span>;</span><br><span class="line">    m1.z[<span class="number">1</span>][<span class="number">1</span>]=m1.z[<span class="number">1</span>][<span class="number">2</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="comment">//给定A1 A2 乘n次得到第N+2项 </span></span><br><span class="line">    matrix ans=Pow(e,cur<span class="number">-3</span>);</span><br><span class="line">    ans=m1*ans;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%lld"</span>,ans.z[<span class="number">1</span>][<span class="number">1</span>]%mod);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-12-22T23:53:18.638Z" itemprop="dateUpdated">2018-12-23 07:53:18</time>
+</span><br>
+
+
+        
+        一点浩然气，千里快哉风。
+        
+    </div>
+    
+    <footer>
+        <a href="https://www.ljhedp.cn">
+            <img src="/img/avatar.jpg" alt="书海扬帆">
+            书海扬帆
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数论/">数论</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/矩阵加速/">矩阵加速</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.ljhedp.cn/post/193a2392.html&title=《「数论+矩阵加速」洛谷P1306-斐波那契公约数》 — 书海扬帆&pic=https://www.ljhedp.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.ljhedp.cn/post/193a2392.html&title=《「数论+矩阵加速」洛谷P1306-斐波那契公约数》 — 书海扬帆&source=分享学习经验、学习方法和学习历程" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ljhedp.cn/post/193a2392.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「数论+矩阵加速」洛谷P1306-斐波那契公约数》 — 书海扬帆&url=https://www.ljhedp.cn/post/193a2392.html&via=https://www.ljhedp.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://www.ljhedp.cn/post/193a2392.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/post/9a71a90f.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">「组合计数」洛谷P3271-「JLOI2016」方</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/post/91fe609.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">调试与Linux命令行略解</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'true' == 'true',
+            appId: "DBTfs1tn9q8DYFqS2ISkW1bk-gzGzoHsz",
+            appKey: "YwAGtYX1drDSOA0IDc1pQ2BB",
+            avatar: "identicon",
+            placeholder: "期待您的真知灼见~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        感谢您的支持~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    
+    <div class="top">
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+        <span>书海扬帆 &copy; 2017 - 2018</span>
+            <span>
+                
+                <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备17041994号-1</a><br>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+    <div class="bottom">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style="display:yes">
+        总访客数<span id="busuanzi_value_site_uv"></span>人次
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:yes">
+        总访问量<span id="busuanzi_value_site_pv"></span>次
+    </span>
+</p>
+
+
+        <p>
+        </p>
+    </div>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.ljhedp.cn/post/193a2392.html&title=《「数论+矩阵加速」洛谷P1306-斐波那契公约数》 — 书海扬帆&pic=https://www.ljhedp.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.ljhedp.cn/post/193a2392.html&title=《「数论+矩阵加速」洛谷P1306-斐波那契公约数》 — 书海扬帆&source=分享学习经验、学习方法和学习历程" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ljhedp.cn/post/193a2392.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《「数论+矩阵加速」洛谷P1306-斐波那契公约数》 — 书海扬帆&url=https://www.ljhedp.cn/post/193a2392.html&via=https://www.ljhedp.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://www.ljhedp.cn/post/193a2392.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABv0lEQVR42u3aS47DIBAFwNz/0p4DWMavaUDJqFhZCcSVTas/fD7xum7r/u1959Mn91OLFy4ubpt7DVfCzaHj57EBFxf3PPfp9dXnMTH5/RcbLi7uV3KTBCUJYbi4uP+J+0RPCh5cXNzf4ibFTzWVScqbjbUaLi5ug5t3Kfc9b+nv4uLiTnGv4qo2OpMBTOEsLi7uEW4eUPrJR14ajcskXFzcM9z8skVyuF/GlE/h4uIu5eZtyjxB6RRRUUaGi4u7mTuX0MyNWDY2UHBxcbdxO9cjOoEvb53g4uKe4a4C9celyRAXFxf3JDe/SJEEnU6zNQpkuLi4x7l5ctNJXKrjE1xc3PPcvElaCDqNUc1k8YOLi7uI27k2kRc/yV9NyipcXNyT3Oq8pTNSTf7Gy4UPXFzcg9zq8CNnVYurlz24uLgHuZ37GnOhbXIPLi7uZu5VXGvbpuWmKi4u7hHu3HgjaYjkw9dVhRYuLu5a7tpRax6qxu+KajVcXNzN3Gqg6bQ8ltVquLi4X8Oda6P0wyUuLu6vcPNUphrOHvfj4uIe5CYhZlULNSlyFtRquLi4DW45lMThr9p+XdzfxcXFneH+Af7HUsFmB/XCAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+lazyScripts.push('//s95.cnzz.com/z_stat.php?id=1264439082&web_id=1264439082')
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>--><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
