@@ -31,7 +31,7 @@
 <meta property="og:site_name" content="书海扬帆">
 <meta property="og:description" content="题目传送门 解题思路这道题操作简单，没多想就打了个暴力上去，结果11个点AC了10个，90分。 无奈之下，翻了翻题解，看到一个巧妙的离线并查集解决方法，于是就看明白之后学来了。 首先读入每一个操作，cnt数组记录每个点被标记的次数。如果一个点被标记了，cnt[i]++； 对于询问节点x最近的被打了标记的祖先，只需考察cnt数组即可。如果cnt[x]!=0，那么答案就是x自己，否则进行并查集的fin">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-11T08:44:18.000Z">
+<meta property="og:updated_time" content="2018-12-22T23:53:18.696Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="离线并查集-洛谷P4092-HEOI2016&#x2F;TJOI2016-树">
 <meta name="twitter:description" content="题目传送门 解题思路这道题操作简单，没多想就打了个暴力上去，结果11个点AC了10个，90分。 无奈之下，翻了翻题解，看到一个巧妙的离线并查集解决方法，于是就看明白之后学来了。 首先读入每一个操作，cnt数组记录每个点被标记的次数。如果一个点被标记了，cnt[i]++； 对于询问节点x最近的被打了标记的祖先，只需考察cnt数组即可。如果cnt[x]!=0，那么答案就是x自己，否则进行并查集的fin">
@@ -216,7 +216,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-11-11T08:44:18.000Z" itemprop="dateUpdated">2018-11-11 16:44:18</time>
+    最后更新时间：<time datetime="2018-12-22T23:53:18.696Z" itemprop="dateUpdated">2018-12-23 07:53:18</time>
 </span><br>
 
 
@@ -348,7 +348,7 @@
             appId: "DBTfs1tn9q8DYFqS2ISkW1bk-gzGzoHsz",
             appKey: "YwAGtYX1drDSOA0IDc1pQ2BB",
             avatar: "identicon",
-            placeholder: "说些什么吧~",
+            placeholder: "期待您的真知灼见~",
             guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
             pageSize: "10"
         })
@@ -393,27 +393,11 @@
 </div>
 
         <footer class="footer">
+    
     <div class="top">
-        
-<p>
-    <span id="busuanzi_container_site_uv" style="display:none">
-        总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style="display:none">
-        总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
-
-
         <p>
-            
-                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-            
-            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
-        </p>
-    </div>
-    <div class="bottom">
-        <p><span>书海扬帆 &copy; 2017 - 2018</span>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+        <span>书海扬帆 &copy; 2017 - 2018</span>
             <span>
                 
                 <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备17041994号-1</a><br>
@@ -422,6 +406,23 @@
             </span>
         </p>
     </div>
+    <div class="bottom">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style="display:yes">
+        总访客数<span id="busuanzi_value_site_uv"></span>人次
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:yes">
+        总访问量<span id="busuanzi_value_site_pv"></span>次
+    </span>
+</p>
+
+
+        <p>
+        </p>
+    </div>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
 </footer>
 
     </main>
@@ -480,6 +481,8 @@
 var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 
+lazyScripts.push('//s95.cnzz.com/z_stat.php?id=1264439082&web_id=1264439082')
+
 </script>
 
 <script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
@@ -512,23 +515,6 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
-
-<script>
-(function() {
-    var OriginTitile = document.title, titleTime;
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            document.title = '( • ̀ω•́ )~Where are you now~';
-            clearTimeout(titleTime);
-        } else {
-            document.title = 'ヾ(ﾟ∀ﾟゞ)欢迎回来！';
-            titleTime = setTimeout(function() {
-                document.title = OriginTitile;
-            },2000);
-        }
-    });
-})();
-</script>
 
 
 

@@ -32,7 +32,7 @@
 <meta property="og:description" content="学了半天，吭哧吭哧的，终于学到图论啦。。。 本篇文章仅供个人复习，因此以自己理解为首要目标，新人不懂勿喷，感谢。&amp;lt;/blockquote&amp;gt; 一、引言图论是组合数学中的一个分支，是组合数学中一颗璀璨的明珠。无论是在数学研究和计算机科学中都有着广泛的应用。图这个东西，说简单不简单，说难也确实不难。虽然有些知识可能有些晦涩，但只要理解透彻，搞清算法的详细意义，就能茅塞顿开。 二、图的基本概念">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://cdn.ljhedp.cn/site-file/2018/03/graph.png">
-<meta property="og:updated_time" content="2018-11-11T13:33:54.000Z">
+<meta property="og:updated_time" content="2018-12-22T23:53:18.627Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图论入门-利用Prim或Kruskal算法求解最小生成树问题">
 <meta name="twitter:description" content="学了半天，吭哧吭哧的，终于学到图论啦。。。 本篇文章仅供个人复习，因此以自己理解为首要目标，新人不懂勿喷，感谢。&amp;lt;/blockquote&amp;gt; 一、引言图论是组合数学中的一个分支，是组合数学中一颗璀璨的明珠。无论是在数学研究和计算机科学中都有着广泛的应用。图这个东西，说简单不简单，说难也确实不难。虽然有些知识可能有些晦涩，但只要理解透彻，搞清算法的详细意义，就能茅塞顿开。 二、图的基本概念">
@@ -239,7 +239,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-11-11T13:33:54.000Z" itemprop="dateUpdated">2018-11-11 21:33:54</time>
+    最后更新时间：<time datetime="2018-12-22T23:53:18.627Z" itemprop="dateUpdated">2018-12-23 07:53:18</time>
 </span><br>
 
 
@@ -371,7 +371,7 @@
             appId: "DBTfs1tn9q8DYFqS2ISkW1bk-gzGzoHsz",
             appKey: "YwAGtYX1drDSOA0IDc1pQ2BB",
             avatar: "identicon",
-            placeholder: "说些什么吧~",
+            placeholder: "期待您的真知灼见~",
             guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
             pageSize: "10"
         })
@@ -416,27 +416,11 @@
 </div>
 
         <footer class="footer">
+    
     <div class="top">
-        
-<p>
-    <span id="busuanzi_container_site_uv" style="display:none">
-        总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style="display:none">
-        总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
-
-
         <p>
-            
-                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-            
-            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
-        </p>
-    </div>
-    <div class="bottom">
-        <p><span>书海扬帆 &copy; 2017 - 2018</span>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+        <span>书海扬帆 &copy; 2017 - 2018</span>
             <span>
                 
                 <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备17041994号-1</a><br>
@@ -445,6 +429,23 @@
             </span>
         </p>
     </div>
+    <div class="bottom">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style="display:yes">
+        总访客数<span id="busuanzi_value_site_uv"></span>人次
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:yes">
+        总访问量<span id="busuanzi_value_site_pv"></span>次
+    </span>
+</p>
+
+
+        <p>
+        </p>
+    </div>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
 </footer>
 
     </main>
@@ -503,6 +504,8 @@
 var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 
+lazyScripts.push('//s95.cnzz.com/z_stat.php?id=1264439082&web_id=1264439082')
+
 </script>
 
 <script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
@@ -535,23 +538,6 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
-
-<script>
-(function() {
-    var OriginTitile = document.title, titleTime;
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            document.title = '( • ̀ω•́ )~Where are you now~';
-            clearTimeout(titleTime);
-        } else {
-            document.title = 'ヾ(ﾟ∀ﾟゞ)欢迎回来！';
-            titleTime = setTimeout(function() {
-                document.title = OriginTitile;
-            },2000);
-        }
-    });
-})();
-</script>
 
 
 
