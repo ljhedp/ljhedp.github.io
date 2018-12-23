@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.ljhedp.cn/"/>
-  <updated>2018-12-22T23:53:18.644Z</updated>
+  <updated>2018-12-23T02:09:49.704Z</updated>
   <id>https://www.ljhedp.cn/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>三角函数公式整理</title>
+    <link href="https://www.ljhedp.cn/2018/12/17/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E5%85%AC%E5%BC%8F%E6%95%B4%E7%90%86/.html"/>
+    <id>https://www.ljhedp.cn/2018/12/17/三角函数公式整理/.html</id>
+    <published>2018-12-17T08:03:02.000Z</published>
+    <updated>2018-12-23T02:09:49.704Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>“代数繁，几何难，三角公式记不完……”</p></blockquote><p>之前学三角函数的时候一直没好好背公式，导致题目做得<strong>乱七八糟</strong>。尽管公式比较多，但细细数来也就那么几十个，还是可以记住的。这里就做一个整理，边用电脑录入边背。</p><p>我是这样理解背三角函数的公式的：虽然可以全部不背，要用的时候自己动手推出来，但是速度显然慢了。就像浏览器的缓存一样，提前加载好网页上的图片、css等文件，访问速度一下子就快了很多。</p><h2 id="三角函数的意义"><a href="#三角函数的意义" class="headerlink" title="三角函数的意义"></a>三角函数的意义</h2><blockquote><p>基本概念：角的定义、终边、单位圆… (留坑待填)</p></blockquote><script type="math/tex; mode=display">\sin A=\frac{y}{r}</script><script type="math/tex; mode=display">\cos A=\frac{x}{r}</script><script type="math/tex; mode=display">\tan A=\frac{y}{x}</script><script type="math/tex; mode=display">\cot A=\frac{x}{y}</script><script type="math/tex; mode=display">\sin^2 \alpha + \cos ^2 \alpha=1</script><script type="math/tex; mode=display">\tan \alpha=\frac{\sin \alpha}{\cos \alpha}</script><script type="math/tex; mode=display">\cot \alpha= \frac{1}{\tan \alpha}</script><h2 id="三角函数与π"><a href="#三角函数与π" class="headerlink" title="三角函数与π"></a>三角函数与π</h2><div class="table-container"><table><thead><tr><th style="text-align:center">$\sin(\alpha+2k\pi)=\sin \alpha$</th><th style="text-align:center">$\cos(\alpha+2k\pi)=\cos \alpha$</th><th style="text-align:center">$\tan(\alpha+2k\pi)=\tan \alpha$</th></tr></thead><tbody><tr><td style="text-align:center">$\sin(-\alpha)=-\sin \alpha$</td><td style="text-align:center">$\cos(-\alpha)=-\cos \alpha$</td><td style="text-align:center">$\tan(-\alpha)=-\tan \alpha$</td></tr><tr><td style="text-align:center">$\sin(\pi-\alpha)=-\sin \alpha$</td><td style="text-align:center"></td><td style="text-align:center"></td></tr><tr><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr><tr><td style="text-align:center"></td><td style="text-align:center"></td></tr></tbody></table></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;“代数繁，几何难，三角公式记不完……”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;之前学三角函数的时候一直没好好背公式，导致题目做得&lt;strong&gt;乱七八糟&lt;/strong&gt;。尽管公式比较多，但细细数来也就那么几十个，还是可以记住的。这里就做一个整
+      
+    
+    </summary>
+    
+      <category term="数学竞赛" scheme="https://www.ljhedp.cn/categories/%E6%95%B0%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+    
+    
+      <category term="数学竞赛" scheme="https://www.ljhedp.cn/tags/%E6%95%B0%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+    
+      <category term="学习笔记" scheme="https://www.ljhedp.cn/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="三角函数" scheme="https://www.ljhedp.cn/tags/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>史记-七十列传-太史公自序</title>
@@ -173,39 +205,6 @@
   </entry>
   
   <entry>
-    <title>三角函数公式整理</title>
-    <link href="https://www.ljhedp.cn/2018/11/17/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E5%85%AC%E5%BC%8F%E6%95%B4%E7%90%86/.html"/>
-    <id>https://www.ljhedp.cn/2018/11/17/三角函数公式整理/.html</id>
-    <published>2018-11-17T08:03:02.000Z</published>
-    <updated>2018-12-22T23:53:18.645Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>“代数繁，几何难，三角公式记不完……”</p></blockquote><p>之前学三角函数的时候一直没好好背公式，导致题目做得乱七八糟。尽管公式比较多，但细细数来也就那么六七十个，还是可以记住的。这里就做一个整理，边用电脑录入边背。</p><p>我是这样理解背三角函数的公式的：虽然可以全部不背，要用的时候自己动手推出来，但是速度显然慢了。就像浏览器的缓存一样，提前加载好网页上的图片、css等文件，访问速度一下子就快了很多。</p><h2 id="三角函数的意义"><a href="#三角函数的意义" class="headerlink" title="三角函数的意义"></a>三角函数的意义</h2><script type="math/tex; mode=display">\sin A=\frac{y}{r}</script><script type="math/tex; mode=display">\cos A=\frac{x}{r}</script><script type="math/tex; mode=display">\tan A=\frac{y}{x}</script><script type="math/tex; mode=display">\cot A=\frac{x}{y}</script><script type="math/tex; mode=display">\sin^2 \alpha + \cos ^2 \alpha=1</script><script type="math/tex; mode=display">\tan \alpha=\frac{\sin \alpha}{\cos \alpha}</script><script type="math/tex; mode=display">\cot \alpha= \frac{1}{\tan \alpha}</script><h2 id="三角函数与π"><a href="#三角函数与π" class="headerlink" title="三角函数与π"></a>三角函数与π</h2><div class="table-container"><table><thead><tr><th style="text-align:center">$\sin(\alpha+2k\pi)=sin \alpha$</th><th style="text-align:center">$\cos(\alpha+2k\pi)=\cos \alpha$</th><th style="text-align:center">$\tan(\alpha+2k\pi)=\tan \alpha$</th></tr></thead><tbody><tr><td style="text-align:center">$\sin(-\alpha)=-\sin \alpha$</td><td style="text-align:center">$\cos(-\alpha)=-\cos \alpha$</td><td style="text-align:center">$\tan(-\alpha)=-\tan \alpha$</td></tr><tr><td style="text-align:center">$\sin(\pi-\alpha)=-\sin \alpha$</td><td style="text-align:center"></td><td style="text-align:center"></td></tr><tr><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr><tr><td style="text-align:center"></td><td style="text-align:center"></td></tr></tbody></table></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;“代数繁，几何难，三角公式记不完……”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;之前学三角函数的时候一直没好好背公式，导致题目做得乱七八糟。尽管公式比较多，但细细数来也就那么六七十个，还是可以记住的。这里就做一个整理，边用电脑录入边背。&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-      <category term="数学竞赛" scheme="https://www.ljhedp.cn/categories/%E6%95%B0%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-    
-    
-      <category term="数学竞赛" scheme="https://www.ljhedp.cn/tags/%E6%95%B0%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-    
-      <category term="学习笔记" scheme="https://www.ljhedp.cn/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="三角函数" scheme="https://www.ljhedp.cn/tags/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Splay与LCT-学习笔记</title>
     <link href="https://www.ljhedp.cn/2018/11/17/Splay-LCT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/.html"/>
     <id>https://www.ljhedp.cn/2018/11/17/Splay-LCT学习笔记/.html</id>
@@ -338,9 +337,9 @@
       <category term="信息学竞赛(OI)" scheme="https://www.ljhedp.cn/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B-OI/"/>
     
     
-      <category term="数论" scheme="https://www.ljhedp.cn/tags/%E6%95%B0%E8%AE%BA/"/>
-    
       <category term="组合数学" scheme="https://www.ljhedp.cn/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
+    
+      <category term="数论" scheme="https://www.ljhedp.cn/tags/%E6%95%B0%E8%AE%BA/"/>
     
   </entry>
   
