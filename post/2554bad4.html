@@ -23,18 +23,18 @@
     
     
     <meta name="keywords" content="数学竞赛,数论">
-    <meta name="description" content="原网页：https://www.cnblogs.com/igaoshang/articles/Zeller.html 历史上的某一天是星期几？未来的某一天是星期几？关于这个问题，有很多计算公式，其中最著名的是蔡勒 (Zeller)公式： $W = \left( {\left[ {\frac{C}{4}} \right] - 2C + Y + \left[ {\frac{Y}{4}} \right]">
+    <meta name="description" content="转载自：https://www.cnblogs.com/igaoshang/articles/Zeller.html 历史上的某一天是星期几？未来的某一天是星期几？关于这个问题，有很多计算公式，其中最著名的是蔡勒 (Zeller)公式： W = \left( {\left[ {\frac{C}{4}} \right] - 2C + Y + \left[ {\frac{Y}{4}} \right]">
 <meta name="keywords" content="数学竞赛,数论">
 <meta property="og:type" content="article">
 <meta property="og:title" content="蔡勒公式算日期">
 <meta property="og:url" content="https://www.ljhedp.cn/post/2554bad4.html">
 <meta property="og:site_name" content="书海扬帆">
-<meta property="og:description" content="原网页：https://www.cnblogs.com/igaoshang/articles/Zeller.html 历史上的某一天是星期几？未来的某一天是星期几？关于这个问题，有很多计算公式，其中最著名的是蔡勒 (Zeller)公式： $W = \left( {\left[ {\frac{C}{4}} \right] - 2C + Y + \left[ {\frac{Y}{4}} \right]">
+<meta property="og:description" content="转载自：https://www.cnblogs.com/igaoshang/articles/Zeller.html 历史上的某一天是星期几？未来的某一天是星期几？关于这个问题，有很多计算公式，其中最著名的是蔡勒 (Zeller)公式： W = \left( {\left[ {\frac{C}{4}} \right] - 2C + Y + \left[ {\frac{Y}{4}} \right]">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-22T23:53:18.692Z">
+<meta property="og:updated_time" content="2019-02-04T01:25:21.674Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="蔡勒公式算日期">
-<meta name="twitter:description" content="原网页：https://www.cnblogs.com/igaoshang/articles/Zeller.html 历史上的某一天是星期几？未来的某一天是星期几？关于这个问题，有很多计算公式，其中最著名的是蔡勒 (Zeller)公式： $W = \left( {\left[ {\frac{C}{4}} \right] - 2C + Y + \left[ {\frac{Y}{4}} \right]">
+<meta name="twitter:description" content="转载自：https://www.cnblogs.com/igaoshang/articles/Zeller.html 历史上的某一天是星期几？未来的某一天是星期几？关于这个问题，有很多计算公式，其中最著名的是蔡勒 (Zeller)公式： W = \left( {\left[ {\frac{C}{4}} \right] - 2C + Y + \left[ {\frac{Y}{4}} \right]">
     
         <link rel="alternate" type="application/atom+xml" title="书海扬帆" href="/atom.xml">
     
@@ -194,28 +194,36 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>原网页：<a href="https://www.cnblogs.com/igaoshang/articles/Zeller.html" target="_blank" rel="noopener">https://www.cnblogs.com/igaoshang/articles/Zeller.html</a></p>
-<p>历史上的某一天是星期几？未来的某一天是星期几？关于这个问题，有很多计算公式，其中最著名的是蔡勒 <span class="latex">(Zeller)公式：</span></p>
-<p>$W = \left( {\left[ {\frac{C}{4}} \right] - 2C + Y + \left[ {\frac{Y}{4}} \right] + \left[ {13 \times \fracNaN{5}} \right] + D - 1} \right){\rm{\% }}7$$.</p>
-<p>公式都是基于公历的置闰规则来考虑。 公式中的符号含义如下：</p>
-<blockquote>
-<p>• W：星期</p>
-<p>• C：世纪数减一 (年份前两位数)</p>
-<p>• Y：年(年份后两位数)</p>
-<p>• M：月(M的取值范围为3至14，即在蔡勒公式中，某年的1、2月要看作上一年的13、14月来计算，比如2003 年1月1日要看作 2002 年的13月1日来计算)</p>
-<p>• D ：日</p>
-<p>• []：称作高斯符号，代表取整，即只要整数部份</p>
-<p>• mod：同余‎这里代表括号里的答案除以7后的余数</p>
-</blockquote>
-<p>算出来的除以7，余数是几就是星期几。如果余数是0，则为星期日。</p>
-<p>不过，以上的公式都只适合于1582年(我国明朝万历十年)10 月15日之后的情形。罗马教皇格里高利十三世在1582年组织了一批天文学家，根据哥白尼日心说计算出来的数据，对儒略历作了修改。将1582年10月5 日到14日之间的10天宣布撤销，即10月4日之后为10月15日。若要计算的日期是在1582年10月4日或之前，其公式为 </p>
-<script type="math/tex; mode=display">W=Y+[Y/4]+[C/4]-2C+[13×(M+1)/5]+D+3.</script><p> 以2049年10月1日<span class="latex">(100周年国庆)为例，用蔡勒(Zeller)公式进行计算，过程如下：
-</span></p>
-<p>$W=Y+[Y/4]+[C/4]-2C+[26×(M+1)/10]+D-1$</p>
-<p>$=49+[49/4]+[20/4]-2×20+[26×(10+1)/10]+1-1<br>=49+[12.25]+5-40+[28.6]$</p>
-<p>$=49+12+5-40+28$</p>
-<p>$=54.$</p>
-<p>54除以7余5， 即2049年10月1日（100周年国庆）是星期5。</p>
+            <p>转载自：<a href="https://www.cnblogs.com/igaoshang/articles/Zeller.html" target="_blank" rel="noopener">https://www.cnblogs.com/igaoshang/articles/Zeller.html</a></p>
+<p>历史上的某一天是星期几？未来的某一天是星期几？关于这个问题，有很多计算公式，其中最著名的是蔡勒 (Zeller)公式：</p>
+<script type="math/tex; mode=display">W = \left( {\left[ {\frac{C}{4}} \right] - 2C + Y + \left[ {\frac{Y}{4}} \right] + \left[ {13 \times \fracNaN{5}} \right] + D - 1} \right){\rm{\% }}7$$.
+
+公式都是基于公历的置闰规则来考虑。 公式中的符号含义如下：
+
+> • W：星期
+>
+> • C：世纪数减一 (年份前两位数)
+>
+> • Y：年(年份后两位数)
+>
+> • M：月(M的取值范围为3至14，即在蔡勒公式中，某年的1、2月要看作上一年的13、14月来计算，比如2003 年1月1日要看作 2002 年的13月1日来计算)
+>
+> • D ：日
+>
+> • []：称作高斯符号，代表取整，即只要整数部分
+>
+> • mod：同余‎这里代表括号里的答案除以7后的余数
+
+算出来的除以7，余数是几就是星期几。如果余数是0，则为星期日。
+
+不过，以上的公式都只适合于**1582年(我国明朝万历十年)10 月15日之后**的情形。罗马教皇**格里高利十三世**在1582年组织了一批天文学家，根据哥白尼日心说计算出来的数据，对儒略历作了修改。将1582年10月5 日到14日之间的10天宣布撤销，即10月4日之后为10月15日。若要计算的日期是在1582年10月4日或之前，其公式为 
+
+$$W=Y+[Y/4]+[C/4]-2C+[13×(M+1)/5]+D+3.</script><p> 以2049年10月1日(100周年国庆)为例，用蔡勒(Zeller)公式进行计算，过程如下：</p>
+<p>$W=Y+[Y/4]+[C/4]-2C+[26×(M+1)/10]+D-1​$</p>
+<p>$=49+[49/4]+[20/4]-2×20+[26×(10+1)/10]+1-1<br>=49+[12.25]+5-40+[28.6]​$</p>
+<p>$=49+12+5-40+28​$</p>
+<p>$=54.​$</p>
+<p>54除以7余5， 即2049年10月1日（100周年国庆）是星期五。</p>
 
         </div>
 
@@ -224,7 +232,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-12-22T23:53:18.692Z" itemprop="dateUpdated">2018-12-23 07:53:18</time>
+    最后更新时间：<time datetime="2019-02-04T01:25:21.674Z" itemprop="dateUpdated">2019-02-04 09:25:21</time>
 </span><br>
 
 
@@ -405,7 +413,7 @@
     <div class="top">
         <p>
             <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-        <span>书海扬帆 &copy; 2017 - 2018</span>
+        <span>书海扬帆 &copy; 2017 - 2019</span>
             <span>
                 
                 <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备17041994号-1</a><br>
