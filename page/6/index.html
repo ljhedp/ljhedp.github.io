@@ -168,6 +168,104 @@
     <ul class="post-list">
     
         <li class="post-list-item fade">
+            <article id="post-模板-洛谷线段树2-AHOI2009维护序列-JSOI2014序列维护" class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-11-11 16:58:10" datetime="2018-11-11T08:58:10.000Z" itemprop="datePublished">2018-11-11</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/信息学竞赛-OI/">信息学竞赛(OI)</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/post/6a503269.html">模板-洛谷线段树2/AHOI2009维护序列/JSOI2014序列维护</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        一道让人揪心的题——线段树2调这两道题调了整整五小时，虽然耗费了很多时间，但这道题让我对线段树的理解变得更加的清晰、透彻，也许这份付出还是值得的。
+开始之前，我们先来回顾一下线段树的几种写法：
+
+指针版线段树
+12345struct node&#123;	int l,r,sum,lazy;	node *lson,*rson;&#125;*root,pool[maxn&lt;&lt;2];
+
+...
+    
+
+        <a href="/post/6a503269.html" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模板/">模板</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/线段树/">线段树</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-约瑟夫问题" class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-11-11 16:53:09" datetime="2018-11-11T08:53:09.000Z" itemprop="datePublished">2018-11-11</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/信息学竞赛-OI/">信息学竞赛(OI)</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/post/3d3935c8.html">约瑟夫问题</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        123456789101112131415161718192021#include &lt;iostream&gt;#include &lt;queue&gt;using namespace std;int n,m,cnt;int main()&#123;    cin&gt;&gt;n&gt;&gt;m;    queue&lt;int&gt; a;    for(int i=1;i&lt...
+    
+
+        <a href="/post/3d3935c8.html" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模拟/">模拟</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/队列/">队列</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
             <article id="post-模板-最长公共子序列LCS" class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -547,114 +645,12 @@
 
         </li>
     
-        <li class="post-list-item fade">
-            <article id="post-快速乘（龟速乘）学习笔记" class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-11-11 16:35:27" datetime="2018-11-11T08:35:27.000Z" itemprop="datePublished">2018-11-11</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/信息学竞赛-OI/">信息学竞赛(OI)</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/post/dc69c69e.html">快速乘（龟速乘）学习笔记</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        要解决的问题给定a,b,求a*b\mod c.如果用常规的乘法运算和取余运算，可能会爆$int$或者爆$long \ long$.所以有什么好的方法呢？
-模型构建和快速幂一样的思路，用分治。
-模板代码（快速乘+快速乘实现的快速幂）12345678910111213141516171819202122232425typedef long long ll;ll qmul(ll a,ll b,ll...
-    
-
-        <a href="/post/dc69c69e.html" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习笔记/">学习笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数论/">数论</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-轻轻地告诉你——《五三》系列图书序言" class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-11-11 16:33:17" datetime="2018-11-11T08:33:17.000Z" itemprop="datePublished">2018-11-11</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/信息学竞赛-OI/">信息学竞赛(OI)</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/post/5b068760.html">轻轻地告诉你——《五三》系列图书序言</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        一个小笑话Q: 如果人生只有八年该怎么过？
-A: 五年高考三年模拟！
-……
-可以说，五三系列的作者文笔是所有教辅作者中最好的。
-这篇《轻轻地告诉你》已经随着各个版本的练习册不知走过了多少个春秋，每年都有新变化。这里经过仔细的整理和筛选，整理出一篇我认为最完美的一个版本。
-
-全文朋友，我正看着你呢，你也正看着我。
-我不是一幅色彩缤纷、线条优美的画卷，也许不能让你感受生活的美妙、世界的神奇；
-我...
-    
-
-        <a href="/post/5b068760.html" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习笔记/">学习笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/精品/">精品</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
     </ul>
 
     
 <nav id="page-nav">
     <div class="inner">
-    <a class="extend prev" rel="prev" href="/page/5/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/7/">下一页</a>
+    <a class="extend prev" rel="prev" href="/page/5/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/7/">下一页</a>
     </div>
 </nav>
 

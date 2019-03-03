@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.ljhedp.cn/"/>
-  <updated>2018-12-23T08:38:31.310Z</updated>
+  <updated>2019-03-03T14:47:39.769Z</updated>
   <id>https://www.ljhedp.cn/</id>
   
   <author>
@@ -15,6 +15,67 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI初探-01-图像风格化</title>
+    <link href="https://www.ljhedp.cn/post/fce332f1.html"/>
+    <id>https://www.ljhedp.cn/post/fce332f1.html</id>
+    <published>2019-03-03T14:41:25.000Z</published>
+    <updated>2019-03-03T14:47:39.769Z</updated>
+    
+    <content type="html"><![CDATA[<p>本学期的信息技术课居然讲<strong>AI</strong>，感谢学校为我们搭建了这样好的平台，让我们能够在OI与AI的道路上齐头并进。第一节课，首先介绍了一下<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">首先，我们需要在```cmd```(Windows)或者```terminal```(Linux, Mac)中输入安装pillow库的命令：</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">pip install pillow</span><br></pre></td></tr></table></figure></p><p>如果是Linux或者Mac，由于默认的Python版本是Python 2，而pillow库在Python 2不可用，因此安装pillow库的命令需要改为：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install pillow</span><br></pre></td></tr></table></figure><p>安装完后，我们就可以愉快地写代码啦~我尝试了一下模糊、浮雕和边缘增强三种效果QAQ</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image,ImageFilter</span><br><span class="line">i=Image.open(<span class="string">'test.jpg'</span>)</span><br><span class="line"><span class="comment"># 保存+格式转换</span></span><br><span class="line">i.save(<span class="string">'test_converted.png'</span>,<span class="string">'png'</span>)</span><br><span class="line"><span class="comment"># 风格化</span></span><br><span class="line">a=i.filter(ImageFilter.BLUR)</span><br><span class="line">a.save(<span class="string">'blur.jpg'</span>,<span class="string">'jpeg'</span>)</span><br><span class="line">b=i.filter(ImageFilter.EMBOSS)</span><br><span class="line">b.save(<span class="string">'emboss.jpg'</span>,<span class="string">'jpeg'</span>)</span><br><span class="line">c=i.filter(ImageFilter.EDGE_ENHANCE_MORE)</span><br><span class="line">c.save(<span class="string">'enhance_more.jpg'</span>,<span class="string">'jpeg'</span>)</span><br></pre></td></tr></table></figure><p>附上测试图片一张~QwQ</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://ws3.sinaimg.cn/large/006tNbRwly1fxjhtbhqmnj30js0jtwra.jpg" alt="用的微博图床，先这样吧~" title="">                </div>                <div class="image-caption">用的微博图床，先这样吧~</div>            </figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;本学期的信息技术课居然讲&lt;strong&gt;AI&lt;/strong&gt;，感谢学校为我们搭建了这样好的平台，让我们能够在OI与AI的道路上齐头并进。第一节课，首先介绍了一下&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gu
+      
+    
+    </summary>
+    
+      <category term="信息学竞赛(OI)" scheme="https://www.ljhedp.cn/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B-OI/"/>
+    
+    
+      <category term="信息技术课程" scheme="https://www.ljhedp.cn/tags/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E8%AF%BE%E7%A8%8B/"/>
+    
+      <category term="人工智能" scheme="https://www.ljhedp.cn/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+      <category term="图像风格化" scheme="https://www.ljhedp.cn/tags/%E5%9B%BE%E5%83%8F%E9%A3%8E%E6%A0%BC%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>江城子·己亥年春忆戊戌事</title>
+    <link href="https://www.ljhedp.cn/post/83dc47eb.html"/>
+    <id>https://www.ljhedp.cn/post/83dc47eb.html</id>
+    <published>2019-03-03T14:36:56.000Z</published>
+    <updated>2019-03-03T14:38:33.537Z</updated>
+    
+    <content type="html"><![CDATA[<p>春寒料峭写题忙。凿壁罢，又偷光。</p><p>晨霞夕照，群英聚机房。</p><p>仍记月下不眠夜，</p><p>面公式，闪灵光。</p><p>秋风萧瑟京城凉。</p><p>磨枪毕，上考场。</p><p>正解茫茫，部分分何方？</p><p>联赛放榜不见我，</p><p>蒟蒻叹，日方长。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;春寒料峭写题忙。凿壁罢，又偷光。&lt;/p&gt;
+&lt;p&gt;晨霞夕照，群英聚机房。&lt;/p&gt;
+&lt;p&gt;仍记月下不眠夜，&lt;/p&gt;
+&lt;p&gt;面公式，闪灵光。&lt;/p&gt;
+&lt;p&gt;秋风萧瑟京城凉。&lt;/p&gt;
+&lt;p&gt;磨枪毕，上考场。&lt;/p&gt;
+&lt;p&gt;正解茫茫，部分分何方？&lt;/p&gt;
+&lt;p&gt;联赛放榜不见我，&lt;/p
+      
+    
+    </summary>
+    
+      <category term="信息学竞赛(OI)" scheme="https://www.ljhedp.cn/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B-OI/"/>
+    
+    
+      <category term="书海扬帆的诗" scheme="https://www.ljhedp.cn/tags/%E4%B9%A6%E6%B5%B7%E6%89%AC%E5%B8%86%E7%9A%84%E8%AF%97/"/>
+    
+  </entry>
   
   <entry>
     <title>三角函数公式整理</title>
@@ -317,9 +378,9 @@
       <category term="信息学竞赛(OI)" scheme="https://www.ljhedp.cn/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B-OI/"/>
     
     
-      <category term="组合数学" scheme="https://www.ljhedp.cn/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
-    
       <category term="数论" scheme="https://www.ljhedp.cn/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+      <category term="组合数学" scheme="https://www.ljhedp.cn/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
@@ -521,62 +582,6 @@
       <category term="模拟" scheme="https://www.ljhedp.cn/tags/%E6%A8%A1%E6%8B%9F/"/>
     
       <category term="贪心" scheme="https://www.ljhedp.cn/tags/%E8%B4%AA%E5%BF%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小学奥数-NOIP2013-转圈游戏</title>
-    <link href="https://www.ljhedp.cn/post/34ffb16e.html"/>
-    <id>https://www.ljhedp.cn/post/34ffb16e.html</id>
-    <published>2018-11-11T13:36:10.000Z</published>
-    <updated>2018-12-23T02:19:50.079Z</updated>
-    
-    <content type="html"><![CDATA[<p>提高组的数论题。</p><p>这道题目我自行思考并在十分钟内写出了正解，一种成就感油然而生。思路就是GCD/LCM再加上快速幂，反复根据同余取模。</p><p>学小学奥数的时候做这类周期问题做多了。。。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll n,m,k,x; </span><br><span class="line"><span class="function">ll <span class="title">gcd</span><span class="params">(ll a,ll b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(b==<span class="number">0</span>) <span class="keyword">return</span> a;</span><br><span class="line">    <span class="keyword">return</span> gcd(b,a%b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">lcm</span><span class="params">(ll a,ll b)</span></span>&#123;</span><br><span class="line">    ll now=gcd(a,b);</span><br><span class="line">    <span class="keyword">return</span> (a/now)*(b/now)*now;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">qmi</span><span class="params">(ll a,ll n,ll p)</span></span>&#123;</span><br><span class="line">    ll m1=a,m2=n,ans=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(n)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n%<span class="number">2</span>) ans=(ans*a)%p;</span><br><span class="line">        a=(a*a)%p;</span><br><span class="line">        n/=<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m&gt;&gt;k&gt;&gt;x;</span><br><span class="line">    k=qmi(<span class="number">10</span>,k,lcm(n,m));</span><br><span class="line">    k=(k*m)%n; </span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;(x+k)%n&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;提高组的数论题。&lt;/p&gt;
-&lt;p&gt;这道题目我自行思考并在十分钟内写出了正解，一种成就感油然而生。思路就是GCD/LCM再加上快速幂，反复根据同余取模。&lt;/p&gt;
-&lt;p&gt;学小学奥数的时候做这类周期问题做多了。。。&lt;br&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;
-      
-    
-    </summary>
-    
-      <category term="信息学竞赛(OI)" scheme="https://www.ljhedp.cn/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B-OI/"/>
-    
-    
-      <category term="数论" scheme="https://www.ljhedp.cn/tags/%E6%95%B0%E8%AE%BA/"/>
-    
-      <category term="快速幂" scheme="https://www.ljhedp.cn/tags/%E5%BF%AB%E9%80%9F%E5%B9%82/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>模板-线性逆元</title>
-    <link href="https://www.ljhedp.cn/post/b82551d7.html"/>
-    <id>https://www.ljhedp.cn/post/b82551d7.html</id>
-    <published>2018-11-11T13:35:13.000Z</published>
-    <updated>2018-12-23T02:19:50.206Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">#define N 3000010</span><br><span class="line">typedef long long ll;</span><br><span class="line">using namespace std;</span><br><span class="line">int inv[N],n,p;</span><br><span class="line">int main()&#123;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;p;</span><br><span class="line">inv[1]=1;</span><br><span class="line">puts(&quot;1&quot;);</span><br><span class="line">    for(int i=2;i&lt;=n;i++)&#123;</span><br><span class="line">        inv[i]=(ll)(p-p/i)*inv[p%i]%p;</span><br><span class="line">        //注意计算时要强制转换，防止溢出</span><br><span class="line">        printf(&quot;%d\n&quot;,inv[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
-      
-    
-    </summary>
-    
-      <category term="信息学竞赛(OI)" scheme="https://www.ljhedp.cn/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B-OI/"/>
-    
-    
-      <category term="数论" scheme="https://www.ljhedp.cn/tags/%E6%95%B0%E8%AE%BA/"/>
-    
-      <category term="逆元" scheme="https://www.ljhedp.cn/tags/%E9%80%86%E5%85%83/"/>
     
   </entry>
   
