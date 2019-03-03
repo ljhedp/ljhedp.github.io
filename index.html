@@ -168,47 +168,6 @@
     <ul class="post-list">
     
         <li class="post-list-item fade">
-            <article id="post-博客搬家到Hexo啦" class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-10-21 15:04:27" datetime="2018-10-21T07:04:27.000Z" itemprop="datePublished">2018-10-21</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/系统信息/">系统信息</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/post/9ea86219.html">博客搬家到Hexo啦~</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        10月中旬，本站出现大规模崩溃，导致100余篇文章无法显示或显示错误。经过全力排查和试图修复，确定错误来源于提供Markdown功能的Wordpress插件，插件原作者在更新中删除了Latex功能，导致全站科学公式无法显示且无法安装支持显示的旧版本插件。
-因此，我们决定由Wordpress系统切换到原生支持$Markdown$和$Mathjax$的$Hexo$博客系统。博主在原博客的200余...
-    
-
-        <a href="/post/9ea86219.html" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
             <article id="post-三角函数公式整理" class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -670,6 +629,58 @@ $xor$
 
         </li>
     
+        <li class="post-list-item fade">
+            <article id="post-NOIP2018题解" class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-11-16 18:16:03" datetime="2018-11-16T10:16:03.000Z" itemprop="datePublished">2018-11-16</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/信息学竞赛-OI/">信息学竞赛(OI)</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/post/c0856590.html">NOIP2018提高组题解</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        Day12. 货币系统25pts部分分类型：特判
+剩余分错因：算法错误
+根据数据满足的条件特判。
+60pts部分分类型：错误的结论
+剩余分错因：算法错误
+考场上想到的做法，不过因为读不懂NOI Linux上浮点数越界的报错提示，没改过来代码，只得了25分。
+将所有数从小到大排序，分别为$a_1,a_2,…,a_n$. 统计每个数除以最小的数$a_1$的余数（包括$a_1$本身），然后扔到一个...
+    
+
+        <a href="/post/c0856590.html" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NOIp题解/">NOIp题解</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/大赛札记/">大赛札记</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
     </ul>
 
     
@@ -799,30 +810,35 @@ lazyScripts.push('//s95.cnzz.com/z_stat.php?id=1264439082&web_id=1264439082')
 
 
 
-
-
-
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-
+<!-- mathjax config similar to math.stackexchange -->
 
 <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>--><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
 </body>
 </html>

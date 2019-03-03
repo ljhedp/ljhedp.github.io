@@ -31,7 +31,7 @@
 <meta property="og:site_name" content="书海扬帆">
 <meta property="og:description" content="10月中旬，本站出现大规模崩溃，导致100余篇文章无法显示或显示错误。经过全力排查和试图修复，确定错误来源于提供Markdown功能的Wordpress插件，插件原作者在更新中删除了Latex功能，导致全站科学公式无法显示且无法安装支持显示的旧版本插件。 因此，我们决定由Wordpress系统切换到原生支持$Markdown$和$Mathjax$的$Hexo$博客系统。博主在原博客的200余篇文章">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-23T02:19:50.017Z">
+<meta property="og:updated_time" content="2019-03-03T14:18:02.137Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客搬家到Hexo啦~">
 <meta name="twitter:description" content="10月中旬，本站出现大规模崩溃，导致100余篇文章无法显示或显示错误。经过全力排查和试图修复，确定错误来源于提供Markdown功能的Wordpress插件，插件原作者在更新中删除了Latex功能，导致全站科学公式无法显示且无法安装支持显示的旧版本插件。 因此，我们决定由Wordpress系统切换到原生支持$Markdown$和$Mathjax$的$Hexo$博客系统。博主在原博客的200余篇文章">
@@ -233,7 +233,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-12-23T02:19:50.017Z" itemprop="dateUpdated">2018-12-23 10:19:50</time>
+    最后更新时间：<time datetime="2019-03-03T14:18:02.137Z" itemprop="dateUpdated">2019-03-03 22:18:02</time>
 </span><br>
 
 
@@ -524,30 +524,35 @@ lazyScripts.push('//s95.cnzz.com/z_stat.php?id=1264439082&web_id=1264439082')
 
 
 
-
-
-
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-
+<!-- mathjax config similar to math.stackexchange -->
 
 <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>--><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
 </body>
 </html>

@@ -22,9 +22,9 @@
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="数论,杨辉三角,组合数学,前缀和,打表">
+    <meta name="keywords" content="杨辉三角,组合数学,数论,前缀和,打表">
     <meta name="description" content="题面传送门 解题思路 组合数与杨辉三角有着千丝万缕的联系，不得不说小学奥数的知识在OI中用处还是蛮大的。（不知道杨辉三角是啥？）杨辉三角与组合数最重要的一个联系在于，第n行的m个数可表示为$ \left( {\begin{array}{*{20}{c}} {m - 1}\\ {n - 1} \end{array}} \right) $，即为从n-1个不同元素中取m-1个元素的组合数。 这就意味着对">
-<meta name="keywords" content="数论,杨辉三角,组合数学,前缀和,打表">
+<meta name="keywords" content="杨辉三角,组合数学,数论,前缀和,打表">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「杨辉三角+打表+二维前缀和」NOIP2016-组合数问题">
 <meta property="og:url" content="https://www.ljhedp.cn/post/d008311.html">
@@ -513,30 +513,35 @@ lazyScripts.push('//s95.cnzz.com/z_stat.php?id=1264439082&web_id=1264439082')
 
 
 
-
-
-
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-
+<!-- mathjax config similar to math.stackexchange -->
 
 <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>--><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
 </body>
 </html>

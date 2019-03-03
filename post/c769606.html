@@ -22,9 +22,9 @@
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="数论,杨辉三角,组合数学,卡特兰数">
+    <meta name="keywords" content="杨辉三角,组合数学,数论,卡特兰数">
     <meta name="description" content="题目给定整数n，求卡特兰数的第n项。 分析利用杨辉三角性质打表算出组合数即可计算。 代码分享12345678910111213141516171819202122#include &amp;lt;iostream&amp;gt;#include &amp;lt;cstdlib&amp;gt;#include &amp;lt;cstdio&amp;gt;using namespace std;//Catalan数：求C(2n,n)/n+1long">
-<meta name="keywords" content="数论,杨辉三角,组合数学,卡特兰数">
+<meta name="keywords" content="杨辉三角,组合数学,数论,卡特兰数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="卡特兰数-洛谷P1044-栈">
 <meta property="og:url" content="https://www.ljhedp.cn/post/c769606.html">
@@ -505,30 +505,35 @@ lazyScripts.push('//s95.cnzz.com/z_stat.php?id=1264439082&web_id=1264439082')
 
 
 
-
-
-
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-
+<!-- mathjax config similar to math.stackexchange -->
 
 <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>--><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
 </body>
 </html>
