@@ -22,9 +22,9 @@
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="学习笔记,图论,Tarjan">
+    <meta name="keywords" content="图论,学习笔记,Tarjan">
     <meta name="description" content="写在前面$Tarjan$算法是一种非常 基本概念与定义入门练习聚焦dfn与low：这么写对吗？进阶">
-<meta name="keywords" content="学习笔记,图论,Tarjan">
+<meta name="keywords" content="图论,学习笔记,Tarjan">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tarjan强连通分量算法略解">
 <meta property="og:url" content="https://www.ljhedp.cn/post/4ffb8961.html">
@@ -527,11 +527,26 @@ MathJax.Hub.Queue(function() {
 
 
 
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>

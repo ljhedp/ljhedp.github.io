@@ -195,8 +195,10 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        本学期的信息技术课居然讲AI，感谢学校为我们搭建了这样好的平台，让我们能够在OI与AI的道路上齐头并进。第一节课，首先介绍了一下12345首先，我们需要在```cmd```(Windows)或者```terminal```(Linux, Mac)中输入安装pillow库的命令：```bashpip install pillow
-如果是Linux或者Mac，由于默认的Python版本是Pyth...
+        本学期的信息技术课居然讲AI，感谢学校为我们搭建了这样好的平台，让我们能够在OI与AI的道路上齐头并进。第一节课，首先介绍了一下pip中的pillow库，以及其中的一些图像风格化的知识。
+首先，我们需要在cmd(Windows)或者terminal(Linux, Mac)中输入安装pillow库的命令：
+1pip install pillow
+如果是Linux或者Mac，由于默认的Pytho...
     
 
         <a href="/post/fce332f1.html" class="post-more waves-effect waves-button">
@@ -811,11 +813,26 @@ MathJax.Hub.Queue(function() {
 
 
 
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
