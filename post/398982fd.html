@@ -1,200 +1,178 @@
 <!DOCTYPE html>
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
-    
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>函数定义与性质 | 书海扬帆</title>
+  
+  <meta name="keywords" content="博客,代码,分享,日志,生活,信息学竞赛,NOIP,C++,前端开发">
+  
+  
+  <meta name="description" content="分享学习经验、学习方法和学习历程">
+  
 
-    
+  
+  <link rel="alternate" href="/atom.xml" title="书海扬帆">
+  
 
-    
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
 
+  <!-- link -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
+  
 
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.ljhedp.cn/images/2019-03-17-favicon.ico">
+  
 
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    
-    
-    
-    <link rel="canonical" href="https://www.ljhedp.cn/post/398982fd.html">
-    
-    
-    <title>函数定义与性质 | 书海扬帆 | 主攻IT，兼修数理，酷爱文史，沉迷学习。</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="theme-color" content="#3F51B5">
-    
-    
-    <meta name="keywords" content="数学竞赛">
-    <meta name="description" content="Welcome to my blog, enter password to read.">
-<meta name="keywords" content="数学竞赛">
-<meta property="og:type" content="article">
-<meta property="og:title" content="函数定义与性质">
-<meta property="og:url" content="https://www.ljhedp.cn/post/398982fd.html">
-<meta property="og:site_name" content="书海扬帆">
-<meta property="og:description" content="Welcome to my blog, enter password to read.">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-23T02:19:50.012Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="函数定义与性质">
-<meta name="twitter:description" content="Welcome to my blog, enter password to read.">
-    
-        <link rel="alternate" type="application/atom+xml" title="书海扬帆" href="/atom.xml">
-    
-    <link rel="shortcut icon" href="/img/favicon.ico">
-    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
-    <script>window.lazyScripts=[]</script>
+  
+  <link rel="stylesheet" href="/style.css">
+  
 
-    <!-- custom head --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-    
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
+  
+  
 </head>
 
 <body>
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="loading" class="active"></div>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="loading-bar-wrapper">
+  <div id="loading-bar" class=""></div>
+</div>
 
-    <aside id="menu" class="hide">
-  <div class="inner flex-row-vertical">
-    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-        <i class="icon icon-lg icon-close"></i>
-    </a>
-    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
-      <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/avatar.jpg">
-        </a>
-        <hgroup class="introduce">
-          <h5 class="nickname">书海扬帆</h5>
-          <a href="mailto:me@ljhedp.cn" title="me@ljhedp.cn" class="mail">me@ljhedp.cn</a>
-        </hgroup>
-      </div>
-    </div>
-    <div class="scroll-wrap flex-col">
-      <ul class="nav">
+    <script>setLoadingBarProgress(20)</script>
+    <header class="l_header ">
+	<div class="wrapper">
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href="/">
         
-            <li class="waves-block waves-effect">
-              <a href="/">
-                <i class="icon icon-lg icon-home"></i>
-                主页
-              </a>
-            </li>
+          书海扬帆
         
-            <li class="waves-block waves-effect">
-              <a href="/archives">
-                <i class="icon icon-lg icon-archives"></i>
-                文章列表
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/tags">
-                <i class="icon icon-lg icon-tags"></i>
-                标签列表
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/categories">
-                <i class="icon icon-lg icon-th-list"></i>
-                分类查找
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/about">
-                <i class="icon icon-lg icon-id-card"></i>
-                关于
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://dalao.online">
-                <i class="icon icon-lg icon-link"></i>
-                RDFZOJ
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://upyun.com">
-                <i class="icon icon-lg icon-cloud"></i>
-                又拍云提供支持
-              </a>
-            </li>
-        
+      </a>
+			<div class="menu">
+				<ul class="h-list">
+          
+  					
+  						<li>
+								<a id="https:www.ljhedp.cn" class="nav flat-box" href="https://www.ljhedp.cn">
+									<i class="fas fa-home fa-fw"></i>&nbsp;主页
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="archives" class="nav flat-box" href="/archives/">
+									<i class="fas fa-archive fa-fw"></i>&nbsp;归档
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+			<ul class="switcher h-list">
+				
+				<li class="s-menu"><a class="fas fa-bars fa-fw" href="javascript:void(0)"></a></li>
+			</ul>
+		</div>
+
+		<div class="nav-sub container container--flex">
+			<a class="logo flat-box"></a>
+			<ul class="switcher h-list">
+				<li class="s-comment"><a class="flat-btn fas fa-comments fa-fw" href="javascript:void(0)"></a></li>
+				<li class="s-toc"><a class="flat-btn fas fa-list fa-fw" href="javascript:void(0)"></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu">
+      <ul>
+          
+              
+                  <li>
+										<a id="https:www.ljhedp.cn" class="nav flat-box" href="https://www.ljhedp.cn">
+											<i class="fas fa-home fa-fw"></i>&nbsp;主页
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="archives" class="nav flat-box" href="/archives/">
+											<i class="fas fa-archive fa-fw"></i>&nbsp;归档
+										</a>
+                  </li>
+              
+       
       </ul>
+		</nav>
+    </header>
+	</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+    <div class="l_body">
+    <div class='container clearfix'>
+        <div class='l_main'>
+            <article id="post" class="post white-box article-type-post" itemscope="" itemprop="blogPost">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      
+          <h1 class="title">函数定义与性质</h1>
+      
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="https://www.ljhedp.cn">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            书海扬帆
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            2018-10-22
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/数学竞赛/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              数学竞赛
+            </a>
+          </div>
+        
+      
+      
+      
     </div>
+    <hr>
   </div>
-</aside>
+</section>
 
-    <main id="main">
-        <header class="top-header" id="header">
-    <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">函数定义与性质</div>
-        
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
-        
-        
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
-            <i class="icon icon-lg icon-share-alt"></i>
-        </a>
-        
-    </div>
-</header>
-<header class="content-header post-header">
-
-    <div class="container fade-scale">
-        <h1 class="title">函数定义与性质</h1>
-        <h5 class="subtitle">
-            
-                <time datetime="2018-10-22T10:54:12.000Z" itemprop="datePublished" class="page-time">
-  2018-10-22
-</time>
-
-
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/数学竞赛/">数学竞赛</a></li></ul>
-
-            
-        </h5>
-    </div>
-
-    
-
-
-</header>
-
-
-<div class="container body-wrap">
-    
-
-<article id="post-函数定义与性质" class="post-article article-type-post fade" itemprop="blogPost">
-
-    <div class="post-card">
-        <h1 class="post-card-title">函数定义与性质</h1>
-        <div class="post-meta">
-            <time class="post-time" title="2018-10-22 18:54:12" datetime="2018-10-22T10:54:12.000Z" itemprop="datePublished">2018-10-22</time>
-
-            
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/数学竞赛/">数学竞赛</a></li></ul>
-
-
-
-            
-<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
-    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
-</span>
-
-
-        </div>
-        <div class="post-content" id="post-content" itemprop="postContent">
-            <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <section class="article typo">
+      <div class="article-entry" itemprop="articleBody">
+        <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <div id="hbe-security">
   <div class="hbe-input-container">
   <input type="password" class="hbe-form-control" id="pass" placeholder="Welcome to my blog, enter password to read.">
@@ -205,339 +183,294 @@
 <div id="decryptionError" style="display: none;">Incorrect Password!</div>
 <div id="noContentError" style="display: none;">No content to display!</div>
 <div id="encrypt-blog" style="display:none">
-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
+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
 </div>
 <script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
-        </div>
-
-        <blockquote class="post-copyright">
-    
-    <div class="content">
+      </div>
         
-<span class="post-time">
-    最后更新时间：<time datetime="2018-12-23T02:19:50.012Z" itemprop="dateUpdated">2018-12-23 10:19:50</time>
-</span><br>
-
-
+          <section class="meta" id="footer-meta">
+            <hr>
+            <div class="new-meta-box">
+              
+                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2018-12-23T10:19:50+08:00">
+                  <a class="notlink">
+                    <i class="fas fa-pencil-alt" aria-hidden="true"></i>
+                    2018-12-23
+                  </a>
+                </div>
+              
+              
+                
+                <div class="new-meta-item meta-tags"><a class="tag" href="/tags/数学竞赛/"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;数学竞赛</a></div>
+              
+              
+            </div>
+          </section>
         
-        一点浩然气，千里快哉风。
-        
-    </div>
-    
-    <footer>
-        <a href="https://www.ljhedp.cn">
-            <img src="/img/avatar.jpg" alt="书海扬帆">
-            书海扬帆
-        </a>
-    </footer>
-</blockquote>
 
         
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
+            <div class="prev-next">
+                
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                            <h4>
+                                <a href="/post/daaecf20.html" rel="prev" title="[20180908]邓神模拟赛题解">
+                                  
+                                      [20180908]邓神模拟赛题解
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/NOIP模拟赛/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>NOIP模拟赛</a> <a class="tag" href="/tags/图论/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>图论</a> <a class="tag" href="/tags/二分/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>二分</a> <a class="tag" href="/tags/STL/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>STL</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/post/604fc339.html" rel="prev" title="四世同堂-老舍">
+                                    
+                                        四世同堂-老舍
+                                    
+                                </a>
+                            </h4>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
 
-
-
-        <div class="post-footer">
-            
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数学竞赛/">数学竞赛</a></li></ul>
-
-
-            
-<div class="page-share-wrap">
-    
-
-<div class="page-share" id="pageShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.ljhedp.cn/post/398982fd.html&title=《函数定义与性质》 — 书海扬帆&pic=https://www.ljhedp.cn/img/avatar.jpg" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.ljhedp.cn/post/398982fd.html&title=《函数定义与性质》 — 书海扬帆&source=Welcome to my blog, enter password to read." data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ljhedp.cn/post/398982fd.html" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《函数定义与性质》 — 书海扬帆&url=https://www.ljhedp.cn/post/398982fd.html&via=https://www.ljhedp.cn" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://www.ljhedp.cn/post/398982fd.html" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-
-    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
-        <i class="icon icon-share-alt icon-lg"></i>
-    </a>
-</div>
-
-
-
-        </div>
-    </div>
-
-    
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/post/daaecf20.html" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">[20180908]邓神模拟赛题解</h4>
-      </a>
-    </div>
-  
-
-  
-    <div class="waves-block waves-effect next">
-      <a href="/post/604fc339.html" id="post-next" class="post-nav-link">
-        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">四世同堂-老舍</h4>
-      </a>
-    </div>
-  
-</nav>
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Valine Comments -->
-    <div class="comments vcomment" id="comments"></div>
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
-    <!-- Valine Comments script -->
-    <script>
-        var GUEST_INFO = ['nick','mail','link'];
-        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
-          return GUEST_INFO.indexOf(item) > -1
-        });
-        new Valine({
-            el: '#comments',
-            notify: 'false' == 'true',
-            verify: 'true' == 'true',
-            appId: "DBTfs1tn9q8DYFqS2ISkW1bk-gzGzoHsz",
-            appKey: "YwAGtYX1drDSOA0IDc1pQ2BB",
-            avatar: "identicon",
-            placeholder: "期待您的真知灼见~",
-            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
-            pageSize: "10"
-        })
-    </script>
-    <!-- Valine Comments end -->
-
-
-
-
-
-
+    </section>
 
 </article>
 
-<div id="reward" class="page-modal reward-lay">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <h3 class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        感谢您的支持~
-        <i class="icon icon-quote-right"></i>
-    </h3>
-    <div class="reward-content">
-        
-        <div class="reward-code">
-            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
-        </div>
-        
-        <label class="reward-toggle">
-            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
-            <div class="reward-toggle-ctrol">
-                <span class="reward-toggle-item wechat">微信</span>
-                <span class="reward-toggle-label"></span>
-                <span class="reward-toggle-item alipay">支付宝</span>
-            </div>
-        </label>
-        
-    </div>
-</div>
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
 
-
-
-</div>
-
-        <footer class="footer">
-    
-    <div class="top">
-        <p>
-            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-        <span>书海扬帆 &copy; 2017 - 2019</span>
-            <span>
-                
-                <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备17041994号-1</a><br>
-                
-                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
-            </span>
-        </p>
-    </div>
-    <div class="bottom">
-        
-<p>
-    <span id="busuanzi_container_site_uv" style="display:yes">
-        总访客数<span id="busuanzi_value_site_uv"></span>人次
-    </span>
-    <span id="busuanzi_container_site_pv" style="display:yes">
-        总访问量<span id="busuanzi_value_site_pv"></span>次
-    </span>
-</p>
-
-
-        <p>
-        </p>
-    </div>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-    </script>
-</footer>
-
-    </main>
-    <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
-
-
-
-<div class="global-share" id="globalShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.ljhedp.cn/post/398982fd.html&title=《函数定义与性质》 — 书海扬帆&pic=https://www.ljhedp.cn/img/avatar.jpg" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.ljhedp.cn/post/398982fd.html&title=《函数定义与性质》 — 书海扬帆&source=Welcome to my blog, enter password to read." data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ljhedp.cn/post/398982fd.html" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《函数定义与性质》 — 书海扬帆&url=https://www.ljhedp.cn/post/398982fd.html&via=https://www.ljhedp.cn" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://www.ljhedp.cn/post/398982fd.html" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-<div class="page-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABxElEQVR42u3aS27DMAwFwNz/0um2QGH1kbQUtxitAsWwRxuCH71e8Xr/WMmTVzvf9187Fi4u7pj7Xq71M+vDXO1c/V5/BRcX9zz3KmJUn1kTJ+/HxcV9Mjf/TBK2cHFx/wc3P1LvMLi4uM/hJuXN+kXrnV5xhYuL+ylu3qXc93tLfxcXF7fFfRdXMiy5Cmfr/ejruLi4R7h5QOmlIL3S6Jej4uLibuYmFyN6RVEP90tYxMXFPcjNRx1JG7TaKMnTHVxc3DPc3osmlNsaKLi4uJu5+ZkKo9BWqIpaKri4uJu5+bAzL1F6xU+UTuHi4h7h5sTqcKXXZi3EXVxc3CPcvFC5C5dPe3BxcU9yJyHmrtFpYTCDi4t7hFv9fF7G9A5fvtaJi4u7jZuf5t6GaZ7cRP1dXFzcDdx8RDq/1NW72oWLi/sE7qSt2UtuClkYLi7uNu67uCaXKpIGa6GTiouLu407GW/0nqn2N5qHwcXFHXMnwStPffJ/C8UPLi7uZm410FQTmptrNVxc3IdxkwHJeidvnuLi4v4t7qTSqtZeoxQHFxd3wE1CTL6/fnM+3MXFxf0UtxxK4tZGPsK5qwmLi4s75n4BbXK5aD0k6X0AAAAASUVORK5CYII=" alt="微信分享二维码">
-</div>
-
-
-
-
-    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
-
-
-lazyScripts.push('//s95.cnzz.com/z_stat.php?id=1264439082&web_id=1264439082')
-
-</script>
-
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
-
-
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
-</div>
-<template id="search-tpl">
-<li class="item">
-    <a href="{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
-            </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
-</template>
-
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
-
-
-
-<!-- mathjax config similar to math.stackexchange -->
-
+    <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
 <script type="text/x-mathjax-config">
-MathJax.Hub.Config({
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX","TeX"],
+      linebreaks: { automatic:true },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
     tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
-
-MathJax.Hub.Queue(function() {
+      inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: { autoNumber: "AMS" },
+      noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+      Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
     var all = MathJax.Hub.getAllJax(), i;
     for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
+      all[i].SourceElement().parentNode.className += (all[i].SourceElement().parentNode.className ? ' ' : '') + 'has-jax';
     }
-});
+    console.log("mathjax did loaded!");
+  });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<br>
+
+<!-- 显示推荐文章和评论 -->
 
 
 
 
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script>
+    window.subData = {
+        title: '函数定义与性质',
+        tools: true
+    }
+</script>
+
+
+        </div>
+        <aside class='l_side'>
+            
+  
+  
+    
+      
+      
+        <section class="author">
+  <div class="content ">
+    
+      <div class="avatar">
+        <img class="avatar" src="/avatar.jpg">
+      </div>
+    
+    
+      <div class="text">
+        
+        
+        
+          <p><span id="jinrishici-sentence">书海扬帆</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="mailto:me@ljhedp.cn" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-envelope" aria-hidden="true"></i></a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+
+      
+    
+  
+    
+      
+      
+        <section class="plain">
+  
+<header class="">
+  <div><i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;QwQ</div>
+  
+</header>
+
+  <div class="content ">
+    <p>待修锅仍很多，坑待填</p>
+
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+  <section class="category">
+    
+<header class="">
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;所有分类</div>
+  
+</header>
+
+    <div class="content ">
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/categories/信息学竞赛-OI/" href="/categories/信息学竞赛-OI/"><div class="name">信息学竞赛(OI)</div><div class="badge">(94)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/复习资料/" href="/categories/复习资料/"><div class="name">复习资料</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/数学竞赛/" href="/categories/数学竞赛/"><div class="name">数学竞赛</div><div class="badge">(3)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/文学/" href="/categories/文学/"><div class="name">文学</div><div class="badge">(10)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/系统信息/" href="/categories/系统信息/"><div class="name">系统信息</div><div class="badge">(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/编程/" href="/categories/编程/"><div class="name">编程</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/音乐/" href="/categories/音乐/"><div class="name">音乐</div><div class="badge">(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+      
+    
+  
+    
+      
+      
+        
+  <section class="tagcloud">
+    
+<header class="">
+  <div><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+</header>
+
+    <div class="content ">
+      <a href="/tags/01背包/" style="font-size: 14.83px; color: #939393">01背包</a> <a href="/tags/Floyd/" style="font-size: 14px; color: #999">Floyd</a> <a href="/tags/KMP/" style="font-size: 14px; color: #999">KMP</a> <a href="/tags/Kruscal/" style="font-size: 14px; color: #999">Kruscal</a> <a href="/tags/LCT/" style="font-size: 14px; color: #999">LCT</a> <a href="/tags/Manacher/" style="font-size: 14px; color: #999">Manacher</a> <a href="/tags/NOI/" style="font-size: 14px; color: #999">NOI</a> <a href="/tags/NOIP模拟赛/" style="font-size: 14px; color: #999">NOIP模拟赛</a> <a href="/tags/NOIp题解/" style="font-size: 14px; color: #999">NOIp题解</a> <a href="/tags/Prim/" style="font-size: 14px; color: #999">Prim</a> <a href="/tags/STL/" style="font-size: 14px; color: #999">STL</a> <a href="/tags/ST表/" style="font-size: 14.83px; color: #939393">ST表</a> <a href="/tags/Splay/" style="font-size: 14px; color: #999">Splay</a> <a href="/tags/Tarjan/" style="font-size: 14.83px; color: #939393">Tarjan</a> <a href="/tags/dinic/" style="font-size: 14px; color: #999">dinic</a> <a href="/tags/dp/" style="font-size: 20.67px; color: #6c6c6c">dp</a> <a href="/tags/dulu/" style="font-size: 14px; color: #999">dulu</a> <a href="/tags/三角函数/" style="font-size: 14px; color: #999">三角函数</a> <a href="/tags/书海扬帆的诗/" style="font-size: 19px; color: #777">书海扬帆的诗</a> <a href="/tags/二分/" style="font-size: 14.83px; color: #939393">二分</a> <a href="/tags/二分图/" style="font-size: 14.83px; color: #939393">二分图</a> <a href="/tags/人工智能/" style="font-size: 14px; color: #999">人工智能</a> <a href="/tags/信息技术课程/" style="font-size: 14px; color: #999">信息技术课程</a> <a href="/tags/分块/" style="font-size: 14px; color: #999">分块</a> <a href="/tags/分组背包/" style="font-size: 14px; color: #999">分组背包</a> <a href="/tags/前缀和/" style="font-size: 14px; color: #999">前缀和</a> <a href="/tags/动态树/" style="font-size: 14px; color: #999">动态树</a> <a href="/tags/动态规划/" style="font-size: 14px; color: #999">动态规划</a> <a href="/tags/匈牙利算法/" style="font-size: 14.83px; color: #939393">匈牙利算法</a> <a href="/tags/区间dp/" style="font-size: 14px; color: #999">区间dp</a> <a href="/tags/卡特兰数/" style="font-size: 14px; color: #999">卡特兰数</a> <a href="/tags/卢卡斯定理/" style="font-size: 14px; color: #999">卢卡斯定理</a> <a href="/tags/历史/" style="font-size: 14px; color: #999">历史</a> <a href="/tags/后缀排序/" style="font-size: 14px; color: #999">后缀排序</a> <a href="/tags/后缀数组/" style="font-size: 14.83px; color: #939393">后缀数组</a> <a href="/tags/哈希/" style="font-size: 14px; color: #999">哈希</a> <a href="/tags/图像风格化/" style="font-size: 14px; color: #999">图像风格化</a> <a href="/tags/图论/" style="font-size: 19.83px; color: #717171">图论</a> <a href="/tags/基环树/" style="font-size: 14px; color: #999">基环树</a> <a href="/tags/大赛札记/" style="font-size: 14px; color: #999">大赛札记</a> <a href="/tags/太强啦/" style="font-size: 14px; color: #999">太强啦</a> <a href="/tags/字符串/" style="font-size: 18.17px; color: #7d7d7d">字符串</a> <a href="/tags/学习笔记/" style="font-size: 22.33px; color: #606060">学习笔记</a> <a href="/tags/小游戏/" style="font-size: 14px; color: #999">小游戏</a> <a href="/tags/差分/" style="font-size: 14px; color: #999">差分</a> <a href="/tags/差分约束/" style="font-size: 14px; color: #999">差分约束</a> <a href="/tags/带约束的背包/" style="font-size: 14px; color: #999">带约束的背包</a> <a href="/tags/平衡树/" style="font-size: 14px; color: #999">平衡树</a> <a href="/tags/并查集/" style="font-size: 14.83px; color: #939393">并查集</a> <a href="/tags/归并排序/" style="font-size: 14px; color: #999">归并排序</a> <a href="/tags/心得体会/" style="font-size: 15.67px; color: #8e8e8e">心得体会</a> <a href="/tags/快速幂/" style="font-size: 14px; color: #999">快速幂</a> <a href="/tags/打表/" style="font-size: 14px; color: #999">打表</a> <a href="/tags/扩展欧拉定理/" style="font-size: 14px; color: #999">扩展欧拉定理</a> <a href="/tags/扩欧/" style="font-size: 14px; color: #999">扩欧</a> <a href="/tags/排序/" style="font-size: 14px; color: #999">排序</a> <a href="/tags/搜索/" style="font-size: 14.83px; color: #939393">搜索</a> <a href="/tags/摩尔投票法/" style="font-size: 14px; color: #999">摩尔投票法</a> <a href="/tags/数学/" style="font-size: 15.67px; color: #8e8e8e">数学</a> <a href="/tags/数学竞赛/" style="font-size: 16.5px; color: #888">数学竞赛</a> <a href="/tags/数据结构/" style="font-size: 14px; color: #999">数据结构</a> <a href="/tags/数论/" style="font-size: 23.17px; color: #5b5b5b">数论</a> <a href="/tags/文学作品/" style="font-size: 18.17px; color: #7d7d7d">文学作品</a> <a href="/tags/最大流/" style="font-size: 14px; color: #999">最大流</a> <a href="/tags/最小生成树/" style="font-size: 14px; color: #999">最小生成树</a> <a href="/tags/最短路/" style="font-size: 15.67px; color: #8e8e8e">最短路</a> <a href="/tags/杨辉三角/" style="font-size: 14.83px; color: #939393">杨辉三角</a> <a href="/tags/树状数组/" style="font-size: 14px; color: #999">树状数组</a> <a href="/tags/校内训练/" style="font-size: 14px; color: #999">校内训练</a> <a href="/tags/模拟/" style="font-size: 21.5px; color: #666">模拟</a> <a href="/tags/模板/" style="font-size: 24px; color: #555">模板</a> <a href="/tags/游记/" style="font-size: 14px; color: #999">游记</a> <a href="/tags/爬虫/" style="font-size: 14px; color: #999">爬虫</a> <a href="/tags/矩阵加速/" style="font-size: 14px; color: #999">矩阵加速</a> <a href="/tags/矩阵快速幂/" style="font-size: 14px; color: #999">矩阵快速幂</a> <a href="/tags/离线并查集/" style="font-size: 14px; color: #999">离线并查集</a> <a href="/tags/精品/" style="font-size: 21.5px; color: #666">精品</a> <a href="/tags/线性基/" style="font-size: 14px; color: #999">线性基</a> <a href="/tags/线段树/" style="font-size: 16.5px; color: #888">线段树</a> <a href="/tags/组合数学/" style="font-size: 17.33px; color: #828282">组合数学</a> <a href="/tags/组合计数/" style="font-size: 14px; color: #999">组合计数</a> <a href="/tags/缩点/" style="font-size: 14px; color: #999">缩点</a> <a href="/tags/网络流/" style="font-size: 15.67px; color: #8e8e8e">网络流</a> <a href="/tags/网络流24题/" style="font-size: 14.83px; color: #939393">网络流24题</a> <a href="/tags/背包问题/" style="font-size: 17.33px; color: #828282">背包问题</a> <a href="/tags/莫比乌斯反演/" style="font-size: 14px; color: #999">莫比乌斯反演</a> <a href="/tags/记忆化搜索/" style="font-size: 14px; color: #999">记忆化搜索</a> <a href="/tags/调试与对拍/" style="font-size: 14.83px; color: #939393">调试与对拍</a> <a href="/tags/贪心/" style="font-size: 15.67px; color: #8e8e8e">贪心</a> <a href="/tags/逆元/" style="font-size: 14.83px; color: #939393">逆元</a> <a href="/tags/里程碑/" style="font-size: 14px; color: #999">里程碑</a> <a href="/tags/错排/" style="font-size: 14px; color: #999">错排</a> <a href="/tags/队列/" style="font-size: 14px; color: #999">队列</a> <a href="/tags/随笔/" style="font-size: 17.33px; color: #828282">随笔</a> <a href="/tags/音乐/" style="font-size: 14.83px; color: #939393">音乐</a> <a href="/tags/马拉车/" style="font-size: 14px; color: #999">马拉车</a> <a href="/tags/高精度/" style="font-size: 14px; color: #999">高精度</a>
+    </div>
+  </section>
+
+
+      
+    
+  
+
+
+        </aside>
+        <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+    <footer id="footer" class="clearfix">
+  
+    <div class="footer">
+      <p>京ICP备17041994号</p>
+
+    </div>
+    <br>
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="mailto:me@ljhedp.cn" class="social fas fa-envelope flat-btn" target="_blank" rel="external"></a>
+        
+      
+    </div>
+  
+  <br>
+  <div>本站使用 <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> 作为主题。
+  </div>
+</footer>
+
+    <script>setLoadingBarProgress(80);</script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
 
 
 
 
 
+
+
+    <script>setLoadingBarProgress(100);</script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
