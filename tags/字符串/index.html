@@ -23,6 +23,9 @@
   
 
   <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
   
@@ -32,7 +35,7 @@
   
 
   
-  <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/css/style.css">
   
 
   <script>
@@ -46,12 +49,55 @@
 </head>
 
 <body>
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="loading-bar-wrapper">
-  <div id="loading-bar" class=""></div>
+  
+  
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="cover-wrapper">
+    <cover class="cover  half">
+      
+        
+  <h1 class="title">书海扬帆的博客</h1>
+
+
+  <div class="m_search">
+    <form name="searchform" class="form u-search-form">
+      <input type="text" class="input u-search-input" placeholder="">
+      <i class="icon fas fa-search fa-fw"></i>
+    </form>
+  </div>
+
+<div class="menu navgation">
+  <ul class="h-list">
+    
+      
+        <li>
+          <a class="nav home" href="/" id="home">
+            <i class="fas fa-rss fa-fw"></i>&nbsp;博文
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/friends/" rel="nofollow" id="friends">
+            <i class="fas fa-link fa-fw"></i>&nbsp;友链
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/about/" rel="nofollow" id="about">
+            <i class="fas fa-info-circle fa-fw"></i>&nbsp;关于
+          </a>
+        </li>
+      
+    
+  </ul>
 </div>
 
-    <script>setLoadingBarProgress(20)</script>
-    <header class="l_header ">
+      
+    </cover>
+    <header class="l_header pure">
+  <div id="loading-bar-wrapper">
+    <div id="loading-bar" class="pure"></div>
+  </div>
+
 	<div class="wrapper">
 		<div class="nav-main container container--flex">
       <a class="logo flat-box" href="/">
@@ -59,18 +105,30 @@
           书海扬帆
         
       </a>
-			<div class="menu">
+			<div class="menu navgation">
 				<ul class="h-list">
           
   					
   						<li>
-								<a id="https:www.ljhedp.cn" class="nav flat-box" href="https://www.ljhedp.cn">
-									<i class="fas fa-home fa-fw"></i>&nbsp;主页
+								<a class="nav flat-box" href="/" id="home">
+									<i class="fas fa-grin fa-fw"></i>&nbsp;示例
 								</a>
 							</li>
       			
   						<li>
-								<a id="archives" class="nav flat-box" href="/archives/">
+								<a class="nav flat-box" href="/categories/" rel="nofollow" id="categories">
+									<i class="fas fa-folder-open fa-fw"></i>&nbsp;分类
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/tags/" rel="nofollow" id="tags">
+									<i class="fas fa-hashtag fa-fw"></i>&nbsp;标签
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/archives/" rel="nofollow" id="archives">
 									<i class="fas fa-archive fa-fw"></i>&nbsp;归档
 								</a>
 							</li>
@@ -80,7 +138,16 @@
 			</div>
 
 			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索">
+						<i class="icon fas fa-search fa-fw"></i>
+					</form>
+				</div>
+			
 			<ul class="switcher h-list">
+				
+					<li class="s-search"><a class="fas fa-search fa-fw" href="javascript:void(0)"></a></li>
 				
 				<li class="s-menu"><a class="fas fa-bars fa-fw" href="javascript:void(0)"></a></li>
 			</ul>
@@ -90,489 +157,378 @@
 			<a class="logo flat-box"></a>
 			<ul class="switcher h-list">
 				<li class="s-comment"><a class="flat-btn fas fa-comments fa-fw" href="javascript:void(0)"></a></li>
-				<li class="s-toc"><a class="flat-btn fas fa-list fa-fw" href="javascript:void(0)"></a></li>
+        
+          <li class="s-toc"><a class="flat-btn fas fa-list fa-fw" href="javascript:void(0)"></a></li>
+        
 			</ul>
 		</div>
 	</div>
 </header>
 	<aside class="menu-phone">
     <header>
-		<nav class="menu">
+		<nav class="menu navgation">
       <ul>
+        
           
-              
-                  <li>
-										<a id="https:www.ljhedp.cn" class="nav flat-box" href="https://www.ljhedp.cn">
-											<i class="fas fa-home fa-fw"></i>&nbsp;主页
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="archives" class="nav flat-box" href="/archives/">
-											<i class="fas fa-archive fa-fw"></i>&nbsp;归档
-										</a>
-                  </li>
-              
+            <li>
+							<a class="nav flat-box" href="/" id="home">
+								<i class="fas fa-clock fa-fw"></i>&nbsp;近期文章
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/blog/archives/" rel="nofollow" id="blogarchives">
+								<i class="fas fa-archive fa-fw"></i>&nbsp;文章归档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/projects/" id="projects">
+								<i class="fas fa-code-branch fa-fw"></i>&nbsp;开源项目
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/friends/" rel="nofollow" id="friends">
+								<i class="fas fa-link fa-fw"></i>&nbsp;我的友链
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="https://xaoxuu.com/wiki/material-x/" rel="nofollow" id="https:xaoxuu.comwikimaterial-x">
+								<i class="fas fa-book fa-fw"></i>&nbsp;主题文档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/about/" rel="nofollow" id="about">
+								<i class="fas fa-info-circle fa-fw"></i>&nbsp;关于小站
+							</a>
+            </li>
+          
        
       </ul>
 		</nav>
     </header>
 	</aside>
+<script>setLoadingBarProgress(40);</script>
 
-    <script>setLoadingBarProgress(40);</script>
-    <div class="l_body">
-    <div class='container clearfix'>
-        <div class='l_main'>
-            
-    <script>
-        window.subData= { title:'标签 : 字符串'}
-    </script>
+  </div>
 
 
-
-
+  <div class="l_body">
+    <div class='body-wrapper'>
+      
+<div class="l_main">
+  
+    
+      
   <section class="post-list">
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-
-
-
-      
-
-      
-
-      
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
     
-<section class="meta">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
   
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/post/532fbd9a.html">
-              
-                  字符串+模拟-洛谷P1207-USACO1.2-双重回文数
-              
-          </a>
-      </h2>
-    
 
-    <div class="new-meta-box">
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
       
-        <div class="new-meta-item author">
-          <a href="https://www.ljhedp.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            书海扬帆
-          </a>
-        </div>
+        
+  <h2 class="title">
+    <a href="/post/532fbd9a.html">
+      字符串+模拟-洛谷P1207-USACO1.2-双重回文数
+    </a>
+  </h2>
+
+
       
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2018-11-27
-          </a>
-        </div>
-      
-      
+      <div class="new-meta-box">
         
           
-          <div class="new-meta-item category">
-            <a href="/categories/信息学竞赛-OI/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              信息学竞赛(OI)
-            </a>
-          </div>
         
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.ljhedp.cn" rel="nofollow">
       
+        <i class="fas fa-user" aria-hidden="true"></i>
       
+      <p>书海扬帆</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-11-27</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/categories/信息学竞赛-OI/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>信息学竞赛(OI)</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
       
     </div>
-    <hr>
-  </div>
-</section>
+  </section>
 
-    <section class="article typo">
-        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,s,tot;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">3625</span>],cnt;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pd</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n/<span class="number">2</span>;i++)</span><br><span class="line">		<span class="keyword">if</span>(a[i]!=a[n-i+<span class="number">1</span>]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">convert</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> d)</span> </span>&#123;</span><br><span class="line">	cnt=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(n) &#123;</span><br><span class="line">		a[++cnt]=n%d;n/=d;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;s;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=s+<span class="number">1</span>;;i++) &#123;</span><br><span class="line">		<span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">2</span>;j&lt;=<span class="number">10</span>;j++) &#123;</span><br><span class="line">			convert(i,j);</span><br><span class="line">			<span class="keyword">if</span>(pd(a,cnt)) res++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(res&gt;=<span class="number">2</span>) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,i);</span><br><span class="line">			tot++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(tot==n) <span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,s,tot;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">3625</span>],cnt;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pd</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n/<span class="number">2</span>;i++)</span><br><span class="line">		<span class="keyword">if</span>(a[i]!=a[n-i+<span class="number">1</span>]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">convert</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> d)</span> </span>&#123;</span><br><span class="line">	cnt=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(n) &#123;</span><br><span class="line">		a[++cnt]=n%d;n/=d;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;s;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=s+<span class="number">1</span>;;i++) &#123;</span><br><span class="line">		<span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">2</span>;j&lt;=<span class="number">10</span>;j++) &#123;</span><br><span class="line">			convert(i,j);</span><br><span class="line">			<span class="keyword">if</span>(pd(a,cnt)) res++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(res&gt;=<span class="number">2</span>) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,i);</span><br><span class="line">			tot++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(tot==n) <span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><a href="https://www.luogu.org/problemnew/show/P1207" target="_blank" rel="noopener">题目</a></p>
 
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
         
-
+          <a href="/tags/字符串/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>字符串</a>
         
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/字符串/"><i class="fas fa-hashtag fa-fw"></i>字符串</a>
-                
-                    <a href="/tags/模拟/"><i class="fas fa-hashtag fa-fw"></i>模拟</a>
-                
-            </div>
+          <a href="/tags/模拟/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>模拟</a>
         
-    </section>
+      </div>
+    
+  </section>
 </article>
 
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/post/d871fa37.html">
-              
-                  模板-Manacher（马拉车）算法
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="https://www.ljhedp.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            书海扬帆
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2018-11-11
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/信息学竞赛-OI/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              信息学竞赛(OI)
-            </a>
           </div>
         
       
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
+
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
       
+        
+  <h2 class="title">
+    <a href="/post/d871fa37.html">
+      模板-Manacher（马拉车）算法
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.ljhedp.cn" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>书海扬帆</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-11-11</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/categories/信息学竞赛-OI/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>信息学竞赛(OI)</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
       
     </div>
-    <hr>
-  </div>
-</section>
+  </section>
 
-    <section class="article typo">
-        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Luogu P3805</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">char</span> s[<span class="number">11000110</span>],s2[<span class="number">33000300</span>];</span><br><span class="line"><span class="keyword">int</span> p[<span class="number">33000300</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> len=<span class="built_in">strlen</span>(s);</span><br><span class="line">	s2[<span class="number">0</span>]=<span class="string">'%'</span>;</span><br><span class="line">	s2[<span class="number">1</span>]=<span class="string">'#'</span>;</span><br><span class="line">	<span class="keyword">int</span> j=<span class="number">2</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">		s2[j++]=s[i];</span><br><span class="line">		s2[j++]=<span class="string">'#'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	s2[j]=<span class="string">'*'</span>;</span><br><span class="line">	<span class="keyword">return</span> j;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">manacher</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> len=init();</span><br><span class="line">	<span class="keyword">int</span> maxLen=<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">int</span> id,mx=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;len;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(i&lt;mx) p[i]=min(p[<span class="number">2</span>*id-i],mx-i);</span><br><span class="line">		<span class="keyword">else</span> p[i]=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span>(s2[i-p[i]]==s2[i+p[i]]) p[i]++;</span><br><span class="line">		<span class="keyword">if</span>(mx&lt;i+p[i]) id=i,mx=i+p[i];</span><br><span class="line">		maxLen=max(maxLen,p[i]<span class="number">-1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">		<span class="keyword">return</span> maxLen;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	gets(s);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,manacher());</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
 
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Luogu P3805</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">char</span> s[<span class="number">11000110</span>],s2[<span class="number">33000300</span>];</span><br><span class="line"><span class="keyword">int</span> p[<span class="number">33000300</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> len=<span class="built_in">strlen</span>(s);</span><br><span class="line">	s2[<span class="number">0</span>]=<span class="string">'%'</span>;</span><br><span class="line">	s2[<span class="number">1</span>]=<span class="string">'#'</span>;</span><br><span class="line">	<span class="keyword">int</span> j=<span class="number">2</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">		s2[j++]=s[i];</span><br><span class="line">		s2[j++]=<span class="string">'#'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	s2[j]=<span class="string">'*'</span>;</span><br><span class="line">	<span class="keyword">return</span> j;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">manacher</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> len=init();</span><br><span class="line">	<span class="keyword">int</span> maxLen=<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">int</span> id,mx=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;len;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(i&lt;mx) p[i]=min(p[<span class="number">2</span>*id-i],mx-i);</span><br><span class="line">		<span class="keyword">else</span> p[i]=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span>(s2[i-p[i]]==s2[i+p[i]]) p[i]++;</span><br><span class="line">		<span class="keyword">if</span>(mx&lt;i+p[i]) id=i,mx=i+p[i];</span><br><span class="line">		maxLen=max(maxLen,p[i]<span class="number">-1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">		<span class="keyword">return</span> maxLen;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	gets(s);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,manacher());</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
         
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/字符串/"><i class="fas fa-hashtag fa-fw"></i>字符串</a>
-                
-                    <a href="/tags/模板/"><i class="fas fa-hashtag fa-fw"></i>模板</a>
-                
-                    <a href="/tags/Manacher/"><i class="fas fa-hashtag fa-fw"></i>Manacher</a>
-                
-                    <a href="/tags/马拉车/"><i class="fas fa-hashtag fa-fw"></i>马拉车</a>
-                
-            </div>
+          <a href="/tags/字符串/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>字符串</a>
         
-    </section>
+          <a href="/tags/模板/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>模板</a>
+        
+          <a href="/tags/Manacher/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>Manacher</a>
+        
+          <a href="/tags/马拉车/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>马拉车</a>
+        
+      </div>
+    
+  </section>
 </article>
 
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/post/8d6921d3.html">
-              
-                  KMP算法与后缀数组的基本知识
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="https://www.ljhedp.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            书海扬帆
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2018-11-11
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/信息学竞赛-OI/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              信息学竞赛(OI)
-            </a>
           </div>
         
       
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
+
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
       
+        
+  <h2 class="title">
+    <a href="/post/8d6921d3.html">
+      KMP算法与后缀数组的基本知识
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.ljhedp.cn" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>书海扬帆</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-11-11</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/categories/信息学竞赛-OI/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>信息学竞赛(OI)</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
       
     </div>
-    <hr>
-  </div>
-</section>
+  </section>
 
-    <section class="article typo">
-        <p>整理一下新学期的笔记。</p>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>整理一下新学期的笔记。</p>
 <p>KMP算法和后缀数组算法都是用于字符串匹配。即：给定两个字符串，寻找其中一个字符串是否包含另一个字符串，如果包含，返回包含的起始位置。</p>
 <p>我们可以利用KMP/后缀数组构建一个简单的搜索引擎。</p>
 <ul>
@@ -580,268 +536,341 @@
      <li><a href="https://cdn.ljhedp.cn/site-file/2018/03/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84%E2%80%94%E2%80%94%E5%A4%84%E7%90%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9C%89%E5%8A%9B%E5%B7%A5%E5%85%B7.pdf" target="_blank" rel="noopener">后缀数组的基本概念及应用（国家集训队论文）</a></li>
 </ul>
 
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
         
-
+          <a href="/tags/学习笔记/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>学习笔记</a>
         
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/学习笔记/"><i class="fas fa-hashtag fa-fw"></i>学习笔记</a>
-                
-                    <a href="/tags/KMP/"><i class="fas fa-hashtag fa-fw"></i>KMP</a>
-                
-                    <a href="/tags/后缀数组/"><i class="fas fa-hashtag fa-fw"></i>后缀数组</a>
-                
-                    <a href="/tags/字符串/"><i class="fas fa-hashtag fa-fw"></i>字符串</a>
-                
-            </div>
+          <a href="/tags/KMP/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>KMP</a>
         
-    </section>
+          <a href="/tags/后缀数组/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>后缀数组</a>
+        
+          <a href="/tags/字符串/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>字符串</a>
+        
+      </div>
+    
+  </section>
 </article>
 
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/post/e190ca40.html">
-              
-                  模板-洛谷P3809-后缀排序
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="https://www.ljhedp.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            书海扬帆
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2018-11-11
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/信息学竞赛-OI/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              信息学竞赛(OI)
-            </a>
           </div>
         
       
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
+
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
       
+        
+  <h2 class="title">
+    <a href="/post/e190ca40.html">
+      模板-洛谷P3809-后缀排序
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.ljhedp.cn" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>书海扬帆</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-11-11</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/categories/信息学竞赛-OI/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>信息学竞赛(OI)</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
       
     </div>
-    <hr>
-  </div>
-</section>
-
-    <section class="article typo">
-        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// luogu-judger-enable-o2</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1e6</span>+<span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">char</span> s[maxn];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> first,second,id;</span><br><span class="line">&#125;a[maxn],b[maxn];</span><br><span class="line"><span class="keyword">int</span> cnt[maxn],rank[maxn],sa[maxn];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getsa</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tot=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">memset</span>(cnt,<span class="number">0</span>,<span class="keyword">sizeof</span>(cnt));</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) cnt[s[i]]++;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">128</span>;i++) cnt[i]+=cnt[i<span class="number">-1</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=n;i&gt;<span class="number">0</span>;i--) sa[cnt[s[i]]--]=i;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(s[sa[i]]==s[sa[i<span class="number">-1</span>]]) rank[sa[i]]=tot;</span><br><span class="line">        <span class="keyword">else</span> rank[sa[i]]=++tot;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">1</span>;k&lt;=n;k*=<span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            a[i].first=rank[i];</span><br><span class="line">            <span class="keyword">if</span>(i+k&lt;=n) a[i].second=rank[i+k];</span><br><span class="line">            <span class="keyword">else</span> a[i].second=<span class="number">0</span>;</span><br><span class="line">            a[i].id=i;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">memset</span>(cnt,<span class="number">0</span>,<span class="keyword">sizeof</span>(cnt));</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) cnt[a[i].second]++;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) cnt[i]+=cnt[i<span class="number">-1</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=n;i&gt;<span class="number">0</span>;i--) b[cnt[a[i].second]--]=a[i];</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">memset</span>(cnt,<span class="number">0</span>,<span class="keyword">sizeof</span>(cnt));</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) cnt[b[i].first]++;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) cnt[i]+=cnt[i<span class="number">-1</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=n;i&gt;<span class="number">0</span>;i--) a[cnt[b[i].first]--]=b[i];</span><br><span class="line">        tot=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i].first==a[i<span class="number">-1</span>].first &amp;&amp; a[i].second==a[i<span class="number">-1</span>].second)</span><br><span class="line">                 rank[a[i].id]=tot;</span><br><span class="line">            <span class="keyword">else</span> rank[a[i].id]=++tot;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(tot&gt;=n) <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)sa[rank[i]]=i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tot=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%s"</span>,s+<span class="number">1</span>);</span><br><span class="line">    n=<span class="built_in">strlen</span>(s+<span class="number">1</span>);</span><br><span class="line">    getsa(s);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">cout</span>&lt;&lt;sa[i]&lt;&lt;<span class="string">' '</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="comment">//system("pause");</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>参考资料：《后缀数组——处理字符串的有力工具》，罗穗骞，2009国家集训队论文</p>
-
-        
-
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/后缀数组/"><i class="fas fa-hashtag fa-fw"></i>后缀数组</a>
-                
-                    <a href="/tags/字符串/"><i class="fas fa-hashtag fa-fw"></i>字符串</a>
-                
-                    <a href="/tags/模板/"><i class="fas fa-hashtag fa-fw"></i>模板</a>
-                
-                    <a href="/tags/后缀排序/"><i class="fas fa-hashtag fa-fw"></i>后缀排序</a>
-                
-            </div>
-        
-    </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/post/440ace07.html">
-              
-                  字符串-洛谷P1538-迎春舞会之数字舞蹈
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="https://www.ljhedp.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            书海扬帆
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2018-11-11
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/信息学竞赛-OI/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              信息学竞赛(OI)
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-    <section class="article typo">
-        <p>字符串毒瘤题，细节很多，写了差不多一个小时才推出来。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">int</span> k;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x=<span class="number">0</span>;<span class="keyword">char</span> c=<span class="string">' '</span>;</span><br><span class="line">	<span class="keyword">while</span>(c&lt;=<span class="string">'0'</span> || c&gt;=<span class="string">'9'</span>) c=getchar();</span><br><span class="line">	<span class="keyword">while</span>(c&gt;=<span class="string">'0'</span> &amp;&amp; c&lt;=<span class="string">'9'</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		x=x*<span class="number">10</span>+c-<span class="string">'0'</span>;</span><br><span class="line">		c=getchar();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">string</span> s,t[<span class="number">10</span>]=&#123;<span class="string">"-|| ||-"</span>,<span class="string">"  |  | "</span>,<span class="string">"- |-| -"</span>,</span><br><span class="line">    <span class="string">"- |- |-"</span>,<span class="string">" ||- | "</span>,    <span class="string">"-| - |-"</span>,<span class="string">"-| -||-"</span>,</span><br><span class="line">    <span class="string">"- |  | "</span>,<span class="string">"-||-||-"</span>,<span class="string">"-||- |-"</span>&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;k&gt;&gt;s;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> p=<span class="number">0</span>;p&lt;<span class="number">7</span>;p++)&#123;</span><br><span class="line">        <span class="keyword">if</span> (p==<span class="number">2</span> || p==<span class="number">5</span>) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span> (p%<span class="number">3</span>==<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.size();i++)&#123;</span><br><span class="line">                <span class="built_in">putchar</span>(<span class="string">' '</span>);</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;k;j++)&#123;</span><br><span class="line">                    <span class="built_in">cout</span>&lt;&lt;t[s[i]<span class="number">-48</span>][p];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(i!=s.size()<span class="number">-1</span>) <span class="built_in">printf</span>(<span class="string">"  "</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">putchar</span>(<span class="string">'\n'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">		<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> q=<span class="number">0</span>;q&lt;k;q++)&#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.size();i++)&#123;</span><br><span class="line">                    <span class="built_in">cout</span>&lt;&lt;t[s[i]<span class="number">-48</span>][p];</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;k;j++)&#123;</span><br><span class="line">                        <span class="built_in">putchar</span>(<span class="string">' '</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="built_in">cout</span>&lt;&lt;t[s[i]<span class="number">-48</span>][p+<span class="number">1</span>];</span><br><span class="line">                    <span class="keyword">if</span>(i!=s.size()<span class="number">-1</span>) <span class="built_in">putchar</span>(<span class="string">' '</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="built_in">putchar</span>(<span class="string">'\n'</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-        
-
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/字符串/"><i class="fas fa-hashtag fa-fw"></i>字符串</a>
-                
-                    <a href="/tags/模拟/"><i class="fas fa-hashtag fa-fw"></i>模拟</a>
-                
-                    <a href="/tags/dulu/"><i class="fas fa-hashtag fa-fw"></i>dulu</a>
-                
-            </div>
-        
-    </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/post/770bfd48.html">
-              
-                  NOIP2015-子串
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="https://www.ljhedp.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            书海扬帆
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2018-11-11
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/信息学竞赛-OI/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              信息学竞赛(OI)
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-    <section class="article typo">
-        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> f[<span class="number">220</span>][<span class="number">220</span>]=&#123;<span class="number">1</span>&#125;,sum[<span class="number">220</span>][<span class="number">220</span>],n,m,k;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">1010</span>],b[<span class="number">220</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld%lld%lld"</span>,&amp;n,&amp;m,&amp;k); </span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%s"</span>,a);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%s"</span>,b);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> j=m;j&gt;=<span class="number">1</span>;j--)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> t=k;t&gt;=<span class="number">1</span>;t--)</span><br><span class="line">                f[j][t]=(f[j][t]+(sum[j][t]=a[i<span class="number">-1</span>]==b[j<span class="number">-1</span>]?sum[j<span class="number">-1</span>][t]+f[j<span class="number">-1</span>][t<span class="number">-1</span>]:<span class="number">0</span>))%<span class="number">1000000007</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,f[m][k]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/字符串/"><i class="fas fa-hashtag fa-fw"></i>字符串</a>
-                
-                    <a href="/tags/dp/"><i class="fas fa-hashtag fa-fw"></i>dp</a>
-                
-            </div>
-        
-    </section>
-</article>
-
-            </div>
-          
-        
-      
-
   </section>
 
 
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// luogu-judger-enable-o2</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1e6</span>+<span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">char</span> s[maxn];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> first,second,id;</span><br><span class="line">&#125;a[maxn],b[maxn];</span><br><span class="line"><span class="keyword">int</span> cnt[maxn],rank[maxn],sa[maxn];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getsa</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tot=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">memset</span>(cnt,<span class="number">0</span>,<span class="keyword">sizeof</span>(cnt));</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) cnt[s[i]]++;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">128</span>;i++) cnt[i]+=cnt[i<span class="number">-1</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=n;i&gt;<span class="number">0</span>;i--) sa[cnt[s[i]]--]=i;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(s[sa[i]]==s[sa[i<span class="number">-1</span>]]) rank[sa[i]]=tot;</span><br><span class="line">        <span class="keyword">else</span> rank[sa[i]]=++tot;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">1</span>;k&lt;=n;k*=<span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            a[i].first=rank[i];</span><br><span class="line">            <span class="keyword">if</span>(i+k&lt;=n) a[i].second=rank[i+k];</span><br><span class="line">            <span class="keyword">else</span> a[i].second=<span class="number">0</span>;</span><br><span class="line">            a[i].id=i;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">memset</span>(cnt,<span class="number">0</span>,<span class="keyword">sizeof</span>(cnt));</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) cnt[a[i].second]++;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) cnt[i]+=cnt[i<span class="number">-1</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=n;i&gt;<span class="number">0</span>;i--) b[cnt[a[i].second]--]=a[i];</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">memset</span>(cnt,<span class="number">0</span>,<span class="keyword">sizeof</span>(cnt));</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) cnt[b[i].first]++;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) cnt[i]+=cnt[i<span class="number">-1</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=n;i&gt;<span class="number">0</span>;i--) a[cnt[b[i].first]--]=b[i];</span><br><span class="line">        tot=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i].first==a[i<span class="number">-1</span>].first &amp;&amp; a[i].second==a[i<span class="number">-1</span>].second)</span><br><span class="line">                 rank[a[i].id]=tot;</span><br><span class="line">            <span class="keyword">else</span> rank[a[i].id]=++tot;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(tot&gt;=n) <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)sa[rank[i]]=i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tot=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%s"</span>,s+<span class="number">1</span>);</span><br><span class="line">    n=<span class="built_in">strlen</span>(s+<span class="number">1</span>);</span><br><span class="line">    getsa(s);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">cout</span>&lt;&lt;sa[i]&lt;&lt;<span class="string">' '</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="comment">//system("pause");</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>参考资料：《后缀数组——处理字符串的有力工具》，罗穗骞，2009国家集训队论文</p>
 
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/后缀数组/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>后缀数组</a>
+        
+          <a href="/tags/字符串/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>字符串</a>
+        
+          <a href="/tags/模板/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>模板</a>
+        
+          <a href="/tags/后缀排序/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>后缀排序</a>
+        
+      </div>
+    
+  </section>
+</article>
 
-
-
+          </div>
+        
+      
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
   
 
-  <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/post/440ace07.html">
+      字符串-洛谷P1538-迎春舞会之数字舞蹈
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.ljhedp.cn" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>书海扬帆</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-11-11</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/categories/信息学竞赛-OI/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>信息学竞赛(OI)</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>字符串毒瘤题，细节很多，写了差不多一个小时才推出来。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">int</span> k;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x=<span class="number">0</span>;<span class="keyword">char</span> c=<span class="string">' '</span>;</span><br><span class="line">	<span class="keyword">while</span>(c&lt;=<span class="string">'0'</span> || c&gt;=<span class="string">'9'</span>) c=getchar();</span><br><span class="line">	<span class="keyword">while</span>(c&gt;=<span class="string">'0'</span> &amp;&amp; c&lt;=<span class="string">'9'</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		x=x*<span class="number">10</span>+c-<span class="string">'0'</span>;</span><br><span class="line">		c=getchar();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">string</span> s,t[<span class="number">10</span>]=&#123;<span class="string">"-|| ||-"</span>,<span class="string">"  |  | "</span>,<span class="string">"- |-| -"</span>,</span><br><span class="line">    <span class="string">"- |- |-"</span>,<span class="string">" ||- | "</span>,    <span class="string">"-| - |-"</span>,<span class="string">"-| -||-"</span>,</span><br><span class="line">    <span class="string">"- |  | "</span>,<span class="string">"-||-||-"</span>,<span class="string">"-||- |-"</span>&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;k&gt;&gt;s;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> p=<span class="number">0</span>;p&lt;<span class="number">7</span>;p++)&#123;</span><br><span class="line">        <span class="keyword">if</span> (p==<span class="number">2</span> || p==<span class="number">5</span>) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span> (p%<span class="number">3</span>==<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.size();i++)&#123;</span><br><span class="line">                <span class="built_in">putchar</span>(<span class="string">' '</span>);</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;k;j++)&#123;</span><br><span class="line">                    <span class="built_in">cout</span>&lt;&lt;t[s[i]<span class="number">-48</span>][p];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(i!=s.size()<span class="number">-1</span>) <span class="built_in">printf</span>(<span class="string">"  "</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">putchar</span>(<span class="string">'\n'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">		<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> q=<span class="number">0</span>;q&lt;k;q++)&#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.size();i++)&#123;</span><br><span class="line">                    <span class="built_in">cout</span>&lt;&lt;t[s[i]<span class="number">-48</span>][p];</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;k;j++)&#123;</span><br><span class="line">                        <span class="built_in">putchar</span>(<span class="string">' '</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="built_in">cout</span>&lt;&lt;t[s[i]<span class="number">-48</span>][p+<span class="number">1</span>];</span><br><span class="line">                    <span class="keyword">if</span>(i!=s.size()<span class="number">-1</span>) <span class="built_in">putchar</span>(<span class="string">' '</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="built_in">putchar</span>(<span class="string">'\n'</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/字符串/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>字符串</a>
+        
+          <a href="/tags/模拟/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>模拟</a>
+        
+          <a href="/tags/dulu/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>dulu</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
   
 
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/post/770bfd48.html">
+      NOIP2015-子串
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.ljhedp.cn" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>书海扬帆</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-11-11</p>
+  </a>
+</div>
+
+          
+        
+          
+            
   
-    <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+  <div class="new-meta-item category">
+    <a href="/categories/信息学竞赛-OI/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>信息学竞赛(OI)</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> f[<span class="number">220</span>][<span class="number">220</span>]=&#123;<span class="number">1</span>&#125;,sum[<span class="number">220</span>][<span class="number">220</span>],n,m,k;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">1010</span>],b[<span class="number">220</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld%lld%lld"</span>,&amp;n,&amp;m,&amp;k); </span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%s"</span>,a);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%s"</span>,b);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> j=m;j&gt;=<span class="number">1</span>;j--)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> t=k;t&gt;=<span class="number">1</span>;t--)</span><br><span class="line">                f[j][t]=(f[j][t]+(sum[j][t]=a[i<span class="number">-1</span>]==b[j<span class="number">-1</span>]?sum[j<span class="number">-1</span>][t]+f[j<span class="number">-1</span>][t<span class="number">-1</span>]:<span class="number">0</span>))%<span class="number">1000000007</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,f[m][k]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/dp/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>dp</a>
+        
+          <a href="/tags/字符串/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>字符串</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+    
+  </section>
+  
+    
+    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+    
+    
+      <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     "HTML-CSS": {
@@ -871,27 +900,30 @@
     for(i=0; i < all.length; i += 1) {
       all[i].SourceElement().parentNode.className += (all[i].SourceElement().parentNode.className ? ' ' : '') + 'has-jax';
     }
-    console.log("mathjax did loaded!");
   });
 </script>
 <!-- 通过连接CDN加载MathJax的js代码 -->
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
+    
+
   
 
 
-
-        </div>
-        <aside class='l_side'>
-            
+    
   
+</div>
+<aside class="l_side">
   
     
+    
       
-      
-        <section class="author">
-  <div class="content ">
+        
+          
+          
+            <section class="widget author">
+  <div class="content pure">
     
       <div class="avatar">
         <img class="avatar" src="/avatar.jpg">
@@ -911,7 +943,23 @@
       <div class="social-wrapper">
         
           
-            <a href="mailto:me@ljhedp.cn" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-envelope" aria-hidden="true"></i></a>
+            <a href="/atom.xml" class="social fas fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="mailto:me@ljhedp.cn" class="social fas fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://github.com/xaoxuu" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://music.163.com/#/user/home?id=63035382" class="social fas fa-headphones-alt flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+            </a>
           
         
       </div>
@@ -919,48 +967,106 @@
   </div>
 </section>
 
-      
-    
-  
-    
-      
+          
+        
       
         
+          
+          
+            
 
+          
+        
       
-    
+        
+          
+          
+            <section class="widget plain">
   
-    
-      
-      
-        <section class="plain">
-  
-<header class="">
+<header class="pure">
   <div><i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;QwQ</div>
   
 </header>
 
-  <div class="content ">
+  <div class="content pure">
     <p>待修锅仍很多，坑待填</p>
 
   </div>
 </section>
 
-      
-    
-  
-    
-      
+          
+        
       
         
-  <section class="category">
-    
-<header class="">
-  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;所有分类</div>
+          
+          
+            <section class="widget grid">
+  
+<header class="pure">
+  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;站内导航</div>
   
 </header>
 
-    <div class="content ">
+  <div class="content pure">
+    <ul class="grid navgation">
+      
+        <li><a class="flat-box" title="/" href="/" id="home">
+          
+            <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
+          
+          近期文章
+        </a></li>
+      
+        <li><a class="flat-box" title="/archives/" href="/archives/" rel="nofollow" id="archives">
+          
+            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
+          
+          文章归档
+        </a></li>
+      
+        <li><a class="flat-box" title="/friends/" href="/friends/" rel="nofollow" id="friends">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          我的友链
+        </a></li>
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/" rel="nofollow" id="https:xaoxuu.comwikimaterial-x">
+          
+            <i class="fas fa-book fa-fw" aria-hidden="true"></i>
+          
+          主题文档
+        </a></li>
+      
+        <li><a class="flat-box" title="/about/" href="/about/" rel="nofollow" id="about">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          关于小站
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+  <section class="widget category">
+    
+<header class="pure">
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章分类</div>
+  
+    <a class="rightBtn" rel="nofollow" href="/categories/" title="categories/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class="content pure">
       <ul class="entry">
         
           <li><a class="flat-box" title="/categories/信息学竞赛-OI/" href="/categories/信息学竞赛-OI/"><div class="name">信息学竞赛(OI)</div><div class="badge">(94)</div></a></li>
@@ -982,37 +1088,78 @@
   </section>
 
 
-      
-    
-  
-    
-      
+          
+        
       
         
-  <section class="tagcloud">
+          
+          
+            
+  <section class="widget tagcloud">
     
-<header class="">
-  <div><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+<header class="pure">
+  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+    <a class="rightBtn" rel="nofollow" href="/tags/" title="tags/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
   
 </header>
 
-    <div class="content ">
+    <div class="content pure">
       <a href="/tags/01背包/" style="font-size: 14.83px; color: #939393">01背包</a> <a href="/tags/Floyd/" style="font-size: 14px; color: #999">Floyd</a> <a href="/tags/KMP/" style="font-size: 14px; color: #999">KMP</a> <a href="/tags/Kruscal/" style="font-size: 14px; color: #999">Kruscal</a> <a href="/tags/LCT/" style="font-size: 14px; color: #999">LCT</a> <a href="/tags/Manacher/" style="font-size: 14px; color: #999">Manacher</a> <a href="/tags/NOI/" style="font-size: 14px; color: #999">NOI</a> <a href="/tags/NOIP模拟赛/" style="font-size: 14px; color: #999">NOIP模拟赛</a> <a href="/tags/NOIp题解/" style="font-size: 14px; color: #999">NOIp题解</a> <a href="/tags/Prim/" style="font-size: 14px; color: #999">Prim</a> <a href="/tags/STL/" style="font-size: 14px; color: #999">STL</a> <a href="/tags/ST表/" style="font-size: 14.83px; color: #939393">ST表</a> <a href="/tags/Splay/" style="font-size: 14px; color: #999">Splay</a> <a href="/tags/Tarjan/" style="font-size: 14.83px; color: #939393">Tarjan</a> <a href="/tags/dinic/" style="font-size: 14px; color: #999">dinic</a> <a href="/tags/dp/" style="font-size: 20.67px; color: #6c6c6c">dp</a> <a href="/tags/dulu/" style="font-size: 14px; color: #999">dulu</a> <a href="/tags/三角函数/" style="font-size: 14px; color: #999">三角函数</a> <a href="/tags/书海扬帆的诗/" style="font-size: 19px; color: #777">书海扬帆的诗</a> <a href="/tags/二分/" style="font-size: 14.83px; color: #939393">二分</a> <a href="/tags/二分图/" style="font-size: 14.83px; color: #939393">二分图</a> <a href="/tags/人工智能/" style="font-size: 14px; color: #999">人工智能</a> <a href="/tags/信息技术课程/" style="font-size: 14px; color: #999">信息技术课程</a> <a href="/tags/分块/" style="font-size: 14px; color: #999">分块</a> <a href="/tags/分组背包/" style="font-size: 14px; color: #999">分组背包</a> <a href="/tags/前缀和/" style="font-size: 14px; color: #999">前缀和</a> <a href="/tags/动态树/" style="font-size: 14px; color: #999">动态树</a> <a href="/tags/动态规划/" style="font-size: 14px; color: #999">动态规划</a> <a href="/tags/匈牙利算法/" style="font-size: 14.83px; color: #939393">匈牙利算法</a> <a href="/tags/区间dp/" style="font-size: 14px; color: #999">区间dp</a> <a href="/tags/卡特兰数/" style="font-size: 14px; color: #999">卡特兰数</a> <a href="/tags/卢卡斯定理/" style="font-size: 14px; color: #999">卢卡斯定理</a> <a href="/tags/历史/" style="font-size: 14px; color: #999">历史</a> <a href="/tags/后缀排序/" style="font-size: 14px; color: #999">后缀排序</a> <a href="/tags/后缀数组/" style="font-size: 14.83px; color: #939393">后缀数组</a> <a href="/tags/哈希/" style="font-size: 14px; color: #999">哈希</a> <a href="/tags/图像风格化/" style="font-size: 14px; color: #999">图像风格化</a> <a href="/tags/图论/" style="font-size: 19.83px; color: #717171">图论</a> <a href="/tags/基环树/" style="font-size: 14px; color: #999">基环树</a> <a href="/tags/大赛札记/" style="font-size: 14px; color: #999">大赛札记</a> <a href="/tags/太强啦/" style="font-size: 14px; color: #999">太强啦</a> <a href="/tags/字符串/" style="font-size: 18.17px; color: #7d7d7d">字符串</a> <a href="/tags/学习笔记/" style="font-size: 22.33px; color: #606060">学习笔记</a> <a href="/tags/小游戏/" style="font-size: 14px; color: #999">小游戏</a> <a href="/tags/差分/" style="font-size: 14px; color: #999">差分</a> <a href="/tags/差分约束/" style="font-size: 14px; color: #999">差分约束</a> <a href="/tags/带约束的背包/" style="font-size: 14px; color: #999">带约束的背包</a> <a href="/tags/平衡树/" style="font-size: 14px; color: #999">平衡树</a> <a href="/tags/并查集/" style="font-size: 14.83px; color: #939393">并查集</a> <a href="/tags/归并排序/" style="font-size: 14px; color: #999">归并排序</a> <a href="/tags/心得体会/" style="font-size: 15.67px; color: #8e8e8e">心得体会</a> <a href="/tags/快速幂/" style="font-size: 14px; color: #999">快速幂</a> <a href="/tags/打表/" style="font-size: 14px; color: #999">打表</a> <a href="/tags/扩展欧拉定理/" style="font-size: 14px; color: #999">扩展欧拉定理</a> <a href="/tags/扩欧/" style="font-size: 14px; color: #999">扩欧</a> <a href="/tags/排序/" style="font-size: 14px; color: #999">排序</a> <a href="/tags/搜索/" style="font-size: 14.83px; color: #939393">搜索</a> <a href="/tags/摩尔投票法/" style="font-size: 14px; color: #999">摩尔投票法</a> <a href="/tags/数学/" style="font-size: 15.67px; color: #8e8e8e">数学</a> <a href="/tags/数学竞赛/" style="font-size: 16.5px; color: #888">数学竞赛</a> <a href="/tags/数据结构/" style="font-size: 14px; color: #999">数据结构</a> <a href="/tags/数论/" style="font-size: 23.17px; color: #5b5b5b">数论</a> <a href="/tags/文学作品/" style="font-size: 18.17px; color: #7d7d7d">文学作品</a> <a href="/tags/最大流/" style="font-size: 14px; color: #999">最大流</a> <a href="/tags/最小生成树/" style="font-size: 14px; color: #999">最小生成树</a> <a href="/tags/最短路/" style="font-size: 15.67px; color: #8e8e8e">最短路</a> <a href="/tags/杨辉三角/" style="font-size: 14.83px; color: #939393">杨辉三角</a> <a href="/tags/树状数组/" style="font-size: 14px; color: #999">树状数组</a> <a href="/tags/校内训练/" style="font-size: 14px; color: #999">校内训练</a> <a href="/tags/模拟/" style="font-size: 21.5px; color: #666">模拟</a> <a href="/tags/模板/" style="font-size: 24px; color: #555">模板</a> <a href="/tags/游记/" style="font-size: 14px; color: #999">游记</a> <a href="/tags/爬虫/" style="font-size: 14px; color: #999">爬虫</a> <a href="/tags/矩阵加速/" style="font-size: 14px; color: #999">矩阵加速</a> <a href="/tags/矩阵快速幂/" style="font-size: 14px; color: #999">矩阵快速幂</a> <a href="/tags/离线并查集/" style="font-size: 14px; color: #999">离线并查集</a> <a href="/tags/精品/" style="font-size: 21.5px; color: #666">精品</a> <a href="/tags/线性基/" style="font-size: 14px; color: #999">线性基</a> <a href="/tags/线段树/" style="font-size: 16.5px; color: #888">线段树</a> <a href="/tags/组合数学/" style="font-size: 17.33px; color: #828282">组合数学</a> <a href="/tags/组合计数/" style="font-size: 14px; color: #999">组合计数</a> <a href="/tags/缩点/" style="font-size: 14px; color: #999">缩点</a> <a href="/tags/网络流/" style="font-size: 15.67px; color: #8e8e8e">网络流</a> <a href="/tags/网络流24题/" style="font-size: 14.83px; color: #939393">网络流24题</a> <a href="/tags/背包问题/" style="font-size: 17.33px; color: #828282">背包问题</a> <a href="/tags/莫比乌斯反演/" style="font-size: 14px; color: #999">莫比乌斯反演</a> <a href="/tags/记忆化搜索/" style="font-size: 14px; color: #999">记忆化搜索</a> <a href="/tags/调试与对拍/" style="font-size: 14.83px; color: #939393">调试与对拍</a> <a href="/tags/贪心/" style="font-size: 15.67px; color: #8e8e8e">贪心</a> <a href="/tags/逆元/" style="font-size: 14.83px; color: #939393">逆元</a> <a href="/tags/里程碑/" style="font-size: 14px; color: #999">里程碑</a> <a href="/tags/错排/" style="font-size: 14px; color: #999">错排</a> <a href="/tags/队列/" style="font-size: 14px; color: #999">队列</a> <a href="/tags/随笔/" style="font-size: 17.33px; color: #828282">随笔</a> <a href="/tags/音乐/" style="font-size: 14.83px; color: #939393">音乐</a> <a href="/tags/马拉车/" style="font-size: 14px; color: #999">马拉车</a> <a href="/tags/高精度/" style="font-size: 14px; color: #999">高精度</a>
     </div>
   </section>
 
 
+          
+        
+      
+        
+          
+          
+            
+
+          
+        
+      
+        
+          
+          
+            
+
+
+  <section class="widget music">
+    
+<header class="pure">
+  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
+  
+    <a class="rightBtn" rel="external nofollow noopener noreferrer" target="_blank" href="https://music.163.com/#/user/home?id=63035382" title="https://music.163.com/#/user/home?id=63035382">
+    <i class="far fa-heart fa-fw"></i></a>
+  
+</header>
+
+    <div class="content pure">
+      
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+  <div class="aplayer" data-theme="#1BCDFC" data-mode="circulation" data-server="netease" data-type="song" data-id="283760" data-volume="0.7">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+
+    </div>
+  </section>
+
+
+          
+        
       
     
+
   
+</aside>
 
-
-        </aside>
-        <script>setLoadingBarProgress(60);</script>
-    </div>
-    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
-    </div>
-    <footer id="footer" class="clearfix">
+<footer id="footer" class="clearfix">
   
     <div class="footer">
       <p>京ICP备17041994号</p>
@@ -1024,26 +1171,253 @@
     <div class="social-wrapper">
       
         
-          <a href="mailto:me@ljhedp.cn" class="social fas fa-envelope flat-btn" target="_blank" rel="external"></a>
+          <a href="/atom.xml" class="social fas fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="mailto:me@ljhedp.cn" class="social fas fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://github.com/xaoxuu" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://music.163.com/#/user/home?id=63035382" class="social fas fa-headphones-alt flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+          </a>
         
       
     </div>
   
   <br>
-  <div>本站使用 <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> 作为主题。
+  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+  <div>
+    本站使用
+    <a href="" target="_blank" class="codename">书海扬帆的博客</a>
+    作为主题
+    
+      ，
+      总访问量为
+      <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+      次
+    
+    。
   </div>
 </footer>
-
-    <script>setLoadingBarProgress(80);</script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+<script>setLoadingBarProgress(80);</script>
 
 
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        if ('.cover') {
+          $('.cover').backstretch(
+          ["https://img.vim-cn.com/6d/a0c9e6f9efad8b731cb7376504bd10d79d2053.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        } else {
+          $.backstretch(
+          ["https://img.vim-cn.com/6d/a0c9e6f9efad8b731cb7376504bd10d79d2053.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        }
+      });
+    </script>
+  
 
 
 
 
 
-    <script>setLoadingBarProgress(100);</script>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/js/app.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/js/search.js"></script>
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>复制</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {

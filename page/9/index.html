@@ -23,6 +23,9 @@
   
 
   <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
   
@@ -32,7 +35,7 @@
   
 
   
-  <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/css/style.css">
   
 
   <script>
@@ -46,12 +49,13 @@
 </head>
 
 <body>
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="loading-bar-wrapper">
-  <div id="loading-bar" class=""></div>
-</div>
+  
+  
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="l_header pure">
+  <div id="loading-bar-wrapper">
+    <div id="loading-bar" class="pure"></div>
+  </div>
 
-    <script>setLoadingBarProgress(20)</script>
-    <header class="l_header ">
 	<div class="wrapper">
 		<div class="nav-main container container--flex">
       <a class="logo flat-box" href="/">
@@ -59,18 +63,30 @@
           书海扬帆
         
       </a>
-			<div class="menu">
+			<div class="menu navgation">
 				<ul class="h-list">
           
   					
   						<li>
-								<a id="https:www.ljhedp.cn" class="nav flat-box" href="https://www.ljhedp.cn">
-									<i class="fas fa-home fa-fw"></i>&nbsp;主页
+								<a class="nav flat-box" href="/" id="home">
+									<i class="fas fa-grin fa-fw"></i>&nbsp;示例
 								</a>
 							</li>
       			
   						<li>
-								<a id="archives" class="nav flat-box" href="/archives/">
+								<a class="nav flat-box" href="/categories/" rel="nofollow" id="categories">
+									<i class="fas fa-folder-open fa-fw"></i>&nbsp;分类
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/tags/" rel="nofollow" id="tags">
+									<i class="fas fa-hashtag fa-fw"></i>&nbsp;标签
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/archives/" rel="nofollow" id="archives">
 									<i class="fas fa-archive fa-fw"></i>&nbsp;归档
 								</a>
 							</li>
@@ -80,7 +96,16 @@
 			</div>
 
 			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索">
+						<i class="icon fas fa-search fa-fw"></i>
+					</form>
+				</div>
+			
 			<ul class="switcher h-list">
+				
+					<li class="s-search"><a class="fas fa-search fa-fw" href="javascript:void(0)"></a></li>
 				
 				<li class="s-menu"><a class="fas fa-bars fa-fw" href="javascript:void(0)"></a></li>
 			</ul>
@@ -90,405 +115,558 @@
 			<a class="logo flat-box"></a>
 			<ul class="switcher h-list">
 				<li class="s-comment"><a class="flat-btn fas fa-comments fa-fw" href="javascript:void(0)"></a></li>
-				<li class="s-toc"><a class="flat-btn fas fa-list fa-fw" href="javascript:void(0)"></a></li>
+        
+          <li class="s-toc"><a class="flat-btn fas fa-list fa-fw" href="javascript:void(0)"></a></li>
+        
 			</ul>
 		</div>
 	</div>
 </header>
 	<aside class="menu-phone">
     <header>
-		<nav class="menu">
+		<nav class="menu navgation">
       <ul>
+        
           
-              
-                  <li>
-										<a id="https:www.ljhedp.cn" class="nav flat-box" href="https://www.ljhedp.cn">
-											<i class="fas fa-home fa-fw"></i>&nbsp;主页
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="archives" class="nav flat-box" href="/archives/">
-											<i class="fas fa-archive fa-fw"></i>&nbsp;归档
-										</a>
-                  </li>
-              
+            <li>
+							<a class="nav flat-box" href="/" id="home">
+								<i class="fas fa-clock fa-fw"></i>&nbsp;近期文章
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/blog/archives/" rel="nofollow" id="blogarchives">
+								<i class="fas fa-archive fa-fw"></i>&nbsp;文章归档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/projects/" id="projects">
+								<i class="fas fa-code-branch fa-fw"></i>&nbsp;开源项目
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/friends/" rel="nofollow" id="friends">
+								<i class="fas fa-link fa-fw"></i>&nbsp;我的友链
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="https://xaoxuu.com/wiki/material-x/" rel="nofollow" id="https:xaoxuu.comwikimaterial-x">
+								<i class="fas fa-book fa-fw"></i>&nbsp;主题文档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/about/" rel="nofollow" id="about">
+								<i class="fas fa-info-circle fa-fw"></i>&nbsp;关于小站
+							</a>
+            </li>
+          
        
       </ul>
 		</nav>
     </header>
 	</aside>
+<script>setLoadingBarProgress(40);</script>
 
-    <script>setLoadingBarProgress(40);</script>
-    <div class="l_body">
-    <div class='container clearfix'>
-        <div class='l_main'>
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      <div class="l_main">
+  
+  <section class="post-list">
+    
+    
+      
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
+
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/post/76415e86.html">
+      「高精度」洛谷P1604-B进制星球
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.ljhedp.cn" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>书海扬帆</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-10-22</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/categories/信息学竞赛-OI/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>信息学竞赛(OI)</p>
+    </a>
+  </div>
+
+
+          
+        
+          
             
 
-
-
-  <section class="post-list">
-      
-
-
-
-      
-
-      
-
-      
+          
         
           
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/post/76415e86.html">
-              
-                  「高精度」洛谷P1604-B进制星球
-              
-          </a>
-      </h2>
-    
+            
 
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="https://www.ljhedp.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            书海扬帆
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2018-10-22
-          </a>
-        </div>
-      
-      
-        
           
-          <div class="new-meta-item category">
-            <a href="/categories/信息学竞赛-OI/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              信息学竞赛(OI)
-            </a>
-          </div>
         
+      </div>
       
-      
+        <hr>
       
     </div>
-    <hr>
-  </div>
-</section>
+  </section>
 
-    <section class="article typo">
-        <p>n进制(n&lt;=36)下的加法。</p>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>n进制(n&lt;=36)下的加法。</p>
 <p>为什么n&lt;=36呢？因为只有10个数字和26个字母。</p>
 <p>这里一定要注意读题了，注意给定的数据范围。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">3010</span>; </span><br><span class="line"><span class="keyword">char</span> a[maxn],b[maxn];</span><br><span class="line"><span class="keyword">int</span> x[maxn],y[maxn],sum[maxn];</span><br><span class="line"><span class="keyword">int</span> bbb; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;bbb;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b;</span><br><span class="line">	<span class="keyword">int</span> l1=<span class="built_in">strlen</span>(a),l2=<span class="built_in">strlen</span>(b);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;l1;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(a[i]&gt;=<span class="string">'A'</span> &amp;&amp; a[i]&lt;=<span class="string">'Z'</span>) x[l1-i]=a[i]<span class="number">-55</span>;</span><br><span class="line">		<span class="keyword">else</span> x[l1-i]=a[i]<span class="number">-48</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;l2;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(b[i]&gt;=<span class="string">'A'</span> &amp;&amp; b[i]&lt;=<span class="string">'Z'</span>) y[l2-i]=b[i]<span class="number">-55</span>;</span><br><span class="line">		<span class="keyword">else</span> y[l2-i]=b[i]<span class="number">-48</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> l3=<span class="number">1</span>,t=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(l3&lt;=l1 || l3&lt;=l2)&#123;</span><br><span class="line">		sum[l3]=x[l3]+y[l3]+t;</span><br><span class="line">		t=sum[l3]/bbb;</span><br><span class="line">		sum[l3]%=bbb;</span><br><span class="line">		l3++;</span><br><span class="line">	&#125;</span><br><span class="line">	sum[l3]=t;</span><br><span class="line">	<span class="keyword">if</span>(sum[l3]==<span class="number">0</span>) l3--;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=l3;i&gt;=<span class="number">1</span>;i--)&#123;</span><br><span class="line">		<span class="keyword">if</span>(sum[i]&gt;=<span class="number">10</span>) <span class="built_in">cout</span>&lt;&lt;<span class="keyword">char</span>(sum[i]+<span class="number">55</span>);</span><br><span class="line">		<span class="keyword">else</span> <span class="built_in">cout</span>&lt;&lt;sum[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
 
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
         
-
+          <a href="/tags/高精度/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>高精度</a>
         
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/高精度/"><i class="fas fa-hashtag fa-fw"></i>高精度</a>
-                
-            </div>
-        
-    </section>
+      </div>
+    
+  </section>
 </article>
 
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/post/a95d16bf.html">
-              
-                  「01背包」洛谷P1510-精卫填海
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="https://www.ljhedp.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            书海扬帆
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2018-10-22
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/信息学竞赛-OI/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              信息学竞赛(OI)
-            </a>
           </div>
         
       
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
+
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
       
+        
+  <h2 class="title">
+    <a href="/post/a95d16bf.html">
+      「01背包」洛谷P1510-精卫填海
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.ljhedp.cn" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>书海扬帆</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-10-22</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/categories/信息学竞赛-OI/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>信息学竞赛(OI)</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
       
     </div>
-    <hr>
-  </div>
-</section>
+  </section>
 
-    <section class="article typo">
-        <p><a href="https://www.luogu.org/problemnew/show/P1510" title="题目传送门" target="_blank" rel="noopener">题目传送门</a></p>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p><a href="https://www.luogu.org/problemnew/show/P1510" title="题目传送门" target="_blank" rel="noopener">题目传送门</a></p>
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>转化为一般的01背包进行求解，最后枚举体力，当目前填的体积&gt;=应该填的体积时，输出最大的体力值。</p>
 <h2 id="代码分享"><a href="#代码分享" class="headerlink" title="代码分享"></a>代码分享</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1001000</span>;</span><br><span class="line"><span class="keyword">int</span> V,N,C;</span><br><span class="line"><span class="keyword">int</span> dp[maxn],d[maxn],v[maxn];</span><br><span class="line"><span class="comment">//d 价值 v体积</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;V,&amp;N,&amp;C);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;v[i],&amp;d[i]);</span><br><span class="line">	&#125; </span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++) &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=C;j&gt;=d[i];j--) &#123;</span><br><span class="line">			dp[j]=max(dp[j],dp[j-d[i]]+v[i]);</span><br><span class="line">		&#125; </span><br><span class="line">	&#125; </span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=C;i++) &#123;</span><br><span class="line">		<span class="keyword">if</span>(dp[i]&gt;=V) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,C-i);</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Impossible"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
         
-
+          <a href="/tags/dp/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>dp</a>
         
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/dp/"><i class="fas fa-hashtag fa-fw"></i>dp</a>
-                
-                    <a href="/tags/背包问题/"><i class="fas fa-hashtag fa-fw"></i>背包问题</a>
-                
-                    <a href="/tags/01背包/"><i class="fas fa-hashtag fa-fw"></i>01背包</a>
-                
-            </div>
+          <a href="/tags/背包问题/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>背包问题</a>
         
-    </section>
+          <a href="/tags/01背包/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>01背包</a>
+        
+      </div>
+    
+  </section>
 </article>
 
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/post/6c636bc3.html">
-              
-                  「带约束的背包」洛谷P1877-「HAOI2012」音量调节
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="https://www.ljhedp.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            书海扬帆
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2018-10-22
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/信息学竞赛-OI/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              信息学竞赛(OI)
-            </a>
           </div>
         
       
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
+
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
       
+        
+  <h2 class="title">
+    <a href="/post/6c636bc3.html">
+      「带约束的背包」洛谷P1877-「HAOI2012」音量调节
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.ljhedp.cn" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>书海扬帆</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-10-22</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/categories/信息学竞赛-OI/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>信息学竞赛(OI)</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
       
     </div>
-    <hr>
-  </div>
-</section>
+  </section>
 
-    <section class="article typo">
-        <p><a href="https://www.luogu.org/problemnew/show/P1877" title="题目传送门" target="_blank" rel="noopener">题目传送门</a></p>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p><a href="https://www.luogu.org/problemnew/show/P1877" title="题目传送门" target="_blank" rel="noopener">题目传送门</a></p>
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>带有约束条件（音量）的背包问题。与原有的背包模型大同小异，只需考虑约束即可。<br>感觉背包是类套路题，只缘身在此山中。</p>
 <h2 id="代码分享"><a href="#代码分享" class="headerlink" title="代码分享"></a>代码分享</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,begin,mx;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">60</span>];</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">2018</span>;</span><br><span class="line"><span class="keyword">int</span> dp[maxn][maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Work</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;n,&amp;begin,&amp;mx);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</span><br><span class="line">    dp[<span class="number">0</span>][begin]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=mx;j++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(dp[i<span class="number">-1</span>][j]) &#123;</span><br><span class="line">                dp[i][j+a[i]]=<span class="number">1</span>;</span><br><span class="line">                dp[i][j-a[i]]=<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=mx;i;i--) <span class="keyword">if</span>(dp[n][i]) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d"</span>,i);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"-1"</span>);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Work();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
         
-
+          <a href="/tags/dp/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>dp</a>
         
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/dp/"><i class="fas fa-hashtag fa-fw"></i>dp</a>
-                
-                    <a href="/tags/背包问题/"><i class="fas fa-hashtag fa-fw"></i>背包问题</a>
-                
-                    <a href="/tags/带约束的背包/"><i class="fas fa-hashtag fa-fw"></i>带约束的背包</a>
-                
-            </div>
+          <a href="/tags/背包问题/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>背包问题</a>
         
-    </section>
+          <a href="/tags/带约束的背包/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>带约束的背包</a>
+        
+      </div>
+    
+  </section>
 </article>
 
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/post/7b46751b.html">
-              
-                  爬虫爬取洛谷用户的AC数量
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="https://www.ljhedp.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            书海扬帆
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2018-10-22
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/信息学竞赛-OI/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              信息学竞赛(OI)
-            </a>
           </div>
         
       
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
+
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
       
+        
+  <h2 class="title">
+    <a href="/post/7b46751b.html">
+      爬虫爬取洛谷用户的AC数量
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.ljhedp.cn" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>书海扬帆</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-10-22</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/categories/信息学竞赛-OI/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>信息学竞赛(OI)</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
       
     </div>
-    <hr>
-  </div>
-</section>
+  </section>
 
-    <section class="article typo">
-        <p>该项目为非本人研发的开源项目，仅为转载，本人已亲测没有任何病毒、木马。<br>请在洛谷允许的爬取范围之内使用。<br>一切技术问题请询问原作者，一切因滥用该代码导致的后果与本博客无关。</p>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>该项目为非本人研发的开源项目，仅为转载，本人已亲测没有任何病毒、木马。<br>请在洛谷允许的爬取范围之内使用。<br>一切技术问题请询问原作者，一切因滥用该代码导致的后果与本博客无关。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;conio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> URLDownloadToFile</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">undef</span> URLDownloadToFile</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">int</span><span class="params">(__stdcall *UDF)</span><span class="params">(LPVOID,LPCSTR,LPCSTR,DWORD,LPVOID)</span></span>;</span><br><span class="line">UDF URLDownloadToFile = (UDF)GetProcAddress(LoadLibrary(<span class="string">"urlmon.dll"</span>),<span class="string">"URLDownloadToFileA"</span>);</span><br><span class="line"><span class="function"><span class="keyword">char</span>* <span class="title">strfind</span><span class="params">(<span class="keyword">char</span> *text,<span class="keyword">char</span> *temp)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">-1</span>,j,l = <span class="built_in">strlen</span>(temp);</span><br><span class="line">    <span class="keyword">while</span>(text[++i])</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;l;j++)<span class="keyword">if</span>(text[i+j] == <span class="number">0</span> || text[i+j] != temp[j])<span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">if</span>(j == l)<span class="keyword">return</span> text+i+l;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">UTF8ToANSI</span><span class="params">(<span class="keyword">char</span> *str)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len = MultiByteToWideChar(CP_UTF8,<span class="number">0</span>,str,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">    WCHAR *wsz = <span class="keyword">new</span> WCHAR[len+<span class="number">1</span>];</span><br><span class="line">    len = MultiByteToWideChar(CP_UTF8,<span class="number">0</span>,str,<span class="number">-1</span>,wsz,len);</span><br><span class="line">    wsz[len] = <span class="number">0</span>;</span><br><span class="line">    len = WideCharToMultiByte(CP_ACP,<span class="number">0</span>,wsz,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">    len = WideCharToMultiByte(CP_ACP,<span class="number">0</span>,wsz,<span class="number">-1</span>,str,len,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">    str[len] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">delete</span> []wsz;</span><br><span class="line">&#125;</span><br><span class="line">HANDLE hOutput;</span><br><span class="line"><span class="keyword">char</span> name[<span class="number">32</span>];</span><br><span class="line"><span class="keyword">int</span> count[<span class="number">8</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">problem</span><span class="params">(<span class="keyword">char</span> *str)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>,len;</span><br><span class="line">    DWORD unused;</span><br><span class="line">    <span class="keyword">char</span> prob[<span class="number">32</span>],url[<span class="number">128</span>],*file,*ptr;</span><br><span class="line">    HANDLE hFile;</span><br><span class="line">    COORD pos = &#123;<span class="number">0</span>,<span class="number">2</span>&#125;;</span><br><span class="line">    <span class="keyword">while</span>(*str != <span class="string">'&lt;'</span>)prob[i++] = *str++;</span><br><span class="line">    prob[i] = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">sprintf</span>(url,<span class="string">"https://www.luogu.org/problemnew/show/%s"</span>,prob);</span><br><span class="line">    URLDownloadToFile(<span class="number">0</span>,url,<span class="string">"download.tmp"</span>,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">    hFile = CreateFile(<span class="string">"download.tmp"</span>,GENERIC_READ,FILE_SHARE_READ,<span class="number">0</span>,OPEN_EXISTING,FILE_ATTRIBUTE_NORMAL,<span class="number">0</span>);</span><br><span class="line">    len = GetFileSize(hFile,<span class="number">0</span>);</span><br><span class="line">    file = ptr = <span class="keyword">new</span> <span class="keyword">char</span>[len+<span class="number">3</span>];</span><br><span class="line">    ReadFile(hFile,file,len,&amp;unused,<span class="number">0</span>);</span><br><span class="line">    file[len] = file[len+<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    CloseHandle(hFile);</span><br><span class="line">    file = strfind(file,<span class="string">"\xE9\x9A\xBE\xE5\xBA\xA6"</span>);</span><br><span class="line">    <span class="keyword">if</span>(file == <span class="number">0</span>)&#123;<span class="keyword">delete</span> []ptr;<span class="keyword">return</span>;&#125;</span><br><span class="line">    file = strfind(file,<span class="string">"lg-bg-"</span>);</span><br><span class="line">    <span class="keyword">if</span>(file[<span class="number">0</span>] == <span class="string">'r'</span>)count[<span class="number">0</span>]++;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(file[<span class="number">0</span>] == <span class="string">'o'</span>)count[<span class="number">1</span>]++;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(file[<span class="number">0</span>] == <span class="string">'y'</span>)count[<span class="number">2</span>]++;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(file[<span class="number">0</span>] == <span class="string">'g'</span> &amp;&amp; file[<span class="number">2</span>] == <span class="string">'e'</span>)count[<span class="number">3</span>]++;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(file[<span class="number">0</span>] == <span class="string">'b'</span> &amp;&amp; file[<span class="number">4</span>] == <span class="string">'l'</span>)count[<span class="number">4</span>]++;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(file[<span class="number">0</span>] == <span class="string">'p'</span>)count[<span class="number">5</span>]++;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(file[<span class="number">0</span>] == <span class="string">'b'</span> &amp;&amp; file[<span class="number">4</span>] == <span class="string">'d'</span>)count[<span class="number">6</span>]++;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(file[<span class="number">0</span>] == <span class="string">'g'</span> &amp;&amp; file[<span class="number">2</span>] == <span class="string">'a'</span>)count[<span class="number">7</span>]++;</span><br><span class="line">    <span class="keyword">delete</span> []ptr;</span><br><span class="line">    SetConsoleCursorPosition(hOutput,pos);</span><br><span class="line">    <span class="built_in">printf</span>(</span><br><span class="line">        <span class="string">"%s 的统计:    %s        \n"</span></span><br><span class="line">        <span class="string">"入门难度:       %d\n"</span></span><br><span class="line">        <span class="string">"普及-:          %d\n"</span></span><br><span class="line">        <span class="string">"普及/提高-:     %d\n"</span></span><br><span class="line">        <span class="string">"普及+/提高:     %d\n"</span></span><br><span class="line">        <span class="string">"提高+/省选-:    %d\n"</span></span><br><span class="line">        <span class="string">"省选/NOI-:      %d\n"</span></span><br><span class="line">        <span class="string">"NOI/NOI+/CTSC:  %d\n"</span></span><br><span class="line">        <span class="string">"尚无评定:       %d\n"</span>,name,prob,count[<span class="number">0</span>],count[<span class="number">1</span>],count[<span class="number">2</span>],count[<span class="number">3</span>],</span><br><span class="line">        count[<span class="number">4</span>],count[<span class="number">5</span>],count[<span class="number">6</span>],count[<span class="number">7</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> uid,len,i = <span class="number">0</span>;</span><br><span class="line">    DWORD unused;</span><br><span class="line">    <span class="keyword">char</span> url[<span class="number">128</span>],user[<span class="number">16</span>],*file,*ptr;</span><br><span class="line">    HANDLE hFile;</span><br><span class="line">    hOutput = GetStdHandle(STD_OUTPUT_HANDLE);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"请输入你的洛谷UID: "</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;uid);</span><br><span class="line">    <span class="built_in">sprintf</span>(url,<span class="string">"https://www.luogu.org/space/show?uid=%d"</span>,uid);</span><br><span class="line">    URLDownloadToFile(<span class="number">0</span>,url,<span class="string">"download.tmp"</span>,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">    hFile = CreateFile(<span class="string">"download.tmp"</span>,GENERIC_READ,FILE_SHARE_READ,<span class="number">0</span>,OPEN_EXISTING,FILE_ATTRIBUTE_NORMAL,<span class="number">0</span>);</span><br><span class="line">    len = GetFileSize(hFile,<span class="number">0</span>);</span><br><span class="line">    file = <span class="keyword">new</span> <span class="keyword">char</span>[len+<span class="number">3</span>];</span><br><span class="line">    ReadFile(hFile,file,len,&amp;unused,<span class="number">0</span>);</span><br><span class="line">    file[len] = file[len+<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    CloseHandle(hFile);</span><br><span class="line">    UTF8ToANSI(file);</span><br><span class="line">    <span class="built_in">sprintf</span>(user,<span class="string">"U%d "</span>,uid);</span><br><span class="line">    ptr = strfind(file,user);</span><br><span class="line">    <span class="keyword">if</span>(ptr)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(ptr[<span class="number">0</span>] != <span class="string">'&lt;'</span> || ptr[<span class="number">1</span>] != <span class="string">'/'</span> || ptr[<span class="number">2</span>] != <span class="string">'h'</span>)name[i++] = *ptr++;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"\n%s 的统计: "</span>,name);</span><br><span class="line">        ptr = strfind(file,<span class="string">"通过题目&lt;/h2&gt;\n[&lt;"</span>);</span><br><span class="line">        <span class="keyword">if</span>(ptr)<span class="keyword">while</span>(*ptr != <span class="string">'&lt;'</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            ptr = strfind(ptr,<span class="string">"\"&gt;"</span>);</span><br><span class="line">            problem(ptr);</span><br><span class="line">            ptr = strfind(ptr,<span class="string">"]\n"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"还没有通过任何题目\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"用户不存在\n"</span>);</span><br><span class="line">    DeleteFile(<span class="string">"download.tmp"</span>);</span><br><span class="line">    <span class="keyword">delete</span> []file;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\nPress any key to exit. . ."</span>);</span><br><span class="line">    getch();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
         
-
+          <a href="/tags/爬虫/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>爬虫</a>
         
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/爬虫/"><i class="fas fa-hashtag fa-fw"></i>爬虫</a>
-                
-            </div>
-        
-    </section>
+      </div>
+    
+  </section>
 </article>
 
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/post/daaecf20.html">
-              
-                  [20180908]邓神模拟赛题解
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="https://www.ljhedp.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            书海扬帆
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2018-10-22
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/信息学竞赛-OI/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              信息学竞赛(OI)
-            </a>
           </div>
         
       
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
+
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
       
+        
+  <h2 class="title">
+    <a href="/post/daaecf20.html">
+      [20180908]邓神模拟赛题解
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.ljhedp.cn" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>书海扬帆</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-10-22</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/categories/信息学竞赛-OI/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>信息学竞赛(OI)</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
       
     </div>
-    <hr>
-  </div>
-</section>
+  </section>
 
-    <section class="article typo">
-        <blockquote>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <blockquote>
 <p>MO/OI双国家集训队大佬dmy出的模拟赛，文字中透露出神犇的霸气。%%%</p>
 </blockquote>
 <h2 id="K大和-kth"><a href="#K大和-kth" class="headerlink" title="K大和(kth.*)"></a>K大和(kth.*)</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>给出两个长为n的数组A,B<br>请你求出所有Ai+Bj (1&lt;=i,j&lt;=n)中第k大的值<br>注意：同一和出现多次时，算作多个。</p>
@@ -510,159 +688,213 @@
 <h3 id="范围与约定-2"><a href="#范围与约定-2" class="headerlink" title="范围与约定"></a>范围与约定</h3><p>对于百分之30的数据，n,m&lt;=5<br>对于百分之50的数据，n,m&lt;=50<br>对于百分之80的数据，n,m&lt;=1000<br>对于百分之百的数据，a,b,c,d&lt;p&lt;=100000 n,m&lt;=5000</p>
 <h3 id="解题思路-2"><a href="#解题思路-2" class="headerlink" title="解题思路"></a>解题思路</h3><p>最小生成树。</p>
 
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
         
-
+          <a href="/tags/NOIP模拟赛/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>NOIP模拟赛</a>
         
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/NOIP模拟赛/"><i class="fas fa-hashtag fa-fw"></i>NOIP模拟赛</a>
-                
-                    <a href="/tags/图论/"><i class="fas fa-hashtag fa-fw"></i>图论</a>
-                
-                    <a href="/tags/二分/"><i class="fas fa-hashtag fa-fw"></i>二分</a>
-                
-                    <a href="/tags/STL/"><i class="fas fa-hashtag fa-fw"></i>STL</a>
-                
-            </div>
+          <a href="/tags/图论/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>图论</a>
         
-    </section>
+          <a href="/tags/二分/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>二分</a>
+        
+          <a href="/tags/STL/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>STL</a>
+        
+      </div>
+    
+  </section>
 </article>
 
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/post/398982fd.html">
-              
-                  函数定义与性质
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="https://www.ljhedp.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            书海扬帆
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2018-10-22
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/数学竞赛/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              数学竞赛
-            </a>
           </div>
         
       
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
+
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
       
+        
+  <h2 class="title">
+    <a href="/post/398982fd.html">
+      函数定义与性质
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.ljhedp.cn" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>书海扬帆</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-10-22</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/categories/数学竞赛/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>数学竞赛</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
       
     </div>
-    <hr>
-  </div>
-</section>
+  </section>
 
-    <section class="article typo">
-        Welcome to my blog, enter password to read.
-        
-            <div class="readmore">
-                <a href="/post/398982fd.html" class="flat-box">
-                    <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-                    阅读全文
-                </a>
-            </div>
-        
 
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      Welcome to my blog, enter password to read.
+      
+        <div class="readmore">
+          <a href="/post/398982fd.html" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
         
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/数学竞赛/"><i class="fas fa-hashtag fa-fw"></i>数学竞赛</a>
-                
-            </div>
+          <a href="/tags/数学竞赛/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>数学竞赛</a>
         
-    </section>
+      </div>
+    
+  </section>
 </article>
 
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/post/604fc339.html">
-              
-                  四世同堂-老舍
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="https://www.ljhedp.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            书海扬帆
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2018-10-22
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/文学/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              文学
-            </a>
           </div>
         
       
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
+
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
       
+        
+  <h2 class="title">
+    <a href="/post/604fc339.html">
+      四世同堂-老舍
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.ljhedp.cn" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>书海扬帆</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-10-22</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/categories/文学/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>文学</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
       
     </div>
-    <hr>
-  </div>
-</section>
+  </section>
 
-    <section class="article typo">
-        <p>【更多精彩好书尽在书包CC <a href="http://www.bookbao.cc】" target="_blank" rel="noopener">http://www.bookbao.cc】</a></p>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>【更多精彩好书尽在书包CC <a href="http://www.bookbao.cc】" target="_blank" rel="noopener">http://www.bookbao.cc】</a></p>
 <h2 id="序幕"><a href="#序幕" class="headerlink" title="序幕"></a>序幕</h2><p>　　假若诸事都能“照计而行”，则此书的组织将是：<br>　　1．段——一百段。每段约有万字，所以<br>　　2．字——共百万字。<br>　　3．部——三部。第一部容纳三十四段，二部三部各三十三段，共百段。<br>　　本来无须分部，因为故事是紧紧相连的一串，而不是可以分成三个独立单位的“三部曲”。不过，为了发表与出书的便利，就不能不在适当的地方画上条红线儿，以清眉目。因此，也就勉强的加上三个副标题，曰《惶惑》，《偷生》，与《饥荒》。将来，全部写完，印成蓝带布套的绣像本的时候，这三个副标题，就会失踪了的。<br>　　现在是随写随出，写到够十五万字左右，即出一本，故三部各有两本，全套共六本。不过，到出第二本的时候，也许就把第一本也放在里面，在《惶惑》之下，成为《四世同堂》的第一部，而后，第二部，第三部，也许照方炮制，直到全套出来，再另行设计，看是用石印好还是刻木版好；此系后话。暂时且不必多去操心。<br>　　设计写此书时，颇有雄心。可是执行起来，精神上，物质上，身体上，都有苦痛，我不敢保险能把他写完。即使幸而能写完，好不好还是另一问题。在这年月而要安心写百万字的长篇，简直有点不知好歹。算了吧，不再说什么了！三十四年四月一日，在打摆子中。 </p>
 <h2 id="01"><a href="#01" class="headerlink" title="01"></a>01</h2><p>　　祁老太爷什么也不怕，只怕庆不了八十大寿。在他的壮年，他亲眼看见八国联军怎样攻进北京城。后来，他看见了清朝的皇帝怎样退位，和接续不断的内战；一会儿九城的城门紧闭，枪声与炮声日夜不绝；一会儿城门开了，马路上又飞驰着得胜的军阀的高车大马。战争没有吓倒他，和平使他高兴。逢节他要过节，遇年他要祭祖，他是个安分守己的公民，只求消消停停的过着不至于愁吃愁穿的日子。即使赶上兵荒马乱，他也自有办法：最值得说的是他的家里老存着全家够吃三个月的粮食与咸菜。这样，即使炮弹在空中飞，兵在街上乱跑，他也会关上大门，再用装满石头的破缸顶上，便足以消灾避难。<br>　　为什么祁老太爷只预备三个月的粮食与咸菜呢？这是因为在他的心理上，他总以为北平是天底下最可靠的大城，不管有什么灾难，到三个月必定灾消难满，而后诸事大吉。北平的灾难恰似一个人免不了有些头疼脑热，过几天自然会好了的。不信，你看吧，祁老太爷会屈指算计：直皖战争有几个月？直奉战争又有好久？啊！听我的，咱们北平的灾难过不去三个月！<br>　　七七抗战那一年，祁老太爷已经七十五岁。对家务，他早已不再操心。他现在的重要工作是浇浇院中的盆花，说说老年间的故事，给笼中的小黄鸟添食换水，和携着重孙子孙女极慢极慢的去逛大街和护国寺。可是，芦沟桥的炮声一响，他老人家便没法不稍微操点心了，谁教他是四世同堂的老太爷呢。<br>　　儿子已经是过了五十岁的人，而儿媳的身体又老那么病病歪歪的，所以祁老太爷把长孙媳妇叫过来。老人家最喜欢长孙媳妇，因为第一，她已给祁家生了儿女，教他老人家有了重孙子孙女；第二，她既会持家，又懂得规矩，一点也不象二孙媳妇那样把头发烫得烂鸡窝似的，看着心里就闹得慌；第三，儿子不常住在家里，媳妇又多病，所以事实上是长孙与长孙媳妇当家，而长孙终日在外教书，晚上还要预备功课与改卷子，那么一家十口的衣食茶水，与亲友邻居的庆吊交际，便差不多都由长孙媳妇一手操持了；这不是件很容易的事，所以老人天公地道的得偏疼点她。还有，老人自幼长在北平，耳习目染的和旗籍人学了许多规矩礼路：儿媳妇见了公公，当然要垂手侍立。可是，儿媳妇既是五十多岁的人，身上又经常的闹着点病；老人若不教她垂手侍立吧，便破坏了家规；教她立规矩吧，又于心不忍，所以不如干脆和长孙媳妇商议商议家中的大事。祁老人的背虽然有点弯，可是全家还属他的身量最高。在壮年的时候，他到处都被叫作“祁大个子”。高身量，长脸，他本应当很有威严，可是他的眼睛太小，一笑便变成一条缝子，于是人们只看见他的高大的身躯，而觉不出什么特别可敬畏的地方来。到了老年，他倒变得好看了一些：黄暗的脸，雪白的须眉，眼角腮旁全皱出永远含笑的纹溜；小眼深深的藏在笑纹与白眉中，看去总是笑眯眯的显出和善；在他真发笑的时候，他的小眼放出一点点光，倒好象是有无限的智慧而不肯一下子全放出来似的。<br>　　把长孙媳妇叫来，老人用小胡梳轻轻的梳着白须，半天没有出声。老人在幼年只读过三本小书与六言杂字；少年与壮年吃尽苦处，独力置买了房子，成了家。他的儿子也只在私塾读过三年书，就去学徒；直到了孙辈，才受了风气的推移，而去入大学读书。现在，他是老太爷，可是他总觉得学问既不及儿子——儿子到如今还能背诵上下《论语》，而且写一笔被算命先生推奖的好字——更不及孙子，而很怕他们看不起他。因此，他对晚辈说话的时候总是先楞一会儿，表示自己很会思想。对长孙媳妇，他本来无须这样，因为她识字并不多，而且一天到晚嘴中不是叫孩子，便是谈论油盐酱醋。不过，日久天长，他已养成了这个习惯，也就只好教孙媳妇多站一会儿了。<br>　　长孙媳妇没入过学校，所以没有学名。出嫁以后，才由她的丈夫象赠送博士学位似的送给她一个名字——韵梅。韵梅两个字仿佛不甚走运，始终没能在祁家通行得开。公婆和老太爷自然没有喊她名字的习惯与必要，别人呢又觉得她只是个主妇，和“韵”与“梅”似乎都没多少关系。况且，老太爷以为“韵梅”和“运煤”既然同音，也就应该同一个意思，“好吗，她一天忙到晚，你们还忍心教她去运煤吗？”这样一来，连她的丈夫也不好意思叫她了，于是她除了“大嫂”“妈妈”等应得的称呼外，便成了“小顺儿的妈”；小顺儿是她的小男孩。<br>　　小顺儿的妈长得不难看，中等身材，圆脸，两只又大又水灵的眼睛。她走路，说话，吃饭，作事，都是快的，可是快得并不发慌。她梳头洗脸擦粉也全是快的，所以有时候碰巧了把粉擦得很匀，她就好看一些；有时候没有擦匀，她就不大顺眼。当她没有把粉擦好而被人家嘲笑的时候，她仍旧一点也不发急，而随着人家笑自己。她是天生的好脾气。<br>　　祁老人把白须梳够，又用手掌轻轻擦了两把，才对小顺儿的妈说：<br>　　“咱们的粮食还有多少啊？”<br>　　小顺儿的妈的又大又水灵的眼很快的转动了两下，已经猜到老太爷的心意。很脆很快的，她回答：“还够吃三个月的呢！”<br>　　其实，家中的粮食并没有那么多。她不愿因说了实话，而惹起老人的罗嗦。对老人和儿童，她很会运用善意的欺骗。“咸菜呢？”老人提出第二个重要事项来。<br>　　她回答的更快当：“也够吃的！干疙疸，老咸萝卜，全还有呢！”她知道，即使老人真的要亲自点验，她也能马上去买些来。<br>　　“好！”老人满意了。有了三个月的粮食与咸菜，就是天塌下来，祁家也会抵抗的。可是老人并不想就这么结束了关切，他必须给长孙媳妇说明白了其中的道理：“日本鬼子又闹事哪！哼！闹去吧！庚子年，八国联军打进了北京城，连皇上都跑了，也没把我的脑袋掰了去呀！八国都不行，单是几个日本小鬼还能有什么蹦儿？咱们这是宝地，多大的乱子也过不去三个月！咱们可也别太粗心大胆，起码得有窝头和咸菜吃！”<br>　　老人说一句，小顺儿的妈点一次头，或说一声“是”。老人的话，她已经听过起码有五十次，但是还当作新的听。老人一见有人欣赏自己的话，不由的提高了一点嗓音，以便增高感动的力量：<br>　　“你公公，别看他五十多了，论操持家务还差得多呢！你婆婆，简直是个病包儿，你跟她商量点事儿，她光会哼哼！这一家，我告诉你，就仗着你跟我！咱们俩要是不操心，一家子连裤子都穿不上！你信不信？”<br>　　小顺儿的妈不好意思说“信”，也不好意思说“不信”，只好低着眼皮笑了一下。<br>　　“瑞宣还没回来哪？”老人问。瑞宣是他的长孙。“他今天有四五堂功课呢。”她回答。<br>　　“哼！开了炮，还不快快的回来！瑞丰和他的那个疯娘们呢？”老人问的是二孙和二孙媳妇——那个把头发烫成鸡窝似的妇人。<br>　　“他们俩——”她不知道怎样回答好。<br>　　“年轻轻的公母俩，老是蜜里调油，一时一刻也离不开，真也不怕人家笑话！”<br>　　小顺儿的妈笑了一下：“这早晚的年轻夫妻都是那个样儿！”<br>　　“我就看不下去！”老人斩钉截铁的说。“都是你婆婆宠得她！我没看见过，一个年轻轻的妇道一天老长在北海，东安市场和——什么电影园来着？”<br>　　“我也说不上来！”她真说不上来，因为她几乎永远没有看电影去的机会。<br>　　“小三儿呢？”小三儿是瑞全，因为还没有结婚，所以老人还叫他小三儿；事实上，他已快在大学毕业了。<br>　　“老三带着妞子出去了。”妞子是小顺儿的妹妹。“他怎么不上学呢？”<br>　　“老三刚才跟我讲了好大半天，说咱们要再不打日本，连北平都要保不住！”小顺儿的妈说得很快，可是也很清楚。“说的时候，他把脸都气红了，又是搓拳，又是磨掌的！我就直劝他，反正咱们姓祁的人没得罪东洋人，他们一定不能欺侮到咱们头上来！我是好意这么跟他说，好教他消消气；喝，哪知道他跟我瞪了眼，好象我和日本人串通一气似的！我不敢再言语了，他气哼哼的扯起妞子就出去了！您瞧，我招了谁啦？”<br>　　老人楞了一小会儿，然后感慨着说：“我很不放心小三儿，怕他早晚要惹出祸来！”<br>　　正说到这里，院里小顺儿撒娇的喊着：“爷爷！爷爷！你回来啦？给我买桃子来没有？怎么，没有？连一个也没有？爷爷你真没出息！”<br>　　小顺儿的妈在屋中答了言：“顺儿！不准和爷爷讪脸！再胡说，我就打你去！”<br>　　小顺儿不再出声，爷爷走了进来。小顺儿的妈赶紧去倒茶。爷爷（祁天佑）是位五十多岁的黑胡子小老头儿。中等身材，相当的富泰，圆脸，重眉毛，大眼睛，头发和胡子都很重很黑，很配作个体面的铺店的掌柜的——事实上，他现在确是一家三间门面的布铺掌柜。他的脚步很重，每走一步，他的脸上的肉就颤动一下。作惯了生意，他的脸上永远是一团和气，鼻子上几乎老拧起一旋笑纹。今天，他的神气可有些不对。他还要勉强的笑，可是眼睛里并没有笑时那点光，鼻子上的一旋笑纹也好象不能拧紧；笑的时候，他几乎不敢大大方方的抬起头来。<br>　　“怎样？老大！”祁老太爷用手指轻轻的抓着白胡子，就手儿看了看儿子的黑胡子，心中不知怎的有点不安似的。<br>　　黑胡子小老头很不自然的坐下，好象白胡子老头给了他一些什么精神上的压迫。看了父亲一眼，他低下头去，低声的说：<br>　　“时局不大好呢！”<br>　　“打得起来吗？”小顺儿的妈以长媳的资格大胆的问。“人心很不安呢！”<br>　　祁老人慢慢的立起来：“小顺儿的妈，把顶大门的破缸预备好！” 
 　
@@ -1260,70 +1492,97 @@
 　 </p>
 <h2 id="100"><a href="#100" class="headerlink" title="100"></a>100</h2><p>　　妞子没有新衣裳，只穿一身过于短小，总还算干净的旧衣服。买个小小的木头匣子，装敛起来，埋在城外了。<br>　　韵梅病得起不了床。幸好有老三和高第在家。老三不打算老呆在家里，准备出去做跟抗日一样重要的工作。他对国家的现状有了认识，懂得祖国最需要他去做什么。他不能婆婆妈妈的，成天守在家里，跟油盐酱醋打交道。不过，眼下他还走不开。首先，得把钱伯伯救出来，安置妥当，然后才能松口气，何况目前爷爷，妈妈和哥嫂都离不开他。他明白，自己的有说有笑和无忧无虑的态度，能够打破家里死一般的沉寂。<br>　　老三对付大嫂的办法很简单，然而甚有成效。他不去安慰她，只是从早到晚要这要那，闹得她一会儿都不得安宁。“大嫂，还没起来哪？我想饺子吃了。八年没吃过你包的饺子了。”再不就是：“大嫂，起来吧，给我找西件旧衣服。瞧瞧我穿的都是些什么——紧绷绷的，箍得我都出不来气了。”他知道嫂子心眼好，一定会上他的当，挣扎着爬起来做事。她只要能起床做事，那心头的创伤就会慢慢好起来。<br>　　他一面跟大嫂要这要那，不让她得空去想那些伤心的事儿，一面跟她唠叨他见过的许多惨事——被敌机炸死的孩子，逃难时被挤到河里的孩子……，在战争中，无辜死去的孩子成千上万，妞子不过是其中的一个。<br>　　大嫂终于能起床做活了。她瘦了，越瘦，眼睛就越显得大。她做活的时候，会忽然停下来，仿佛想起了什么。老三总不让她得着机会去胡思乱想，叫小顺儿陪着妈妈，跟她说话儿。<br>　　老三跟大哥在一起的时候，话最多。哥俩干脆搬到一间屋里住，让高第陪韵梅。<br>　　谈过三、四个晚上，哥俩把要说的话都说了，还不乐意就此罢休。又扯起家事，国事，世界大势，仿佛国家的繁荣昌盛与世界和平，全仗着他俩筹划。等到实在没的可说了，就把已经说过的话，拿出来再重温一遍。<br>　　全家都喜欢高第。她已经不是什么“小姐”，样样活都乐意干，——战争把她调教出来了。她伺候祁老人和天佑太太，做全家的饭。她做饭的手艺不高，可是这难为不了她。不论好歹，饭总算是做出来了，这顿做得不可口，下顿还不能改进改进？<br>　　这样韵梅就更觉着自己应当赶快爬起来干活，不能让客人替她操持一切。连祁老人也受了感动，忘记了他对冠家的成见。他偷偷对老三说：“别让客人来伺候咱们呀，那象什么话呢！”<br>　　老三笑了一笑，没说什么。<br>　　胜利后第七天，钱诗人打监牢里出来了。<br>　　老三打算来次小小的聚会，欢迎欢迎钱伯伯。胜利以来，北平一直冷冷清清，瑞全不喜欢这股子冷清劲儿。他去跟爷爷商量。爷爷答应了，叮咛说：“得买瓶酒，他喜欢喝两口。”<br>　　“那是自然，我知道上哪儿弄酒去。”<br>　　他还跟韵梅和高第商量，得做上几个菜？韵梅觉乎着，有豆腐干和花生米下酒，就满够了。她安排不了那么些个人的饭食，没什么钱，精神也不济。<br>　　“就这么办吧，大嫂，再给沏点儿茶。”<br>　　他去找妈妈：“妈，钱伯伯要来，您得起来招待招待他。”天佑太太点了头。<br>　　瑞全邀大哥一起去接钱先生。瑞宣当然乐意。他也想到了富善先生。他花了一整天去找这位老朋友，后来听人说，几个月以前，富善先生给弄到山东潍县的集中营里去了。<br>　　老三去找金三爷，要他跟钱少奶奶一起到祁家来。然后他又邀了李四大妈，程长顺和小羊圈所有的街坊邻居。老邻居们高兴得跟刚听到胜利的消息时一样。<br>　　瑞宣和瑞全把钱先生接了出来。<br>　　钱先生，除了一身衣服，什么也没有。他一手扶着老三的胳臂，一手领着孙子，踉踉跄跄走出监牢的门。瑞宣跟在后面。<br>　　这回钱先生在牢里过堂的时候，没有受刑。日本人要他投降，他拒绝了他们的“亲善”，他们就把他的孙子偷来，也给下在牢里。他们让爷儿俩每天见一面。钱先生明白，他们是想要利用这个孩子，来对他施加压力。要是他低头，投降了，孙子就有了活命；要是他不肯呢，他们就会当着他的面给孩子用刑。<br>　　钱先生一点也没发愁。他一不发脾气，二不惹他们，尽量不让孩子遭罪；当然他更不能为了救孩子而屈服。他那斯斯文文的脸上老带着笑，顺其自然。要是到时候他确实保护不了自己的孙子，那也没有法子。反正也不能投降。打仗嘛，多死一个两个的又怎么样？即便那死去的就是他的孙儿。<br>　　孩子初进监牢里来，是又哭又闹。日本人头一回带他见钱先生的时候，他满脸都是泪。他使劲拍打爷爷的腿，喊着：“我要妈妈，我要妈妈。”<br>　　钱先生，轻轻拍了拍孩子的脑袋，一再说：“别闹，乖乖的，别哭了。”孩子安静了一点，问：“干嘛要把咱们关在这儿？干嘛不让咱们回家去？”<br>　　“没有道理。”<br>　　“怎么没有道理？”<br>　　“就是没有道理。”<br>　　过了几天，孩子习惯了一点，不再大哭大闹了。每逢人家带着他来看爷爷，他总是特别高兴。他拿好多问题来问爷爷——为什么要打仗，监牢是干什么的，日本人打哪儿来，为什么要到北平来。爷爷很耐心地一一讲给他听。<br>　　孙子要求爷爷给起个名字。他记得妈妈常说，他的名字得让爷爷来起。<br>　　孩子还没有出世，爷爷就给起好了名字，钱仇——不忘报仇的意思。而这会儿孩子倚在膝下，他又觉得不能让孩子一辈子背着这么一个叫人痛心的名字。老人问孩子，“你觉着‘仇’字怎么样？”<br>　　孙子的小眼睛直眨巴，象是在认真考虑。他能想象出猫、狗、牛是什么样子，然而“仇”，“仇”是什么呢？他闹不明白，一准不是什么好词儿。他说：“我不要这个。”爷爷赶紧道歉：“好，等一等，让我再好好想想，一定要给你起个好名字。”<br>　　于是有一天，他说了：“钱善怎么样，善，是正义，善良的意思，是打我教你的那本《三字经》的头一行上取来的，‘人之初，性本善’，记得吗？”孩子同意了。起初，日本人每次只让孩子跟爷爷在一块儿呆几分钟，后来爷爷跟孙子在一块儿呆惯了，他们就把时间延长，让他们多谈谈，希望用孩子来打动钱先生。等爷俩谈得正热闹，他们就突然把孩子带走，故意让他哭闹。<br>　　钱少奶奶和小顺儿站在小羊圈口上，等她的公公和儿子。她模样大变，变得叫人认不出来了；瘦得皮包骨，只有一双眼睛还亮堂堂的，仿佛她把整个生命都注入了这一对眼睛，好去找儿子。这会儿，她知道儿子快要回到她的身边来了，她的眼睛几乎要冒出火星来。<br>　　钱少奶奶一见公公和儿子的人影儿，就没命地跑起来。她一下子把小善搂在怀里，紧紧抱住。她蹲在地上，把脸紧紧贴在儿子脸上。<br>　　走到一号门口，钱少奶奶习惯地站住了，可是钱先生连朝大门都没瞧一眼，就慢条斯理地走了过去。<br>　　祁家大门外站了一群人。大伙儿见了钱先生，都想跑上前来，可是谁也没挪窝。钱先生是大家的好邻居、老朋友，英雄。他穿了一件旧的蓝布僧袍，短得刚刚够得着膝盖。他的头发全白了，乱蓬蓬的，双颊下陷，干巴巴的没有一点血色。他外表上并没有什么英雄气概，浑身满布战争的创伤。大家不禁相互打量了一番，他们自己的衣服也很破烂，每个人的脸都瘦骨棱棱的，白里带青。大家又朝小羊圈扫了一眼，家家户户，大门上的油漆已经完全看不出来了，墙皮也剥落了。一切都显着凄凉，使人不忍得看。<br>　　说相声的方六，点起一小挂鞭炮，按老规矩欢迎英雄归来。<br>　　大家都想第一个跟钱先生拉手，又都不约而同，一致把优先权让给了祁老人。祁老人双手捧着钱先生的手，只说了一句：“到底回来了！”就再也说不出话来。他想起了天佑。在小羊圈，论年纪，身量和人品，就数钱先生跟天佑最相近。钱先生热烈地握住老人的手，也说不出话来。<br>　　老三想把欢迎会弄得热热闹闹的，一个劲往里让着街坊：“进去吧，里面请，到院子里头喝一盅。”<br>　　祈老人转过身来，站在门边让钱先生，嘴里不住地说：“请！请！”<br>　　钱先生的确想喝一盅。他起过誓，抗战不胜利，他决不沾酒盅儿，今儿他可得喝上一大杯。<br>　　他走进大门，边走边跟高第，天佑太太和刘太太打招呼。<br>　　祁老人等大家都进了院子，才慢慢跟了进来。瑞全早就跟大家伙儿说笑开了，瑞宣在一边等着搀爷爷。走了几步，老人点了点头，说：“瑞宣，街坊都到齐啦？得好好庆祝庆祝。”他脸上逐渐现出了笑容。<br>　　“等您庆九十大寿的时候，比这还得热闹呢。”瑞宣说。小羊圈里，槐树叶儿拂拂地在摇曳，起风了。</p>
 <h2 id="End"><a href="#End" class="headerlink" title="End"></a>End</h2>
-        
-
-        
-    </section>
+      
+    </div>
+    
+  </section>
 </article>
 
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/post/69f7434c.html">
-              
-                  夜航-圣埃克苏佩里
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="https://www.ljhedp.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            书海扬帆
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2018-10-22
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/文学/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              文学
-            </a>
           </div>
         
       
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
+
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
       
+        
+  <h2 class="title">
+    <a href="/post/69f7434c.html">
+      夜航-圣埃克苏佩里
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.ljhedp.cn" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>书海扬帆</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-10-22</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/categories/文学/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>文学</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
       
     </div>
-    <hr>
-  </div>
-</section>
+  </section>
 
-    <section class="article typo">
-        <p><a href="https://read.douban.com/ebook/514334/" target="_blank" rel="noopener">来自豆瓣的书评</a></p>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p><a href="https://read.douban.com/ebook/514334/" target="_blank" rel="noopener">来自豆瓣的书评</a></p>
 <p>全篇约3万字，囊括中文、英文两种版本。</p>
 <p><hr></p>
 <p class="p1">本书录自</p>
@@ -2622,70 +2881,97 @@
 <p class="p3">Within five minutes the radio stations would broadcast the news along the line and across a thousand miles the vibrant force of life give pause to every problem.</p>
 <p class="p3">Already a deep organ-note was booming<span class="s2">;</span> the plane.</p>
 <p class="p3">Rivière went back to his work and<span class="s2">,</span> as he passed<span class="s2">,</span> the clerks quailed under his stern eyes<span class="s2">;</span> Rivière the Great<span class="s2">,</span> Rivière the Con­queror<span class="s2">,</span> bearing his heavy load of victory.</p>
-        
-
-        
-    </section>
+      
+    </div>
+    
+  </section>
 </article>
 
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/post/bd02de84.html">
-              
-                  程序竞赛中的调试技巧
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="https://www.ljhedp.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            书海扬帆
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2018-10-22
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/信息学竞赛-OI/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              信息学竞赛(OI)
-            </a>
           </div>
         
       
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
+
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
       
+        
+  <h2 class="title">
+    <a href="/post/bd02de84.html">
+      程序竞赛中的调试技巧
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.ljhedp.cn" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>书海扬帆</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-10-22</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/categories/信息学竞赛-OI/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>信息学竞赛(OI)</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
       
     </div>
-    <hr>
-  </div>
-</section>
+  </section>
 
-    <section class="article typo">
-        <p>作者介绍：镇高红，计蒜客研发工程师，毕业于西南科技大学，曾获 ACM/ICPC 亚洲区预赛金奖。</p>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>作者介绍：镇高红，计蒜客研发工程师，毕业于西南科技大学，曾获 ACM/ICPC 亚洲区预赛金奖。</p>
 <p><strong>代码能力</strong>是我们在<a href="https://www.jisuanke.com/course/cs209" target="_blank" rel="noopener">程序设计竞赛</a>中常常谈到的一种能力，是指选手把算法用代码<strong>准确地</strong>实现的能力。</p>
 <p>2005 年，Comars 曾经给代码能力作过一个比较准确的定义：如果我 150 行以内的题目，1Y（提交一次就正确通过，Y 是指 Yes）率非常高，并且保持稳定；而当代码长度超过 150 行以后，1Y 率就开始急速下降了。如果我们画出一条代码行数与 1Y 率之间的关系的曲线，150 行就是一个转折点。我们不妨认为，150 行就是 Comars 当时的代码能力。一年以后，经过努力，Comars 把代码能力提高到了 250 行，也就意味着他通常可以无错误地写出一份 250 行的代码。</p>
 <p>当然，想要把代码能力提高到 150 行并非是一个简单的事情。在代码能力不够强的时候，就需要有足够的<strong>调试（debug）能力</strong>了。结合我的比赛经历和平时训练的经验，给大家分享一些程序设计竞赛题目 debug 的技巧。</p>
@@ -2750,129 +3036,147 @@
 </li>
 </ol>
 
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
         
-
+          <a href="/tags/精品/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>精品</a>
         
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/精品/"><i class="fas fa-hashtag fa-fw"></i>精品</a>
-                
-                    <a href="/tags/调试与对拍/"><i class="fas fa-hashtag fa-fw"></i>调试与对拍</a>
-                
-            </div>
+          <a href="/tags/调试与对拍/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>调试与对拍</a>
         
-    </section>
+      </div>
+    
+  </section>
 </article>
 
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/post/f0692f68.html">
-              
-                  千字文
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="https://www.ljhedp.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            书海扬帆
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2018-10-22
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/文学/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              文学
-            </a>
           </div>
         
       
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-    <section class="article typo">
-        <p>天地玄黄，宇宙洪荒。日月盈昃，辰宿列张。<br>寒来暑往，秋收冬藏。闰余成岁，律吕调阳。<br>云腾致雨，露结为霜。金生丽水，玉出昆冈。<br>剑号巨阙，珠称夜光。果珍李柰，菜重芥姜。<br>海咸河淡，鳞潜羽翔。龙师火帝，鸟官人皇。<br>始制文字，乃服衣裳。推位让国，有虞陶唐。<br>吊民伐罪，周发殷汤。坐朝问道，垂拱平章。<br>爱育黎首，臣伏戎羌。遐迩一体，率宾归王。<br>鸣凤在竹，白驹食场。化被草木，赖及万方。<br>盖此身发，四大五常。恭惟鞠养，岂敢毁伤。<br>女慕贞洁，男效才良。知过必改，得能莫忘。<br>罔谈彼短，靡恃己长。信使可覆，器欲难量。<br>墨悲丝染，诗赞羔羊。景行维贤，克念作圣。<br>德建名立，形端表正。空谷传声，虚堂习听。<br>祸因恶积，福缘善庆。尺璧非宝，寸阴是竞。<br>资父事君，曰严与敬。孝当竭力，忠则尽命。<br>临深履薄，夙兴温凊。似兰斯馨，如松之盛。<br>川流不息，渊澄取映。容止若思，言辞安定。<br>笃初诚美，慎终宜令。荣业所基，籍甚无竟。<br>学优登仕，摄职从政。存以甘棠，去而益咏。<br>乐殊贵贱，礼别尊卑。上和下睦，夫唱妇随。<br>外受傅训，入奉母仪。诸姑伯叔，犹子比儿。<br>孔怀兄弟，同气连枝。交友投分，切磨箴规。<br>仁慈隐恻，造次弗离。节义廉退，颠沛匪亏。<br>性静情逸，心动神疲。守真志满，逐物意移。<br>坚持雅操，好爵自縻。都邑华夏，东西二京。<br>背邙面洛，浮渭据泾。宫殿盘郁，楼观飞惊。<br>图写禽兽，画彩仙灵。丙舍旁启，甲帐对楹。<br>肆筵设席，鼓瑟吹笙。升阶纳陛，弁转疑星。<br>右通广内，左达承明。既集坟典，亦聚群英。<br>杜稿钟隶，漆书壁经。府罗将相，路侠槐卿。<br>户封八县，家给千兵。高冠陪辇，驱毂振缨。<br>世禄侈富，车驾肥轻。策功茂实，勒碑刻铭。<br>盘溪伊尹，佐时阿衡。奄宅曲阜，微旦孰营。<br>桓公匡合，济弱扶倾。绮回汉惠，说感武丁。<br>俊义密勿，多士实宁。晋楚更霸，赵魏困横。<br>假途灭虢，践土会盟。何遵约法，韩弊烦刑。<br>起翦颇牧，用军最精。宣威沙漠，驰誉丹青。<br>九州禹迹，百郡秦并。岳宗泰岱，禅主云亭。<br>雁门紫塞，鸡田赤诚。昆池碣石，钜野洞庭。<br>旷远绵邈，岩岫杳冥。治本于农，务兹稼穑。<br>俶载南亩，我艺黍稷。税熟贡新，劝赏黜陟。<br>孟轲敦素，史鱼秉直。庶几中庸，劳谦谨敕。<br>聆音察理，鉴貌辨色。贻厥嘉猷，勉其祗植。<br>省躬讥诫，宠增抗极。殆辱近耻，林皋幸即。<br>两疏见机，解组谁逼。索居闲处，沉默寂寥。<br>求古寻论，散虑逍遥。欣奏累遣，戚谢欢招。<br>渠荷的历，园莽抽条。枇杷晚翠，梧桐蚤凋。<br>陈根委翳，落叶飘摇。游鹍独运，凌摩绛霄。<br>耽读玩市，寓目囊箱。易輶攸畏，属耳垣墙。<br>具膳餐饭，适口充肠。饱饫烹宰，饥厌糟糠。<br>亲戚故旧，老少异粮。妾御绩纺，侍巾帷房。<br>纨扇圆洁，银烛炜煌。昼眠夕寐，蓝笋象床。<br>弦歌酒宴，接杯举殇。矫手顿足，悦豫且康。<br>嫡后嗣续，祭祀烝尝。稽颡再拜，悚惧恐惶。<br>笺牒简要，顾答审详。骸垢想浴，执热愿凉。<br>驴骡犊特，骇跃超骧。诛斩贼盗，捕获叛亡。<br>布射僚丸，嵇琴阮箫。恬笔伦纸，钧巧任钓。<br>释纷利俗，并皆佳妙。毛施淑姿，工颦妍笑。<br>年矢每催，曦晖朗曜。璇玑悬斡，晦魄环照。<br>指薪修祜，永绥吉劭。矩步引领，俯仰廊庙。<br>束带矜庄，徘徊瞻眺。孤陋寡闻，愚蒙等诮。<br>谓语助者，焉哉乎也。</p>
-
         
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
 
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
+      
         
-    </section>
-</article>
+  <h2 class="title">
+    <a href="/post/f0692f68.html">
+      千字文
+    </a>
+  </h2>
 
-            </div>
+
+      
+      <div class="new-meta-box">
+        
           
         
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.ljhedp.cn" rel="nofollow">
       
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>书海扬帆</p>
+    </a>
+  </div>
 
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-10-22</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/categories/文学/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>文学</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
   </section>
 
 
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>天地玄黄，宇宙洪荒。日月盈昃，辰宿列张。<br>寒来暑往，秋收冬藏。闰余成岁，律吕调阳。<br>云腾致雨，露结为霜。金生丽水，玉出昆冈。<br>剑号巨阙，珠称夜光。果珍李柰，菜重芥姜。<br>海咸河淡，鳞潜羽翔。龙师火帝，鸟官人皇。<br>始制文字，乃服衣裳。推位让国，有虞陶唐。<br>吊民伐罪，周发殷汤。坐朝问道，垂拱平章。<br>爱育黎首，臣伏戎羌。遐迩一体，率宾归王。<br>鸣凤在竹，白驹食场。化被草木，赖及万方。<br>盖此身发，四大五常。恭惟鞠养，岂敢毁伤。<br>女慕贞洁，男效才良。知过必改，得能莫忘。<br>罔谈彼短，靡恃己长。信使可覆，器欲难量。<br>墨悲丝染，诗赞羔羊。景行维贤，克念作圣。<br>德建名立，形端表正。空谷传声，虚堂习听。<br>祸因恶积，福缘善庆。尺璧非宝，寸阴是竞。<br>资父事君，曰严与敬。孝当竭力，忠则尽命。<br>临深履薄，夙兴温凊。似兰斯馨，如松之盛。<br>川流不息，渊澄取映。容止若思，言辞安定。<br>笃初诚美，慎终宜令。荣业所基，籍甚无竟。<br>学优登仕，摄职从政。存以甘棠，去而益咏。<br>乐殊贵贱，礼别尊卑。上和下睦，夫唱妇随。<br>外受傅训，入奉母仪。诸姑伯叔，犹子比儿。<br>孔怀兄弟，同气连枝。交友投分，切磨箴规。<br>仁慈隐恻，造次弗离。节义廉退，颠沛匪亏。<br>性静情逸，心动神疲。守真志满，逐物意移。<br>坚持雅操，好爵自縻。都邑华夏，东西二京。<br>背邙面洛，浮渭据泾。宫殿盘郁，楼观飞惊。<br>图写禽兽，画彩仙灵。丙舍旁启，甲帐对楹。<br>肆筵设席，鼓瑟吹笙。升阶纳陛，弁转疑星。<br>右通广内，左达承明。既集坟典，亦聚群英。<br>杜稿钟隶，漆书壁经。府罗将相，路侠槐卿。<br>户封八县，家给千兵。高冠陪辇，驱毂振缨。<br>世禄侈富，车驾肥轻。策功茂实，勒碑刻铭。<br>盘溪伊尹，佐时阿衡。奄宅曲阜，微旦孰营。<br>桓公匡合，济弱扶倾。绮回汉惠，说感武丁。<br>俊义密勿，多士实宁。晋楚更霸，赵魏困横。<br>假途灭虢，践土会盟。何遵约法，韩弊烦刑。<br>起翦颇牧，用军最精。宣威沙漠，驰誉丹青。<br>九州禹迹，百郡秦并。岳宗泰岱，禅主云亭。<br>雁门紫塞，鸡田赤诚。昆池碣石，钜野洞庭。<br>旷远绵邈，岩岫杳冥。治本于农，务兹稼穑。<br>俶载南亩，我艺黍稷。税熟贡新，劝赏黜陟。<br>孟轲敦素，史鱼秉直。庶几中庸，劳谦谨敕。<br>聆音察理，鉴貌辨色。贻厥嘉猷，勉其祗植。<br>省躬讥诫，宠增抗极。殆辱近耻，林皋幸即。<br>两疏见机，解组谁逼。索居闲处，沉默寂寥。<br>求古寻论，散虑逍遥。欣奏累遣，戚谢欢招。<br>渠荷的历，园莽抽条。枇杷晚翠，梧桐蚤凋。<br>陈根委翳，落叶飘摇。游鹍独运，凌摩绛霄。<br>耽读玩市，寓目囊箱。易輶攸畏，属耳垣墙。<br>具膳餐饭，适口充肠。饱饫烹宰，饥厌糟糠。<br>亲戚故旧，老少异粮。妾御绩纺，侍巾帷房。<br>纨扇圆洁，银烛炜煌。昼眠夕寐，蓝笋象床。<br>弦歌酒宴，接杯举殇。矫手顿足，悦豫且康。<br>嫡后嗣续，祭祀烝尝。稽颡再拜，悚惧恐惶。<br>笺牒简要，顾答审详。骸垢想浴，执热愿凉。<br>驴骡犊特，骇跃超骧。诛斩贼盗，捕获叛亡。<br>布射僚丸，嵇琴阮箫。恬笔伦纸，钧巧任钓。<br>释纷利俗，并皆佳妙。毛施淑姿，工颦妍笑。<br>年矢每催，曦晖朗曜。璇玑悬斡，晦魄环照。<br>指薪修祜，永绥吉劭。矩步引领，俯仰廊庙。<br>束带矜庄，徘徊瞻眺。孤陋寡闻，愚蒙等诮。<br>谓语助者，焉哉乎也。</p>
 
-
-
-
-  
-      <br>
-      <div class="prev-next">
-          <div class="prev-next">
-              
-                  <a class="prev" rel="prev" href="/page/8/">
-                      <section class="post prev">
-                          <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页&nbsp;
-                      </section>
-                  </a>
-              
-              <p class="current">
-                  9 / 12
-              </p>
-              
-                  <a class="next" rel="next" href="/page/10/">
-                      <section class="post next">
-                          &nbsp;下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
-                      </section>
-                  </a>
-              
+      
+    </div>
+    
+  </section>
+</article>
 
           </div>
+        
+      
+    
+  </section>
+  
+    
+      <br>
+      <div class="prev-next">
+        <div class="prev-next">
+          
+            <a class="prev" rel="prev" href="/page/8/">
+              <section class="post prev">
+                <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页&nbsp;
+              </section>
+            </a>
+          
+          <p class="current">
+            9 / 12
+          </p>
+          
+            <a class="next" rel="next" href="/page/10/">
+              <section class="post next">
+                &nbsp;下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
+              </section>
+            </a>
+          
+        </div>
       </div>
 
-  
-
-  <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-  
-
-  
-    <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+    
+    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+    
+    
+      <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     "HTML-CSS": {
@@ -2902,28 +3206,28 @@
     for(i=0; i < all.length; i += 1) {
       all[i].SourceElement().parentNode.className += (all[i].SourceElement().parentNode.className ? ' ' : '') + 'has-jax';
     }
-    console.log("mathjax did loaded!");
   });
 </script>
 <!-- 通过连接CDN加载MathJax的js代码 -->
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
+    
+
   
 
 
-
-
-        </div>
-        <aside class='l_side'>
-            
-  
+</div>
+<aside class="l_side">
   
     
+    
       
-      
-        <section class="author">
-  <div class="content ">
+        
+          
+          
+            <section class="widget author">
+  <div class="content pure">
     
       <div class="avatar">
         <img class="avatar" src="/avatar.jpg">
@@ -2943,7 +3247,23 @@
       <div class="social-wrapper">
         
           
-            <a href="mailto:me@ljhedp.cn" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-envelope" aria-hidden="true"></i></a>
+            <a href="/atom.xml" class="social fas fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="mailto:me@ljhedp.cn" class="social fas fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://github.com/xaoxuu" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://music.163.com/#/user/home?id=63035382" class="social fas fa-headphones-alt flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+            </a>
           
         
       </div>
@@ -2951,48 +3271,106 @@
   </div>
 </section>
 
-      
-    
-  
-    
-      
+          
+        
       
         
+          
+          
+            
 
+          
+        
       
-    
+        
+          
+          
+            <section class="widget plain">
   
-    
-      
-      
-        <section class="plain">
-  
-<header class="">
+<header class="pure">
   <div><i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;QwQ</div>
   
 </header>
 
-  <div class="content ">
+  <div class="content pure">
     <p>待修锅仍很多，坑待填</p>
 
   </div>
 </section>
 
-      
-    
-  
-    
-      
+          
+        
       
         
-  <section class="category">
-    
-<header class="">
-  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;所有分类</div>
+          
+          
+            <section class="widget grid">
+  
+<header class="pure">
+  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;站内导航</div>
   
 </header>
 
-    <div class="content ">
+  <div class="content pure">
+    <ul class="grid navgation">
+      
+        <li><a class="flat-box" title="/" href="/" id="home">
+          
+            <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
+          
+          近期文章
+        </a></li>
+      
+        <li><a class="flat-box" title="/archives/" href="/archives/" rel="nofollow" id="archives">
+          
+            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
+          
+          文章归档
+        </a></li>
+      
+        <li><a class="flat-box" title="/friends/" href="/friends/" rel="nofollow" id="friends">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          我的友链
+        </a></li>
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/" rel="nofollow" id="https:xaoxuu.comwikimaterial-x">
+          
+            <i class="fas fa-book fa-fw" aria-hidden="true"></i>
+          
+          主题文档
+        </a></li>
+      
+        <li><a class="flat-box" title="/about/" href="/about/" rel="nofollow" id="about">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          关于小站
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+  <section class="widget category">
+    
+<header class="pure">
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章分类</div>
+  
+    <a class="rightBtn" rel="nofollow" href="/categories/" title="categories/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class="content pure">
       <ul class="entry">
         
           <li><a class="flat-box" title="/categories/信息学竞赛-OI/" href="/categories/信息学竞赛-OI/"><div class="name">信息学竞赛(OI)</div><div class="badge">(94)</div></a></li>
@@ -3014,37 +3392,78 @@
   </section>
 
 
-      
-    
-  
-    
-      
+          
+        
       
         
-  <section class="tagcloud">
+          
+          
+            
+  <section class="widget tagcloud">
     
-<header class="">
-  <div><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+<header class="pure">
+  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+    <a class="rightBtn" rel="nofollow" href="/tags/" title="tags/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
   
 </header>
 
-    <div class="content ">
+    <div class="content pure">
       <a href="/tags/01背包/" style="font-size: 14.83px; color: #939393">01背包</a> <a href="/tags/Floyd/" style="font-size: 14px; color: #999">Floyd</a> <a href="/tags/KMP/" style="font-size: 14px; color: #999">KMP</a> <a href="/tags/Kruscal/" style="font-size: 14px; color: #999">Kruscal</a> <a href="/tags/LCT/" style="font-size: 14px; color: #999">LCT</a> <a href="/tags/Manacher/" style="font-size: 14px; color: #999">Manacher</a> <a href="/tags/NOI/" style="font-size: 14px; color: #999">NOI</a> <a href="/tags/NOIP模拟赛/" style="font-size: 14px; color: #999">NOIP模拟赛</a> <a href="/tags/NOIp题解/" style="font-size: 14px; color: #999">NOIp题解</a> <a href="/tags/Prim/" style="font-size: 14px; color: #999">Prim</a> <a href="/tags/STL/" style="font-size: 14px; color: #999">STL</a> <a href="/tags/ST表/" style="font-size: 14.83px; color: #939393">ST表</a> <a href="/tags/Splay/" style="font-size: 14px; color: #999">Splay</a> <a href="/tags/Tarjan/" style="font-size: 14.83px; color: #939393">Tarjan</a> <a href="/tags/dinic/" style="font-size: 14px; color: #999">dinic</a> <a href="/tags/dp/" style="font-size: 20.67px; color: #6c6c6c">dp</a> <a href="/tags/dulu/" style="font-size: 14px; color: #999">dulu</a> <a href="/tags/三角函数/" style="font-size: 14px; color: #999">三角函数</a> <a href="/tags/书海扬帆的诗/" style="font-size: 19px; color: #777">书海扬帆的诗</a> <a href="/tags/二分/" style="font-size: 14.83px; color: #939393">二分</a> <a href="/tags/二分图/" style="font-size: 14.83px; color: #939393">二分图</a> <a href="/tags/人工智能/" style="font-size: 14px; color: #999">人工智能</a> <a href="/tags/信息技术课程/" style="font-size: 14px; color: #999">信息技术课程</a> <a href="/tags/分块/" style="font-size: 14px; color: #999">分块</a> <a href="/tags/分组背包/" style="font-size: 14px; color: #999">分组背包</a> <a href="/tags/前缀和/" style="font-size: 14px; color: #999">前缀和</a> <a href="/tags/动态树/" style="font-size: 14px; color: #999">动态树</a> <a href="/tags/动态规划/" style="font-size: 14px; color: #999">动态规划</a> <a href="/tags/匈牙利算法/" style="font-size: 14.83px; color: #939393">匈牙利算法</a> <a href="/tags/区间dp/" style="font-size: 14px; color: #999">区间dp</a> <a href="/tags/卡特兰数/" style="font-size: 14px; color: #999">卡特兰数</a> <a href="/tags/卢卡斯定理/" style="font-size: 14px; color: #999">卢卡斯定理</a> <a href="/tags/历史/" style="font-size: 14px; color: #999">历史</a> <a href="/tags/后缀排序/" style="font-size: 14px; color: #999">后缀排序</a> <a href="/tags/后缀数组/" style="font-size: 14.83px; color: #939393">后缀数组</a> <a href="/tags/哈希/" style="font-size: 14px; color: #999">哈希</a> <a href="/tags/图像风格化/" style="font-size: 14px; color: #999">图像风格化</a> <a href="/tags/图论/" style="font-size: 19.83px; color: #717171">图论</a> <a href="/tags/基环树/" style="font-size: 14px; color: #999">基环树</a> <a href="/tags/大赛札记/" style="font-size: 14px; color: #999">大赛札记</a> <a href="/tags/太强啦/" style="font-size: 14px; color: #999">太强啦</a> <a href="/tags/字符串/" style="font-size: 18.17px; color: #7d7d7d">字符串</a> <a href="/tags/学习笔记/" style="font-size: 22.33px; color: #606060">学习笔记</a> <a href="/tags/小游戏/" style="font-size: 14px; color: #999">小游戏</a> <a href="/tags/差分/" style="font-size: 14px; color: #999">差分</a> <a href="/tags/差分约束/" style="font-size: 14px; color: #999">差分约束</a> <a href="/tags/带约束的背包/" style="font-size: 14px; color: #999">带约束的背包</a> <a href="/tags/平衡树/" style="font-size: 14px; color: #999">平衡树</a> <a href="/tags/并查集/" style="font-size: 14.83px; color: #939393">并查集</a> <a href="/tags/归并排序/" style="font-size: 14px; color: #999">归并排序</a> <a href="/tags/心得体会/" style="font-size: 15.67px; color: #8e8e8e">心得体会</a> <a href="/tags/快速幂/" style="font-size: 14px; color: #999">快速幂</a> <a href="/tags/打表/" style="font-size: 14px; color: #999">打表</a> <a href="/tags/扩展欧拉定理/" style="font-size: 14px; color: #999">扩展欧拉定理</a> <a href="/tags/扩欧/" style="font-size: 14px; color: #999">扩欧</a> <a href="/tags/排序/" style="font-size: 14px; color: #999">排序</a> <a href="/tags/搜索/" style="font-size: 14.83px; color: #939393">搜索</a> <a href="/tags/摩尔投票法/" style="font-size: 14px; color: #999">摩尔投票法</a> <a href="/tags/数学/" style="font-size: 15.67px; color: #8e8e8e">数学</a> <a href="/tags/数学竞赛/" style="font-size: 16.5px; color: #888">数学竞赛</a> <a href="/tags/数据结构/" style="font-size: 14px; color: #999">数据结构</a> <a href="/tags/数论/" style="font-size: 23.17px; color: #5b5b5b">数论</a> <a href="/tags/文学作品/" style="font-size: 18.17px; color: #7d7d7d">文学作品</a> <a href="/tags/最大流/" style="font-size: 14px; color: #999">最大流</a> <a href="/tags/最小生成树/" style="font-size: 14px; color: #999">最小生成树</a> <a href="/tags/最短路/" style="font-size: 15.67px; color: #8e8e8e">最短路</a> <a href="/tags/杨辉三角/" style="font-size: 14.83px; color: #939393">杨辉三角</a> <a href="/tags/树状数组/" style="font-size: 14px; color: #999">树状数组</a> <a href="/tags/校内训练/" style="font-size: 14px; color: #999">校内训练</a> <a href="/tags/模拟/" style="font-size: 21.5px; color: #666">模拟</a> <a href="/tags/模板/" style="font-size: 24px; color: #555">模板</a> <a href="/tags/游记/" style="font-size: 14px; color: #999">游记</a> <a href="/tags/爬虫/" style="font-size: 14px; color: #999">爬虫</a> <a href="/tags/矩阵加速/" style="font-size: 14px; color: #999">矩阵加速</a> <a href="/tags/矩阵快速幂/" style="font-size: 14px; color: #999">矩阵快速幂</a> <a href="/tags/离线并查集/" style="font-size: 14px; color: #999">离线并查集</a> <a href="/tags/精品/" style="font-size: 21.5px; color: #666">精品</a> <a href="/tags/线性基/" style="font-size: 14px; color: #999">线性基</a> <a href="/tags/线段树/" style="font-size: 16.5px; color: #888">线段树</a> <a href="/tags/组合数学/" style="font-size: 17.33px; color: #828282">组合数学</a> <a href="/tags/组合计数/" style="font-size: 14px; color: #999">组合计数</a> <a href="/tags/缩点/" style="font-size: 14px; color: #999">缩点</a> <a href="/tags/网络流/" style="font-size: 15.67px; color: #8e8e8e">网络流</a> <a href="/tags/网络流24题/" style="font-size: 14.83px; color: #939393">网络流24题</a> <a href="/tags/背包问题/" style="font-size: 17.33px; color: #828282">背包问题</a> <a href="/tags/莫比乌斯反演/" style="font-size: 14px; color: #999">莫比乌斯反演</a> <a href="/tags/记忆化搜索/" style="font-size: 14px; color: #999">记忆化搜索</a> <a href="/tags/调试与对拍/" style="font-size: 14.83px; color: #939393">调试与对拍</a> <a href="/tags/贪心/" style="font-size: 15.67px; color: #8e8e8e">贪心</a> <a href="/tags/逆元/" style="font-size: 14.83px; color: #939393">逆元</a> <a href="/tags/里程碑/" style="font-size: 14px; color: #999">里程碑</a> <a href="/tags/错排/" style="font-size: 14px; color: #999">错排</a> <a href="/tags/队列/" style="font-size: 14px; color: #999">队列</a> <a href="/tags/随笔/" style="font-size: 17.33px; color: #828282">随笔</a> <a href="/tags/音乐/" style="font-size: 14.83px; color: #939393">音乐</a> <a href="/tags/马拉车/" style="font-size: 14px; color: #999">马拉车</a> <a href="/tags/高精度/" style="font-size: 14px; color: #999">高精度</a>
     </div>
   </section>
 
 
+          
+        
+      
+        
+          
+          
+            
+
+          
+        
+      
+        
+          
+          
+            
+
+
+  <section class="widget music">
+    
+<header class="pure">
+  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
+  
+    <a class="rightBtn" rel="external nofollow noopener noreferrer" target="_blank" href="https://music.163.com/#/user/home?id=63035382" title="https://music.163.com/#/user/home?id=63035382">
+    <i class="far fa-heart fa-fw"></i></a>
+  
+</header>
+
+    <div class="content pure">
+      
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+  <div class="aplayer" data-theme="#1BCDFC" data-mode="circulation" data-server="netease" data-type="song" data-id="283760" data-volume="0.7">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+
+    </div>
+  </section>
+
+
+          
+        
       
     
+
   
+</aside>
 
-
-        </aside>
-        <script>setLoadingBarProgress(60);</script>
-    </div>
-    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
-    </div>
-    <footer id="footer" class="clearfix">
+<footer id="footer" class="clearfix">
   
     <div class="footer">
       <p>京ICP备17041994号</p>
@@ -3056,26 +3475,253 @@
     <div class="social-wrapper">
       
         
-          <a href="mailto:me@ljhedp.cn" class="social fas fa-envelope flat-btn" target="_blank" rel="external"></a>
+          <a href="/atom.xml" class="social fas fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="mailto:me@ljhedp.cn" class="social fas fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://github.com/xaoxuu" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://music.163.com/#/user/home?id=63035382" class="social fas fa-headphones-alt flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+          </a>
         
       
     </div>
   
   <br>
-  <div>本站使用 <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> 作为主题。
+  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+  <div>
+    本站使用
+    <a href="" target="_blank" class="codename">书海扬帆的博客</a>
+    作为主题
+    
+      ，
+      总访问量为
+      <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+      次
+    
+    。
   </div>
 </footer>
-
-    <script>setLoadingBarProgress(80);</script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+<script>setLoadingBarProgress(80);</script>
 
 
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        if ('.cover') {
+          $('.cover').backstretch(
+          ["https://img.vim-cn.com/6d/a0c9e6f9efad8b731cb7376504bd10d79d2053.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        } else {
+          $.backstretch(
+          ["https://img.vim-cn.com/6d/a0c9e6f9efad8b731cb7376504bd10d79d2053.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        }
+      });
+    </script>
+  
 
 
 
 
 
-    <script>setLoadingBarProgress(100);</script>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/js/app.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.5/js/search.js"></script>
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>复制</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
