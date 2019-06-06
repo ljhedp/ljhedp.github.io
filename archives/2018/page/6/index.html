@@ -153,78 +153,6 @@
   <div class="meta" id="header-meta">
     
       <h2 class="title">
-          <a href="/post/736e80b.html">
-              
-                  模板-最长公共子序列LCS
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="https://www.ljhedp.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            书海扬帆
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2018-11-11
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/信息学竞赛-OI/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              信息学竞赛(OI)
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-    <section class="article typo">
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;string.h&gt;</span><br><span class="line">#include &lt;string&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int dp[110][110];</span><br><span class="line">int main() &#123;</span><br><span class="line">	string a,b;</span><br><span class="line">    memset(dp,0,sizeof(dp));</span><br><span class="line">    cin&gt;&gt;a&gt;&gt;b;</span><br><span class="line">    int lena=a.size();</span><br><span class="line">    int lenb=b.size();</span><br><span class="line">    for(int i=1;i&lt;=lena;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        for(int j=1;j&lt;=lenb;++j)</span><br><span class="line">        &#123;</span><br><span class="line">            if(a[i-1]==b[j-1])</span><br><span class="line">            &#123;</span><br><span class="line">                dp[i][j]=dp[i-1][j-1]+1;</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                dp[i][j]=max(dp[i-1][j],dp[i][j-1]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;dp[lena][lenb]&lt;&lt;endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/dp/"><i class="fas fa-hashtag fa-fw"></i>dp</a>
-                
-                    <a href="/tags/模板/"><i class="fas fa-hashtag fa-fw"></i>模板</a>
-                
-            </div>
-        
-    </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
           <a href="/post/b7fc3a1e.html">
               
                   模板-最长不上升子序列
@@ -916,6 +844,78 @@
                     <a href="/tags/学习笔记/"><i class="fas fa-hashtag fa-fw"></i>学习笔记</a>
                 
                     <a href="/tags/精品/"><i class="fas fa-hashtag fa-fw"></i>精品</a>
+                
+            </div>
+        
+    </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+    
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/post/7f122078.html">
+              
+                  数论-「NOI2012」随机数生成器
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="https://www.ljhedp.cn">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            书海扬帆
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            2018-11-11
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/信息学竞赛-OI/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              信息学竞赛(OI)
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+    <section class="article typo">
+        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line">ll m,a,c,x0,n,g;</span><br><span class="line"><span class="function">ll <span class="title">qpow_add</span><span class="params">(ll x,ll y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(y)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(y%<span class="number">2</span>) ans=(ans+x)%m;</span><br><span class="line">        x=(x+x)%m;</span><br><span class="line">        y/=<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans%m;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">qpow</span><span class="params">(ll x,ll y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll ans=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(y)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(y%<span class="number">2</span>==<span class="number">1</span>) ans=qpow_add(ans,x);</span><br><span class="line">        x=(ll)qpow_add(x,x)%m;</span><br><span class="line">        y/=<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans%m;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">qmul</span><span class="params">(ll x,ll y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(y==<span class="number">1</span>) <span class="keyword">return</span> (x+<span class="number">1</span>)%m;</span><br><span class="line">    <span class="keyword">if</span>(y==<span class="number">0</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(y%<span class="number">2</span>) <span class="keyword">return</span> qpow_add((qpow(x,y/<span class="number">2</span>+<span class="number">1</span>)%m+<span class="number">1</span>)%m,qmul(x,y/<span class="number">2</span>)%m)%m;</span><br><span class="line">    <span class="keyword">return</span> qpow(x,y)%m+qpow_add((qpow(x,y/<span class="number">2</span>)+<span class="number">1</span>)%m,qmul(x,y/<span class="number">2</span><span class="number">-1</span>)%m)%m;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld%lld%lld%lld%lld%lld"</span>,&amp;m,&amp;a,&amp;c,&amp;x0,&amp;n,&amp;g);</span><br><span class="line">    x0%=m;</span><br><span class="line">    ll a0=qpow(a,n)%m;</span><br><span class="line">    ll temp1=qpow_add(a0,x0)%m;</span><br><span class="line">    ll temp2=qpow_add(qmul(a,n<span class="number">-1</span>)%m,c%m)%m;</span><br><span class="line">    ll ret=(temp1+temp2)%m%g;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ret);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+
+        
+            <div class="full-width auto-padding tags">
+                
+                    <a href="/tags/数论/"><i class="fas fa-hashtag fa-fw"></i>数论</a>
+                
+                    <a href="/tags/NOI/"><i class="fas fa-hashtag fa-fw"></i>NOI</a>
                 
             </div>
         

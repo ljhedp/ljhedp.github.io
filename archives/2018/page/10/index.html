@@ -153,85 +153,6 @@
   <div class="meta" id="header-meta">
     
       <h2 class="title">
-          <a href="/post/28558fa5.html">
-              
-                  「线段树+数论」ContestHunter4302-IntervalGCD
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="https://www.ljhedp.cn">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            书海扬帆
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2018-10-21
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/信息学竞赛-OI/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              信息学竞赛(OI)
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-    <section class="article typo">
-        <h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>给定一个长度为N的数列A，以及M条指令 (N≤5*10^5, M&lt;=10^5)，每条指令可能是以下两种之一：<br>“C l r d”，表示把 A[l],A[l+1],…,A[r] 都加上 d。<br>“Q l r”，表示询问 A[l],A[l+1],…,A[r] 的最大公约数(GCD)。</p>
-<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行两个整数N,M，第二行N个整数Ai，接下来M行每条指令的格式如题目描述所示。</p>
-<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>对于每个询问，输出一个整数表示答案。</p>
-<h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2><p>5 5<br>1 3 5 7 9<br>Q 1 5<br>C 1 5 1<br>Q 1 5<br>C 3 3 6<br>Q 2 4</p>
-<h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2><p>1<br>2<br>4</p>
-<h2 id="数据范围与约定"><a href="#数据范围与约定" class="headerlink" title="数据范围与约定"></a>数据范围与约定</h2><p>$N,M≤2*10^5$，$l&lt;=r$，数据保证任何时刻序列中的数都是不超过$2^62-1$的正整数。</p>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>本题综合考察线段树与数论，是一道非常棒的题目。<br>在解决这道题之前我们先来回顾一下线段树可以做些什么。<br>线段树可以维护<strong>连续</strong>的区间。。。</p>
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> ll maxn=<span class="number">2000200</span>;</span><br><span class="line">ll n,m,a[maxn],d[maxn];</span><br><span class="line"><span class="function">ll <span class="title">gcd</span><span class="params">(ll a,ll b)</span> </span>&#123;<span class="keyword">return</span> b==<span class="number">0</span>?a:gcd(b,a%b);&#125;</span><br><span class="line">ll num[maxn&lt;&lt;<span class="number">2</span>];</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mid ((l+r)&gt;&gt;1)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lson rt&lt;&lt;1,l,mid</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rson rt&lt;&lt;1|1,mid+1,r</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">pushup</span><span class="params">(ll rt)</span> </span>&#123;num[rt]=gcd(num[rt&lt;&lt;<span class="number">1</span>],num[rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>]);&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">build</span><span class="params">(ll rt,ll l,ll r)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(l==r) &#123;num[rt]=d[l];<span class="keyword">return</span>;&#125;</span><br><span class="line">	build(lson);build(rson);pushup(rt);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">(ll pos,ll d,ll rt,ll l,ll r)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(l==r) &#123;num[rt]+=d;<span class="keyword">return</span>;&#125;</span><br><span class="line">	<span class="keyword">if</span>(pos&lt;=mid) update(pos,d,lson);</span><br><span class="line">	<span class="keyword">else</span> update(pos,d,rson);</span><br><span class="line">	pushup(rt);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">query</span><span class="params">(ll L,ll R,ll rt,ll l,ll r)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(l&gt;r) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(L&lt;=l &amp;&amp; r&lt;=R) <span class="keyword">return</span> num[rt];</span><br><span class="line">	<span class="keyword">if</span>(R&lt;=mid) <span class="keyword">return</span> query(L,R,lson);</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(L&gt;mid) <span class="keyword">return</span> query(L,R,rson);</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> gcd(query(L,R,lson),query(L,R,rson));</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Tree</span> &#123;</span></span><br><span class="line">	ll c[maxn];</span><br><span class="line">	<span class="function">ll <span class="title">lowbit</span><span class="params">(ll x)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> x&amp;-x;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(ll x,ll p)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">while</span>(x&lt;=n) &#123;</span><br><span class="line">			c[x]+=p;</span><br><span class="line">			x+=lowbit(x);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function">ll <span class="title">sum</span><span class="params">(ll x)</span> </span>&#123;</span><br><span class="line">		ll ret=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span>(x) &#123;</span><br><span class="line">			ret+=c[x];</span><br><span class="line">			x-=lowbit(x);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> ret;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;t;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>,&amp;n,&amp;m);</span><br><span class="line">	<span class="keyword">for</span>(ll i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;a[i]);</span><br><span class="line">	<span class="keyword">for</span>(ll i=<span class="number">1</span>;i&lt;n;i++) d[i]=a[i+<span class="number">1</span>]-a[i];</span><br><span class="line">	t.add(<span class="number">1</span>,a[<span class="number">1</span>]);</span><br><span class="line">	<span class="keyword">for</span>(ll i=<span class="number">2</span>;i&lt;=n;i++) t.add(i,d[i<span class="number">-1</span>]);</span><br><span class="line">	build(<span class="number">1</span>,<span class="number">1</span>,n);</span><br><span class="line">	<span class="keyword">char</span> opt[<span class="number">2</span>];</span><br><span class="line">	<span class="keyword">for</span>(ll i=<span class="number">1</span>;i&lt;=m;i++) &#123;</span><br><span class="line">		ll l,r,d;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%s"</span>,opt);<span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>,&amp;l,&amp;r);</span><br><span class="line">		<span class="keyword">if</span>(opt[<span class="number">0</span>]==<span class="string">'Q'</span>) <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,<span class="built_in">abs</span>(gcd(t.sum(l),query(l,r<span class="number">-1</span>,<span class="number">1</span>,<span class="number">1</span>,n))));</span><br><span class="line">		<span class="keyword">if</span>(opt[<span class="number">0</span>]==<span class="string">'C'</span>) &#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;d);</span><br><span class="line">			t.add(l,d);</span><br><span class="line">			<span class="keyword">if</span>(l&gt;<span class="number">1</span>) update(l<span class="number">-1</span>,d,<span class="number">1</span>,<span class="number">1</span>,n);</span><br><span class="line">			<span class="keyword">if</span>(r&lt;n) t.add(r+<span class="number">1</span>,-d),update(r,-d,<span class="number">1</span>,<span class="number">1</span>,n);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-
-        
-            <div class="full-width auto-padding tags">
-                
-                    <a href="/tags/数论/"><i class="fas fa-hashtag fa-fw"></i>数论</a>
-                
-                    <a href="/tags/线段树/"><i class="fas fa-hashtag fa-fw"></i>线段树</a>
-                
-            </div>
-        
-    </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-    
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
           <a href="/post/9ea86219.html">
               
                   博客搬家到Hexo啦~
@@ -972,6 +893,85 @@
                     <a href="/tags/精品/"><i class="fas fa-hashtag fa-fw"></i>精品</a>
                 
                     <a href="/tags/随笔/"><i class="fas fa-hashtag fa-fw"></i>随笔</a>
+                
+            </div>
+        
+    </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+    
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/post/4cd2c3c5.html">
+              
+                  数学课后有感
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="https://www.ljhedp.cn">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            书海扬帆
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            2018-03-18
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/信息学竞赛-OI/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              信息学竞赛(OI)
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+    <section class="article typo">
+        <p style="text-align: center;">人是铁来饭是钢，</p>
+<p style="text-align: center;">刷题乃比红缨枪。</p>
+<p style="text-align: center;">难题知识吃不透，</p>
+<p style="text-align: center;">待到考试必定凉。</p>
+<p style="text-align: center;">上课好比喂熟饭，</p>
+<p style="text-align: center;">不如自己啃来香。</p>
+<p style="text-align: center;">书是帆来题为桨，</p>
+<p style="text-align: center;">无惧旋涡与巨浪。</p>
+
+
+        
+
+        
+            <div class="full-width auto-padding tags">
+                
+                    <a href="/tags/书海扬帆的诗/"><i class="fas fa-hashtag fa-fw"></i>书海扬帆的诗</a>
                 
             </div>
         

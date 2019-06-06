@@ -4,7 +4,7 @@
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>矩阵快速幂优化动态规划-SHOI2013-超级跳马 | 书海扬帆</title>
+  <title>Archives: 2019/6 | 书海扬帆</title>
   
   <meta name="keywords" content="博客,代码,分享,日志,生活,信息学竞赛,NOIP,C++,前端开发">
   
@@ -123,16 +123,268 @@
     <div class="l_body">
     <div class='container clearfix'>
         <div class='l_main'>
-            <article id="post" class="post white-box article-type-post" itemscope="" itemprop="blogPost">
-  
+            
+	
+    <script>
+        window.subData= { title:'year : 2019.6'}
+    </script>
+
+
+
+
+  <section class="post-list">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+
+
+      
+
+      
+
+      
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+    
 <section class="meta">
   
   
   <div class="meta" id="header-meta">
     
-      
-          <h1 class="title">矩阵快速幂优化动态规划-SHOI2013-超级跳马</h1>
-      
+      <h2 class="title">
+          <a href="/post/acc98d3b.html">
+              
+                  三角函数公式整理
+              
+          </a>
+      </h2>
     
 
     <div class="new-meta-box">
@@ -148,7 +400,7 @@
         <div class="new-meta-item date">
           <a class="notlink">
             <i class="fas fa-clock" aria-hidden="true"></i>
-            2019-03-05
+            2019-06-06
           </a>
         </div>
       
@@ -156,9 +408,9 @@
         
           
           <div class="new-meta-item category">
-            <a href="/categories/信息学竞赛-OI/">
+            <a href="/categories/数学竞赛/">
               <i class="fas fa-folder-open" aria-hidden="true"></i>
-              信息学竞赛(OI)
+              数学竞赛
             </a>
           </div>
         
@@ -171,89 +423,156 @@
 </section>
 
     <section class="article typo">
-      <div class="article-entry" itemprop="articleBody">
-        <h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>现有一个$n$行$m$ 列的棋盘，一只马欲从棋盘的左上角跳到右下角。每一步它向右跳奇数列，且跳到本行或相邻行。跳越期间，马不能离开棋盘。例如，当$n = 3, m = 10$ 时，下图是一种可行的跳法。</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1g0rw8d6e1dj30c1049gly.jpg" alt="img"></p>
-<p>试求跳法种数$mod\ 30011$。</p>
-<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><p>本题为采用矩阵速幂优化的动态规划，首先需要想出朴素的转移方程。</p>
-<h3 id="10pts-朴素做法"><a href="#10pts-朴素做法" class="headerlink" title="10pts: 朴素做法"></a>10pts: 朴素做法</h3><p>我们用$dp[i][j]$表示超级跳马跳到$(i,j)$的总方案数，这样最终只需求出$dp[n][m]$即可。</p>
-<p>考虑马能从什么地方跳到$(i,j)$。根据题目条件，从行和列的角度分别考虑。</p>
-<p>首先考虑行。第$i$行，第$i+1$行和第$i-1$行都可以跳到第$i$行。</p>
-<p>接着考虑列，只要是和第$j$列相差奇数列的列都可以跳到第$j​$列。因此</p>
-<script type="math/tex; mode=display">dp[i][j] = \sum\limits_{k = 1}^{j/2} {\left( {dp[i][j - 2k + 1] + dp[i - 1][j - 2k + 1] + dp[i + 1][j - 2k + 1]} \right)} .</script><p>如果我们直接用朴素的循环计算，复杂度为$O(nm^2)$，只能得到10分，因此考虑在计算过程中优化。</p>
-<h3 id="50pts：前缀和优化"><a href="#50pts：前缀和优化" class="headerlink" title="50pts：前缀和优化"></a>50pts：前缀和优化</h3><h3 id="100pts：矩阵快速幂"><a href="#100pts：矩阵快速幂" class="headerlink" title="100pts：矩阵快速幂"></a>100pts：矩阵快速幂</h3>
-      </div>
-        
-          <section class="meta" id="footer-meta">
-            <hr>
-            <div class="new-meta-box">
-              
-                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-03-15T22:53:39+08:00">
-                  <a class="notlink">
-                    <i class="fas fa-pencil-alt" aria-hidden="true"></i>
-                    2019-03-15
-                  </a>
-                </div>
-              
-              
-                
-                <div class="new-meta-item meta-tags"><a class="tag" href="/tags/dp/"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;dp</a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/矩阵快速幂/"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;矩阵快速幂</a></div>
-              
-              
-            </div>
-          </section>
+        <blockquote>
+<p>“代数繁，几何难，三角公式记不完……”</p>
+</blockquote>
+<p>之前学三角函数的时候一直没好好背公式，导致题目做得<strong>乱七八糟</strong>。尽管公式比较多，但细细数来也就那么几十个，还是可以记住的。这里就做一个整理，边用电脑录入边背。</p>
+<p>我是这样理解背三角函数的公式的：虽然可以全部不背，要用的时候自己动手推出来，但是速度显然慢了。就像浏览器的缓存一样，提前加载好网页上的图片、css等文件，访问速度一下子就快了很多。</p>
+<h2 id="三角函数的意义"><a href="#三角函数的意义" class="headerlink" title="三角函数的意义"></a>三角函数的意义</h2><blockquote>
+<p>基本概念：角的定义、终边、单位圆… (留坑待填)</p>
+</blockquote>
+<script type="math/tex; mode=display">\sin A=\frac{y}{r}</script><script type="math/tex; mode=display">\cos A=\frac{x}{r}</script><script type="math/tex; mode=display">\tan A=\frac{y}{x}</script><script type="math/tex; mode=display">\cot A=\frac{x}{y}</script><script type="math/tex; mode=display">\sin^2 \alpha + \cos ^2 \alpha=1</script><script type="math/tex; mode=display">\tan \alpha=\frac{\sin \alpha}{\cos \alpha}</script><script type="math/tex; mode=display">\cot \alpha= \frac{1}{\tan \alpha}</script><h2 id="诱导公式：奇变偶不变-符号看象限"><a href="#诱导公式：奇变偶不变-符号看象限" class="headerlink" title="诱导公式：奇变偶不变 符号看象限"></a>诱导公式：奇变偶不变 符号看象限</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$\sin(\alpha+2k\pi)=\sin \alpha$</th>
+<th style="text-align:center">$\cos(\alpha+2k\pi)=\cos \alpha$</th>
+<th style="text-align:center">$\tan(\alpha+2k\pi)=\tan \alpha$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$\sin(-\alpha)=-\sin \alpha$</td>
+<td style="text-align:center">$\cos(-\alpha)=\cos \alpha$</td>
+<td style="text-align:center">$\tan(-\alpha)=-\tan \alpha$</td>
+</tr>
+<tr>
+<td style="text-align:center">$\sin(\pi-\alpha)=\sin \alpha$</td>
+<td style="text-align:center">$\cos(\pi-\alpha)=-\cos\alpha$</td>
+<td style="text-align:center">$\tan(\pi-\alpha)=-\tan\alpha$</td>
+</tr>
+<tr>
+<td style="text-align:center">$\sin(\pi+\alpha)=-\sin \alpha$</td>
+<td style="text-align:center">$\cos(\pi+\alpha)=-\cos\alpha$</td>
+<td style="text-align:center">$\tan(\pi+\alpha)=\tan\alpha$</td>
+</tr>
+<tr>
+<td style="text-align:center">$\sin(\frac{\pi}{2}-\alpha)=\cos\alpha$</td>
+<td style="text-align:center">$\cos(\frac{\pi}{2}-\alpha)=\sin\alpha$</td>
+<td style="text-align:center">$\tan(\frac{\pi}{2}-\alpha)=\cot\alpha$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="三角恒等式"><a href="#三角恒等式" class="headerlink" title="三角恒等式"></a>三角恒等式</h2><p>$\sin^2\alpha+\cos^2\alpha=1$</p>
+<p>$\tan\alpha=\frac{\sin\alpha}{\cos\alpha}$</p>
+<h2 id="和角公式"><a href="#和角公式" class="headerlink" title="和角公式"></a>和角公式</h2><p>$\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta$</p>
+<p>$\cos(\alpha-\beta)=\cos\alpha\cos\beta+\sin\alpha\sin\beta$</p>
+<p>$\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta$</p>
+<p>$\sin(\alpha-\beta)=\sin\alpha\cos\beta-\cos\alpha\sin\beta$</p>
+<p>$\tan(\alpha+\beta)=\frac{\tan\alpha+\tan\beta}{1-\tan\alpha\tan\beta}$</p>
+<p>$\tan(\alpha-\beta)=\frac{\tan\alpha-\tan\beta}{1+\tan\alpha\tan\beta}$</p>
+<h2 id="二倍角公式"><a href="#二倍角公式" class="headerlink" title="二倍角公式"></a>二倍角公式</h2><p>$\sin2\alpha=2\sin\alpha\cos\alpha$</p>
+<p>$\cos2\alpha=\cos^2\alpha-\sin^2\alpha=2\cos^2\alpha-1=1-2\sin^2\alpha$</p>
+<p>$\tan2\alpha=\frac{2\tan\alpha}{1-\tan^2\alpha}$</p>
+<h2 id="三倍角公式"><a href="#三倍角公式" class="headerlink" title="三倍角公式"></a>三倍角公式</h2><p>$\sin3\alpha=3\sin\alpha-4\sin^3\alpha=4\sin(\frac{\pi}{3}-\alpha)\sin\alpha\sin(\frac{\pi}{3}+\alpha)$</p>
+<p>$\cos3\alpha=-3\cos\alpha+4\cos^3\alpha=4\cos(\frac{\pi}{3}-\alpha)\cos\alpha\cos(\frac{\pi}{3}+\alpha)$</p>
+<p>$\tan3\alpha=\tan(\frac{\pi}{3}-\alpha)\tan\alpha\tan(\frac{\pi}{3}+\alpha)$</p>
+<h2 id="半角公式"><a href="#半角公式" class="headerlink" title="半角公式"></a>半角公式</h2><p>$\sin\frac{\alpha}{2}=\pm\sqrt{\frac{1-\cos\alpha}{2}}$</p>
+<p>$\cos\frac{\alpha}{2}=\pm\sqrt{\frac{1+\cos\alpha}{2}}$</p>
+<p>$\tan\frac{\alpha}{2}=\pm\sqrt{\frac{1-\cos\alpha}{1+\cos\alpha}}=\frac{1-\cos\alpha}{\sin\alpha}=\frac{\sin\alpha}{1+\cos\alpha}$</p>
+<h2 id="万能公式"><a href="#万能公式" class="headerlink" title="万能公式"></a>万能公式</h2><p>$\sin\alpha=\frac{2\tan{\frac{\alpha}{2}}}{1+\tan^2\frac{\alpha}{2}}$</p>
+<p>$\cos\alpha=\frac{1-\tan^2\frac{\alpha}{2}}{1+\tan^2\frac{\alpha}{2}}$</p>
+<p>$\tan\alpha=\frac{2\tan{\frac{\alpha}{2}}}{1-\tan^2\frac{\alpha}{2}}$</p>
+<h2 id="和差化积"><a href="#和差化积" class="headerlink" title="和差化积"></a>和差化积</h2><p>$\sin\alpha+\sin\beta=2\sin{\frac{\alpha+\beta}{2}}\cos{\frac{\alpha-\beta}{2}}$</p>
+<p>$\sin\alpha-\sin\beta=2\cos{\frac{\alpha+\beta}{2}}\sin{\frac{\alpha-\beta}{2}}$</p>
+<p>$\cos\alpha+\cos\beta=2\cos{\frac{\alpha+\beta}{2}}\cos{\frac{\alpha-\beta}{2}}$</p>
+<p>$\cos\alpha-\cos\beta=-2\sin{\frac{\alpha+\beta}{2}}\sin{\frac{\alpha-\beta}{2}}$</p>
+<h2 id="积化和差"><a href="#积化和差" class="headerlink" title="积化和差"></a>积化和差</h2><p>$\sin\alpha\cos\beta=\frac{1}{2}(\sin(\alpha+\beta)+\sin(\alpha-\beta))$</p>
+<p>$\cos\alpha\sin\beta=\frac{1}{2}(\sin(\alpha+\beta)-\sin(\alpha-\beta))$</p>
+<p>$\cos\alpha\cos\beta=\frac{1}{2}(\cos(\alpha+\beta)+\cos(\alpha-\beta))$</p>
+<p>$\sin\alpha\sin\beta=-\frac{1}{2}(\cos(\alpha+\beta)-\cos(\alpha-\beta))$</p>
+
         
 
         
-            <div class="prev-next">
+            <div class="full-width auto-padding tags">
                 
-                    <section class="prev">
-                        <span class="art-item-left">
-                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
-                            <h4>
-                                <a href="/post/acc98d3b.html" rel="prev" title="三角函数公式整理">
-                                  
-                                      三角函数公式整理
-                                  
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/数学竞赛/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>数学竞赛</a> <a class="tag" href="/tags/学习笔记/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>学习笔记</a> <a class="tag" href="/tags/三角函数/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>三角函数</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
+                    <a href="/tags/数学竞赛/"><i class="fas fa-hashtag fa-fw"></i>数学竞赛</a>
                 
+                    <a href="/tags/学习笔记/"><i class="fas fa-hashtag fa-fw"></i>学习笔记</a>
                 
-                    <section class="next">
-                        <span class="art-item-right" aria-hidden="true">
-                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
-                            <h4>
-                                <a href="/post/fce332f1.html" rel="prev" title="AI初探-01-图像风格化">
-                                    
-                                        AI初探-01-图像风格化
-                                    
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/信息技术课程/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>信息技术课程</a> <a class="tag" href="/tags/人工智能/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>人工智能</a> <a class="tag" href="/tags/图像风格化/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>图像风格化</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
+                    <a href="/tags/三角函数/"><i class="fas fa-hashtag fa-fw"></i>三角函数</a>
                 
             </div>
         
-
     </section>
-
 </article>
 
-<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+            </div>
+          
+        
+      
+
+  </section>
+
+
+
+
+
+
+  
+
+  <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+  
+
+  
+    <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX","TeX"],
+      linebreaks: { automatic:true },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: { autoNumber: "AMS" },
+      noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+      Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += (all[i].SourceElement().parentNode.className ? ' ' : '') + 'has-jax';
+    }
+    console.log("mathjax did loaded!");
+  });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+  
+
+
+
+
+
+<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+
+
 
     <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
 <script type="text/x-mathjax-config">
@@ -292,22 +611,6 @@
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-
-
-<br>
-
-<!-- 显示推荐文章和评论 -->
-
-
-
-
-
-<script>
-    window.subData = {
-        title: '矩阵快速幂优化动态规划-SHOI2013-超级跳马',
-        tools: true
-    }
-</script>
 
 
         </div>
@@ -354,20 +657,6 @@
       
       
         
-  <section class="toc-wrapper">
-    
-<header class="">
-  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章目录</div>
-  
-    <div class="wrapper"><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
-  
-</header>
-
-    <div class="content ">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题意"><span class="toc-text">题意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解法"><span class="toc-text">解法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#10pts-朴素做法"><span class="toc-text">10pts: 朴素做法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#50pts：前缀和优化"><span class="toc-text">50pts：前缀和优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#100pts：矩阵快速幂"><span class="toc-text">100pts：矩阵快速幂</span></a></li></ol></li></ol>
-    </div>
-  </section>
-
 
       
     
