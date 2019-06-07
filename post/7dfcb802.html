@@ -439,7 +439,21 @@
 
 
 
-  
+  <article class="post white-box comments">
+    <section class="article typo">
+      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+    </section>
+  </article>
 
 
   
@@ -614,13 +628,6 @@
           我的友链
         </a></li>
       
-        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/" rel="nofollow" id="https:xaoxuu.comwikimaterial-x">
-          
-            <i class="fas fa-book fa-fw" aria-hidden="true"></i>
-          
-          主题文档
-        </a></li>
-      
         <li><a class="flat-box" title="/about/" href="/about/" rel="nofollow" id="about">
           
             <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
@@ -709,7 +716,7 @@
 </header>
 
     <div class="content pure">
-      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/post/163e04e2.html" title="新木兰辞（数竞版）" rel="bookmark">新木兰辞（数竞版）</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/post/c8170b1a.html" title="如梦令·爆零" rel="bookmark">如梦令·爆零</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/post/c5be0c61.html" title="西江月·证明" rel="bookmark">西江月·证明</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/post/fdff78fa.html" title="西江月·报错" rel="bookmark">西江月·报错</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/post/37ab6a04.html" title="夜读有感" rel="bookmark">夜读有感</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/post/b0191352.html" title="矩阵快速幂优化动态规划-SHOI2013-超级跳马" rel="bookmark">矩阵快速幂优化动态规划-SHOI2013-超级跳马</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/post/fce332f1.html" title="AI初探-01-图像风格化" rel="bookmark">AI初探-01-图像风格化</a></h3></div></li></ul>
+      <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/post/163e04e2.html" title="新木兰辞（数竞版）" rel="bookmark">新木兰辞（数竞版）</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/post/c8170b1a.html" title="如梦令·爆零" rel="bookmark">如梦令·爆零</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/post/fdff78fa.html" title="西江月·报错" rel="bookmark">西江月·报错</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/post/c5be0c61.html" title="西江月·证明" rel="bookmark">西江月·证明</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/post/37ab6a04.html" title="夜读有感" rel="bookmark">夜读有感</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/post/b0191352.html" title="矩阵快速幂优化动态规划-SHOI2013-超级跳马" rel="bookmark">矩阵快速幂优化动态规划-SHOI2013-超级跳马</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/post/fce332f1.html" title="AI初探-01-图像风格化" rel="bookmark">AI初探-01-图像风格化</a></h3></div></li></ul>
     </div>
   </section>
 
@@ -790,7 +797,7 @@
   <br>
   <div>
     本站使用
-    <a href="" target="_blank" class="codename">书海扬帆的博客</a>
+    <a href="" target="_blank" class="codename">Material-X</a>
     作为主题
     
       ，
@@ -890,6 +897,36 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+    
+      <script src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0/js/volantis.min.js"></script>
+    
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = 'true' == true;
+  var verify = 'true' == true;
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    
+    appId: "DBTfs1tn9q8DYFqS2ISkW1bk-gzGzoHsz",
+    appKey: "YwAGtYX1drDSOA0IDc1pQ2BB",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    highlight:'true'
+  })
+  </script>
 
 
 

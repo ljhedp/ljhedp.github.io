@@ -4,12 +4,12 @@
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>关于书海扬帆 | 书海扬帆</title>
+  <title>about | 书海扬帆</title>
   
   <meta name="keywords" content="博客,代码,分享,日志,生活,信息学竞赛,NOIP,C++,前端开发">
   
   
-  <meta name="description" content="在此了解本博客和博主的一些有趣的事情..., 分享学习经验、学习方法和学习历程">
+  <meta name="description" content="分享学习经验、学习方法和学习历程">
   
 
   
@@ -52,7 +52,7 @@
   
   
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="cover-wrapper">
-    <cover class="cover about half">
+    <cover class="cover page half">
       
         
   <h1 class="title">书海扬帆的博客</h1>
@@ -222,7 +222,7 @@
   
 
   
-    <article id="about" class="post white-box article-type-about" itemscope="" itemprop="blogPost">
+    <article id="page" class="post white-box article-type-page" itemscope="" itemprop="blogPost">
       
 
 
@@ -235,7 +235,7 @@
   
     <h1 class="title">
       <a href="/about/index.html">
-        关于书海扬帆
+        about
       </a>
     </h1>
   
@@ -264,7 +264,7 @@
             <div class="new-meta-item date">
   <a class="notlink">
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2018-12-23</p>
+    <p>2019-06-07</p>
   </a>
 </div>
 
@@ -308,7 +308,8 @@
 
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
-          
+          <p>主修IT，兼修数理，酷爱文史，沉迷学习。</p>
+
         </div>
         
         
@@ -321,7 +322,21 @@
 
 
 
-  
+  <article class="post white-box comments">
+    <section class="article typo">
+      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+    </section>
+  </article>
 
 
   
@@ -450,13 +465,6 @@
             <i class="fas fa-link fa-fw" aria-hidden="true"></i>
           
           我的友链
-        </a></li>
-      
-        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/" rel="nofollow" id="https:xaoxuu.comwikimaterial-x">
-          
-            <i class="fas fa-book fa-fw" aria-hidden="true"></i>
-          
-          主题文档
         </a></li>
       
         <li><a class="flat-box" title="/about/" href="/about/" rel="nofollow" id="about">
@@ -616,7 +624,7 @@
   <br>
   <div>
     本站使用
-    <a href="" target="_blank" class="codename">书海扬帆的博客</a>
+    <a href="" target="_blank" class="codename">Material-X</a>
     作为主题
     
       ，
@@ -716,6 +724,36 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+    
+      <script src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0/js/volantis.min.js"></script>
+    
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = 'true' == true;
+  var verify = 'true' == true;
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    
+    appId: "DBTfs1tn9q8DYFqS2ISkW1bk-gzGzoHsz",
+    appKey: "YwAGtYX1drDSOA0IDc1pQ2BB",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    highlight:'true'
+  })
+  </script>
 
 
 
