@@ -194,6 +194,113 @@
       
         
   <h2 class="title">
+    <a href="/post/f18b30d8.html">
+      线段树-上帝造题的七分钟2/花神游历各国/GSS4
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.ljhedp.cn" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>书海扬帆</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2018-10-22</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/categories/信息学竞赛-OI/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>信息学竞赛(OI)</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>$n$个数的序列，$m$个操作，要求支持：</p>
+<ol>
+<li>将区间内每个数修改为其算术平方根；</li>
+<li>区间求和。</li>
+</ol>
+<script type="math/tex; mode=display">(1<=n,m<=100000, 1<=a_i<=10^{12})</script><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>本题和<a href="https://www.ljhedp.cn/oi/1712.html" title="刚才说过的CF920F">刚才说过的CF920F</a>很像。<br>典型的区间修改和求和当然能想到线段树啦。。。<br>那么如何进行区间修改呢？<br>遍历每个区间，递归到叶子节点暴力修改即可。<br>可发现一个特殊性质：平方根是下降很快的。<br>大家有没有过这样的经历呢？找来一个计算器，输入任意正数，不停地按$\sqrt{}$按钮，不一会儿这个数字就变成1了。这倒不是因为咱们的计算机出了问题，而是因为浮点数在运算和处理的过程中会产生精度误差，误差随着一次一次地按键不断升高，省略计算的部分也就越多，于是最后就逐渐减小，直到变成1。口说无凭，大家不妨亲自实践一下。<br>综上，一个数修改不了几次，就可以变成1。我们只需维护区间最大值，一旦发现区间最大值为1了，就直接跳过，否则暴力递归到叶子节点进行修改。<br>时间复杂度$O(m \log n).$<br>注意数据范围，本题需要开$long long$.</p>
+<hr>
+<p>贴下代码。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> I inline</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;<span class="title">void</span> <span class="title">read</span>(<span class="title">T</span> &amp;<span class="title">x</span>) &#123;</span></span><br><span class="line">	<span class="keyword">register</span> ll c = getchar(), f = <span class="number">1</span>; x = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(!<span class="built_in">isdigit</span>(c)) &#123;<span class="keyword">if</span> (c == <span class="string">'-'</span>) f = <span class="number">-1</span>; c = getchar();&#125;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">isdigit</span>(c)) x = x * <span class="number">10</span> + c - <span class="string">'0'</span>, c = getchar();</span><br><span class="line">	x *= f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> ll maxn=<span class="number">300300</span>;</span><br><span class="line"><span class="keyword">const</span> ll maxm=<span class="number">1000100</span>;</span><br><span class="line">ll n,k,tot,cnt[maxm],prime[maxm],d[maxm];</span><br><span class="line"><span class="keyword">bool</span> vis[maxm];</span><br><span class="line">ll a[maxn],mx[maxn&lt;&lt;<span class="number">2</span>];</span><br><span class="line">ll sum[maxn&lt;&lt;<span class="number">2</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Get_Prime</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	d[<span class="number">1</span>]=<span class="number">1</span>;cnt[<span class="number">1</span>]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(ll i=<span class="number">2</span>;i&lt;=n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(!vis[i]) &#123;</span><br><span class="line">			prime[++tot]=i;</span><br><span class="line">			d[i]=<span class="number">2</span>;</span><br><span class="line">			cnt[i]=<span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(ll j=<span class="number">1</span>;j&lt;=tot &amp;&amp; prime[j]&lt;=n/i;j++)</span><br><span class="line">		&#123;</span><br><span class="line">			vis[i*prime[j]]=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">if</span>(i%prime[j]==<span class="number">0</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				cnt[i*prime[j]]=cnt[i]+<span class="number">1</span>;</span><br><span class="line">				d[i*prime[j]]=d[i]/(cnt[i]+<span class="number">1</span>)*(cnt[i*prime[j]]+<span class="number">1</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			cnt[i*prime[j]]=<span class="number">1</span>;</span><br><span class="line">			d[i*prime[j]]=d[i]*<span class="number">2</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> m ((l+r)&gt;&gt;1)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lson rt&lt;&lt;1,l,m</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rson rt&lt;&lt;1|1,m+1,r</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(ll rt,ll l,ll r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(l==r)</span><br><span class="line">	&#123;</span><br><span class="line">		sum[rt]=mx[rt]=a[l];</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	build(lson);</span><br><span class="line">	build(rson);</span><br><span class="line">	mx[rt]=max(mx[rt&lt;&lt;<span class="number">1</span>],mx[rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>]);</span><br><span class="line">	sum[rt]=sum[rt&lt;&lt;<span class="number">1</span>]+sum[rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>]; </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(ll rt,ll l,ll r,ll L,ll R)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(mx[rt]&lt;=<span class="number">1</span>) <span class="keyword">return</span> ;</span><br><span class="line">	<span class="keyword">if</span>(l==r)</span><br><span class="line">	&#123;</span><br><span class="line">		sum[rt]=<span class="built_in">sqrt</span>(sum[rt]);</span><br><span class="line">		mx[rt]=<span class="built_in">sqrt</span>(mx[rt]);</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(m&gt;=L) update(lson,L,R);</span><br><span class="line">	<span class="keyword">if</span>(m&lt;R) update(rson,L,R);</span><br><span class="line">	mx[rt]=max(mx[rt&lt;&lt;<span class="number">1</span>],mx[rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>]);</span><br><span class="line">	sum[rt]=sum[rt&lt;&lt;<span class="number">1</span>]+sum[rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>]; </span><br><span class="line">&#125; </span><br><span class="line"><span class="function">ll <span class="title">query</span><span class="params">(ll rt,ll l,ll r,ll L,ll R)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(L&lt;=l &amp;&amp; r&lt;=R) <span class="keyword">return</span> sum[rt];</span><br><span class="line">	ll ret=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span>(m&gt;=L) ret+=query(lson,L,R);</span><br><span class="line">	<span class="keyword">if</span>(m&lt;R) ret+=query(rson,L,R);</span><br><span class="line">	<span class="keyword">return</span> ret; </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	n=<span class="number">1000010</span>;</span><br><span class="line">	Get_Prime();</span><br><span class="line">	read(n);</span><br><span class="line">	<span class="keyword">for</span>(ll i=<span class="number">1</span>;i&lt;=n;i++) read(a[i]);</span><br><span class="line">	build(<span class="number">1</span>,<span class="number">1</span>,n);</span><br><span class="line">	read(k);</span><br><span class="line">	<span class="keyword">while</span>(k--)</span><br><span class="line">	&#123;</span><br><span class="line">		ll op;</span><br><span class="line">		read(op);</span><br><span class="line">		<span class="keyword">if</span>(op==<span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			ll L,R;</span><br><span class="line">			read(L);read(R);</span><br><span class="line">			<span class="keyword">if</span>(L&gt;R) swap(L,R); </span><br><span class="line">			update(<span class="number">1</span>,<span class="number">1</span>,n,L,R);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			ll L,R;</span><br><span class="line">			read(L);read(R);</span><br><span class="line">			<span class="keyword">if</span>(L&gt;R) swap(L,R); </span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,query(<span class="number">1</span>,<span class="number">1</span>,n,L,R));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/线段树/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>线段树</a>
+        
+          <a href="/tags/数学/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>数学</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
+
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
     <a href="/post/76415e86.html">
       「高精度」洛谷P1604-B进制星球
     </a>
@@ -3053,98 +3160,6 @@
           </div>
         
       
-        
-          <div class="post-wrapper">
-            <article class="post reveal ">
-  
-
-
-  <section class="meta">
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/post/f0692f68.html">
-      千字文
-    </a>
-  </h2>
-
-
-      
-      <div class="new-meta-box">
-        
-          
-        
-          
-            
-  <div class="new-meta-item author">
-    <a href="https://www.ljhedp.cn" rel="nofollow">
-      
-        <i class="fas fa-user" aria-hidden="true"></i>
-      
-      <p>书海扬帆</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class="notlink">
-    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2018-10-22</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class="new-meta-item category">
-    <a href="/categories/文学/" rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>文学</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>天地玄黄，宇宙洪荒。日月盈昃，辰宿列张。<br>寒来暑往，秋收冬藏。闰余成岁，律吕调阳。<br>云腾致雨，露结为霜。金生丽水，玉出昆冈。<br>剑号巨阙，珠称夜光。果珍李柰，菜重芥姜。<br>海咸河淡，鳞潜羽翔。龙师火帝，鸟官人皇。<br>始制文字，乃服衣裳。推位让国，有虞陶唐。<br>吊民伐罪，周发殷汤。坐朝问道，垂拱平章。<br>爱育黎首，臣伏戎羌。遐迩一体，率宾归王。<br>鸣凤在竹，白驹食场。化被草木，赖及万方。<br>盖此身发，四大五常。恭惟鞠养，岂敢毁伤。<br>女慕贞洁，男效才良。知过必改，得能莫忘。<br>罔谈彼短，靡恃己长。信使可覆，器欲难量。<br>墨悲丝染，诗赞羔羊。景行维贤，克念作圣。<br>德建名立，形端表正。空谷传声，虚堂习听。<br>祸因恶积，福缘善庆。尺璧非宝，寸阴是竞。<br>资父事君，曰严与敬。孝当竭力，忠则尽命。<br>临深履薄，夙兴温凊。似兰斯馨，如松之盛。<br>川流不息，渊澄取映。容止若思，言辞安定。<br>笃初诚美，慎终宜令。荣业所基，籍甚无竟。<br>学优登仕，摄职从政。存以甘棠，去而益咏。<br>乐殊贵贱，礼别尊卑。上和下睦，夫唱妇随。<br>外受傅训，入奉母仪。诸姑伯叔，犹子比儿。<br>孔怀兄弟，同气连枝。交友投分，切磨箴规。<br>仁慈隐恻，造次弗离。节义廉退，颠沛匪亏。<br>性静情逸，心动神疲。守真志满，逐物意移。<br>坚持雅操，好爵自縻。都邑华夏，东西二京。<br>背邙面洛，浮渭据泾。宫殿盘郁，楼观飞惊。<br>图写禽兽，画彩仙灵。丙舍旁启，甲帐对楹。<br>肆筵设席，鼓瑟吹笙。升阶纳陛，弁转疑星。<br>右通广内，左达承明。既集坟典，亦聚群英。<br>杜稿钟隶，漆书壁经。府罗将相，路侠槐卿。<br>户封八县，家给千兵。高冠陪辇，驱毂振缨。<br>世禄侈富，车驾肥轻。策功茂实，勒碑刻铭。<br>盘溪伊尹，佐时阿衡。奄宅曲阜，微旦孰营。<br>桓公匡合，济弱扶倾。绮回汉惠，说感武丁。<br>俊义密勿，多士实宁。晋楚更霸，赵魏困横。<br>假途灭虢，践土会盟。何遵约法，韩弊烦刑。<br>起翦颇牧，用军最精。宣威沙漠，驰誉丹青。<br>九州禹迹，百郡秦并。岳宗泰岱，禅主云亭。<br>雁门紫塞，鸡田赤诚。昆池碣石，钜野洞庭。<br>旷远绵邈，岩岫杳冥。治本于农，务兹稼穑。<br>俶载南亩，我艺黍稷。税熟贡新，劝赏黜陟。<br>孟轲敦素，史鱼秉直。庶几中庸，劳谦谨敕。<br>聆音察理，鉴貌辨色。贻厥嘉猷，勉其祗植。<br>省躬讥诫，宠增抗极。殆辱近耻，林皋幸即。<br>两疏见机，解组谁逼。索居闲处，沉默寂寥。<br>求古寻论，散虑逍遥。欣奏累遣，戚谢欢招。<br>渠荷的历，园莽抽条。枇杷晚翠，梧桐蚤凋。<br>陈根委翳，落叶飘摇。游鹍独运，凌摩绛霄。<br>耽读玩市，寓目囊箱。易輶攸畏，属耳垣墙。<br>具膳餐饭，适口充肠。饱饫烹宰，饥厌糟糠。<br>亲戚故旧，老少异粮。妾御绩纺，侍巾帷房。<br>纨扇圆洁，银烛炜煌。昼眠夕寐，蓝笋象床。<br>弦歌酒宴，接杯举殇。矫手顿足，悦豫且康。<br>嫡后嗣续，祭祀烝尝。稽颡再拜，悚惧恐惶。<br>笺牒简要，顾答审详。骸垢想浴，执热愿凉。<br>驴骡犊特，骇跃超骧。诛斩贼盗，捕获叛亡。<br>布射僚丸，嵇琴阮箫。恬笔伦纸，钧巧任钓。<br>释纷利俗，并皆佳妙。毛施淑姿，工颦妍笑。<br>年矢每催，曦晖朗曜。璇玑悬斡，晦魄环照。<br>指薪修祜，永绥吉劭。矩步引领，俯仰廊庙。<br>束带矜庄，徘徊瞻眺。孤陋寡闻，愚蒙等诮。<br>谓语助者，焉哉乎也。</p>
-
-      
-    </div>
-    
-  </section>
-</article>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3372,7 +3387,7 @@
         
           <li><a class="flat-box" title="/categories/数学竞赛/" href="/categories/数学竞赛/"><div class="name">数学竞赛</div><div class="badge">(3)</div></a></li>
         
-          <li><a class="flat-box" title="/categories/文学/" href="/categories/文学/"><div class="name">文学</div><div class="badge">(10)</div></a></li>
+          <li><a class="flat-box" title="/categories/文学/" href="/categories/文学/"><div class="name">文学</div><div class="badge">(11)</div></a></li>
         
           <li><a class="flat-box" title="/categories/系统信息/" href="/categories/系统信息/"><div class="name">系统信息</div><div class="badge">(2)</div></a></li>
         
@@ -3403,7 +3418,7 @@
 </header>
 
     <div class="content pure">
-      <a href="/tags/01背包/" style="font-size: 14.83px; color: #939393">01背包</a> <a href="/tags/Floyd/" style="font-size: 14px; color: #999">Floyd</a> <a href="/tags/KMP/" style="font-size: 14px; color: #999">KMP</a> <a href="/tags/Kruscal/" style="font-size: 14px; color: #999">Kruscal</a> <a href="/tags/LCT/" style="font-size: 14px; color: #999">LCT</a> <a href="/tags/Manacher/" style="font-size: 14px; color: #999">Manacher</a> <a href="/tags/NOI/" style="font-size: 14px; color: #999">NOI</a> <a href="/tags/NOIP模拟赛/" style="font-size: 14px; color: #999">NOIP模拟赛</a> <a href="/tags/NOIp题解/" style="font-size: 14px; color: #999">NOIp题解</a> <a href="/tags/Prim/" style="font-size: 14px; color: #999">Prim</a> <a href="/tags/STL/" style="font-size: 14px; color: #999">STL</a> <a href="/tags/ST表/" style="font-size: 14.83px; color: #939393">ST表</a> <a href="/tags/Splay/" style="font-size: 14px; color: #999">Splay</a> <a href="/tags/Tarjan/" style="font-size: 14.83px; color: #939393">Tarjan</a> <a href="/tags/dinic/" style="font-size: 14px; color: #999">dinic</a> <a href="/tags/dp/" style="font-size: 20.67px; color: #6c6c6c">dp</a> <a href="/tags/dulu/" style="font-size: 14px; color: #999">dulu</a> <a href="/tags/三角函数/" style="font-size: 14px; color: #999">三角函数</a> <a href="/tags/书海扬帆的诗/" style="font-size: 19px; color: #777">书海扬帆的诗</a> <a href="/tags/二分/" style="font-size: 14.83px; color: #939393">二分</a> <a href="/tags/二分图/" style="font-size: 14.83px; color: #939393">二分图</a> <a href="/tags/人工智能/" style="font-size: 14px; color: #999">人工智能</a> <a href="/tags/信息技术课程/" style="font-size: 14px; color: #999">信息技术课程</a> <a href="/tags/分块/" style="font-size: 14px; color: #999">分块</a> <a href="/tags/分组背包/" style="font-size: 14px; color: #999">分组背包</a> <a href="/tags/前缀和/" style="font-size: 14px; color: #999">前缀和</a> <a href="/tags/动态树/" style="font-size: 14px; color: #999">动态树</a> <a href="/tags/动态规划/" style="font-size: 14px; color: #999">动态规划</a> <a href="/tags/匈牙利算法/" style="font-size: 14.83px; color: #939393">匈牙利算法</a> <a href="/tags/区间dp/" style="font-size: 14px; color: #999">区间dp</a> <a href="/tags/卡特兰数/" style="font-size: 14px; color: #999">卡特兰数</a> <a href="/tags/卢卡斯定理/" style="font-size: 14px; color: #999">卢卡斯定理</a> <a href="/tags/历史/" style="font-size: 14px; color: #999">历史</a> <a href="/tags/后缀排序/" style="font-size: 14px; color: #999">后缀排序</a> <a href="/tags/后缀数组/" style="font-size: 14.83px; color: #939393">后缀数组</a> <a href="/tags/哈希/" style="font-size: 14px; color: #999">哈希</a> <a href="/tags/图像风格化/" style="font-size: 14px; color: #999">图像风格化</a> <a href="/tags/图论/" style="font-size: 19.83px; color: #717171">图论</a> <a href="/tags/基环树/" style="font-size: 14px; color: #999">基环树</a> <a href="/tags/大赛札记/" style="font-size: 14px; color: #999">大赛札记</a> <a href="/tags/太强啦/" style="font-size: 14px; color: #999">太强啦</a> <a href="/tags/字符串/" style="font-size: 18.17px; color: #7d7d7d">字符串</a> <a href="/tags/学习笔记/" style="font-size: 22.33px; color: #606060">学习笔记</a> <a href="/tags/小游戏/" style="font-size: 14px; color: #999">小游戏</a> <a href="/tags/差分/" style="font-size: 14px; color: #999">差分</a> <a href="/tags/差分约束/" style="font-size: 14px; color: #999">差分约束</a> <a href="/tags/带约束的背包/" style="font-size: 14px; color: #999">带约束的背包</a> <a href="/tags/平衡树/" style="font-size: 14px; color: #999">平衡树</a> <a href="/tags/并查集/" style="font-size: 14.83px; color: #939393">并查集</a> <a href="/tags/归并排序/" style="font-size: 14px; color: #999">归并排序</a> <a href="/tags/心得体会/" style="font-size: 15.67px; color: #8e8e8e">心得体会</a> <a href="/tags/快速幂/" style="font-size: 14px; color: #999">快速幂</a> <a href="/tags/打表/" style="font-size: 14px; color: #999">打表</a> <a href="/tags/扩展欧拉定理/" style="font-size: 14px; color: #999">扩展欧拉定理</a> <a href="/tags/扩欧/" style="font-size: 14px; color: #999">扩欧</a> <a href="/tags/排序/" style="font-size: 14px; color: #999">排序</a> <a href="/tags/搜索/" style="font-size: 14.83px; color: #939393">搜索</a> <a href="/tags/摩尔投票法/" style="font-size: 14px; color: #999">摩尔投票法</a> <a href="/tags/数学/" style="font-size: 15.67px; color: #8e8e8e">数学</a> <a href="/tags/数学竞赛/" style="font-size: 16.5px; color: #888">数学竞赛</a> <a href="/tags/数据结构/" style="font-size: 14px; color: #999">数据结构</a> <a href="/tags/数论/" style="font-size: 23.17px; color: #5b5b5b">数论</a> <a href="/tags/文学作品/" style="font-size: 18.17px; color: #7d7d7d">文学作品</a> <a href="/tags/最大流/" style="font-size: 14px; color: #999">最大流</a> <a href="/tags/最小生成树/" style="font-size: 14px; color: #999">最小生成树</a> <a href="/tags/最短路/" style="font-size: 15.67px; color: #8e8e8e">最短路</a> <a href="/tags/杨辉三角/" style="font-size: 14.83px; color: #939393">杨辉三角</a> <a href="/tags/树状数组/" style="font-size: 14px; color: #999">树状数组</a> <a href="/tags/校内训练/" style="font-size: 14px; color: #999">校内训练</a> <a href="/tags/模拟/" style="font-size: 21.5px; color: #666">模拟</a> <a href="/tags/模板/" style="font-size: 24px; color: #555">模板</a> <a href="/tags/游记/" style="font-size: 14px; color: #999">游记</a> <a href="/tags/爬虫/" style="font-size: 14px; color: #999">爬虫</a> <a href="/tags/矩阵加速/" style="font-size: 14px; color: #999">矩阵加速</a> <a href="/tags/矩阵快速幂/" style="font-size: 14px; color: #999">矩阵快速幂</a> <a href="/tags/离线并查集/" style="font-size: 14px; color: #999">离线并查集</a> <a href="/tags/精品/" style="font-size: 21.5px; color: #666">精品</a> <a href="/tags/线性基/" style="font-size: 14px; color: #999">线性基</a> <a href="/tags/线段树/" style="font-size: 16.5px; color: #888">线段树</a> <a href="/tags/组合数学/" style="font-size: 17.33px; color: #828282">组合数学</a> <a href="/tags/组合计数/" style="font-size: 14px; color: #999">组合计数</a> <a href="/tags/缩点/" style="font-size: 14px; color: #999">缩点</a> <a href="/tags/网络流/" style="font-size: 15.67px; color: #8e8e8e">网络流</a> <a href="/tags/网络流24题/" style="font-size: 14.83px; color: #939393">网络流24题</a> <a href="/tags/背包问题/" style="font-size: 17.33px; color: #828282">背包问题</a> <a href="/tags/莫比乌斯反演/" style="font-size: 14px; color: #999">莫比乌斯反演</a> <a href="/tags/记忆化搜索/" style="font-size: 14px; color: #999">记忆化搜索</a> <a href="/tags/调试与对拍/" style="font-size: 14.83px; color: #939393">调试与对拍</a> <a href="/tags/贪心/" style="font-size: 15.67px; color: #8e8e8e">贪心</a> <a href="/tags/逆元/" style="font-size: 14.83px; color: #939393">逆元</a> <a href="/tags/里程碑/" style="font-size: 14px; color: #999">里程碑</a> <a href="/tags/错排/" style="font-size: 14px; color: #999">错排</a> <a href="/tags/队列/" style="font-size: 14px; color: #999">队列</a> <a href="/tags/随笔/" style="font-size: 17.33px; color: #828282">随笔</a> <a href="/tags/音乐/" style="font-size: 14.83px; color: #939393">音乐</a> <a href="/tags/马拉车/" style="font-size: 14px; color: #999">马拉车</a> <a href="/tags/高精度/" style="font-size: 14px; color: #999">高精度</a>
+      <a href="/tags/01背包/" style="font-size: 14.77px; color: #949494">01背包</a> <a href="/tags/Floyd/" style="font-size: 14px; color: #999">Floyd</a> <a href="/tags/KMP/" style="font-size: 14px; color: #999">KMP</a> <a href="/tags/Kruscal/" style="font-size: 14px; color: #999">Kruscal</a> <a href="/tags/LCT/" style="font-size: 14px; color: #999">LCT</a> <a href="/tags/Manacher/" style="font-size: 14px; color: #999">Manacher</a> <a href="/tags/NOI/" style="font-size: 14px; color: #999">NOI</a> <a href="/tags/NOIP模拟赛/" style="font-size: 14px; color: #999">NOIP模拟赛</a> <a href="/tags/NOIp题解/" style="font-size: 14px; color: #999">NOIp题解</a> <a href="/tags/Prim/" style="font-size: 14px; color: #999">Prim</a> <a href="/tags/STL/" style="font-size: 14px; color: #999">STL</a> <a href="/tags/ST表/" style="font-size: 14.77px; color: #949494">ST表</a> <a href="/tags/Splay/" style="font-size: 14px; color: #999">Splay</a> <a href="/tags/Tarjan/" style="font-size: 14.77px; color: #949494">Tarjan</a> <a href="/tags/dinic/" style="font-size: 14px; color: #999">dinic</a> <a href="/tags/dp/" style="font-size: 20.92px; color: #6a6a6a">dp</a> <a href="/tags/dulu/" style="font-size: 14px; color: #999">dulu</a> <a href="/tags/三角函数/" style="font-size: 14px; color: #999">三角函数</a> <a href="/tags/书海扬帆的诗/" style="font-size: 19.38px; color: #747474">书海扬帆的诗</a> <a href="/tags/二分/" style="font-size: 14.77px; color: #949494">二分</a> <a href="/tags/二分图/" style="font-size: 14.77px; color: #949494">二分图</a> <a href="/tags/人工智能/" style="font-size: 14px; color: #999">人工智能</a> <a href="/tags/信息技术课程/" style="font-size: 14px; color: #999">信息技术课程</a> <a href="/tags/分块/" style="font-size: 14px; color: #999">分块</a> <a href="/tags/分组背包/" style="font-size: 14px; color: #999">分组背包</a> <a href="/tags/前缀和/" style="font-size: 14px; color: #999">前缀和</a> <a href="/tags/动态树/" style="font-size: 14px; color: #999">动态树</a> <a href="/tags/动态规划/" style="font-size: 14px; color: #999">动态规划</a> <a href="/tags/匈牙利算法/" style="font-size: 14.77px; color: #949494">匈牙利算法</a> <a href="/tags/区间dp/" style="font-size: 14px; color: #999">区间dp</a> <a href="/tags/卡特兰数/" style="font-size: 14px; color: #999">卡特兰数</a> <a href="/tags/卢卡斯定理/" style="font-size: 14px; color: #999">卢卡斯定理</a> <a href="/tags/历史/" style="font-size: 14px; color: #999">历史</a> <a href="/tags/后缀排序/" style="font-size: 14px; color: #999">后缀排序</a> <a href="/tags/后缀数组/" style="font-size: 14.77px; color: #949494">后缀数组</a> <a href="/tags/哈希/" style="font-size: 14px; color: #999">哈希</a> <a href="/tags/图像风格化/" style="font-size: 14px; color: #999">图像风格化</a> <a href="/tags/图论/" style="font-size: 20.15px; color: #6f6f6f">图论</a> <a href="/tags/基环树/" style="font-size: 14px; color: #999">基环树</a> <a href="/tags/大赛札记/" style="font-size: 14px; color: #999">大赛札记</a> <a href="/tags/太强啦/" style="font-size: 14px; color: #999">太强啦</a> <a href="/tags/好文推荐/" style="font-size: 14px; color: #999">好文推荐</a> <a href="/tags/字符串/" style="font-size: 17.85px; color: #7f7f7f">字符串</a> <a href="/tags/学习笔记/" style="font-size: 22.46px; color: #5f5f5f">学习笔记</a> <a href="/tags/小游戏/" style="font-size: 14px; color: #999">小游戏</a> <a href="/tags/差分/" style="font-size: 14px; color: #999">差分</a> <a href="/tags/差分约束/" style="font-size: 14px; color: #999">差分约束</a> <a href="/tags/带约束的背包/" style="font-size: 14px; color: #999">带约束的背包</a> <a href="/tags/平衡树/" style="font-size: 14px; color: #999">平衡树</a> <a href="/tags/并查集/" style="font-size: 14.77px; color: #949494">并查集</a> <a href="/tags/归并排序/" style="font-size: 14px; color: #999">归并排序</a> <a href="/tags/心得体会/" style="font-size: 15.54px; color: #8f8f8f">心得体会</a> <a href="/tags/快速幂/" style="font-size: 14px; color: #999">快速幂</a> <a href="/tags/打表/" style="font-size: 14px; color: #999">打表</a> <a href="/tags/扩展欧拉定理/" style="font-size: 14px; color: #999">扩展欧拉定理</a> <a href="/tags/扩欧/" style="font-size: 14px; color: #999">扩欧</a> <a href="/tags/排序/" style="font-size: 14px; color: #999">排序</a> <a href="/tags/搜索/" style="font-size: 14.77px; color: #949494">搜索</a> <a href="/tags/摩尔投票法/" style="font-size: 14px; color: #999">摩尔投票法</a> <a href="/tags/数学/" style="font-size: 15.54px; color: #8f8f8f">数学</a> <a href="/tags/数学竞赛/" style="font-size: 16.31px; color: #898989">数学竞赛</a> <a href="/tags/数据结构/" style="font-size: 14px; color: #999">数据结构</a> <a href="/tags/数论/" style="font-size: 23.23px; color: #5a5a5a">数论</a> <a href="/tags/文学作品/" style="font-size: 18.62px; color: #7a7a7a">文学作品</a> <a href="/tags/最大流/" style="font-size: 14px; color: #999">最大流</a> <a href="/tags/最小生成树/" style="font-size: 14px; color: #999">最小生成树</a> <a href="/tags/最短路/" style="font-size: 15.54px; color: #8f8f8f">最短路</a> <a href="/tags/杨辉三角/" style="font-size: 14.77px; color: #949494">杨辉三角</a> <a href="/tags/树状数组/" style="font-size: 14px; color: #999">树状数组</a> <a href="/tags/校内训练/" style="font-size: 14px; color: #999">校内训练</a> <a href="/tags/模拟/" style="font-size: 21.69px; color: #656565">模拟</a> <a href="/tags/模板/" style="font-size: 24px; color: #555">模板</a> <a href="/tags/游记/" style="font-size: 14px; color: #999">游记</a> <a href="/tags/爬虫/" style="font-size: 14px; color: #999">爬虫</a> <a href="/tags/矩阵加速/" style="font-size: 14px; color: #999">矩阵加速</a> <a href="/tags/矩阵快速幂/" style="font-size: 14px; color: #999">矩阵快速幂</a> <a href="/tags/离线并查集/" style="font-size: 14px; color: #999">离线并查集</a> <a href="/tags/精品/" style="font-size: 21.69px; color: #656565">精品</a> <a href="/tags/线性基/" style="font-size: 14px; color: #999">线性基</a> <a href="/tags/线段树/" style="font-size: 16.31px; color: #898989">线段树</a> <a href="/tags/组合数学/" style="font-size: 17.08px; color: #848484">组合数学</a> <a href="/tags/组合计数/" style="font-size: 14px; color: #999">组合计数</a> <a href="/tags/缩点/" style="font-size: 14px; color: #999">缩点</a> <a href="/tags/网络流/" style="font-size: 15.54px; color: #8f8f8f">网络流</a> <a href="/tags/网络流24题/" style="font-size: 14.77px; color: #949494">网络流24题</a> <a href="/tags/背包问题/" style="font-size: 17.08px; color: #848484">背包问题</a> <a href="/tags/莫比乌斯反演/" style="font-size: 14px; color: #999">莫比乌斯反演</a> <a href="/tags/记忆化搜索/" style="font-size: 14px; color: #999">记忆化搜索</a> <a href="/tags/调试与对拍/" style="font-size: 14.77px; color: #949494">调试与对拍</a> <a href="/tags/贪心/" style="font-size: 15.54px; color: #8f8f8f">贪心</a> <a href="/tags/逆元/" style="font-size: 14.77px; color: #949494">逆元</a> <a href="/tags/里程碑/" style="font-size: 14px; color: #999">里程碑</a> <a href="/tags/错排/" style="font-size: 14px; color: #999">错排</a> <a href="/tags/队列/" style="font-size: 14px; color: #999">队列</a> <a href="/tags/随笔/" style="font-size: 17.08px; color: #848484">随笔</a> <a href="/tags/音乐/" style="font-size: 14.77px; color: #949494">音乐</a> <a href="/tags/马拉车/" style="font-size: 14px; color: #999">马拉车</a> <a href="/tags/高精度/" style="font-size: 14px; color: #999">高精度</a>
     </div>
   </section>
 
@@ -3521,7 +3536,7 @@
     } 
   setInterval("createtime()",250);
   </script>
-  <span class="post-count">字数统计：726.9k</span>
+  <span class="post-count">字数统计：730k</span>
    
 <script type="text/javascript" src="https://s22.cnzz.com/z_stat.php?id=1264439082&web_id=1264439082"></script>
  
