@@ -220,25 +220,6 @@
     
     
     <entry>
-      <title>Python机器学习初探-01-感知器</title>
-      <link href="/post/c9b8a948.html"/>
-      <url>/post/c9b8a948.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> 信息学竞赛(OI) </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>线段树-洛谷P1204-挤牛奶</title>
       <link href="/post/e3e1ec50.html"/>
       <url>/post/e3e1ec50.html</url>
@@ -266,35 +247,6 @@
     
     
     <entry>
-      <title>网络流入门——基本概念及定理，最大流，最小费用最大流</title>
-      <link href="/post/defa2767.html"/>
-      <url>/post/defa2767.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro."></a>Intro.</h2><p>本文着重介绍网络流的一些基本概念和定理，以及最大流、费用流的基本模型。详细的例题解析以及更加深入的探究会在后文提及。本文适合网络流初学者。</p><blockquote><p>要学会网络流，你需要掌握：</p><ul><li>图论基本知识</li><li>图的存储、遍历</li></ul></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> 信息学竞赛(OI) </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 学习笔记 </tag>
-            
-            <tag> 模板 </tag>
-            
-            <tag> 网络流 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Splay与LCT-学习笔记</title>
       <link href="/post/ed71cfc.html"/>
       <url>/post/ed71cfc.html</url>
@@ -313,8 +265,6 @@
             
             <tag> 学习笔记 </tag>
             
-            <tag> 模板 </tag>
-            
             <tag> Splay </tag>
             
             <tag> LCT </tag>
@@ -322,6 +272,8 @@
             <tag> 平衡树 </tag>
             
             <tag> 动态树 </tag>
+            
+            <tag> 模板 </tag>
             
         </tags>
       
@@ -402,9 +354,9 @@
       
         <tags>
             
-            <tag> 数论 </tag>
-            
             <tag> 组合数学 </tag>
+            
+            <tag> 数论 </tag>
             
         </tags>
       
@@ -744,11 +696,11 @@
             
             <tag> 学习笔记 </tag>
             
-            <tag> 字符串 </tag>
-            
             <tag> KMP </tag>
             
             <tag> 后缀数组 </tag>
+            
+            <tag> 字符串 </tag>
             
         </tags>
       
@@ -856,36 +808,9 @@
       
         <tags>
             
-            <tag> 模板 </tag>
-            
             <tag> ST表 </tag>
             
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>贪心基础-区间选点问题及其变形</title>
-      <link href="/post/f1e660f1.html"/>
-      <url>/post/f1e660f1.html</url>
-      
-        <content type="html"><![CDATA[<p>首先来看一下区间选点问题的模板：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> b;</span><br><span class="line">    <span class="keyword">int</span> e;</span><br><span class="line">&#125;a[<span class="number">10000</span>];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(node x,node y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x.e&lt;y.e;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;a[i].b&gt;&gt;a[i].e;</span><br><span class="line">    sort(a,a+n,cmp);</span><br><span class="line">    <span class="keyword">int</span> flag[n];</span><br><span class="line">    <span class="built_in">memset</span>(flag,<span class="number">0</span>,<span class="keyword">sizeof</span>(flag));</span><br><span class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(flag[i]==<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(a[i].e&gt;=a[j].b &amp;&amp; a[i].e&lt;=a[j].e)</span><br><span class="line">                &#123;</span><br><span class="line">                flag[j]=<span class="number">1</span>; </span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 信息学竞赛(OI) </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 学习笔记 </tag>
-            
-            <tag> 贪心 </tag>
+            <tag> 模板 </tag>
             
         </tags>
       
@@ -937,11 +862,11 @@
       
         <tags>
             
-            <tag> 数论 </tag>
-            
             <tag> 杨辉三角 </tag>
             
             <tag> 组合数学 </tag>
+            
+            <tag> 数论 </tag>
             
             <tag> 卡特兰数 </tag>
             
@@ -968,40 +893,13 @@
       
         <tags>
             
-            <tag> 字符串 </tag>
-            
             <tag> 后缀数组 </tag>
+            
+            <tag> 字符串 </tag>
             
             <tag> 模板 </tag>
             
             <tag> 后缀排序 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>新木兰辞（数竞版）</title>
-      <link href="/post/163e04e2.html"/>
-      <url>/post/163e04e2.html</url>
-      
-        <content type="html"><![CDATA[<p>唧唧复唧唧，木兰在做题。不闻纸笔声，惟闻女叹息。</p><p>问女何所思，问女何所忆。女亦无所思，女亦无所忆。昨夜见通告，联赛选名额。金牌十二块，块块有爷名。阿爷无大儿，木兰无长兄，愿参加海选，从此替爷征。</p><p>东市学代数，西市做几何；南市听数论，北市刷组合。旦辞爷娘去，暮宿题河边，不闻爷娘唤女声，但闻遇到拐弯做平行。旦辞题河去，暮宿题山头。不闻爷娘唤女声，但闻一个中点两垂线。</p><p>不会怎么办，常用辅助线。共圆推角等，解析来暴算。难题百战死，满分十年归。</p><p>归来见老师，老师坐明堂。夸奖十二次，赏赐百千题。老师问所欲，木兰不要一等奖。愿买千斤题，送儿还故乡。</p><p>爷娘闻女来，出郭买题典；阿姊闻妹来，连把答案蒙。小弟闻姊来，拿笔霍霍写过程。拿我东阁纸，取我西阁笔，拿我战时卷，翻我旧时题。当窗想题目，对镜刷起来。出门看火伴，火伴皆惊忙：同行十二年，不知木兰这么强。</p><p>雄兔蒙答案，雌兔写伪证，双兔共做题，安能辨我强不强？</p><p><em>[注]本文为北朝民歌《木兰辞》基础之上的再创作。</em></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数学竞赛 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 书海扬帆的诗 </tag>
-            
-            <tag> 文学作品 </tag>
             
         </tags>
       
@@ -1707,11 +1605,11 @@
       
         <tags>
             
-            <tag> 数论 </tag>
-            
             <tag> 杨辉三角 </tag>
             
             <tag> 组合数学 </tag>
+            
+            <tag> 数论 </tag>
             
             <tag> 前缀和 </tag>
             
@@ -2079,58 +1977,6 @@
     
     
     <entry>
-      <title>OI竞赛常见模板</title>
-      <link href="/post/ba83fe9a.html"/>
-      <url>/post/ba83fe9a.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> 信息学竞赛(OI) </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 心得体会 </tag>
-            
-            <tag> 模板 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>人教八上历史1-2单元复习提纲</title>
-      <link href="/post/9fbf5d66.html"/>
-      <url>/post/9fbf5d66.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="第一单元-中国开始沦为半殖民地半封建社会"><a href="#第一单元-中国开始沦为半殖民地半封建社会" class="headerlink" title="第一单元 中国开始沦为半殖民地半封建社会"></a>第一单元 中国开始沦为半殖民地半封建社会</h1><h2 id="第一课-鸦片战争"><a href="#第一课-鸦片战争" class="headerlink" title="第一课 鸦片战争"></a>第一课 鸦片战争</h2><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><h4 id="根本原因"><a href="#根本原因" class="headerlink" title="根本原因"></a>根本原因</h4><p>英国不断掠夺殖民地，扩大商品市场。</p><h4 id="直接原因：虎门销烟"><a href="#直接原因：虎门销烟" class="headerlink" title="直接原因：虎门销烟"></a>直接原因：虎门销烟</h4><ol><li>鸦片的危害</li></ol><ul><li><p>白银外流威胁清政府的财政。</p></li><li><p>摧残民众体质，导致政治腐败和军队战斗力削弱。</p></li></ul><ol><li><p>过程<br>林则徐到广州查禁鸦片。</p></li><li><p>意义</p></li></ol><ul><li><p>虎门销烟是中国人民禁烟斗争的伟大胜利；</p></li><li><p>显示了中华民族反抗外来侵略的坚强意志。</p></li></ul><h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><ul><li><p>1840年，鸦片战争爆发，关天培战死，广州三元里人民抗英，陈化成牺牲。</p></li><li><p>中国战败，其原因有：封建专制制度腐朽；统治者昏庸，经济落后，武器落后。</p></li></ul><h3 id="结果：签订《南京条约》"><a href="#结果：签订《南京条约》" class="headerlink" title="结果：签订《南京条约》"></a>结果：签订《南京条约》</h3><h4 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h4><p>中国近代史上<strong>第一个不平等条约</strong>。</p><h4 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h4><ol><li><p>五口通商：开放广州、厦门、福州、宁波、上海为通商口岸。</p></li><li><p>割地：割<strong>香港岛</strong>给英国（破坏领土主权）</p></li><li><p>赔款：赔款2100万银元（加重经济负担）</p></li><li><p>协定关税：英商进出口货物应缴纳税款须双方协议（破坏关税主权）</p></li></ol><h4 id=""><a href="#" class="headerlink" title="*"></a>*</h4><p>英国与清政府签订《虎门条约》，获得<strong>领事裁判权</strong>、<strong>片面最惠国待遇</strong>和<strong>在通商口岸租地建房</strong>的权利。<br>中美<strong>《望厦条约》</strong>、中法<strong>《黄埔条约》</strong>。</p><h3 id="影响"><a href="#影响" class="headerlink" title="影响"></a>影响</h3><ol><li>鸦片战争改变了中国历史发展的进程。</li><li>中国不再享有完整独立的主权，自然经济遭到破坏，开始沦为半殖民地半封建社会。</li><li>鸦片战争成为中国近代史的开端。</li></ol><h2 id="第二课-第二次鸦片战争"><a href="#第二课-第二次鸦片战争" class="headerlink" title="第二课 第二次鸦片战争"></a>第二课 第二次鸦片战争</h2><h3 id="原因-1"><a href="#原因-1" class="headerlink" title="原因"></a>原因</h3><ol><li>根本原因：西方列强企图进一步打开中国市场，扩大侵略权益。</li><li>战争借口：亚罗号事件、马神甫事件。</li></ol><h2 id="过程-1"><a href="#过程-1" class="headerlink" title="过程"></a>过程</h2><ol><li>战争第一阶段：1856年战争爆发，1858年英法联军攻陷大沽炮台，逼近天津。</li></ol><ul><li>结果：签订《天津条约》，外国公使可进驻北京，增开十处通商口岸，外国商船和军舰可以在长江各口岸自由航行，《通商章程善后条约》承认鸦片贸易合法化。</li></ul><ol><li>战争第二阶段：1860年，英法两国占领天津、进逼北京，火烧圆明园。</li></ol><ul><li>结果：签订《北京条约》，增开天津为商埠，割九龙司地方一区给英国，赔款。</li></ul><h2 id="沙俄侵占中国北方大片领土（课本P11地图）"><a href="#沙俄侵占中国北方大片领土（课本P11地图）" class="headerlink" title="沙俄侵占中国北方大片领土（课本P11地图）"></a>沙俄侵占中国北方大片领土（课本P11地图）</h2><p><img src="https://cdn.ljhedp.cn/site-file/2018/10/%E6%B2%99%E4%BF%84%E4%BE%B5%E5%8D%A0%E5%A4%A7%E7%89%87%E9%A2%86%E5%9C%9F.jpg" alt="地图"></p><h2 id="影响-1"><a href="#影响-1" class="headerlink" title="影响"></a>影响</h2><ol><li>第二次鸦片战争使中国丧失更多主权</li><li>西方侵略势力由东南沿海一带深入到长江中下游地区</li><li>中国半殖民地化程度进一步加深</li></ol><h2 id="第三课-太平天国运动"><a href="#第三课-太平天国运动" class="headerlink" title="第三课 太平天国运动"></a>第三课 太平天国运动</h2><h3 id="一、金田起义"><a href="#一、金田起义" class="headerlink" title="一、金田起义"></a>一、金田起义</h3><h4 id="金田起义"><a href="#金田起义" class="headerlink" title="金田起义"></a>金田起义</h4><p>1851年，洪秀全在广西桂平县金田村发动武装起义，建号“太平天国”，起义军称“太平军”。</p><h4 id="永安建制"><a href="#永安建制" class="headerlink" title="永安建制"></a>永安建制</h4><p>太平天国初步建立起政权组织。</p><h3 id="二、定都天京"><a href="#二、定都天京" class="headerlink" title="二、定都天京"></a>二、定都天京</h3><h4 id="定都天京"><a href="#定都天京" class="headerlink" title="定都天京"></a>定都天京</h4><p>1853年，太平军攻占南京，改名天京，定为都城。</p><h4 id="纲领文献《天朝田亩制度》"><a href="#纲领文献《天朝田亩制度》" class="headerlink" title="纲领文献《天朝田亩制度》"></a>纲领文献《天朝田亩制度》</h4><h5 id="内容-1"><a href="#内容-1" class="headerlink" title="内容"></a>内容</h5><p>不分男女，按人口和年龄平均分配土地。</p><h5 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h5><p>该制度主张在小生产的基础上废除私有制和平均社会财富，具有空想性，是不可能实现的。</p><h4 id="北伐、西征"><a href="#北伐、西征" class="headerlink" title="北伐、西征"></a>北伐、西征</h4><p>军事上进入全盛时期。</p><h3 id="三、天京陷落"><a href="#三、天京陷落" class="headerlink" title="三、天京陷落"></a>三、天京陷落</h3><h4 id="天京事变"><a href="#天京事变" class="headerlink" title="天京事变"></a>天京事变</h4><p>太平天国由盛转衰。</p><h4 id="重建核心"><a href="#重建核心" class="headerlink" title="重建核心"></a>重建核心</h4><p>洪仁玕《资政新篇》，主张向西方学习，改革内政。<br>但由于受当时历史条件的限制，《资政新篇》未能付诸实践。</p><h4 id="天京陷落"><a href="#天京陷落" class="headerlink" title="天京陷落"></a>天京陷落</h4><p>1864年，天京陷落，太平天国农民运动失败。</p><h3 id="四、评价"><a href="#四、评价" class="headerlink" title="四、评价"></a>四、评价</h3><h4 id="性质-1"><a href="#性质-1" class="headerlink" title="性质"></a>性质</h4><p>中国历史上规模最宏大的一次农民战争。</p><h4 id="积极"><a href="#积极" class="headerlink" title="积极"></a>积极</h4><p>沉重打击了清王朝的统治和外国侵略势力。</p><h4 id="消极"><a href="#消极" class="headerlink" title="消极"></a>消极</h4><p>由于农民阶级的局限性，太平天国无法提出切实的纲领，无法克服领导集体的腐败，无法长期保持领导集团的团结。</p><h1 id="第二单元-近代化的早期探索与民族危机的加剧"><a href="#第二单元-近代化的早期探索与民族危机的加剧" class="headerlink" title="第二单元 近代化的早期探索与民族危机的加剧"></a>第二单元 近代化的早期探索与民族危机的加剧</h1><h2 id="第四课-洋务运动"><a href="#第四课-洋务运动" class="headerlink" title="第四课 洋务运动"></a>第四课 洋务运动</h2><h3 id="一、洋务运动的兴起"><a href="#一、洋务运动的兴起" class="headerlink" title="一、洋务运动的兴起"></a>一、洋务运动的兴起</h3><ol><li><p>目的：维护清王朝的统治。</p></li><li><p>时间：19世纪60年代到90年代中期</p></li><li><p>口号：<strong>自强</strong>、<strong>求富</strong>。</p></li><li><p>代表人物：奕䜣、曾国藩、李鸿章、左宗棠、张之洞</p></li></ol><h3 id="二、内容"><a href="#二、内容" class="headerlink" title="二、内容"></a>二、内容</h3><h4 id="军事工业"><a href="#军事工业" class="headerlink" title="军事工业"></a>军事工业</h4><p>以“自强”为口号，发展近代军事工业；安庆内军械所、江南制造总局、福州船政局。</p><h4 id="近代教育"><a href="#近代教育" class="headerlink" title="近代教育"></a>近代教育</h4><p>兴办新式学校、培养翻译人才；设立翻译馆、翻译外国书籍；派遣留学生出国深造，</p><p>京师同文馆：中国第一所新式学堂。</p><h4 id="民用企业"><a href="#民用企业" class="headerlink" title="民用企业"></a>民用企业</h4><p>以“求富”为口号，发展民用企业；轮船招商局、开平煤矿、汉阳铁厂、湖北织布局。</p><h4 id="建立新式海陆军"><a href="#建立新式海陆军" class="headerlink" title="建立新式海陆军"></a>建立新式海陆军</h4><h5 id="西北塞防"><a href="#西北塞防" class="headerlink" title="西北塞防"></a>西北塞防</h5><p>中亚浩罕国将领阿古柏率军占据新疆，俄国出兵侵占伊犁。左宗棠收复新疆，1884年，清政府在新疆建立行省。</p><h5 id="东南海防"><a href="#东南海防" class="headerlink" title="东南海防"></a>东南海防</h5><p>在李鸿章的倡议下，清政府开始筹建新式海军，建成南洋、北洋、福建三支海军。1885年在台湾建立行省。</p><h3 id="三、评价"><a href="#三、评价" class="headerlink" title="三、评价"></a>三、评价</h3><h4 id="积极方面"><a href="#积极方面" class="headerlink" title="积极方面"></a>积极方面</h4><ol><li>洋务运动是中国历史上第一次近代化运动。</li><li>客观上促进了民族资本主义的产生，对外国资本的入侵起到了一定的抵制作用。</li></ol><h4 id="局限性-1"><a href="#局限性-1" class="headerlink" title="局限性"></a>局限性</h4><p>洋务运动的根本目的是维护和巩固清政府的统治，加上内部的腐败和外国势力的挤压，洋务运动最终没有使中国走向富强的道路。</p><h2 id="第五课-甲午中日战争与瓜分中国狂潮"><a href="#第五课-甲午中日战争与瓜分中国狂潮" class="headerlink" title="第五课 甲午中日战争与瓜分中国狂潮"></a>第五课 甲午中日战争与瓜分中国狂潮</h2><h3 id="一、甲午中日战争"><a href="#一、甲午中日战争" class="headerlink" title="一、甲午中日战争"></a>一、甲午中日战争</h3><h4 id="原因-2"><a href="#原因-2" class="headerlink" title="原因"></a>原因</h4><h5 id="根本原因-1"><a href="#根本原因-1" class="headerlink" title="根本原因"></a>根本原因</h5><p>征服朝鲜是日本企图侵略中国、称霸世界的重要步骤。</p><h5 id="直接原因"><a href="#直接原因" class="headerlink" title="直接原因"></a>直接原因</h5><p>朝鲜东学党起义。</p><h4 id="经过"><a href="#经过" class="headerlink" title="经过"></a>经过</h4><p>1894年，甲午中日战争爆发，平壤战役中左宝贵牺牲；黄海海战中邓世昌殉国；李鸿章避战保船，日本趁机夺取了制海权。日军占领旅顺后，大肆屠杀中国居民；威海卫战役，北洋舰队全军覆没。</p><h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><p>中国战败，签订《马关条约》。</p><h3 id="二、马关条约"><a href="#二、马关条约" class="headerlink" title="二、马关条约"></a>二、马关条约</h3><h4 id="内容-2"><a href="#内容-2" class="headerlink" title="内容"></a>内容</h4><ul><li>割地：清政府割辽东半岛、台湾全岛及所有附属各岛屿、澎湖列岛给日本；</li><li>赔款：赔偿日本兵费白银2亿两；</li><li>开埠：开放重庆、沙市、苏州、杭州为商埠；</li><li>开厂：允许日本在通商口岸开设工厂。</li></ul><h4 id="影响-2"><a href="#影响-2" class="headerlink" title="影响"></a>影响</h4><p>外国侵略势力进一步深入中国腹地，大大加深了中国的半殖民地化程度。</p><h3 id="三、瓜分中国狂潮"><a href="#三、瓜分中国狂潮" class="headerlink" title="三、瓜分中国狂潮"></a>三、瓜分中国狂潮</h3><h4 id="三国干涉还辽"><a href="#三国干涉还辽" class="headerlink" title="三国干涉还辽"></a>三国干涉还辽</h4><p>沙俄、法德迫使日本放弃辽东半岛，日本向中国索取“赎辽费”，以此为契机，列强在中国掀起瓜分中国的狂潮。</p><h4 id="美国“门户开放”政策"><a href="#美国“门户开放”政策" class="headerlink" title="美国“门户开放”政策"></a>美国“门户开放”政策</h4><p>该政策反映出帝国主义国家在侵华政策上存在矛盾。</p><h2 id="第六课-戊戌变法"><a href="#第六课-戊戌变法" class="headerlink" title="第六课 戊戌变法"></a>第六课 戊戌变法</h2><h3 id="一、序幕：公车上书（1895年）"><a href="#一、序幕：公车上书（1895年）" class="headerlink" title="一、序幕：公车上书（1895年）"></a>一、序幕：公车上书（1895年）</h3><p>康有为、梁启超等上书光绪帝，拉开了变法维新运动的序幕。</p><h3 id="二、发展：维新思想的传播"><a href="#二、发展：维新思想的传播" class="headerlink" title="二、发展：维新思想的传播"></a>二、发展：维新思想的传播</h3><h4 id="维新思想的传播"><a href="#维新思想的传播" class="headerlink" title="维新思想的传播"></a>维新思想的传播</h4><p>维新人士在各地组织学会、创办报刊，影响最大的是上海的《时务报》和天津的《国闻报》。</p><h4 id="维新代表人物"><a href="#维新代表人物" class="headerlink" title="维新代表人物"></a>维新代表人物</h4><p>康有为、梁启超、严复（翻译《天演论》，宣传“物竞天择”、“适者生存”的生物进化理论）</p><h3 id="三、高潮：百日维新（1898年）"><a href="#三、高潮：百日维新（1898年）" class="headerlink" title="三、高潮：百日维新（1898年）"></a>三、高潮：百日维新（1898年）</h3><h4 id="内容-3"><a href="#内容-3" class="headerlink" title="内容"></a>内容</h4><p>裁撤冗官冗员，允许官民上书言事；鼓励私人兴办工矿企业，发展农工商业；改革财政，编制国家预算；废除八股，开办新式学堂（京师大学堂）；裁剪绿营（清朝时期国家常备武装），兴办新式军队</p><h4 id="失败原因"><a href="#失败原因" class="headerlink" title="失败原因"></a>失败原因</h4><p>变法触犯了以慈禧太后为首的顽固派的利益。</p><h3 id="四、结果：戊戌政变"><a href="#四、结果：戊戌政变" class="headerlink" title="四、结果：戊戌政变"></a>四、结果：戊戌政变</h3><p>慈禧太后等发动政变，光绪帝被囚；除京师大学堂外，变法措施均被废除；谭嗣同等“戊戌六君子”被杀。</p><h3 id="五、影响"><a href="#五、影响" class="headerlink" title="五、影响"></a>五、影响</h3><p>维新变法运动失败，但在思想文化方面产生了广泛而持久的影响。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 复习资料 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 历史 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Tarjan强连通分量算法略解</title>
       <link href="/post/4ffb8961.html"/>
       <url>/post/4ffb8961.html</url>
@@ -2386,7 +2232,7 @@
       <link href="/post/398982fd.html"/>
       <url>/post/398982fd.html</url>
       
-        <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Welcome to my blog, enter password to read." />    <label for="pass">Welcome to my blog, enter password to read.</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+        <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Welcome to my blog, enter password to read." />    <label for="pass">Welcome to my blog, enter password to read.</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       
       
       <categories>
@@ -2745,68 +2591,6 @@
     
     
     <entry>
-      <title>如梦令·爆零</title>
-      <link href="/post/c8170b1a.html"/>
-      <url>/post/c8170b1a.html</url>
-      
-        <content type="html"><![CDATA[<p>模拟比赛好难，</p><p>感觉自己要完，</p><p>无奈翻样例，</p><p>数据令人胆寒。</p><p>太难，</p><p>太难，</p><p>打爆两个键盘。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 文学 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 书海扬帆的诗 </tag>
-            
-            <tag> 精品 </tag>
-            
-            <tag> 文学作品 </tag>
-            
-            <tag> 随笔 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>西江月·报错</title>
-      <link href="/post/fdff78fa.html"/>
-      <url>/post/fdff78fa.html</url>
-      
-        <content type="html"><![CDATA[<p>本该快到飞起，实际只能放弃。</p><p>又见龟速老爷机，卡常出奇精辟。</p><p>对拍写出正解，竟然不过样例。</p><p>今日只得刷水题，暴力可出奇迹。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 文学 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 书海扬帆的诗 </tag>
-            
-            <tag> 精品 </tag>
-            
-            <tag> 文学作品 </tag>
-            
-            <tag> 随笔 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>西江月·证明</title>
       <link href="/post/c5be0c61.html"/>
       <url>/post/c5be0c61.html</url>
@@ -2825,36 +2609,11 @@
             
             <tag> 书海扬帆的诗 </tag>
             
-            <tag> 精品 </tag>
-            
             <tag> 文学作品 </tag>
             
+            <tag> 精品 </tag>
+            
             <tag> 随笔 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>数学课后有感</title>
-      <link href="/post/4cd2c3c5.html"/>
-      <url>/post/4cd2c3c5.html</url>
-      
-        <content type="html"><![CDATA[<p style="text-align: center;">人是铁来饭是钢，</p><p style="text-align: center;">刷题乃比红缨枪。</p><p style="text-align: center;">难题知识吃不透，</p><p style="text-align: center;">待到考试必定凉。</p><p style="text-align: center;">上课好比喂熟饭，</p><p style="text-align: center;">不如自己啃来香。</p><p style="text-align: center;">书是帆来题为桨，</p><p style="text-align: center;">无惧旋涡与巨浪。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 信息学竞赛(OI) </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 书海扬帆的诗 </tag>
             
         </tags>
       
@@ -2913,31 +2672,6 @@
     
     
     <entry>
-      <title>NOIP2017游记</title>
-      <link href="/post/16fceb49.html"/>
-      <url>/post/16fceb49.html</url>
-      
-        <content type="html"><![CDATA[<p>自从接触了信息学竞赛以后，这半年我就一发不可收拾。之前都是熬夜准备秒杀的双十一节，今年变成了复习数据结构和算法。今天走入考场，该展现的也都展现出来了，成绩也许很快就能知晓，随之而来的便是奖项，但忙活了一天的我现在觉得这些都不重要，就像洛谷说的：忌对答案，考完两天后再对，最重要的是这半年以来我没有亏待自己，我与那些题目似乎天生就有缘似的，看了之后我的眼睛会放光，今天也不例外。伴随着期中考试未尽的余波，我坐在书桌前，用新买的笔记本电脑，敲打下这篇游记。</p><p>9月份的区赛是妈妈陪着我去的，结果几近爆零，只得了30分。所以这次我决定自己去。考试地点在北京市第八十中学高中部，从家出发要换乘三趟地铁，总计一个多小时，于是我上完早上的课，吃了个麦当劳就匆忙出发了，到了地铁闸机发现卡里没钱，身上有没有现金可以充值，只好到附近的一家教育机构找前台老师帮着换钱，这样就消耗了20多分钟。地铁上人很多，我几乎被挤成了相片，随身带的《信息学奥赛一本通》也无暇阅览，只好在脑子里回顾。</p><p>出了站，还要骑行800米才能到。当时我不知道是规定从南门进去的，骑着骑着，看见有一个八十中学的北门，就大摇大摆进去了，门卫叔叔仔细核对了我的准考证和身份信息。这时是13:40.</p><p>考试地点在办公楼的五层，需要爬楼，学校的校园环境和空气都很好，比区赛时的首师大附中要大气很多，我喜欢。走到了考场门口，被告知14:10才可以进场，于是就在外面拿出笔记本电脑，又重温了一下NOI Linux的操作方法，并用GUIDE（比赛时规定使用的IDE）敲打了一道“导弹拦截”的题目。机房门口有一排书架，摆放着《信息学奥赛一本通》、CCF出版的《C++程序设计》以及机器人方面的诸多书籍，可以阅览。由此看出该学校对IT的重视。</p><p>敲敲代码，熟悉熟悉环境，和要好的同学打几声招呼，进场时间就这样到了。老师的要求很严格，要求出示身份证/学生证、小准考证以及印有照片的大准考证等3样证件，并且是按机位点名之后才能入场的。教室一共7排，每个机位都有隔板（也许叫做屏风），可以很好的起到保护知识成果的作用。</p><p>监考老师是一男一女，要求非常严格，进入到考场，只能带食品、饮料、水和文具，其余物品一律放在讲台前，没有老师允许，是不让操作电脑的。桌面上有一个单子，类似于承诺书，需要填写是否保存程序以及文件名是否无误，还有程序的大小。电脑是Windows系统，安装有VMware虚拟机，里面是NOI Linux。等到老师下令之后，我便开始解密桌面上的试题。密码一次便输对了，成就感满满。完成以上操作之后，十分钟便过去了，考试开始。</p><p>不知道为什么，T1考察整数计算，非常简单，但是我的第二个样例始终过不去。为什么？原来犯了一个低级错误，修正后，马上就毫无问题了，一共耗费7分钟，开始做T2。T2也是暴力，不过代码难度比较高，我想了好久才做出来，大概70多行。为了保险，数组全部memset，一些掌握不熟练的技巧也没使用。T2相当耗时，做完之后已是15:30，期间去了三次厕所，这是依据某神犇的建议：不要看着一个题太久，会睡着的。</p><p>于是就接着看T3和T4。T4直接放弃，反正也做不出来，就输出个“-1”了事，至少得十分。来搞T3。T3是棋盘题，求的是最少花费的金币数量，直接想到二维dp。不过写了60行之后，发现漏洞百出，结果还不如输出“-1”呢！于是很委屈地写了个-1。一并填写了确认单。考试结束。</p><p>从南门出来，天已黑了，门口除了家长，还有许多不知名的小机构在散发着传单，内容都是关于信息学奥赛培训。拿了几个回去，也许可以叠纸飞机玩玩，也许可以去培训培训。和两位同学一同坐车回去，坐到中关村，还要上数学集训队的课。晚上的四环很堵，坐着车，逐渐逐渐就晕了。晚上的课也没心思听，昏昏沉沉的。</p><blockquote><p>预估：220<br>实际得分：125<br>奖项：二等奖<br>点评：太自信不一定是好事情。。。</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> 信息学竞赛(OI) </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 游记 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>洛谷P1478-陶陶摘苹果升级版</title>
       <link href="/post/e44989b4.html"/>
       <url>/post/e44989b4.html</url>
@@ -2983,9 +2717,9 @@
             
             <tag> 书海扬帆的诗 </tag>
             
-            <tag> 精品 </tag>
-            
             <tag> 文学作品 </tag>
+            
+            <tag> 精品 </tag>
             
             <tag> 随笔 </tag>
             
@@ -3044,7 +2778,7 @@
       <link href="/post/4a17b156.html"/>
       <url>/post/4a17b156.html</url>
       
-        <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Welcome to my blog, enter password to read." />    <label for="pass">Welcome to my blog, enter password to read.</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+        <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Welcome to my blog, enter password to read." />    <label for="pass">Welcome to my blog, enter password to read.</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       
       
       <categories>
