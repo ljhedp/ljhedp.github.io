@@ -194,6 +194,242 @@
       
         
   <h2 class="title">
+    <a href="/post/e44989b4.html">
+      洛谷P1478-陶陶摘苹果升级版
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.ljhedp.cn" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>书海扬帆</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2017-10-07</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/categories/信息学竞赛-OI/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>信息学竞赛(OI)</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p></p><h2>题目描述</h2><br>又是一年秋季时，陶陶家的苹果树结了n个果子。陶陶又跑去摘苹果，这次她有一个a公分的椅子。当他手够不着时，他会站到椅子上再试试。<p></p>
+<p>这次与NOIp2005普及组第一题不同的是：陶陶之前搬凳子，力气只剩下s了。当然，每次摘苹果时都要用一定的力气。陶陶想知道在s&lt;0之前最多能摘到多少个苹果。</p>
+<p>现在已知n个苹果到达地上的高度xi，椅子的高度a，陶陶手伸直的最大长度b，陶陶所剩的力气s，陶陶摘一个苹果需要的力气yi，求陶陶最多能摘到多少个苹果。</p>
+<p></p><h2>输入输出格式</h2><br><strong>输入格式：</strong><p></p>
+<p>第1行：两个数 苹果数n，力气s。</p>
+<p>第2行：两个数 椅子的高度a，陶陶手伸直的最大长度b。</p>
+<p>第3行~第3+n-1行：每行两个数 苹果高度xi，摘这个苹果需要的力气yi。</p>
+<p><strong>输出格式：</strong></p>
+<p>只有一个整数，表示陶陶最多能摘到的苹果数。</p>
+<p></p><h2>输入输出样例</h2><p></p>
+<p><div class="am-g"></div></p>
+<div class="am-u-md-6">
+
+<p><strong>输入样例#1：</strong></p>
+<p><pre class="">8 15
+20 130
+120 3
+150 2
+110 7
+180 1
+50 8
+200 0
+140 3
+120 2</pre><br>&lt;/div&gt;</p>
+<div class="am-u-md-6">
+
+<p><strong>输出样例#1：</strong></p>
+<p><pre>4</pre><br>&lt;/div&gt;<br>&lt;/div&gt;</p>
+<p></p><h2>说明</h2><br>所有数据：n&lt;=5000 a&lt;=50 b&lt;=200 s&lt;=1000 xi&lt;=280 yi&lt;=100<p></p>
+<p></p><h2><span style="color: #000080;"><strong>题解</strong></span></h2><br>本题和陶陶摘苹果的原题有几分相像，可以使用动态规划，但是我还是用模拟的做法给解决了。<p></p>
+<p>注意到数据的范围不会太大，所以无论是在时间还是空间范围内都是可以做出答案的。</p>
+<p>详细的解题思路我都放到代码的注释里了~</p>
+<p></p><h2><span style="color: #003366;"><strong>代码分享</strong></span></h2><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="comment">//读入和输出都用C语言，这样速度会提高。algorithm库的引入是方便接下来的sort快速排序。 </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,s,a,b,ans=<span class="number">0</span>;</span><br><span class="line"><span class="comment">//根据题目要求设定我们需要的全局变量 </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>,&amp;n,&amp;s,&amp;a,&amp;b);</span><br><span class="line">	<span class="comment">//根据题目要求读入数据 </span></span><br><span class="line">	<span class="keyword">int</span> x[n+<span class="number">10</span>],y[n+<span class="number">10</span>];</span><br><span class="line">	<span class="comment">//x数组存储苹果高度，y数组存储摘下苹果需要花费的体力 </span></span><br><span class="line">	<span class="keyword">int</span> h=a+b;</span><br><span class="line">	<span class="comment">//我们的陶陶把手伸直再踩上凳子，最高也就是h厘米。。。 </span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n+<span class="number">10</span>;i++)&#123;</span><br><span class="line">		x[i]=h+<span class="number">1</span>;</span><br><span class="line">		y[i]=s+<span class="number">1</span>;</span><br><span class="line">		<span class="comment">//这里把每一个苹果都假设成陶陶摘不到的~</span></span><br><span class="line">		<span class="comment">//有的同学可能不明白为什么，原因之后会进行阐述。 </span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;x[i],&amp;y[i]);</span><br><span class="line">	<span class="comment">//读入数据，此时数组中大部分数据会被真实数据覆盖。 </span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(h&lt;x[i])&#123;</span><br><span class="line">			<span class="comment">//如果陶陶连够都够不到，那和力气也没有啥关系了。。。 </span></span><br><span class="line">			x[i]=h+<span class="number">1</span>;</span><br><span class="line">			y[i]=s+<span class="number">1</span>;</span><br><span class="line">			<span class="comment">//所以将这个苹果的高度和需要花费的力气都设定为大于陶陶的身高及体力值的数据。 </span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	sort(x,x+n+<span class="number">10</span>);</span><br><span class="line">	sort(y,y+n+<span class="number">10</span>);</span><br><span class="line">	<span class="comment">//经过刚才一番折腾，现在两个数组中存储的数据都是保证陶陶能够够到的了。</span></span><br><span class="line">	<span class="comment">//之所以第19行那样做，就是因为sort排序是默认从小到大开始排的，</span></span><br><span class="line">	<span class="comment">//不满足要求的会按照我们的设定被排在最后，使得陶陶无法采摘。 </span></span><br><span class="line">	<span class="comment">//我们排一下序，这样花费力气少的在前面，</span></span><br><span class="line">	<span class="comment">//陶陶为了摘下苹果的个数尽可能多，肯定会从花费力气最少的开始摘。 </span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n+<span class="number">10</span>;i++)&#123;</span><br><span class="line">		<span class="comment">//注意一定是从0开始的哦~同时我们要保证x数组和y数组一定是一一匹配的，</span></span><br><span class="line">		<span class="comment">//千万不能错位，要不然就WA了 </span></span><br><span class="line">		<span class="keyword">if</span>(h&gt;=x[i]&amp;&amp;y[i]&lt;=s)&#123;</span><br><span class="line">			<span class="comment">//如果既能够得到，又有足够的力气 </span></span><br><span class="line">			s-=y[i];</span><br><span class="line">			<span class="comment">//体力值相应减少 </span></span><br><span class="line">			ans++;</span><br><span class="line">			<span class="comment">//满足要求的条件增多一种 </span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">	<span class="comment">//输出最多能摘到的苹果数。 </span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure><p></p>
+</div></div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/模拟/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>模拟</a>
+        
+          <a href="/tags/精品/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>精品</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
+
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/post/37ab6a04.html">
+      夜读有感
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://www.ljhedp.cn" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>书海扬帆</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2017-08-25</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/categories/文学/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>文学</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>月下灯光几点莹，<br>车水马龙映繁星。<br>寒窗苦读奋战夜，<br>偶闻蟋蟀一声鸣。</p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/书海扬帆的诗/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>书海扬帆的诗</a>
+        
+          <a href="/tags/精品/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>精品</a>
+        
+          <a href="/tags/文学作品/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>文学作品</a>
+        
+          <a href="/tags/随笔/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>随笔</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
+
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
     <a href="/post/3e7b0fce.html">
       肖复兴：聪明只是一张漂亮的糖纸
     </a>
@@ -710,7 +946,7 @@
 </header>
 
   <div class="content pure">
-    <p>鸟欲高飞先振翅，人求上进先读书</p>
+    <p>面朝大海日，春暖花开时</p>
 
   </div>
 </section>
@@ -783,9 +1019,9 @@
     <div class="content pure">
       <ul class="entry">
         
-          <li><a class="flat-box" title="/categories/信息学竞赛-OI/" href="/categories/信息学竞赛-OI/"><div class="name">信息学竞赛(OI)</div><div class="badge">(88)</div></a></li>
+          <li><a class="flat-box" title="/categories/信息学竞赛-OI/" href="/categories/信息学竞赛-OI/"><div class="name">信息学竞赛(OI)</div><div class="badge">(89)</div></a></li>
         
-          <li><a class="flat-box" title="/categories/数学竞赛/" href="/categories/数学竞赛/"><div class="name">数学竞赛</div><div class="badge">(2)</div></a></li>
+          <li><a class="flat-box" title="/categories/数学竞赛/" href="/categories/数学竞赛/"><div class="name">数学竞赛</div><div class="badge">(3)</div></a></li>
         
           <li><a class="flat-box" title="/categories/文学/" href="/categories/文学/"><div class="name">文学</div><div class="badge">(9)</div></a></li>
         
@@ -818,7 +1054,7 @@
 </header>
 
     <div class="content pure">
-      <a href="/tags/01背包/" style="font-size: 15.11px; color: #919191">01背包</a> <a href="/tags/Floyd/" style="font-size: 14px; color: #999">Floyd</a> <a href="/tags/KMP/" style="font-size: 14px; color: #999">KMP</a> <a href="/tags/Kruscal/" style="font-size: 14px; color: #999">Kruscal</a> <a href="/tags/LCT/" style="font-size: 14px; color: #999">LCT</a> <a href="/tags/Manacher/" style="font-size: 14px; color: #999">Manacher</a> <a href="/tags/NOI/" style="font-size: 14px; color: #999">NOI</a> <a href="/tags/NOIP模拟赛/" style="font-size: 14px; color: #999">NOIP模拟赛</a> <a href="/tags/NOIp题解/" style="font-size: 14px; color: #999">NOIp题解</a> <a href="/tags/Prim/" style="font-size: 14px; color: #999">Prim</a> <a href="/tags/STL/" style="font-size: 14px; color: #999">STL</a> <a href="/tags/ST表/" style="font-size: 15.11px; color: #919191">ST表</a> <a href="/tags/Splay/" style="font-size: 14px; color: #999">Splay</a> <a href="/tags/Tarjan/" style="font-size: 15.11px; color: #919191">Tarjan</a> <a href="/tags/dinic/" style="font-size: 14px; color: #999">dinic</a> <a href="/tags/dp/" style="font-size: 21.78px; color: #646464">dp</a> <a href="/tags/dulu/" style="font-size: 14px; color: #999">dulu</a> <a href="/tags/三角函数/" style="font-size: 14px; color: #999">三角函数</a> <a href="/tags/书海扬帆的诗/" style="font-size: 17.33px; color: #828282">书海扬帆的诗</a> <a href="/tags/二分/" style="font-size: 15.11px; color: #919191">二分</a> <a href="/tags/二分图/" style="font-size: 15.11px; color: #919191">二分图</a> <a href="/tags/人工智能/" style="font-size: 14px; color: #999">人工智能</a> <a href="/tags/信息技术课程/" style="font-size: 14px; color: #999">信息技术课程</a> <a href="/tags/分块/" style="font-size: 14px; color: #999">分块</a> <a href="/tags/分组背包/" style="font-size: 14px; color: #999">分组背包</a> <a href="/tags/前缀和/" style="font-size: 14px; color: #999">前缀和</a> <a href="/tags/动态树/" style="font-size: 14px; color: #999">动态树</a> <a href="/tags/动态规划/" style="font-size: 14px; color: #999">动态规划</a> <a href="/tags/匈牙利算法/" style="font-size: 15.11px; color: #919191">匈牙利算法</a> <a href="/tags/区间dp/" style="font-size: 14px; color: #999">区间dp</a> <a href="/tags/卡特兰数/" style="font-size: 14px; color: #999">卡特兰数</a> <a href="/tags/卢卡斯定理/" style="font-size: 14px; color: #999">卢卡斯定理</a> <a href="/tags/后缀排序/" style="font-size: 14px; color: #999">后缀排序</a> <a href="/tags/后缀数组/" style="font-size: 15.11px; color: #919191">后缀数组</a> <a href="/tags/哈希/" style="font-size: 14px; color: #999">哈希</a> <a href="/tags/图像风格化/" style="font-size: 14px; color: #999">图像风格化</a> <a href="/tags/图论/" style="font-size: 20.67px; color: #6c6c6c">图论</a> <a href="/tags/基环树/" style="font-size: 14px; color: #999">基环树</a> <a href="/tags/大赛札记/" style="font-size: 14px; color: #999">大赛札记</a> <a href="/tags/太强啦/" style="font-size: 14px; color: #999">太强啦</a> <a href="/tags/好文推荐/" style="font-size: 14px; color: #999">好文推荐</a> <a href="/tags/字符串/" style="font-size: 19.56px; color: #737373">字符串</a> <a href="/tags/学习笔记/" style="font-size: 22.89px; color: #5d5d5d">学习笔记</a> <a href="/tags/小游戏/" style="font-size: 14px; color: #999">小游戏</a> <a href="/tags/差分/" style="font-size: 14px; color: #999">差分</a> <a href="/tags/差分约束/" style="font-size: 14px; color: #999">差分约束</a> <a href="/tags/带约束的背包/" style="font-size: 14px; color: #999">带约束的背包</a> <a href="/tags/平衡树/" style="font-size: 14px; color: #999">平衡树</a> <a href="/tags/并查集/" style="font-size: 15.11px; color: #919191">并查集</a> <a href="/tags/归并排序/" style="font-size: 14px; color: #999">归并排序</a> <a href="/tags/心得体会/" style="font-size: 15.11px; color: #919191">心得体会</a> <a href="/tags/快速幂/" style="font-size: 14px; color: #999">快速幂</a> <a href="/tags/打表/" style="font-size: 14px; color: #999">打表</a> <a href="/tags/扩展欧拉定理/" style="font-size: 14px; color: #999">扩展欧拉定理</a> <a href="/tags/扩欧/" style="font-size: 14px; color: #999">扩欧</a> <a href="/tags/排序/" style="font-size: 14px; color: #999">排序</a> <a href="/tags/搜索/" style="font-size: 15.11px; color: #919191">搜索</a> <a href="/tags/摩尔投票法/" style="font-size: 14px; color: #999">摩尔投票法</a> <a href="/tags/数学/" style="font-size: 16.22px; color: #8a8a8a">数学</a> <a href="/tags/数学竞赛/" style="font-size: 17.33px; color: #828282">数学竞赛</a> <a href="/tags/数据结构/" style="font-size: 14px; color: #999">数据结构</a> <a href="/tags/数论/" style="font-size: 24px; color: #555">数论</a> <a href="/tags/文学作品/" style="font-size: 17.33px; color: #828282">文学作品</a> <a href="/tags/最大流/" style="font-size: 14px; color: #999">最大流</a> <a href="/tags/最小生成树/" style="font-size: 14px; color: #999">最小生成树</a> <a href="/tags/最短路/" style="font-size: 16.22px; color: #8a8a8a">最短路</a> <a href="/tags/杨辉三角/" style="font-size: 15.11px; color: #919191">杨辉三角</a> <a href="/tags/树状数组/" style="font-size: 14px; color: #999">树状数组</a> <a href="/tags/校内训练/" style="font-size: 14px; color: #999">校内训练</a> <a href="/tags/模拟/" style="font-size: 22.89px; color: #5d5d5d">模拟</a> <a href="/tags/模板/" style="font-size: 24px; color: #555">模板</a> <a href="/tags/爬虫/" style="font-size: 14px; color: #999">爬虫</a> <a href="/tags/矩阵加速/" style="font-size: 14px; color: #999">矩阵加速</a> <a href="/tags/矩阵快速幂/" style="font-size: 14px; color: #999">矩阵快速幂</a> <a href="/tags/离线并查集/" style="font-size: 14px; color: #999">离线并查集</a> <a href="/tags/精品/" style="font-size: 20.67px; color: #6c6c6c">精品</a> <a href="/tags/线性基/" style="font-size: 14px; color: #999">线性基</a> <a href="/tags/线段树/" style="font-size: 17.33px; color: #828282">线段树</a> <a href="/tags/组合数学/" style="font-size: 18.44px; color: #7b7b7b">组合数学</a> <a href="/tags/组合计数/" style="font-size: 14px; color: #999">组合计数</a> <a href="/tags/缩点/" style="font-size: 14px; color: #999">缩点</a> <a href="/tags/网络流/" style="font-size: 15.11px; color: #919191">网络流</a> <a href="/tags/网络流24题/" style="font-size: 15.11px; color: #919191">网络流24题</a> <a href="/tags/背包问题/" style="font-size: 18.44px; color: #7b7b7b">背包问题</a> <a href="/tags/莫比乌斯反演/" style="font-size: 14px; color: #999">莫比乌斯反演</a> <a href="/tags/记忆化搜索/" style="font-size: 14px; color: #999">记忆化搜索</a> <a href="/tags/调试与对拍/" style="font-size: 15.11px; color: #919191">调试与对拍</a> <a href="/tags/贪心/" style="font-size: 15.11px; color: #919191">贪心</a> <a href="/tags/逆元/" style="font-size: 15.11px; color: #919191">逆元</a> <a href="/tags/里程碑/" style="font-size: 14px; color: #999">里程碑</a> <a href="/tags/错排/" style="font-size: 14px; color: #999">错排</a> <a href="/tags/队列/" style="font-size: 14px; color: #999">队列</a> <a href="/tags/随笔/" style="font-size: 16.22px; color: #8a8a8a">随笔</a> <a href="/tags/音乐/" style="font-size: 15.11px; color: #919191">音乐</a> <a href="/tags/马拉车/" style="font-size: 14px; color: #999">马拉车</a> <a href="/tags/高精度/" style="font-size: 14px; color: #999">高精度</a>
+      <a href="/tags/01背包/" style="font-size: 15.11px; color: #919191">01背包</a> <a href="/tags/Floyd/" style="font-size: 14px; color: #999">Floyd</a> <a href="/tags/KMP/" style="font-size: 14px; color: #999">KMP</a> <a href="/tags/Kruscal/" style="font-size: 14px; color: #999">Kruscal</a> <a href="/tags/LCT/" style="font-size: 14px; color: #999">LCT</a> <a href="/tags/Manacher/" style="font-size: 14px; color: #999">Manacher</a> <a href="/tags/NOI/" style="font-size: 14px; color: #999">NOI</a> <a href="/tags/NOIP模拟赛/" style="font-size: 14px; color: #999">NOIP模拟赛</a> <a href="/tags/NOIp题解/" style="font-size: 14px; color: #999">NOIp题解</a> <a href="/tags/Prim/" style="font-size: 14px; color: #999">Prim</a> <a href="/tags/STL/" style="font-size: 14px; color: #999">STL</a> <a href="/tags/ST表/" style="font-size: 15.11px; color: #919191">ST表</a> <a href="/tags/Splay/" style="font-size: 14px; color: #999">Splay</a> <a href="/tags/Tarjan/" style="font-size: 15.11px; color: #919191">Tarjan</a> <a href="/tags/dinic/" style="font-size: 14px; color: #999">dinic</a> <a href="/tags/dp/" style="font-size: 21.78px; color: #646464">dp</a> <a href="/tags/dulu/" style="font-size: 14px; color: #999">dulu</a> <a href="/tags/三角函数/" style="font-size: 14px; color: #999">三角函数</a> <a href="/tags/不等式/" style="font-size: 14px; color: #999">不等式</a> <a href="/tags/书海扬帆的诗/" style="font-size: 17.33px; color: #828282">书海扬帆的诗</a> <a href="/tags/二分/" style="font-size: 15.11px; color: #919191">二分</a> <a href="/tags/二分图/" style="font-size: 16.22px; color: #8a8a8a">二分图</a> <a href="/tags/人工智能/" style="font-size: 14px; color: #999">人工智能</a> <a href="/tags/信息技术课程/" style="font-size: 14px; color: #999">信息技术课程</a> <a href="/tags/分块/" style="font-size: 14px; color: #999">分块</a> <a href="/tags/分离变量/" style="font-size: 14px; color: #999">分离变量</a> <a href="/tags/分组背包/" style="font-size: 14px; color: #999">分组背包</a> <a href="/tags/前缀和/" style="font-size: 14px; color: #999">前缀和</a> <a href="/tags/动态树/" style="font-size: 14px; color: #999">动态树</a> <a href="/tags/动态规划/" style="font-size: 14px; color: #999">动态规划</a> <a href="/tags/匈牙利算法/" style="font-size: 15.11px; color: #919191">匈牙利算法</a> <a href="/tags/区间dp/" style="font-size: 14px; color: #999">区间dp</a> <a href="/tags/卡特兰数/" style="font-size: 14px; color: #999">卡特兰数</a> <a href="/tags/卢卡斯定理/" style="font-size: 14px; color: #999">卢卡斯定理</a> <a href="/tags/后缀排序/" style="font-size: 14px; color: #999">后缀排序</a> <a href="/tags/后缀数组/" style="font-size: 15.11px; color: #919191">后缀数组</a> <a href="/tags/哈希/" style="font-size: 14px; color: #999">哈希</a> <a href="/tags/图像风格化/" style="font-size: 14px; color: #999">图像风格化</a> <a href="/tags/图论/" style="font-size: 20.67px; color: #6c6c6c">图论</a> <a href="/tags/基环树/" style="font-size: 14px; color: #999">基环树</a> <a href="/tags/大赛札记/" style="font-size: 14px; color: #999">大赛札记</a> <a href="/tags/太强啦/" style="font-size: 14px; color: #999">太强啦</a> <a href="/tags/好文推荐/" style="font-size: 14px; color: #999">好文推荐</a> <a href="/tags/字符串/" style="font-size: 19.56px; color: #737373">字符串</a> <a href="/tags/学习笔记/" style="font-size: 22.89px; color: #5d5d5d">学习笔记</a> <a href="/tags/小游戏/" style="font-size: 14px; color: #999">小游戏</a> <a href="/tags/差分/" style="font-size: 14px; color: #999">差分</a> <a href="/tags/差分约束/" style="font-size: 14px; color: #999">差分约束</a> <a href="/tags/带约束的背包/" style="font-size: 14px; color: #999">带约束的背包</a> <a href="/tags/平衡树/" style="font-size: 14px; color: #999">平衡树</a> <a href="/tags/并查集/" style="font-size: 15.11px; color: #919191">并查集</a> <a href="/tags/归并排序/" style="font-size: 14px; color: #999">归并排序</a> <a href="/tags/心得体会/" style="font-size: 15.11px; color: #919191">心得体会</a> <a href="/tags/快速幂/" style="font-size: 14px; color: #999">快速幂</a> <a href="/tags/打表/" style="font-size: 14px; color: #999">打表</a> <a href="/tags/扩展欧拉定理/" style="font-size: 14px; color: #999">扩展欧拉定理</a> <a href="/tags/扩欧/" style="font-size: 14px; color: #999">扩欧</a> <a href="/tags/排序/" style="font-size: 14px; color: #999">排序</a> <a href="/tags/搜索/" style="font-size: 15.11px; color: #919191">搜索</a> <a href="/tags/摩尔投票法/" style="font-size: 14px; color: #999">摩尔投票法</a> <a href="/tags/数学/" style="font-size: 16.22px; color: #8a8a8a">数学</a> <a href="/tags/数学竞赛/" style="font-size: 17.33px; color: #828282">数学竞赛</a> <a href="/tags/数据结构/" style="font-size: 14px; color: #999">数据结构</a> <a href="/tags/数论/" style="font-size: 24px; color: #555">数论</a> <a href="/tags/文学作品/" style="font-size: 17.33px; color: #828282">文学作品</a> <a href="/tags/最大流/" style="font-size: 14px; color: #999">最大流</a> <a href="/tags/最小生成树/" style="font-size: 14px; color: #999">最小生成树</a> <a href="/tags/最短路/" style="font-size: 16.22px; color: #8a8a8a">最短路</a> <a href="/tags/杨辉三角/" style="font-size: 15.11px; color: #919191">杨辉三角</a> <a href="/tags/树状数组/" style="font-size: 14px; color: #999">树状数组</a> <a href="/tags/校内训练/" style="font-size: 14px; color: #999">校内训练</a> <a href="/tags/模拟/" style="font-size: 22.89px; color: #5d5d5d">模拟</a> <a href="/tags/模板/" style="font-size: 24px; color: #555">模板</a> <a href="/tags/爬虫/" style="font-size: 14px; color: #999">爬虫</a> <a href="/tags/矩阵加速/" style="font-size: 14px; color: #999">矩阵加速</a> <a href="/tags/矩阵快速幂/" style="font-size: 14px; color: #999">矩阵快速幂</a> <a href="/tags/离线并查集/" style="font-size: 14px; color: #999">离线并查集</a> <a href="/tags/精品/" style="font-size: 20.67px; color: #6c6c6c">精品</a> <a href="/tags/线性基/" style="font-size: 14px; color: #999">线性基</a> <a href="/tags/线段树/" style="font-size: 17.33px; color: #828282">线段树</a> <a href="/tags/组合数学/" style="font-size: 18.44px; color: #7b7b7b">组合数学</a> <a href="/tags/组合计数/" style="font-size: 14px; color: #999">组合计数</a> <a href="/tags/缩点/" style="font-size: 14px; color: #999">缩点</a> <a href="/tags/网络流/" style="font-size: 15.11px; color: #919191">网络流</a> <a href="/tags/网络流24题/" style="font-size: 15.11px; color: #919191">网络流24题</a> <a href="/tags/背包问题/" style="font-size: 18.44px; color: #7b7b7b">背包问题</a> <a href="/tags/莫比乌斯反演/" style="font-size: 14px; color: #999">莫比乌斯反演</a> <a href="/tags/记忆化搜索/" style="font-size: 14px; color: #999">记忆化搜索</a> <a href="/tags/调试与对拍/" style="font-size: 15.11px; color: #919191">调试与对拍</a> <a href="/tags/贪心/" style="font-size: 15.11px; color: #919191">贪心</a> <a href="/tags/逆元/" style="font-size: 15.11px; color: #919191">逆元</a> <a href="/tags/里程碑/" style="font-size: 14px; color: #999">里程碑</a> <a href="/tags/错排/" style="font-size: 14px; color: #999">错排</a> <a href="/tags/队列/" style="font-size: 14px; color: #999">队列</a> <a href="/tags/随笔/" style="font-size: 16.22px; color: #8a8a8a">随笔</a> <a href="/tags/音乐/" style="font-size: 15.11px; color: #919191">音乐</a> <a href="/tags/马拉车/" style="font-size: 14px; color: #999">马拉车</a> <a href="/tags/高精度/" style="font-size: 14px; color: #999">高精度</a>
     </div>
   </section>
 
@@ -936,7 +1172,7 @@
     } 
   setInterval("createtime()",250);
   </script>
-  <span class="post-count">字数统计：725.9k</span>
+  <span class="post-count">字数统计：726.4k</span>
    
 <script type="text/javascript" src="https://s22.cnzz.com/z_stat.php?id=1264439082&web_id=1264439082"></script>
  

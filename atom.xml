@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.ljhedp.cn/"/>
-  <updated>2019-06-14T08:39:34.836Z</updated>
+  <updated>2019-09-14T01:01:56.877Z</updated>
   <id>https://www.ljhedp.cn/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>二分图学习笔记</title>
+    <link href="https://www.ljhedp.cn/post/ff083450.html"/>
+    <id>https://www.ljhedp.cn/post/ff083450.html</id>
+    <published>2019-09-14T01:01:26.000Z</published>
+    <updated>2019-09-14T01:01:56.877Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="NOI2009-变换序列"><a href="#NOI2009-变换序列" class="headerlink" title="NOI2009-变换序列"></a>NOI2009-变换序列</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;NOI2009-变换序列&quot;&gt;&lt;a href=&quot;#NOI2009-变换序列&quot; class=&quot;headerlink&quot; title=&quot;NOI2009-变换序列&quot;&gt;&lt;/a&gt;NOI2009-变换序列&lt;/h2&gt;
+      
+    
+    </summary>
+    
+      <category term="信息学竞赛(OI)" scheme="https://www.ljhedp.cn/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B-OI/"/>
+    
+    
+      <category term="二分图" scheme="https://www.ljhedp.cn/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浅谈分离变量法在解不等式中的应用(持续更新中...)</title>
+    <link href="https://www.ljhedp.cn/post/66a2f397.html"/>
+    <id>https://www.ljhedp.cn/post/66a2f397.html</id>
+    <published>2019-08-23T14:16:24.000Z</published>
+    <updated>2019-08-23T23:14:57.353Z</updated>
+    
+    <content type="html"><![CDATA[<p>潜水一段时间，最近终于要开始写一写了呢。</p><p>七八月份发生了许多大事，对于竞赛生们来说，一件非常令人高兴的事情，莫过于今年五大国际学科竞赛中国队均取得了优异成绩。在IMO中，中国队重新登上世界巅峰，取得了团体总分并列第一的傲人成绩，扬眉吐气！</p><p>从国际形势来看，大国博弈更是风云乍起。同时这也预示着，在接下来的10-20年间，重视数学、物理、化学、生物等基础科学者，将行稳致远。于是今天就来写一写数学。</p><a id="more"></a><h2 id="九层高台，起于累土"><a href="#九层高台，起于累土" class="headerlink" title="九层高台，起于累土"></a>九层高台，起于累土</h2><p>先来复习一下两个十分基础的不等式：</p><h3 id="均值不等式"><a href="#均值不等式" class="headerlink" title="均值不等式"></a>均值不等式</h3><p>适用范围：<strong>正实数</strong></p><script type="math/tex; mode=display">\frac{n}{\frac{1}{a_1}+\frac{1}{a_2}+...+\frac{1}{a_n}}\le\sqrt[\uproot{3}n]{a_1a_2...a_n}\le\frac{a_1+a_2+...+a_n}{n}\le\sqrt{\frac{a_1^2+a_2^2+...+a_n^2}{n}}</script><p>可以略写为$H_n\le G_n\le A_n\le Q_n$，</p><p>即：调和平均值$\le$几何平均值$\le$算术平均值$\le$平方平均值.</p><h3 id="柯西不等式"><a href="#柯西不等式" class="headerlink" title="柯西不等式"></a>柯西不等式</h3><p>适用范围：实数</p><script type="math/tex; mode=display">\sum\limits_{i=1}^na_i^2 \sum\limits_{i=1}^nb_i^2\ge(\sum\limits_{i=1}^na_ib_i)^2</script><p>也有扩展版的“大柯西不等式”，这个以后会写到。</p><h2 id="从一道不等式问题谈起"><a href="#从一道不等式问题谈起" class="headerlink" title="从一道不等式问题谈起"></a>从一道不等式问题谈起</h2><p>我们来看这样一道问题：</p><p>设实数$x,y\in[0,1]$, 求$\frac{x}{1+y}+\frac{y}{1+x}+(1-x)(1-y)$的最小值.</p><p>起初来看，似乎很难看出端倪。不过，至少这个式子具有<strong>对称性</strong>，这是个不错的条件。</p><p>在这里，我们不妨设$x+y=a$,$xy=b$.</p><p>这样原式就可以写为$\frac{a^2+a-2b}{a+b+1}+1-a+b$.</p><p>通分化简，得原式=$\frac{a^2+a-2b+(a+b+1)(-a+b+1)}{a+b+1}$.</p><p>也就是$\frac{a+b^2+1}{a+b+1}$.</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;潜水一段时间，最近终于要开始写一写了呢。&lt;/p&gt;
+&lt;p&gt;七八月份发生了许多大事，对于竞赛生们来说，一件非常令人高兴的事情，莫过于今年五大国际学科竞赛中国队均取得了优异成绩。在IMO中，中国队重新登上世界巅峰，取得了团体总分并列第一的傲人成绩，扬眉吐气！&lt;/p&gt;
+&lt;p&gt;从国际形势来看，大国博弈更是风云乍起。同时这也预示着，在接下来的10-20年间，重视数学、物理、化学、生物等基础科学者，将行稳致远。于是今天就来写一写数学。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="数学竞赛" scheme="https://www.ljhedp.cn/categories/%E6%95%B0%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+    
+    
+      <category term="不等式" scheme="https://www.ljhedp.cn/tags/%E4%B8%8D%E7%AD%89%E5%BC%8F/"/>
+    
+      <category term="分离变量" scheme="https://www.ljhedp.cn/tags/%E5%88%86%E7%A6%BB%E5%8F%98%E9%87%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>好文推荐-心之力</title>
@@ -49,7 +100,7 @@
     <link href="https://www.ljhedp.cn/post/acc98d3b.html"/>
     <id>https://www.ljhedp.cn/post/acc98d3b.html</id>
     <published>2019-06-06T14:55:00.000Z</published>
-    <updated>2019-06-23T03:24:42.249Z</updated>
+    <updated>2019-08-27T12:08:34.477Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>三角函数常用公式整理，补齐中…</p></blockquote><a id="more"></a><h2 id="三角函数的意义"><a href="#三角函数的意义" class="headerlink" title="三角函数的意义"></a>三角函数的意义</h2><blockquote><p>基本概念：角的定义、终边、单位圆… </p></blockquote><script type="math/tex; mode=display">\sin A=\frac{y}{r}</script><script type="math/tex; mode=display">\cos A=\frac{x}{r}</script><script type="math/tex; mode=display">\tan A=\frac{y}{x}</script><script type="math/tex; mode=display">\cot A=\frac{x}{y}</script><script type="math/tex; mode=display">\sin^2 \alpha + \cos ^2 \alpha=1</script><script type="math/tex; mode=display">\tan \alpha=\frac{\sin \alpha}{\cos \alpha}</script><script type="math/tex; mode=display">\cot \alpha= \frac{1}{\tan \alpha}</script><h2 id="诱导公式：奇变偶不变-符号看象限"><a href="#诱导公式：奇变偶不变-符号看象限" class="headerlink" title="诱导公式：奇变偶不变 符号看象限"></a>诱导公式：奇变偶不变 符号看象限</h2><div class="table-container"><table><thead><tr><th style="text-align:center">$\sin(\alpha+2k\pi)=\sin \alpha$</th><th style="text-align:center">$\cos(\alpha+2k\pi)=\cos \alpha$</th><th style="text-align:center">$\tan(\alpha+2k\pi)=\tan \alpha$</th></tr></thead><tbody><tr><td style="text-align:center">$\sin(-\alpha)=-\sin \alpha$</td><td style="text-align:center">$\cos(-\alpha)=\cos \alpha$</td><td style="text-align:center">$\tan(-\alpha)=-\tan \alpha$</td></tr><tr><td style="text-align:center">$\sin(\pi-\alpha)=\sin \alpha$</td><td style="text-align:center">$\cos(\pi-\alpha)=-\cos\alpha$</td><td style="text-align:center">$\tan(\pi-\alpha)=-\tan\alpha$</td></tr><tr><td style="text-align:center">$\sin(\pi+\alpha)=-\sin \alpha$</td><td style="text-align:center">$\cos(\pi+\alpha)=-\cos\alpha$</td><td style="text-align:center">$\tan(\pi+\alpha)=\tan\alpha$</td></tr><tr><td style="text-align:center">$\sin(\frac{\pi}{2}-\alpha)=\cos\alpha$</td><td style="text-align:center">$\cos(\frac{\pi}{2}-\alpha)=\sin\alpha$</td><td style="text-align:center">$\tan(\frac{\pi}{2}-\alpha)=\cot\alpha$</td></tr></tbody></table></div><h2 id="三角恒等式"><a href="#三角恒等式" class="headerlink" title="三角恒等式"></a>三角恒等式</h2><p>$\sin^2\alpha+\cos^2\alpha=1$</p><p>$\tan\alpha=\frac{\sin\alpha}{\cos\alpha}$</p><h2 id="和角公式"><a href="#和角公式" class="headerlink" title="和角公式"></a>和角公式</h2><p>$\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta$</p><p>$\cos(\alpha-\beta)=\cos\alpha\cos\beta+\sin\alpha\sin\beta$</p><p>$\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta$</p><p>$\sin(\alpha-\beta)=\sin\alpha\cos\beta-\cos\alpha\sin\beta$</p><p>$\tan(\alpha+\beta)=\frac{\tan\alpha+\tan\beta}{1-\tan\alpha\tan\beta}$</p><p>$\tan(\alpha-\beta)=\frac{\tan\alpha-\tan\beta}{1+\tan\alpha\tan\beta}$</p><h2 id="辅助角公式"><a href="#辅助角公式" class="headerlink" title="辅助角公式"></a>辅助角公式</h2><script type="math/tex; mode=display">a\sin\alpha+b\cos\alpha=\sqrt{a^2+b^2}sin(\alpha+\theta)</script><p>其中$\tan\theta=\frac{b}{a}.$</p><h2 id="二倍角公式"><a href="#二倍角公式" class="headerlink" title="二倍角公式"></a>二倍角公式</h2><p>$\sin2\alpha=2\sin\alpha\cos\alpha$</p><p>$\cos2\alpha=\cos^2\alpha-\sin^2\alpha=2\cos^2\alpha-1=1-2\sin^2\alpha$</p><p>$\tan2\alpha=\frac{2\tan\alpha}{1-\tan^2\alpha}$</p><h2 id="三倍角公式"><a href="#三倍角公式" class="headerlink" title="三倍角公式"></a>三倍角公式</h2><p>$\sin3\alpha=3\sin\alpha-4\sin^3\alpha=4\sin(\frac{\pi}{3}-\alpha)\sin\alpha\sin(\frac{\pi}{3}+\alpha)$</p><p>$\cos3\alpha=-3\cos\alpha+4\cos^3\alpha=4\cos(\frac{\pi}{3}-\alpha)\cos\alpha\cos(\frac{\pi}{3}+\alpha)$</p><p>$\tan3\alpha=\tan(\frac{\pi}{3}-\alpha)\tan\alpha\tan(\frac{\pi}{3}+\alpha)$</p><h2 id="半角公式"><a href="#半角公式" class="headerlink" title="半角公式"></a>半角公式</h2><p>$\sin\frac{\alpha}{2}=\pm\sqrt{\frac{1-\cos\alpha}{2}}$</p><p>$\cos\frac{\alpha}{2}=\pm\sqrt{\frac{1+\cos\alpha}{2}}$</p><p>$\tan\frac{\alpha}{2}=\pm\sqrt{\frac{1-\cos\alpha}{1+\cos\alpha}}=\frac{1-\cos\alpha}{\sin\alpha}=\frac{\sin\alpha}{1+\cos\alpha}$</p><h2 id="万能公式"><a href="#万能公式" class="headerlink" title="万能公式"></a>万能公式</h2><p>$\sin\alpha=\frac{2\tan{\frac{\alpha}{2}}}{1+\tan^2\frac{\alpha}{2}}$</p><p>$\cos\alpha=\frac{1-\tan^2\frac{\alpha}{2}}{1+\tan^2\frac{\alpha}{2}}$</p><p>$\tan\alpha=\frac{2\tan{\frac{\alpha}{2}}}{1-\tan^2\frac{\alpha}{2}}$</p><h2 id="和差化积"><a href="#和差化积" class="headerlink" title="和差化积"></a>和差化积</h2><p>$\sin\alpha+\sin\beta=2\sin{\frac{\alpha+\beta}{2}}\cos{\frac{\alpha-\beta}{2}}$</p><p>$\sin\alpha-\sin\beta=2\cos{\frac{\alpha+\beta}{2}}\sin{\frac{\alpha-\beta}{2}}$</p><p>$\cos\alpha+\cos\beta=2\cos{\frac{\alpha+\beta}{2}}\cos{\frac{\alpha-\beta}{2}}$</p><p>$\cos\alpha-\cos\beta=-2\sin{\frac{\alpha+\beta}{2}}\sin{\frac{\alpha-\beta}{2}}$</p><h2 id="积化和差"><a href="#积化和差" class="headerlink" title="积化和差"></a>积化和差</h2><p>$\sin\alpha\cos\beta=\frac{1}{2}(\sin(\alpha+\beta)+\sin(\alpha-\beta))$</p><p>$\cos\alpha\sin\beta=\frac{1}{2}(\sin(\alpha+\beta)-\sin(\alpha-\beta))$</p><p>$\cos\alpha\cos\beta=\frac{1}{2}(\cos(\alpha+\beta)+\cos(\alpha-\beta))$</p><p>$\sin\alpha\sin\beta=-\frac{1}{2}(\cos(\alpha+\beta)-\cos(\alpha-\beta))$</p><h2 id="补充公式组1-左右互化"><a href="#补充公式组1-左右互化" class="headerlink" title="补充公式组1(左右互化)"></a>补充公式组1(左右互化)</h2><p>$1+\cot^2\alpha=\csc^2\alpha=\frac{1}{\sin^2\alpha}$</p><p>$1+\tan^2\alpha=\sec^2\alpha=\frac{1}{\cos^2\alpha}$</p><h2 id="补充公式组2-二倍角逆用"><a href="#补充公式组2-二倍角逆用" class="headerlink" title="补充公式组2(二倍角逆用)"></a>补充公式组2(二倍角逆用)</h2><script type="math/tex; mode=display">\sin^2\alpha=\frac{1-\cos2\alpha}{2}</script><script type="math/tex; mode=display">\cos^2\alpha=\frac{1+\cos2\alpha}{2}</script>]]></content>
     
@@ -381,9 +432,9 @@
       <category term="信息学竞赛(OI)" scheme="https://www.ljhedp.cn/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B-OI/"/>
     
     
-      <category term="组合数学" scheme="https://www.ljhedp.cn/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
-    
       <category term="数论" scheme="https://www.ljhedp.cn/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+      <category term="组合数学" scheme="https://www.ljhedp.cn/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
@@ -527,64 +578,6 @@
       <category term="ST表" scheme="https://www.ljhedp.cn/tags/ST%E8%A1%A8/"/>
     
       <category term="模拟" scheme="https://www.ljhedp.cn/tags/%E6%A8%A1%E6%8B%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>模板-01背包</title>
-    <link href="https://www.ljhedp.cn/post/76fee62b.html"/>
-    <id>https://www.ljhedp.cn/post/76fee62b.html</id>
-    <published>2018-11-11T13:38:41.000Z</published>
-    <updated>2018-12-23T02:19:50.121Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int MAXC=10001;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int C[MAXC],W[MAXC];</span><br><span class="line">    int f[MAXC];</span><br><span class="line">    int n,V;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;V;</span><br><span class="line">    memset(f,0,sizeof(f));</span><br><span class="line">    for(int i = 1; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;C[i]&gt;&gt;W[i];</span><br><span class="line">        for(int j=V;j&gt;=C[i];j--)</span><br><span class="line">        &#123;</span><br><span class="line">                if(f[j]&lt;f[j-C[i]]+W[i])</span><br><span class="line">                f[j]=f[j-C[i]]+W[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;f[V];</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
-      
-    
-    </summary>
-    
-      <category term="信息学竞赛(OI)" scheme="https://www.ljhedp.cn/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B-OI/"/>
-    
-    
-      <category term="dp" scheme="https://www.ljhedp.cn/tags/dp/"/>
-    
-      <category term="背包问题" scheme="https://www.ljhedp.cn/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/"/>
-    
-      <category term="模板" scheme="https://www.ljhedp.cn/tags/%E6%A8%A1%E6%9D%BF/"/>
-    
-      <category term="01背包" scheme="https://www.ljhedp.cn/tags/01%E8%83%8C%E5%8C%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>贪心-NOIP2012-国王游戏</title>
-    <link href="https://www.ljhedp.cn/post/3abf7d83.html"/>
-    <id>https://www.ljhedp.cn/post/3abf7d83.html</id>
-    <published>2018-11-11T13:36:57.000Z</published>
-    <updated>2018-12-23T02:19:50.317Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="50pts"><a href="#50pts" class="headerlink" title="50pts"></a>50pts</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> n,a1,b1,ans,wealth;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> a,b,w;</span><br><span class="line">&#125;c[<span class="number">10010</span>]; </span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(node x,node y)</span></span>&#123;</span><br><span class="line"><span class="keyword">if</span>(x.a*x.b==y.a*y.b) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"><span class="keyword">return</span> x.a*x.b&gt;y.a*y.b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;n&gt;&gt;a1&gt;&gt;b1;</span><br><span class="line">wealth=a1;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> i=<span class="number">0</span>;i&lt;n;i++) <span class="built_in">cin</span>&gt;&gt;c[i].a&gt;&gt;c[i].b;</span><br><span class="line">sort(c,c+n,cmp);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> i=n<span class="number">-1</span>;i&gt;<span class="number">0</span>;i--) wealth*=c[i].a;</span><br><span class="line">wealth/=c[<span class="number">0</span>].b;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;wealth&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="100pts"><a href="#100pts" class="headerlink" title="100pts"></a>100pts</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">a</span>&#123;</span></span><br><span class="line">       <span class="keyword">int</span> lt,rt;</span><br><span class="line">       &#125;a[<span class="number">1001</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> f[<span class="number">1001</span>]=&#123;<span class="number">0</span>&#125;,fs[<span class="number">1001</span>]=&#123;<span class="number">0</span>&#125;,k[<span class="number">1001</span>];</span><br><span class="line">    <span class="keyword">int</span> m,n;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;i++)&#123;</span><br><span class="line">       <span class="built_in">cin</span>&gt;&gt;a[i].lt&gt;&gt;a[i].rt;</span><br><span class="line">       k[i]=a[i].rt*a[i].lt;</span><br><span class="line">       &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;n; i++) &#123; </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>; j&lt;=n-i; j++)&#123; </span><br><span class="line">    <span class="keyword">if</span> (k[j]&gt;k[j+<span class="number">1</span>])  </span><br><span class="line">    &#123; </span><br><span class="line">    <span class="keyword">int</span> t=a[j].lt;a[j].lt=a[j+<span class="number">1</span>].lt; a[j+<span class="number">1</span>].lt=t; </span><br><span class="line">    t=a[j].rt; a[j].rt=a[j+<span class="number">1</span>].rt; a[j+<span class="number">1</span>].rt=t; </span><br><span class="line">    t=k[j];k[j]=k[j+<span class="number">1</span>];k[j+<span class="number">1</span>]=t; </span><br><span class="line">    &#125; </span><br><span class="line">    &#125; </span><br><span class="line">    &#125; </span><br><span class="line">    f[<span class="number">0</span>]=a[<span class="number">0</span>].lt;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">double</span> s=<span class="number">0</span>,t=a[<span class="number">0</span>].lt;</span><br><span class="line">    <span class="keyword">int</span> si=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(t/a[i].rt&gt;s)</span><br><span class="line">            &#123;</span><br><span class="line">            s=t/a[i].rt;</span><br><span class="line">            m=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">999</span>;j&gt;=<span class="number">0</span>;j--)&#123;</span><br><span class="line">                m=<span class="number">10000</span>*m+f[j];</span><br><span class="line">                fs[j]=m/a[i].rt;</span><br><span class="line">                m%=a[i].rt;</span><br><span class="line">                &#125;</span><br><span class="line">                si=i;</span><br><span class="line">        &#125;</span><br><span class="line">        t*=a[i].lt; </span><br><span class="line">        m=<span class="number">0</span>; </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=<span class="number">999</span>;j++) &#123; </span><br><span class="line">         m+=f[j]*a[i].lt; </span><br><span class="line">         f[j]=m%<span class="number">10000</span>; </span><br><span class="line">         m/=<span class="number">10000</span>; </span><br><span class="line">         &#125; </span><br><span class="line">         &#125;</span><br><span class="line">         m=<span class="number">0</span>;</span><br><span class="line">         <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">999</span>; j&gt;=<span class="number">0</span>; j--) &#123; </span><br><span class="line">         <span class="keyword">if</span> (m==<span class="number">1</span>) </span><br><span class="line">         &#123; </span><br><span class="line">          <span class="keyword">if</span> (fs[j]&lt;<span class="number">10</span>) <span class="built_in">cout</span>&lt;&lt;<span class="string">"000"</span>; </span><br><span class="line">          <span class="keyword">else</span> <span class="keyword">if</span> (fs[j]&lt;<span class="number">100</span>) <span class="built_in">cout</span>&lt;&lt;<span class="string">"00"</span>; </span><br><span class="line">          <span class="keyword">else</span> <span class="keyword">if</span> (fs[j]&lt;<span class="number">1000</span>) <span class="built_in">cout</span>&lt;&lt;<span class="string">"0"</span>; </span><br><span class="line">          <span class="built_in">cout</span>&lt;&lt;fs[j]; </span><br><span class="line">         &#125; </span><br><span class="line">         <span class="keyword">else</span> <span class="keyword">if</span>(fs[j]&gt;<span class="number">0</span>)&#123;<span class="built_in">cout</span>&lt;&lt;fs[j];</span><br><span class="line">         m=<span class="number">1</span>;</span><br><span class="line">         &#125; </span><br><span class="line">         &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;50pts&quot;&gt;&lt;a href=&quot;#50pts&quot; class=&quot;headerlink&quot; title=&quot;50pts&quot;&gt;&lt;/a&gt;50pts&lt;/h2&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;
-      
-    
-    </summary>
-    
-      <category term="信息学竞赛(OI)" scheme="https://www.ljhedp.cn/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B-OI/"/>
-    
-    
-      <category term="模拟" scheme="https://www.ljhedp.cn/tags/%E6%A8%A1%E6%8B%9F/"/>
-    
-      <category term="贪心" scheme="https://www.ljhedp.cn/tags/%E8%B4%AA%E5%BF%83/"/>
     
   </entry>
   
